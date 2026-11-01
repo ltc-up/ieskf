@@ -1,10 +1,10 @@
-test_B_keeps_pure_rotation_and_lever_height (test_deskew_ablation.DeskewAblationTests.test_B_keeps_pure_rotation_and_lever_height) ... ok
-test_B_removes_only_world_IMU_z (test_deskew_ablation.DeskewAblationTests.test_B_removes_only_world_IMU_z) ... ok
+test_B_keeps_pure_body_rotation_and_LiDAR_lever_height (test_deskew_ablation.DeskewAblationTests.test_B_keeps_pure_body_rotation_and_LiDAR_lever_height) ... ok
+test_B_removes_only_kernel_world_base_z (test_deskew_ablation.DeskewAblationTests.test_B_removes_only_kernel_world_base_z) ... ok
 test_C_keeps_yaw_and_reference_RP (test_deskew_ablation.DeskewAblationTests.test_C_keeps_yaw_and_reference_RP) ... ok
 test_C_no_change_when_RP_constant (test_deskew_ablation.DeskewAblationTests.test_C_no_change_when_RP_constant) ... ok
 test_reference_all_identity (test_deskew_ablation.DeskewAblationTests.test_reference_all_identity) ... ok
 
 ----------------------------------------------------------------------
-Ran 5 tests in 0.011s
+Ran 5 tests in 0.009s
 
 OK

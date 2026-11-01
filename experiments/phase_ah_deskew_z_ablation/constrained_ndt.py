@@ -10,8 +10,9 @@ from scipy.optimize import minimize
 from geometry_ieskf.common import C,dump
 
 def main():
- ap=argparse.ArgumentParser();ap.add_argument('--output',required=True);ap.add_argument('--score-service',required=True);a=ap.parse_args();O=Path(a.output);jobs=json.load(open(O/'ndt_jobs.json'));full=[json.loads(l) for l in open(O/'ndt_results.jsonl')];allout=[]
+ ap=argparse.ArgumentParser();ap.add_argument('--output',required=True);ap.add_argument('--score-service',required=True);ap.add_argument('--only-groups',default='AC');a=ap.parse_args();O=Path(a.output);jobs=json.load(open(O/'ndt_jobs.json'));full=[json.loads(l) for l in open(O/'ndt_results.jsonl')];allout=[]
  for index,j in enumerate(jobs):
+  if j['group'] not in a.only_groups:continue
   tick=time.perf_counter();proc=subprocess.Popen([a.score_service,str(O/'ndt_jobs.json'),str(index)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,stderr=subprocess.PIPE,text=True);trace=[]
   def score(p):
    proc.stdin.write(json.dumps(np.asarray(p).tolist())+'\n');proc.stdin.flush();line=proc.stdout.readline()

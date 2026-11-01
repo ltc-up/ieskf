@@ -1,0 +1,135 @@
+{
+  "phase": "AH",
+  "date": "2026-11-01",
+  "baseline_AG_commit": "9b9ed67995757cf9ca02bc0ae70c86ca9ff8da4f",
+  "initial_research_code_commit": "d015b18101745595506c7262f349468f02df3f2f",
+  "final_commit_scope": "reporting commit binds corrected kernel-base B definition and incremental B-only results; earlier definition error retained explicitly",
+  "input_identity": {
+    "AA_complete_replay_sha256": "af789ef4a0cea1666e10f852c801930bb0f5e175967d4a2fa9be340de345ba59",
+    "first_Source_sha256": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "Target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "AB_first_fixed_refinement_record_sha256": "cf41503a4b0459f702d77098826f5b863bd4afd51bd3fe2acf0573e5b0fba050",
+    "event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "first_frozen_state_and_P_binding_sha256": "10b397a123b13fedadfeaf744bd8f2275a6cd6e07b36b567c2b36575c1f4a94b",
+    "identity_scope": "non-reconstructive digests only; raw Header timestamps/device frames/private matrices are excluded"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "public_numeric_config_file_sha256": "cb25184d76b20bec92303351772e95ee25b8495f77c01315a9aa3a1287bfd109",
+  "data_version": "unchanged native AA event inputs; raw payloads re-extracted with original CDR/raw SHA equality; A bitwise equals old Source; corrected B/C derived ablations",
+  "source_and_binary_identity": {
+    "pose_estimator": "1d716286b48d50e70264c76772841e3cb96a65fc23cbbf92c030aa391d414d66",
+    "deskew_wrapper": "129136aadf927a90f66e67444363eb50e0d28d03624fb143d854dbe5f20e1a15",
+    "deskew_kernel": "5ec6456f86bf853e9b9811603fc8bf723de5eed05db5d7e8d00856e4039e7418",
+    "parameters": "52a9a1a9211bf8337aab57326e459b6203d626375f07a5753b11f74a340a0595",
+    "launch": "84635d34dd283d28a478bbc38e682e61aff21f42ff8188e26a4e6e23915eea5e",
+    "original_gpu_adapter": "aa352562fa57f40a4412a938338833f11ff8562887bcba3c0b3d97947a2fea27",
+    "original_gpu_library": "df2dc5ecf7fb3ccbd66aa72fb458fdf35f0a411aa299d593ac787a145fdd6ab1",
+    "unchanged_NDT_adapter": "53bb9b804be9791fb5cb3bf0da188ca37f67cdc10ed46a9a2d1041ded99ab91d",
+    "unchanged_NDT_library": "14c044f894d5b9344adf81bdaecc17615dfb43bc98cef4a974552b4ecdc6127f"
+  },
+  "local_only_ablation_kernel_source_sha256": "1b0e59165891eae179f310d0677afd5f20c3479490edbc815f5e6dfaf970c982",
+  "local_only_ablation_library_sha256": "cb3d15d1fca1b726e076ba0355341b95c1d866d670d2dec27dd864aed6159edd",
+  "local_only_deskew_adapter_sha256": "313055dcd6ccd7eeea8a780ef14c10341a80da6cb4bb39ca165b0f2d5407aa48",
+  "motion_cache_sha256": "4ee0d5725bd43481d7be578ce71596ff8db496d01e68d3350a3922db15a5ee99",
+  "selected_source_sha256": [
+    "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "da41349d8e4b8ca1e9c68f5923bb43b06b55a80df3e98d65e1d17b43c6b745bd",
+    "b219f5e72327bdc056c9631d5c4b65834af1e5295bb3d84d0404709dffd78dd9",
+    "fa8bc38fc9f18ebbe2b6a0daddedd28382a00d2ef988e2337d0337480cdc131a",
+    "75bc4f14004ba5f968d82003dba42e32ffa96439d054fd19c01f8d87d269ec14"
+  ],
+  "selected_raw_CDR_sha256": [
+    "0cc754b3bbab2027b6ebc41bbcadc800d2711fee68836f451a934c39faa07cad",
+    "d4a11dcac5dbfe16732f9c0703ba5b261464c44e6b504f44026e65399b5812b3",
+    "4ea6430a1a48353bc819b75228e3e4cf0abe17b8770d556877a46b5ec7c424ed",
+    "d44f3eb0db5ed222ea99f809085ea045ff56bdce8737518a6b8affed67bfc3e1",
+    "47048f3ed3d66a31694fae0ce15d6a376b0bb847cac3f7583814b2c1c8164512",
+    "daabe501469fbf18fbf1457d7aa8fa4e29edcb72754ee68e3b34d3b230b43766",
+    "9ff80f812504bda310b93f5b74ea84f6ed5f153517c0f2601701e23fe9075d0f",
+    "456be42d2ff679142e87b3f948cfe7f484914f750e1175f828c27fdb097f8204",
+    "5a99677d9652125072ee07b9b698bcf9d8376f2a2667f68aa871a9a76a7978ed",
+    "33fa8ff4599306f56aa2bde57630e3862cdf16655b525aede3a0199aaa49d061",
+    "9e7a5322a1f2a039777f71f66d10ac1f8128bc702a0ec7098e6fd40db719f039",
+    "302a1d5a8c6ad6b717e10a331b028b28512c8bc6ea671e9a05c61e15fe629251",
+    "b66c8a9d186f5427ea2a6d8e9db35fab00c4189a68dc1a35741d9f42979aa9e7",
+    "ae4f4e1a82f9d36e076372c049ff5c0d8372d619cfcba852fdead3c6903beb60",
+    "6d1485d3733d13e7fee09fffe678d66d8248340ad41d5481ad910095cd55ed10"
+  ],
+  "software": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "GPU_math": "double SE3 interpolation/transform to float32 XYZI; same kernel branch implementation",
+    "nvcc": "12.8.93",
+    "gplusplus": "13.3.0"
+  },
+  "counts": {
+    "unique_events": 5,
+    "predefined_roles": 6,
+    "new_SE3_tests": 5,
+    "primary_full_NDT_fits": 15,
+    "obsolete_wrong_B_full_fits": 5,
+    "primary_frozen_IESKF_updates": 15,
+    "obsolete_wrong_B_updates": 5,
+    "valid_A_C_constrained_failures": 10,
+    "corrected_B_constrained_control_executed": 0,
+    "raw_score_wrong_sign_failures": 15,
+    "continuous_replays": 0,
+    "published_states": 0
+  },
+  "covariance_and_update": "original AA Huber, weights, prior/P, motion model, constraints; no AF/AG surfaces/Laplace and no NDT pose input",
+  "reproducibility": {
+    "independent_public": "SE3 tests and aggregate plots",
+    "authorized_local_required": "raw bag/Source/motion/TF/state/P/private production kernel and CUDA-NDT SDK/binaries needed; no restricted source/data published"
+  },
+  "qualifications": {
+    "RAW_INPUT_AND_A_PARITY": "PASS",
+    "CORRECTED_OPERATOR_PARITY": "PASS",
+    "FULL_NDT_SENSITIVITY": "PASS",
+    "CONSTRAINED_CONTROL": "NOT_VALIDATED",
+    "FULL15_NUMERIC_DECOMPOSITION": "PASS",
+    "QUALIFIED_UPDATE_SUBMISSION": "FAIL",
+    "INDEPENDENT_ACCURACY": "NOT_VALIDATED",
+    "CONTINUOUS": "NOT_VALIDATED",
+    "PRODUCTION_CANDIDATE": "NOT_VALIDATED"
+  },
+  "implementation_hashes": {
+    "src/geometry_ieskf/deskew_ablation.py": "a3763f28c30e5e0d4b14cf47c8a51c92b4bb3caaf7bb2812b1afd6d162c7dd8c",
+    "tests/test_deskew_ablation.py": "0cd1f11e244a243e7e4ccd32915feeef554ed89768583c74d7cb9972a110de7f",
+    "experiments/phase_ah_deskew_z_ablation/prepare_inputs.py": "83246fc099a31d14909ba4dc7bca4745de9542f8d1584c722e445d6727a2f038",
+    "experiments/phase_ah_deskew_z_ablation/constrained_ndt.py": "9646f03881eafdbc0ea761596b9ba8443509620ed508decaa003221e43bacd1b",
+    "experiments/phase_ah_deskew_z_ablation/summarize_saved.py": "d6401bff9a2da58ad4eb7d9c4467006cad85cbe0e174a0e1a4cd20a72c3d76ea",
+    "experiments/phase_ah_deskew_z_ablation/run_frozen.py": "d93a572e3855cc8841fdc4d97211f5c6538fd2bc70b6489eae147cd8b6e03d05",
+    "experiments/phase_ah_deskew_z_ablation/plot_results.py": "969660acd4825dad979b336c79ba02bd51b1ad5a7041d78758f1a0e5e86942b7"
+  },
+  "payload_hashes": {
+    "REPRODUCE.md": "7e9939d35fb307f12de4700ef7cb6b0b170bcda2fbcf613fe4b5fb52a7e3be63",
+    "prepare_inputs.py": "83246fc099a31d14909ba4dc7bca4745de9542f8d1584c722e445d6727a2f038",
+    "TEST_PLAN.md": "0344367a7eab5dd707adf13b935262ca6da38a423269db77a0b9b0d27d5839b4",
+    "IESKF_STATE_COUPLING.md": "7d0f1e07446749b6cd2cb45be98afc9d4f9ff2b7285cd47c2b49cd1761779783",
+    "key_results.json": "4a37b7831acc0ebb1dfb6d6b34bf6aa6f0a7acef6ae9bcf1cd0ca88e02c5c45a",
+    "FINAL_CONCLUSION.md": "b2f458a1974e5b8048a983965ba4a627f758e853495ac7e3c932b50b537fead9",
+    "constrained_ndt.py": "9646f03881eafdbc0ea761596b9ba8443509620ed508decaa003221e43bacd1b",
+    "NUMERIC_TEST_LOG.txt": "c19ad46f578ec2092f01dadb4b82a87c6744b10aa3bb54595dcaf58be6f24531",
+    "NDT_Z_SENSITIVITY.md": "582a5abac46da209dd1a925b89230be28733a651add2bc64a61daa567acf2de1",
+    "REPRESENTATIVE_EVENTS.md": "678c72a5e7061ca7d36e439b9af7c80a9215caedfbf726d75694b38c4293561b",
+    "summarize_saved.py": "d6401bff9a2da58ad4eb7d9c4467006cad85cbe0e174a0e1a4cd20a72c3d76ea",
+    "run_frozen.py": "d93a572e3855cc8841fdc4d97211f5c6538fd2bc70b6489eae147cd8b6e03d05",
+    "DESKEW_Z_ABLATION.md": "3e643810f906909b107e05c9cc9b977b017d24b03b66ded6c1f50b061cc4ea36",
+    "FAILURES.md": "c89eb4b0246a97ab25ba60bcfc00581a6859a67b5116db9791e1269d1820372f",
+    "plot_results.py": "969660acd4825dad979b336c79ba02bd51b1ad5a7041d78758f1a0e5e86942b7",
+    "INPUT_PROVENANCE.md": "de360dc0da2bd65d81476246bfb67ebe873e829d17b8fc8dcd53293dbd529516",
+    "deskew_sensitivity.png": "254f88952d525fbfb02e5c98cea66e02997d048c286eeed1dfef97d3efa6da1a"
+  },
+  "protection": {
+    "production_files_unchanged": 45621,
+    "previous_private_artifact_counts": {
+      "phase_ac_geometry_capture": 106,
+      "phase_ad_association_objective": 77,
+      "phase_ae_measurement_information": 169,
+      "phase_af_surface_observation": 23,
+      "phase_ag_surface_evidence_capture": 21
+    },
+    "original_Git_HEAD_branch_worktree_stash_unchanged": true
+  }
+}

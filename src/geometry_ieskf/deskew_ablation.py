@@ -3,12 +3,13 @@ import numpy as np
 from scipy.spatial.transform import Rotation
 
 def compensate(points,R,p,Rref,pref,lever,mode):
- # All p are base-origin world positions; lever is base->IMU in body axes.
+ # All p are already base-origin world positions. Do NOT reapply IMU transport.
+ # points already include static LiDAR extrinsics; full rotation retains that lever.
  y=np.einsum('nij,nj->ni',R,points)
  if mode=='C':
   yaw=np.arctan2(R[:,1,0],R[:,0,0]);yr=np.arctan2(Rref[1,0],Rref[0,0]);d=yaw-yr;c=np.cos(d);s=np.sin(d);w=points@Rref.T;y=np.c_[c*w[:,0]-s*w[:,1],s*w[:,0]+c*w[:,1],w[:,2]]
  w=y+p-pref
- if mode=='B':w[:,2]-=(p[:,2]-pref[2])+(np.einsum('nij,j->ni',R,lever)[:,2]-(Rref@lever)[2])
+ if mode=='B':w[:,2]-=p[:,2]-pref[2]
  return w@Rref
 
 def interpolate(time,poses):

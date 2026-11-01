@@ -1,0 +1,9 @@
+# Failures retained
+
+1. Initial B used IMU-origin Z removal instead of the task's actual base-pose kernel Z term. This is a DEFINITION_ERROR. Its5 fits/updates and all generated points remain in a separate ignored archive; excluded from primary results. Corrected B was declared before corrected outcomes. A/C regeneration was bitwise identical, so matches/updates were reused. No favorable branch selected.
+2. Raw point payload files referenced by old audit paths were absent. Re-extracted exactly from same SQLite message IDs; CDR and raw payload SHA match saved identities. No changed input bytes or invented source.
+3. First extraction invocation replaced ROS PYTHONPATH and could not import rclpy. Restoring the existing environment fixed it. A dependent original-wrapper attempt had no jobs JSON and failed before processing. Logs retained.
+4. Sandbox GPU enumeration failed; authorized host read-only query and isolated CUDA execution succeeded. This was device visibility, not a hardware conclusion or bypass of approval.
+5. FixedXY/yaw score diagnostic initially had an objective-sign error, retained and excluded. Exported angular derivative/actual-score mismatch was not repaired by changing NDT; corrected score-only diagnostic still fails qualification. No qualified constrained control, no infeasibility/causal coupling claim. Earlier B diagnostic additionally invalid after definition correction; no retry chasing success.
+6. Saved-result summary used abs(list), raising TypeError after experiment files were safely saved. Corrected only serialization/aggregation (np.abs); no experiment rerun for that failure.
+7. Old solver partly accepts nonconverged states and contracts P in all Deskew variants; strict certificate rejects all15. Neither partial acceptance nor rejection-only smoothness is presented as an improvement. No continuous run, accuracy, calibrated covariance, or production modification.
