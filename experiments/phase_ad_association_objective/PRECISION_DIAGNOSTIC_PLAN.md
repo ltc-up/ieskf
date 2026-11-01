@@ -1,0 +1,7 @@
+# Uniform numerical-stationarity diagnosis (after raw solver results)
+
+The ONE objective is unchanged. Raw SLSQP outcomes are retained: 7/13 interior stationary, 6/13 no-descent/stall; nominal white gradient 2.52462e-4 is NOT passed. Raw costs stop changing at floating-point scale although gradients remain nonzero. No tolerance is relaxed.
+
+Apply the same post-solve diagnostic to ALL 13 stored endpoints, without re-running or selecting initializers. Use a central finite difference of the analytic prior-white gradient at coordinate offset 1e-5 to form a symmetrized full15 Hessian. Record asymmetry and eigenvalues. Only if SPD, take at most THREE undamped Newton corrections, respecting original trust/cumulative balls and original line scale set. Accept only finite same-objective nonincrease within roundoff floor 1e-10, AND a decreasing raw gradient. Explicitly record predicted change, actual change and floor; below-roundoff descent is not proven by cost alone. Original 1e-4 raw-gradient certificate unchanged. Final Hessian repeat at offsets 1e-4/1e-5/1e-6 tests numerical robustness. This is costly offline endpoint verification, NOT a second association candidate, production optimizer, posterior or continuous run. Raw failures must remain visible separately.
+
+If the numerical probe succeeds, it establishes a stationary point of the declared energy, not a calibrated measurement, correct location or validated state/P recursion. No continuous admission is inferred solely from a finite-difference Hessian.
