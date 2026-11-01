@@ -24,7 +24,7 @@ def run():
   assert row['input_frame']=='base_link'
   assert binding is not None and sha(path)==binding[str(stamp)]
   xyz=np.fromfile(path,dtype='<f4',offset=8).reshape(-1,3).astype(float);T=np.asarray(e['T_native_from_common'])
-  mappings.append({'native_ns':e['header_ns'],'legacy_common_ns':stamp,'new_common_ns':e['common_header_ns'],'legacy_sha256':sha(path),'rebase':e['T_native_from_common']})
+  mappings.append({'native_ns':e['header_ns'],'legacy_common_ns':stamp,'new_common_ns':e['common_header_ns'],'legacy_sha256':sha(path),'reference_source_sha256':e['source_sha256'],'loaded_xyz_f64_sha256':hashlib.sha256(np.ascontiguousarray(xyz@T[:3,:3].T+T[:3,3],dtype='<f8').tobytes()).hexdigest(),'rebase':e['T_native_from_common']})
   return xyz@T[:3,:3].T+T[:3,3]
  target=np.fromfile(target_path,dtype='<f4',offset=8).reshape(-1,3).astype(float);query=GeometryCorrespondence(target)
  replay=EventReplay(contract,source_loader=load);replay.solver=InstrumentedUpdate(replay.factor)
@@ -40,11 +40,15 @@ def run():
   for row in reference['lidar_updates']:
    st=row['predicted'];x=State(np.array(st['p_imu_map']),np.array(st['v_imu_map']),Rotation.from_quat(st['q_map_body_xyzw']).as_matrix(),np.array(st['bg_body_rad_s']),np.array(st['ba_body_m_s2']),st['state_time_ns']);P=np.array(st['P']);e=frames[row['header_ns']]
    y,post,info=diagnostic(x,P,load(e),query);result.append({'header_ns':row['header_ns'],'corrected':replay.diagnostics.snapshot(y,post),**info})
-  dump(out,result)
+  dump(out,result);dump(out.with_suffix('.sources.json'),mappings)
   print('Frozen common-prior evaluations',len(result),flush=True)
   return
  result=replay.run(data,query);dump(out,result)
- if legacy is not None:dump(out.with_suffix('.sources.json'),mappings)
+ if legacy is not None:
+  # Original frame SHA identifies the reference stream, not the replacement cloud.
+  for row,m in zip(result['lidar_updates'],mappings):
+   row['reference_source_sha256']=row['source_sha256'];row['source_sha256']=m['legacy_sha256'];row['source_identity_encoding']='legacy input bin before the disclosed common-to-native rigid rebase';row['loaded_xyz_f64_sha256']=m['loaded_xyz_f64_sha256']
+  dump(out,result);dump(out.with_suffix('.sources.json'),mappings)
  if a.baseline:
   old=json.load(open(a.baseline));assert result['counts']==old['counts'];assert len(result['outputs'])==len(old['outputs'])
   errors={k:max(float(np.max(abs(np.asarray(x[k])-np.asarray(y[k])))) for x,y in zip(result['outputs'],old['outputs'])) for k in ['p_imu_map','v_imu_map','P','bg_body_rad_s','ba_body_m_s2']}
