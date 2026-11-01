@@ -4,7 +4,7 @@ Independent offline research in inertial error-state estimation, wheel constrain
 
 ## Public boundary
 
-Only independently written algorithms, synthetic smoke checks, portable tools and redacted research summaries are distributed. Production project code, sensor data, maps, trajectories, equipment details, extrinsics and real-data results are excluded. Historical originals are retained locally without rewriting. No third-party source is vendored and no production installation is replaced.
+Only independently written algorithms, synthetic smoke checks, portable tools and redacted research summaries are distributed. Production project code, sensor data, maps, trajectories, equipment details, extrinsics and private event-level results are excluded. Authorized de-identified aggregate findings and failure reports are included. Historical originals are retained locally without rewriting. No third-party source is vendored and no production installation is replaced.
 
 ## Run the portable smoke checks
 

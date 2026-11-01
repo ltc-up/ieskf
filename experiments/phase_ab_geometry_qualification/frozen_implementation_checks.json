@@ -1,0 +1,86 @@
+[
+  {
+    "case": "first_update",
+    "pass": true,
+    "old_accepted": true,
+    "new_accepted": false,
+    "reason": "REJECTED_KEEP_PRIOR",
+    "qualification": {
+      "accepted": false,
+      "local_converged": false,
+      "association_stable": false,
+      "reasons": [
+        "LOCAL_NOT_CONVERGED",
+        "ASSOCIATION_NOT_CERTIFIED"
+      ],
+      "status": "REJECTED_KEEP_PRIOR",
+      "STATISTICAL_POSTERIOR_CALIBRATED": false
+    }
+  },
+  {
+    "case": "rejected_large_proposal",
+    "pass": true,
+    "old_accepted": false,
+    "new_accepted": false,
+    "reason": "LINE_SEARCH_OR_TRUST_LIMIT",
+    "qualification": {
+      "accepted": false,
+      "status": "REJECTED_KEEP_PRIOR",
+      "reasons": [
+        "HISTORICAL_SOLVER_REJECTED"
+      ],
+      "local_converged": false,
+      "association_stable": false
+    }
+  },
+  {
+    "case": "largest_committed_velocity_change",
+    "pass": true,
+    "old_accepted": true,
+    "new_accepted": false,
+    "reason": "REJECTED_KEEP_PRIOR",
+    "qualification": {
+      "accepted": false,
+      "local_converged": false,
+      "association_stable": false,
+      "reasons": [
+        "LOCAL_NOT_CONVERGED",
+        "ASSOCIATION_NOT_CERTIFIED"
+      ],
+      "status": "REJECTED_KEEP_PRIOR",
+      "STATISTICAL_POSTERIOR_CALIBRATED": false
+    }
+  },
+  {
+    "case": "borderline_old_step_convergence",
+    "pass": true,
+    "old_accepted": true,
+    "new_accepted": false,
+    "reason": "REJECTED_KEEP_PRIOR",
+    "qualification": {
+      "accepted": false,
+      "local_converged": false,
+      "association_stable": true,
+      "reasons": [
+        "LOCAL_NOT_CONVERGED"
+      ],
+      "status": "REJECTED_KEEP_PRIOR",
+      "STATISTICAL_POSTERIOR_CALIBRATED": false
+    }
+  },
+  {
+    "case": "smallest_final_GN_step",
+    "pass": true,
+    "old_accepted": true,
+    "new_accepted": true,
+    "reason": "QUALIFIED_LOCAL_UPDATE",
+    "qualification": {
+      "accepted": true,
+      "local_converged": true,
+      "association_stable": true,
+      "reasons": [],
+      "status": "QUALIFIED_LOCAL_UPDATE",
+      "STATISTICAL_POSTERIOR_CALIBRATED": false
+    }
+  }
+]

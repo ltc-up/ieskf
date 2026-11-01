@@ -1,0 +1,74 @@
+{
+  "phase": "AB",
+  "date": "2026-11-01",
+  "baseline_phase_AA_commit": "35333679c5332734909c2223c5b2f6534316b6d4",
+  "research_code_commit": "275f3530973ebca4024d2b73ce99761f19e8c0f3",
+  "commit_semantics": "qualified solver/new numerical tests/frozen diagnostic implementation; later report and CLI-interface refinements are in this report Git history",
+  "input_identity": {
+    "AA_complete_replay_sha256": "af789ef4a0cea1666e10f852c801930bb0f5e175967d4a2fa9be340de345ba59",
+    "frozen_event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "contract_sha256": "282db2e3054b582735d6a394cd57b0377f319013d7348647a914816433a1620c",
+    "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "corrected_source_set_digest": "4a9c7a378509ebcb9abbfa4d97d5c031402f0dec5e8266749d49b42a90079140",
+    "identity_scope": "hashes only; per-event timestamps/paths and payloads retained privately"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "data_version": "same identified corrected deskew Source set and native time reference as AA; no regeneration",
+  "parameter_changes": "NONE to source/map/initial state/P/Q/R/prediction/wheel/Huber/association/guards/iteration budget",
+  "single_mechanism": "post-solve qualification and atomic state/P commit or rollback",
+  "numerical_tolerance": {
+    "inherited_prior_white_GN_step": 0.0001,
+    "dual_gradient_numeric_tolerance": 0.0001,
+    "association_witness": "exact last/final and final/next-untruncated pair equality; conservative local witness, not full-neighborhood proof"
+  },
+  "executed": {
+    "frozen_iteration_limit_frames": 226,
+    "old_converged_frames_audited": 7,
+    "rejected_large_proposal_audited": 1,
+    "representative_fixed_reference_solves": 4,
+    "tiny_pose_probes": 48,
+    "new_numerical_tests": 8,
+    "frozen_candidate_implementation_checks": 5,
+    "candidate_continuous_runs": 1,
+    "baseline_continuous_reruns": 0,
+    "deskew_runs": 0,
+    "production_changes": 0
+  },
+  "software_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "matplotlib": "3.6.3"
+  },
+  "reproduction_conditions": {
+    "public_synthetic_checks": "self-contained",
+    "real_input_replay": "requires separately authorized AA input/Source/Target/init/full-P traces and frozen configuration plus saved no-geometry control",
+    "online_arrival_replay": "not validated; deterministic offline event-time sort",
+    "full_covariance_calibration": "not established; posterior remains conditional fixed-linearization/IRLS approximation"
+  },
+  "failures": [
+    "candidate continuous accepted zero LiDAR updates",
+    "no longer-window eligibility",
+    "no independent accuracy or statistical consistency"
+  ],
+  "report": "FINAL_CONCLUSION.md",
+  "aggregate_results": "key_results.json",
+  "qualifications": {
+    "FINAL_OPTIMALITY_AUDITED": "PASS",
+    "NUMERIC_INFORMATION_VALID": "PASS",
+    "GEOMETRY_INFORMATION_TRUSTWORTHY": "NOT_VALIDATED",
+    "ASSOCIATION_STABILITY_AUDIT": "CONDITIONAL",
+    "ATOMIC_QUALIFICATION_NUMERIC": "PASS",
+    "FROZEN_IMPLEMENTATION_PARITY": "PASS",
+    "CONTINUOUS_CONSTRAINT_RETENTION": "FAIL",
+    "LONGER_REPLAY_ELIGIBLE": "FAIL",
+    "STATISTICAL_CONSISTENCY": "NOT_VALIDATED",
+    "INDEPENDENT_ACCURACY": "NOT_VALIDATED",
+    "PRODUCTION_CANDIDATE": "FAIL"
+  },
+  "report_helper_source_sha256": {
+    "diagnose.py": "62c55f4a532d607c2d45925aa44af12d1ab9900393b0d1a8d87a002e23c96c2d",
+    "summarize.py": "15c4596b15f3bd64df8e1a2ac29bb2bf2bc33ca2b808ca5a4d52b91d70642989",
+    "run_candidate.py": "75b849d8ff4cd934e7aa79725753e676dd74a7beaf378627f1692846b18186b1",
+    "check_candidate.py": "bcb801c1743577f57890c1db37dc37afca2deda0fa5e9996343b5540f451cc9b"
+  }
+}
