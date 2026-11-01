@@ -1,0 +1,27 @@
+test_patch_scale_does_not_invent_tangential_information (test_surface_observation.SurfaceExtractionTests.test_patch_scale_does_not_invent_tangential_information) ... ok
+test_sparse_support_cannot_be_faked_by_duplicates (test_surface_observation.SurfaceExtractionTests.test_sparse_support_cannot_be_faked_by_duplicates) ... ok
+test_target_record_copies_do_not_change_surfaces (test_surface_observation.SurfaceExtractionTests.test_target_record_copies_do_not_change_surfaces) ... ok
+test_anchor_covariance_transport_preserves_R (test_surface_observation.SurfaceObservationTests.test_anchor_covariance_transport_preserves_R) ... ok
+test_dense_independent_samples_have_shared_error_floor (test_surface_observation.SurfaceObservationTests.test_dense_independent_samples_have_shared_error_floor) ... ok
+test_duplicate_plane_registry_not_independent (test_surface_observation.SurfaceObservationTests.test_duplicate_plane_registry_not_independent) ... ok
+test_duplicate_source_ids_do_not_change_information (test_surface_observation.SurfaceObservationTests.test_duplicate_source_ids_do_not_change_information) ... ok
+test_finite_coplanar_has_no_edge_information (test_surface_observation.SurfaceObservationTests.test_finite_coplanar_has_no_edge_information) ... ok
+test_full_state_and_plane_jacobians (test_surface_observation.SurfaceObservationTests.test_full_state_and_plane_jacobians) ... ok
+test_horizontal_nulls_and_rank (test_surface_observation.SurfaceObservationTests.test_horizontal_nulls_and_rank) ... ok
+test_inconsistent_duplicate_identity_rejected (test_surface_observation.SurfaceObservationTests.test_inconsistent_duplicate_identity_rejected) ... ok
+test_invalid_covariance_rejected_without_update (test_surface_observation.SurfaceObservationTests.test_invalid_covariance_rejected_without_update) ... ok
+test_joseph_dense_gain_full_cross_state (test_surface_observation.SurfaceObservationTests.test_joseph_dense_gain_full_cross_state) ... ok
+test_low_rank_effective_R_matches_dense (test_surface_observation.SurfaceObservationTests.test_low_rank_effective_R_matches_dense) ... ok
+test_low_support_atomic_reject (test_surface_observation.SurfaceObservationTests.test_low_support_atomic_reject) ... ok
+test_reset_and_atomic_reject (test_surface_observation.SurfaceObservationTests.test_reset_and_atomic_reject) ... ok
+test_shared_parent_patch_partition_and_independent_counterexample (test_surface_observation.SurfaceObservationTests.test_shared_parent_patch_partition_and_independent_counterexample) ... ok
+test_shared_plane_R_monte_carlo_known_law (test_surface_observation.SurfaceObservationTests.test_shared_plane_R_monte_carlo_known_law) ... ok
+test_singular_alias_covariance_has_same_information (test_surface_observation.SurfaceObservationTests.test_singular_alias_covariance_has_same_information) ... ok
+test_three_and_local_plane_rank6 (test_surface_observation.SurfaceObservationTests.test_three_and_local_plane_rank6) ... ok
+test_two_plane_rank5 (test_surface_observation.SurfaceObservationTests.test_two_plane_rank5) ... ok
+test_unobserved_independent_prior_variances_stay (test_surface_observation.SurfaceObservationTests.test_unobserved_independent_prior_variances_stay) ... ok
+
+----------------------------------------------------------------------
+Ran 22 tests in 0.069s
+
+OK
