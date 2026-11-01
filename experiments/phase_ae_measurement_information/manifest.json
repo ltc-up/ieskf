@@ -1,0 +1,103 @@
+{
+  "phase": "AE",
+  "date": "2026-11-01",
+  "baseline_AD_commit": "3198fe2e23768f519e84f62b0e18bb8d9d763da3",
+  "density_and_Hessian_code_commit": "86da5ff06b9edfd28f79194da67bada5d30cb596",
+  "analysis_code_commit": "2934dd79c5c4cdf2fa101267d086fb3625e5949c",
+  "commit_scope": "predefined arms/tests committed before real runs; spatial exclusion and disclosed support supplement before supplementary scores; reporting code hashed below",
+  "input_identity": {
+    "AA_complete_replay_sha256": "af789ef4a0cea1666e10f852c801930bb0f5e175967d4a2fa9be340de345ba59",
+    "first_Source_sha256": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "Target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "AB_first_fixed_refinement_record_sha256": "cf41503a4b0459f702d77098826f5b863bd4afd51bd3fe2acf0573e5b0fba050",
+    "event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "first_frozen_state_and_P_binding_sha256": "10b397a123b13fedadfeaf744bd8f2275a6cd6e07b36b567c2b36575c1f4a94b",
+    "identity_scope": "non-reconstructive digests only; raw Header timestamps/device frames/private matrices are excluded"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "public_numeric_config_file_sha256": "cb25184d76b20bec92303351772e95ee25b8495f77c01315a9aa3a1287bfd109",
+  "canonical_numeric_config_sha256": "c83d5498f59bb6927cd00bc6729372a6c53722b056c6e2f431a706cb81b5a4c7",
+  "config_identity_note": "Original frozen config includes two private input-topic labels deliberately excluded from public defaults; all numeric/research entries compare equal. No runtime objective/model setting differs.",
+  "AD_objective_sha256_unchanged": "b4539d52b17bd1ae1140dc0b079b7e81ea21832caa68660bf82e41f3c2402b38",
+  "AD_saved_precision_results_sha256": "efb94c5af1cc4e6bbaedde1ab0684d50500746673d60da4572f6390c235f7e1d",
+  "original13_optimizer_seed_sha256": "00584b9547d3b303ef793537c48ffedea9f9f8ee3d7901df1f01061f814cb79e",
+  "density_mask_identity_sha256": "f11a8a6cd050ba123f46f203283311e14393d83e0b0c6f1c16777b8ea30cd08d",
+  "density_definition_identity_sha256": "164f993c9a598d3996c21bc1905083bd4645d0cf20f36ab083a50ac472a6a2b1",
+  "crossfit_partition_identity_sha256": "0fdd7f47c83f9d6c62e85df18a1ed2164228d90e13e08257c23a4ab16d0d9268",
+  "fixed_validation_witness_identity_sha256": "789c12743f6f31507ef3befc05d189fc755784266a1d1f1721edf7931a305158",
+  "data_version": "unchanged original corrected native-reference Source/Target; duplicate/subsample views are local diagnostics, no overwrite or deskew regeneration",
+  "software": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "matplotlib": "3.6.3"
+  },
+  "fixed": [
+    "AD objective/kernel/Huber/sigma/null prior",
+    "original real-input full15 prior/P and13 seeds",
+    "inertial/wheel/F/G/Q/R/initialization",
+    "Source/Target coordinates and native time",
+    "all original safety/trust/support thresholds"
+  ],
+  "sampling": {
+    "A": "original",
+    "B": "two identical aliases each Target, first exact original planes, separately refit",
+    "C": "alternating lexicographic per5m-cell ranks",
+    "D": "C inside count-ranked top-quartile candidate cells; no residual selection",
+    "normal_refit_layer": "original20-neighbor/validity rules, nominal only",
+    "synthetic": "known plane with separate configured synthetic initial prior, no real prior modification",
+    "crossfit": "20m XY cores inset3.5m, color(ix+2iy)mod3; train-only density rules use train candidates and original seeds, never all-data roots"
+  },
+  "parameters": {
+    "all13_starts_each_pure_density_arm": true,
+    "solver": "unchanged AD60 trust stages/200 SLSQP iterations/ftol1e-12/original scales",
+    "uniform_precision_probe": "same AD up to3 steps,1e-5 Hessian,1e-10 roundoff cost floor, unchanged1e-4 gradient qualification",
+    "Hessian_validation_stencils": [
+      0.0001,
+      1e-05,
+      1e-06,
+      1e-07
+    ],
+    "synthetic_tests_new": 10
+  },
+  "executed": {
+    "AD_endpoint_evaluations": 13,
+    "density_algebra_checks": 8,
+    "fixed_planes_density": 39,
+    "refitted_normals_nominal": 3,
+    "training_only_spatial_crossfits": 4,
+    "synthetic": 4,
+    "total": 50,
+    "continuous_runs": 0,
+    "filter_state_covariance_commits": 0
+  },
+  "qualification": {
+    "AD_RESULT_REPRODUCED": "PASS",
+    "PURE_MULTIPLICITY_ISOLATED": "PASS",
+    "DENSITY_INVARIANCE": "FAIL",
+    "SIGNED_HESSIAN_DECOMPOSITION": "PASS",
+    "GEOMETRIC_OBSERVABILITY_SANITY": "FAIL",
+    "SPATIAL_NEIGHBORHOOD_ISOLATION": "PASS",
+    "ABSOLUTE_POSE_ACCURACY": "NOT_VALIDATED",
+    "FRONTEND_RESEARCH_USE": "CONDITIONAL",
+    "TRUSTED_LOCALIZATION_FRONTEND": "NOT_VALIDATED",
+    "FILTER_POSTERIOR": "FILTER_POSTERIOR_NOT_QUALIFIED",
+    "CLOSED_LOOP_RECOMMENDED": "FAIL",
+    "PRODUCTION_CANDIDATE": "FAIL"
+  },
+  "reproduction": "synthetic tests/plane fully public and independent; exact real-input study needs separately authorized payloads. No raw point/map/trajectory/fullP or restricted production source published.",
+  "source_sha256": {
+    "src/geometry_ieskf/density_audit.py": "f9feaba14d8c13be6cfe555212a0594d39de9f04b737837bf3d8ab9b4a58eebb",
+    "src/geometry_ieskf/information_audit.py": "380d0ee80c6f03d19232c90616d54695cf6cfa0287ac8197560a8b5d7899931c",
+    "tests/test_measurement_information.py": "eada6441392dcbb44bd3995145a57b13ac6a06616de603c6ad45067ace6707c3",
+    "experiments/phase_ae_measurement_information/run_synthetic.py": "158d8292796b5bbadac2146ea06c2daaf98bdec988850992546de576f045e416",
+    "experiments/phase_ae_measurement_information/bind_density_factors.py": "588ef62114499a5c841c4a40031a80d81eeea971490bd13b378152d2e92ced2a",
+    "experiments/phase_ae_measurement_information/summarize.py": "86045aeb52d2e30bd325ed4827b92630d832cee5777c67f05100c1c6c73fe1e9",
+    "experiments/phase_ae_measurement_information/complete_validation.py": "673a7e8157d9f566fe567c14e5f41bdfa1097aa433ece89ff3b2294fac851f8f",
+    "experiments/phase_ae_measurement_information/audit_directions.py": "e071786dcb41309f548d0fa1f1a625fcdfb99a1087ff1166e2421c07ce87d015",
+    "experiments/phase_ae_measurement_information/case_tools.py": "0bf5e27a06225c9e52ef61640567840125da970dcafa5ac04dbfc2f292bb2102",
+    "experiments/phase_ae_measurement_information/run_validation.py": "d77e3ec9170cd13d73924483801303dc887b0877497d924cbbb8e2a613d436b9",
+    "experiments/phase_ae_measurement_information/prepare_density.py": "f200d61ae0459bb08171f4679d131342768bc7c7cc89ad7a165e5d33c9ea713b",
+    "experiments/phase_ae_measurement_information/run_density.py": "f46736a3def1576ea87a2f89d2fcd290d9bef164d3346e78b53ba23a51fddf64"
+  }
+}

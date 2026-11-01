@@ -1,0 +1,1 @@
+AD exact energy repeated13, roots [{'root': 'G1', 'Hessian_relative_repeat_error': 0.0, 'reconstruction_relative': 1.637443789945812e-08}, {'root': 'G2', 'Hessian_relative_repeat_error': 0.0, 'reconstruction_relative': 3.319480281333198e-05}] arm counts {'A': 908013, 'B': 1816026, 'C': 460384, 'D': 903607}
