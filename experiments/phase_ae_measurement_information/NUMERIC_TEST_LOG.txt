@@ -1,0 +1,15 @@
+test_block_cores_have_disjoint_large_gap (test_measurement_information.InformationAuditTests.test_block_cores_have_disjoint_large_gap) ... ok
+test_complete_signed_reconstruction (test_measurement_information.InformationAuditTests.test_complete_signed_reconstruction) ... ok
+test_duplicated_view_matches_materialized_same_planes (test_measurement_information.InformationAuditTests.test_duplicated_view_matches_materialized_same_planes) ... ok
+test_force_reconstruction (test_measurement_information.InformationAuditTests.test_force_reconstruction) ... ok
+test_negative_responsibility_covariance (test_measurement_information.InformationAuditTests.test_negative_responsibility_covariance) ... ok
+test_nonpositive_curvature_does_not_invent_sigma (test_measurement_information.InformationAuditTests.test_nonpositive_curvature_does_not_invent_sigma) ... ok
+test_prior_is_identity_in_full_white_chart (test_measurement_information.InformationAuditTests.test_prior_is_identity_in_full_white_chart) ... ok
+test_pure_density_preserves_normal_and_identity_aliases (test_measurement_information.InformationAuditTests.test_pure_density_preserves_normal_and_identity_aliases) ... ok
+test_sampling_is_deterministic_without_coordinate_jitter (test_measurement_information.InformationAuditTests.test_sampling_is_deterministic_without_coordinate_jitter) ... ok
+test_signed_kernel_first_terms (test_measurement_information.InformationAuditTests.test_signed_kernel_first_terms) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 0.049s
+
+OK

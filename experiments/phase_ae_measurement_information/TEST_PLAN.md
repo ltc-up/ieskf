@@ -1,0 +1,21 @@
+# Phase AE predeclared plan
+
+Baseline: Phase AD 3198fe2, confirmed remote main identical. No new association objective, model/noise/prior/Deskew/safety changes; zero continuous runs and zero filter posterior commits.
+
+## Density arms, fixed BEFORE outcomes
+A=original records. B=exactly TWO copies of every original Target (no jitter). C=within each existing 5m spatial cell, lexicographically order original xyz/index and keep alternating even ranks; this approximates uniform half density per cell, not a new geometric surface. D=apply C only inside the top quartile of 5m cells by candidate-pool count, others unchanged. Candidate pool is the union of radius queries at all13 existing starting states and original AD G1/G2; choose high-density cells by counts descending, lexicographic cell tie-break, never by objective/residual. Copies and removed records retain their original identity map.
+
+FIRST: preserve original Target coordinates, normals and plane validity in ALL four arms (fit each original plane on the original map; duplicate records share that exact plane). Evaluate energy/gradient/full Hessian at SAME original G1/G2; compare G1/G2 energy ranking. Reuse original A capture results after binding checks; B/C/D run ALL13 SAME starts with AD solver and uniform precision diagnostic, same budgets/tolerances/guards. No prior recenter or favorable initializer selection.
+
+SECOND and separate: construct B/C/D actual resampled maps and re-estimate original20-neighbor planes/validity there. Evaluate SAME G1/G2; solve from nominal only (predeclared, not a favorable seed). This isolates extra normal-neighborhood changes from pure multiplicity; no all13 basin claim for this layer.
+
+## Hessian source audit
+At A/G1 and A/G2 decompose the exact same energy into prior; plane residual intrinsic curvature; negative residual-responsibility covariance; kernel/residual cross terms; numerator kernel first/second derivative terms; denominator/support-density first/second derivative terms; and nonlinear state-chart curvature. Keep full15 matrices in the actual chart and prior-white chart. Check reconstruction against finite differences at 1e-5 and1e-6; never interpret signed summands as independent covariance. Preserve full spectra/eigenvectors privately; publish deidentified directional loadings/contributions and sigma summaries. Derive block condition recovery only where unconstrained assumptions hold.
+
+## Known-plane synthetic case
+Use exact z=0 plane normals, deterministic grid/source/prior and known true pose, no sensor noise. Apply all-record duplicate2, alternating half, and half-space duplicated density. At the true pose inspect tangential gradient/curvature even though geometric normals have ZERO tangential information. Optimize all four from the SAME nominal start. No tuning of tau, null weight, noise or kernel.
+
+## Validation identity and leakage
+AD G1/G2 used ALL original Source/map; retroactive held-out subsets are NOT independent validation of those historic fits. Do not falsely relabel them independent. Build a NEW spatial cross-fit: 20m XY blocks, core inset R+normal_radius=3.5m on each side; validation color (ix+2iy) mod3=0, train other colors. Source IDs assigned once by original predicted coordinates to block cores; training/validation Source IDs disjoint. Map centers in different block cores are >=7m apart, greater than twice normal radius=5m; verify actual valid-plane neighbor IDs do not overlap. Fit NEW train-only A/B/C/D from ORIGINAL nominal prior, never from all-data G1/G2; use same objective, no validation-driven parameter or seed choice. Validate with excluded Source/map, both support and untruncated residual tails; no residual-only cherry-picking. Historic roots/density fits evaluated on the same excluded structures only as contaminated posthoc consistency diagnostics. No absolute pose truth is assumed.
+
+If a fold has insufficient original support/normal eligibility, report failure; do not choose a different partition. If no genuinely independent geometric/reference data exist, say so. Sampling changes are sensitivity diagnostics, not proposed production parameters. All full states, P, normals, map, points, trajectories and private records stay ignored; public code/synthetic data and deidentified summaries only.
