@@ -1,0 +1,9 @@
+# Single candidate, recorded after mechanism diagnosis
+
+The original 13-start/60-outer-step diagnostic was completed without changing the original association rule. Twelve starts reached the same alternating cycle; one lacked support at initialization. Read-only endpoint attribution found ONE Source whose nearest Target switched between valid and invalid local normals. Both nearest distances are well inside the unchanged radius. Factor inclusion, not just Target-ID churn, changes discontinuously.
+
+Only now test one candidate: restrict to Targets satisfying the EXISTING normal-validity predicate before choosing the nearest inside the EXISTING correspondence radius. Use exact radius candidates, not a newly tuned k or distance. Normal fitting, Huber, Target-repeat normalization, original support minima, full frozen prior, optimizer/trust/safety limits and AB qualification are unchanged. This is an explicit association algorithm change, NOT an assertion that the original nearest-then-reject rule was retained. It does not modify any production module.
+
+This amends the initial no-rule-change baseline plan for AC4 ONLY; original results are retained. The sole controlled change relative to the AC2 solver is the ordering of admissibility and nearest selection. Test the SAME 13 predetermined starts and SAME three representative events, without new seeds or best-seed selection. Only the nominal start may establish continuous admission. Do not simultaneously change dynamic-merit line search, point weights, posterior gate or iteration cap.
+
+The candidate may fail from other valid-plane switches or support/cost behavior. No success is assumed. Extra nominal continuation to 120 is unnecessary if an exact repeating cycle is already demonstrated; do not spend budget to relabel a cycle as convergence.
