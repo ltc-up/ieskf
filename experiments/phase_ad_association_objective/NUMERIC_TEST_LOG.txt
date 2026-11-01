@@ -1,0 +1,14 @@
+test_complete_gradient_nonzero_chart_and_cross_prior (test_association_objective.AssociationObjectiveTests.test_complete_gradient_nonzero_chart_and_cross_prior) ... ok
+test_duplicate_map_is_not_claimed_density_invariant (test_association_objective.AssociationObjectiveTests.test_duplicate_map_is_not_claimed_density_invariant) ... ok
+test_huber_kink_gradient_continuous (test_association_objective.AssociationObjectiveTests.test_huber_kink_gradient_continuous) ... ok
+test_invalid_plane_contributes_identically_zero (test_association_objective.AssociationObjectiveTests.test_invalid_plane_contributes_identically_zero) ... ok
+test_mixture_bounds_nonnegative_and_capped (test_association_objective.AssociationObjectiveTests.test_mixture_bounds_nonnegative_and_capped) ... ok
+test_plane_order_tie_has_no_switch (test_association_objective.AssociationObjectiveTests.test_plane_order_tie_has_no_switch) ... ok
+test_radius_value_and_first_derivative_continuity (test_association_objective.AssociationObjectiveTests.test_radius_value_and_first_derivative_continuity) ... ok
+test_repeatability_and_permutation (test_association_objective.AssociationObjectiveTests.test_repeatability_and_permutation) ... ok
+test_unsupported_source_constant_and_prior (test_association_objective.AssociationObjectiveTests.test_unsupported_source_constant_and_prior) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.021s
+
+OK
