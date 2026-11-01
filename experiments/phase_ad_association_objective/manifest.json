@@ -1,0 +1,104 @@
+{
+  "phase": "AD",
+  "date": "2026-11-01",
+  "baseline_commit": "b8b45d0c36f910b308f9d9cc18d5e5da1121238f",
+  "objective_frozen_code_commit": "0f74497a4fbf5adf4fb09f20ae6e884a89401185",
+  "analysis_code_commit": "7d3ef8e97cde0a7ada45e7d2008c51a97a7e4a76",
+  "commit_semantics": "objective solver frozen before capture; precision diagnosis predeclared after raw solver outcomes, applied uniformly; later tools/reports have file hashes below",
+  "input_identity": {
+    "AA_complete_replay_sha256": "af789ef4a0cea1666e10f852c801930bb0f5e175967d4a2fa9be340de345ba59",
+    "first_Source_sha256": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "Target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "AB_first_fixed_refinement_record_sha256": "cf41503a4b0459f702d77098826f5b863bd4afd51bd3fe2acf0573e5b0fba050",
+    "event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "first_frozen_state_and_P_binding_sha256": "10b397a123b13fedadfeaf744bd8f2275a6cd6e07b36b567c2b36575c1f4a94b",
+    "identity_scope": "non-reconstructive digests only; raw Header timestamps/device frames/private matrices are excluded"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "data_version": "same corrected native-reference frozen AA/AC inputs; no source regeneration",
+  "software": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "matplotlib": "3.6.3"
+  },
+  "unchanged": [
+    "full15 frozen prediction/P and original optimizer starts",
+    "IMU/wheel/F/G/Q/R and initial state",
+    "Source/map/Deskew/native LiDAR reference time",
+    "original Huber/sigma/radius/normal validity",
+    "cumulative safety and trust balls"
+  ],
+  "explicit_change": "ONE compact Huber/null mixture replaces nearest selection and hard repeated-Target factor weights; weight derivatives included; measurement semantics changed, not calibrated",
+  "parameters": {
+    "initial_path_samples_per_edge": 33,
+    "boundary_bisections": 40,
+    "one_sided_offsets": [
+      0.001,
+      0.0001,
+      1e-05,
+      1e-06,
+      1e-07,
+      1e-08
+    ],
+    "optimizer_seeds": 13,
+    "stages_max": 60,
+    "SLSQP_maxiter": 200,
+    "ftol": 1e-12,
+    "white_gradient_inf_threshold": 0.0001,
+    "mixture_temperature": "existing Huber delta squared",
+    "radial_kernel": "(1-d\u00b2/R\u00b2)^3 inside same R; otherwise0",
+    "null_weight": 1,
+    "null_loss": "Huber(existing R)",
+    "uniform_precision_steps_max": 3,
+    "precision_H_stencil": 1e-05,
+    "H_stencil_validation": [
+      0.0001,
+      1e-05,
+      1e-06
+    ],
+    "precision_roundoff_cost_floor": 1e-10,
+    "line_scales": "unchanged original list"
+  },
+  "executed": {
+    "old_cycle_edges": 7,
+    "boundary_records": 43,
+    "smooth_cell_tests": 181,
+    "new_synthetic_tests": 9,
+    "new_capture_runs": 13,
+    "uniform_endpoint_probes": 13,
+    "discarded_energy_covariance_transactions": 1,
+    "continuous_runs": 0,
+    "filter_state_covariance_commits": 0
+  },
+  "qualifications": {
+    "DISCRETE_SWITCH_CAUSE": "PASS",
+    "UNIFIED_OBJECTIVE_AND_DERIVATIVE": "PASS",
+    "RAW_NOMINAL_SOLVER": "FAIL",
+    "OFFLINE_NOMINAL_STATIONARY_POINT": "PASS",
+    "INITIALIZATION_INVARIANCE": "FAIL",
+    "NUMERIC_ENERGY_LAPLACE_TRANSACTION": "PASS",
+    "VALIDATED_FILTER_POSTERIOR": "NOT_VALIDATED",
+    "CONTINUOUS_REPLAY_ELIGIBLE": "FAIL",
+    "TWENTY_HZ_IMPLEMENTATION": "FAIL",
+    "INDEPENDENT_ACCURACY": "NOT_VALIDATED",
+    "STATISTICAL_CONSISTENCY": "NOT_VALIDATED",
+    "PRODUCTION_CANDIDATE": "FAIL"
+  },
+  "reproduction": "public synthetic tests independent; exact frozen-input experiment requires separately authorized private payloads; no auto-eagle production source included",
+  "source_file_sha256": {
+    "src/geometry_ieskf/association_objective.py": "b4539d52b17bd1ae1140dc0b079b7e81ea21832caa68660bf82e41f3c2402b38",
+    "tests/test_association_objective.py": "2a0f72cc6a055f3e1699c952da4ce0b6186c1cf0677b2f8cf5b1cfefb8c52edf",
+    "experiments/phase_ad_association_objective/audit_precision.py": "e6f0ef83dc16ae1a769321cc12b50e685365a9a4f0f5fb629eede980aaff912d",
+    "experiments/phase_ad_association_objective/summarize.py": "c8f001e5a9613469d0e89bc7862bb4c749a09dac6c81fbaaded10a8a1fdee4df",
+    "experiments/phase_ad_association_objective/audit_paths.py": "814f1797737b680a37c6fbc1ae6ba4e700ecb99ef19656ded19f9ec2ee3d888a",
+    "experiments/phase_ad_association_objective/audit_smooth_paths.py": "efac0f7639b14d838d90bde136d4611e47d633cff3b9d4b011bd521c1465e88f",
+    "experiments/phase_ad_association_objective/audit_force_balance.py": "61b45b39fc946132da5a38cb33a44737f93a5400e0a0155adc27b7e8eb686a77",
+    "experiments/phase_ad_association_objective/run_candidate.py": "6a12bc854e7ff6415c45baa4879b9e48046ec0a64b3d25fbd69859e416abf790",
+    "experiments/phase_ad_association_objective/detail_switches.py": "0a6469e6c4bd5ab014f393247a4323bf8c0f5a813c4c13cc8cdd8164e71f8b7e",
+    "experiments/phase_ad_association_objective/audit_endpoints.py": "d21ca90394fcb7fdbcc7451b3e325f582d8c6b61060622c5a41144bf81bf632e"
+  },
+  "public_numeric_config_file_sha256": "cb25184d76b20bec92303351772e95ee25b8495f77c01315a9aa3a1287bfd109",
+  "canonical_numeric_config_sha256": "c83d5498f59bb6927cd00bc6729372a6c53722b056c6e2f431a706cb81b5a4c7",
+  "config_identity_note": "Original frozen config includes two private input-topic labels deliberately excluded from public defaults; all numeric/research entries compare equal. No runtime objective/model setting differs."
+}

@@ -1,0 +1,7 @@
+original 0 boundaries 1 interiors 31 endpoint_change -0.19390479010988315
+original 1 boundaries 1 interiors 31 endpoint_change 0.19390479010988315
+nearest_valid 0 boundaries 12 interiors 20 endpoint_change 0.9550070422292265
+nearest_valid 1 boundaries 8 interiors 24 endpoint_change -0.4928204880064868
+nearest_valid 2 boundaries 6 interiors 26 endpoint_change -0.07928332764367951
+nearest_valid 3 boundaries 7 interiors 25 endpoint_change -0.456937564613213
+nearest_valid 4 boundaries 8 interiors 24 endpoint_change 0.07403433803415282
