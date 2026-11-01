@@ -1,0 +1,11 @@
+test_conditional_completion_preserves_cross_prior (test_seeded_geometry.SeedInterfaceTests.test_conditional_completion_preserves_cross_prior) ... ok
+test_infeasible_seed_not_clipped (test_seeded_geometry.SeedInterfaceTests.test_infeasible_seed_not_clipped) ... ok
+test_nonzero_seed_frozen_prior_not_reset (test_seeded_geometry.SeedInterfaceTests.test_nonzero_seed_frozen_prior_not_reset) ... ok
+test_partial_candidate_atomic_rejection (test_seeded_geometry.SeedInterfaceTests.test_partial_candidate_atomic_rejection) ... ok
+test_pose_round_trip (test_seeded_geometry.SeedInterfaceTests.test_pose_round_trip) ... ok
+test_zero_start_matches_historical_decisions (test_seeded_geometry.SeedInterfaceTests.test_zero_start_matches_historical_decisions) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.007s
+
+OK

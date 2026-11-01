@@ -1,0 +1,71 @@
+{
+  "phase": "AI",
+  "baseline_commit": "262e22f625aa4b2410e5418429c2ed0bba27a432",
+  "research_code_commit": "Enclosing Git commit; resolve with git log -1 -- experiments/phase_ai_ndt_seeded_geometry",
+  "data_version": "AH five full-deskew A events, unchanged native reference",
+  "input_file_hashes": {
+    "phase_ah_deskew_z_ablation/selection_private.json": "23537d81d120d6fe4a64d5913cef250fa2f26967f3812277265639bfca79ed82",
+    "phase_ah_deskew_z_ablation/frozen_updates_private.json": "b130aa2e360456cb187d35a6d1d622be6523ca220f1847986f3603e2a38a54a1",
+    "phase_ah_deskew_z_ablation/ndt_results.jsonl": "a973e723ba80f441fce9dd270560ea72b28ab52310d23c5c9a8398f43d79cafe",
+    "history/phase_v/results/input_contract.json": "282db2e3054b582735d6a394cd57b0377f319013d7348647a914816433a1620c",
+    "inputs/map_target.bin": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968"
+  },
+  "source_hashes": {
+    "E1": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "E2": "da41349d8e4b8ca1e9c68f5923bb43b06b55a80df3e98d65e1d17b43c6b745bd",
+    "E3": "b219f5e72327bdc056c9631d5c4b65834af1e5295bb3d84d0404709dffd78dd9",
+    "E4": "fa8bc38fc9f18ebbe2b6a0daddedd28382a00d2ef988e2337d0337480cdc131a",
+    "E5": "75bc4f14004ba5f968d82003dba42e32ffa96439d054fd19c01f8d87d269ec14"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "public_numeric_config_file_sha256": "cb25184d76b20bec92303351772e95ee25b8495f77c01315a9aa3a1287bfd109",
+  "software": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4"
+  },
+  "new_test_count": 6,
+  "actual_execution": {
+    "four_loop_start_comparisons": 10,
+    "four_loop_seed_rejected_before_solve": 3,
+    "extended_start_comparisons": 4,
+    "extended_max_loops": 16,
+    "new_NDT_fits": 0,
+    "qualified_endpoints": 1,
+    "real_state_P_commits": 0,
+    "continuous_replays": 0
+  },
+  "publication": "Independent code/synthetic tests/deidentified aggregates only; private inputs required for real-data reproduction",
+  "implementation_hashes": {
+    "experiments/phase_ai_ndt_seeded_geometry/posterior_diagnostic.py": "1561d750d548c187eca93abb3406dfa9d60547400f3fd32b0beca334c8174aa4",
+    "experiments/phase_ai_ndt_seeded_geometry/run_frozen.py": "98e4ac574b4b2d6171e47fa42dde6f253bf45cc186983f83b17414813d290d71",
+    "src/geometry_ieskf/seeded_geometry.py": "079c3c2b0d78e9db07557eb435a5ec4ca9e91b1e1a9fa83983cff84e4bf5e620",
+    "tests/test_seeded_geometry.py": "b504a99baede959a043b625e1d1ed20d3bb7d98a9b4458879daaa61f73a4c147"
+  },
+  "payload_hashes": {
+    "FAILURE_ANALYSIS.md": "b4f23c6d3d230c996492fbe0f1f136da90643a49ca75c81ed104fd6847ff5ed3",
+    "posterior_diagnostic.py": "1561d750d548c187eca93abb3406dfa9d60547400f3fd32b0beca334c8174aa4",
+    "REPRODUCE.md": "77dd1754cd7780b13cd858d234d4e5273e0e4d06a1e376b06da887817f02d4d8",
+    "TEST_PLAN.md": "497cb433c0000f17b072ed5b1b82af28d1629fc73e889c17812fa1ba92d0ccd0",
+    "key_results.json": "d2243542443f2d15c6e12ce90cbdd6c929df8da173f4b1854c06ab65a9c2cd72",
+    "NDT_SEED_GEOMETRY_COMPATIBILITY.md": "5b87595b5c3562423d149a4e38eea8c99a042f43718bba1c25e7f648afaf4ade",
+    "INPUT_AND_PRIOR_IDENTITY.md": "ba416039a56219a651b498874018f0f5b0c14afd008587d2103e92b24348e75d",
+    "FINAL_CONCLUSION.md": "ba8d77a5b3b9d430ab465d3ded17fc6b14bffbf21b6010e872f5c4b9a0effb13",
+    "NUMERIC_TEST_LOG.txt": "10a531c8adce8cd16cdf88120d2a4ed202498a5f3e295ce14b0e487b00b73245",
+    "FROZEN_SOLVER_COMPARISON.md": "1bb5b50495b61e494fa5663e161b3e2ec4fe94a11044f52f15939d71454c37b7",
+    "POSTERIOR_QUALIFICATION.md": "1a456ff1ad5533c7881e15c8b09a6e177167f6f1852b414bfa8da1d75de3c9a5",
+    "run_frozen.py": "98e4ac574b4b2d6171e47fa42dde6f253bf45cc186983f83b17414813d290d71"
+  },
+  "production_protection": {
+    "files_unchanged": 45621,
+    "original_Git_HEAD_branch_worktree_stash_unchanged": true,
+    "history_artifact_counts": {
+      "phase_ac_geometry_capture": 106,
+      "phase_ad_association_objective": 77,
+      "phase_ae_measurement_information": 169,
+      "phase_af_surface_observation": 23,
+      "phase_ag_surface_evidence_capture": 21,
+      "phase_ah_deskew_z_ablation": 213
+    }
+  }
+}
