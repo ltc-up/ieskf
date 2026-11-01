@@ -1,0 +1,10 @@
+test_boundary_solution_not_infeasible (test_surface_capture.SurfaceCaptureTests.test_boundary_solution_not_infeasible) ... ok
+test_budget_not_relabelled_converged (test_surface_capture.SurfaceCaptureTests.test_budget_not_relabelled_converged) ... ok
+test_effective_covariance_really_frozen (test_surface_capture.SurfaceCaptureTests.test_effective_covariance_really_frozen) ... ok
+test_large_single_step_has_legal_multistep_solution (test_surface_capture.SurfaceCaptureTests.test_large_single_step_has_legal_multistep_solution) ... ok
+test_new_constant_R_objective_gradient (test_surface_capture.SurfaceCaptureTests.test_new_constant_R_objective_gradient) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.027s
+
+OK
