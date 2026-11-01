@@ -1,0 +1,31 @@
+{
+  "phase": "AA",
+  "schema_version": 1,
+  "research_code_commit": "d613b74684655de7336d952a8af84be8a9a29735",
+  "code_commit_semantics": "algorithm/tool revision; this documentation revision is obtained from Git history, avoiding a self-referential commit hash",
+  "input_identity": {
+    "extracted_event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "contract_sha256": "282db2e3054b582735d6a394cd57b0377f319013d7348647a914816433a1620c",
+    "source_set_identity": "SHA-bound corrected native-reference set plus separately SHA-bound legacy captures; complete per-event binding withheld to avoid publishing internal event metadata"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "data_versions": {
+    "corrected": "identified historical height-improved chain; no regeneration in AA",
+    "legacy": "historical capture, rigid-reference rebasing only; conditional reference/coverage equivalence"
+  },
+  "software_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "matplotlib": "3.6.3"
+  },
+  "reproducibility": {
+    "synthetic_checks": "self-contained via tests/test_portable_smoke.py",
+    "real_input_replay": "requires separately authorized private data and frozen initialization/extrinsics/configuration; CLI accepts explicit paths",
+    "historical_arrival_order": "not recoverable; replay is offline physical/Header-time sorting",
+    "raw_bag_full_hash": "not recomputed; individually extracted event identities retained",
+    "historical_CUDA_toolkit_version": "not recovered; binary identity evidence retained privately"
+  },
+  "qualification": "diagnostic only; no independent accuracy, statistical consistency or production readiness",
+  "publication_scope": "independent code, de-identified aggregates and documents; no private source/map/bag/trajectory payloads"
+}
