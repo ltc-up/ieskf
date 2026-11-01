@@ -1,33 +1,18 @@
-# Geometry-IESKF Research
+# Geometry-IESKF research
 
-Independent research workspace for a 15-state geometry-aided inertial error-state Kalman filter (ESKF).
+Independent offline research in inertial error-state estimation, wheel constraints, map point-plane factors and iterative full-state updates. This is a research prototype with known convergence and uncertainty limitations.
 
-## Repository layout
+## Public boundary
 
-- `src/` — independent research implementation (to be migrated locally).
-- `experiments/` — versioned research phases and reproducibility notes.
-- `docs/EXPERIMENT_INDEX.md` — phase summary and result links.
-- `docs/RESEARCH_STATUS.md` — current research gates and open questions.
-- `scripts/` and `tests/` — reproducibility tooling and independent tests.
-- `configs/` — research-only configuration.
-- `data/` — **local-only** experimental inputs (Git-ignored).
+Only independently written algorithms, synthetic smoke checks, portable tools and redacted research summaries are distributed. Production project code, sensor data, maps, trajectories, equipment details, extrinsics and real-data results are excluded. Historical originals are retained locally without rewriting. No third-party source is vendored and no production installation is replaced.
 
-This repository is separate from the production A2RL / auto-eagle source tree. Research outcomes must not be presented as production-ready until independent accuracy, statistical consistency, and runtime criteria have been met.
-
-## Local setup
+## Run the portable smoke checks
 
 ```bash
-cd /home/ltc/flyagle
-git clone https://github.com/ltc-up/ieskf.git
-cd ieskf
+python3 -m pip install -e .
+PYTHONPATH=src python3 -m unittest discover -s tests -v
 ```
 
-Set `A2RL_ROOT` and `IESKF_DATA_ROOT` explicitly for local-only dependencies. Do not copy the production repository's `.git` or publish bag/PCD/raw sensor files.
+Python, NumPy, SciPy and matplotlib are required. The public default configuration is an uncalibrated research example; it contains no device extrinsics. For authorized private replay use `IESKF_CONFIG`, `IESKF_DATA_ROOT` and optionally `A2RL_ROOT`; see docs/A2RL_INTEGRATION.md. Real-input reproduction requires separately authorized local inputs.
 
-## Publishing policy
-
-The repository is **public**. Before committing a report, confirm ownership and permission to publish any code, experimental data, maps, derived artifacts, internal paths, and third-party material. Add reproducible code and redacted reports only; large or restricted data should be referenced by local manifest and hashes.
-
-## Workflow
-
-Each phase adds a final report, a reproducibility note, a lightweight input identity manifest, and optional scripts. Update `docs/EXPERIMENT_INDEX.md` and `docs/RESEARCH_STATUS.md` at the same commit.
+Start with docs/EXPERIMENT_INDEX.md and docs/RESEARCH_STATUS.md. The legacy iterative update intentionally retains partial iteration-limit acceptance to reproduce historical behavior. Do not use it as a production filter or a calibrated posterior.

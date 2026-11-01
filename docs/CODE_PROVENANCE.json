@@ -1,0 +1,93 @@
+[
+  {
+    "module": "geometry_factor.py",
+    "independent_research_origin": "phase_u",
+    "original_sha256": "51144e8c712ab186b6ac56c03e4c6851042ef0b4f6551847117a769791a9bbed",
+    "portable_sha256": "51144e8c712ab186b6ac56c03e4c6851042ef0b4f6551847117a769791a9bbed",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "wheel.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "bd4b8c696fbb184f7a344d99bf528d93c6ee076617d5fab5f90f855e80d6fd7b",
+    "portable_sha256": "827fcb042b03dd7d20e3bab81f076d15d11fe6ada3affab33dcc86f8431dffa7",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "diagnostics.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "b2a5e12d6a9cd97003d5a7e12bf3ddf4ac1da30e7057aecfeff426172145ae90",
+    "portable_sha256": "110ed1627687c0c45320e2c28dbdccb5843fb1fc37a99330dc5512461bf63606",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "inertial.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "abdc91c334f9c444bbeba3722647d27a3c45b5529c68e60ce60a3bdcbad73881",
+    "portable_sha256": "279b7933319d391d2535d8736f0e55ab52eeefbe79c10128fbcfa23f811d3e61",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "replay.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "50fb7321e9f10368a1c7357f67117b0bd74d91926345b84b723c89311de4b7d6",
+    "portable_sha256": "a1a78366fcad54f80713cb0285146e2edbcfb3f4da2753b318940d1010d4f752",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "common.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "cdcf61e78aae3b5ec1b49f92f29f1be323320361a88ba2094b3e89c226181e16",
+    "portable_sha256": "a38a278c7146a0fc1b4a5f2bdc8dd0008dcc8514907c02b43c5dd864c45beb51",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "geometry.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "61efc800f33471bffdcf65663ed9acc326a4dc8f24a57224ee320bbc888f6dae",
+    "portable_sha256": "de180b46e6ab733ce4bc6aaa015509b5d8f2d81e82f5eb01473b14ad1e478c08",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "state.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "27339cba5910b667ef9111da2eb063f4925a107391c61dd3dc4ef78c6cb0d239",
+    "portable_sha256": "21e8652a5cc32538f8ee19f293ef4c94cc176dffa4d29cc630b0fe5708cbecce",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "iterated.py",
+    "independent_research_origin": "phase_v",
+    "original_sha256": "39057f47f7ad79eacd7771f8c7104f59242589bf293ef3f1c27688dfaf29deb4",
+    "portable_sha256": "e571df39f92c68006233d6f6c2ff2506a64fac2cbd78872ac366ad2c133845a4",
+    "changes": "relative imports, environment path/configuration injection only; replay entrypoint separated"
+  },
+  {
+    "module": "objective.py",
+    "independent_research_origin": "phase_x",
+    "original_sha256": "56e50f3adca01450613863c8dcf04a389a82dcb9c4831b5e510f137f97bc6c96",
+    "portable_sha256": "45c715126ed27d9b576396077f51306b06429c0c46bca4a3a7fc9e0f8470d6c4",
+    "changes": "package imports; private case-loader and filesystem globals removed; mathematical functions retained; no historical tests rerun"
+  },
+  {
+    "module": "partition.py",
+    "independent_research_origin": "phase_y",
+    "original_sha256": "df946280adba8f3d23e56f35816315ee492895d59676de8d8d29b6c662907031",
+    "portable_sha256": "e64ce3310368053c14d4d97ce80971c00e6598cef39314b73e99e29f4b0f2a39",
+    "changes": "package imports; private case-loader and filesystem globals removed; mathematical functions retained; no historical tests rerun"
+  },
+  {
+    "module": "constrained.py",
+    "independent_research_origin": "phase_y",
+    "original_sha256": "e96a6d6070db592aab3311530573f5177d47ea5472f0739910af536ddafdfdd3",
+    "portable_sha256": "bb770f4634cf3393033b177dd9b1efb79e92ffa46ae1aa3211be5beab4889ba1",
+    "changes": "package imports; private case-loader and filesystem globals removed; mathematical functions retained; no historical tests rerun"
+  },
+  {
+    "module": "posterior.py",
+    "independent_research_origin": "phase_z",
+    "original_sha256": "c445b18378eb9e53ee7ce116b7b5294b497b18fca605bdc34ee8b157c113ce04",
+    "portable_sha256": "c1f2b6a26f7868b19d9219cb70e28785233d081f92f1dee474348a2b9458cfbc",
+    "changes": "package imports; private case-loader and filesystem globals removed; mathematical functions retained; no historical tests rerun"
+  }
+]

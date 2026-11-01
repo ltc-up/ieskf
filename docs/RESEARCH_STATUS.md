@@ -1,24 +1,9 @@
-# Research Status
+# Research status
 
-Last repository setup: 2026-11-01.
+A complete inertial error-state research prototype exists. Pose/full-state elimination and fixed-association constrained optimization were investigated numerically; those findings are not a deployment qualification.
 
-## Established so far
+Dynamic map association remains unqualified for reliable convergence. A first non-converged geometry update can over-contract position uncertainty while leaving velocity uncertainty substantial; propagation then creates strong position–velocity conditional recovery. Large proposed other-state corrections are mathematically explained, but their physical validity is not established.
 
-- A 15D error-state research prototype was constructed and exercised in offline experiments.
-- The fixed-correspondence MAP numerical behavior, 6D/15D elimination, and constrained fixed-case optimization have been investigated.
-- Phase Z attributed large **candidate** map-Z velocity corrections to Z-position proposals and the prior position/velocity covariance structure.
-- Phase Z did not commit candidate geometry updates on the five diagnostic frames, did not run a new continuous replay, and did not verify independent accuracy.
+AA preserved the prediction, wheel and geometry models and investigated actual carried state separately from raw proposals. Full numerical results are private. Typical geometry improvements do not imply elimination of worst cases; rejecting a proposal is not the same as observing a real state spike.
 
-## Not established
-
-- Stable dynamic association / valid geometry update acceptance.
-- Calibrated posterior uncertainty or independent localization accuracy.
-- Production runtime and suitability.
-
-## Next research decision
-
-Hold the IMU/wheel speed model, noise, map and deskew algorithm fixed. Verify actual old/new deskew source provenance; distinguish candidate `delta_vz`, accepted `delta_vz`, and the replayed full-state `v_z`. Diagnose whether deskew correction reduces real accepted Z-velocity spikes under comparable replay conditions.
-
-## Repository boundaries
-
-No embedded Git repository under auto-eagle, and no production source mutations as part of research migration. Public repo: review every report, script and data file before publishing.
+Next priority: update convergence/association eligibility and credible information/posterior handling, while maintaining a fixed independent preprocessing front end. No independent localization accuracy, long-term statistical calibration, live scheduling or production suitability has been established. The production system remains unchanged.

@@ -37,3 +37,6 @@ secrets*
 evidence/private/
 experiments/**/raw/
 experiments/**/large/
+
+*.egg-info/
+.pytest_cache/

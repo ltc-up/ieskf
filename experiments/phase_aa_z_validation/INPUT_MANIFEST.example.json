@@ -1,0 +1,9 @@
+{
+  "classification": "SCHEMA_ONLY_NO_REAL_IDENTITIES",
+  "configuration": "<private frozen configuration>",
+  "events": "<private event JSON and SHA>",
+  "target": "<private target and SHA>",
+  "sources": "<private native-frame Sources and SHA list>",
+  "state_reference": "world-frame IMU origin; explicit lever arm required",
+  "times": "native common physical scan reference; no numeric timestamps distributed"
+}

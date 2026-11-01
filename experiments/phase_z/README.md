@@ -1,0 +1,5 @@
+# Phase Z: Covariance attribution and trusted geometry interface
+
+Decompose non-pose corrections through conditional cross covariance without deleting correlations. Prior numerical propagation and early observation-induced uncertainty tightening can amplify later position requests into large velocity proposals. Separate numeric unconstrained posterior validity from probability calibration. Require genuine local/association qualification and reject atomically to preserve both prior state and covariance; that rejection policy itself does not prove long-term consistency.
+
+The original test plan, source, parameters, full evidence, failure logs and input hashes are retained unchanged in ignored `data/history/phase_z/`. This is a separate public redaction; it contains no real sensor results. Portable independent modules and transformation hashes are listed in `docs/CODE_PROVENANCE.json`. Private extraction/driver/configuration dependencies remain local and are not independently reproducible from this repository.
