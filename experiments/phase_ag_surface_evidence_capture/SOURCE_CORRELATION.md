@@ -1,0 +1,7 @@
+# Source and prediction correlation
+
+Historical W/AF evidence is reused: frozen Source was already deskewed by an independent frontend driven by the same raw inertial/velocity streams also used by the research predictor. There is no direct production NDT/EKF pose feedback identified in that frontend, but that does not imply statistical independence from the prediction prior. AG does not alter or regenerate Deskew, timestamps, Source or sensor models.
+
+Unidentified terms include within-scan temporal/beam/rigid-motion error, common Deskew trajectory/IMU-bias/velocity error, cross-Source correlation, map construction pose/datum error, and map/prior correlation if they share localization history. Exact-copy identity is distinguishable and handled by AF; nearby distinct point IDs are NOT automatically independent. No repeated independent motion/scan truth is available to estimate these effects here. Source sample covariance is not inferred from a single static point set or from final map residuals.
+
+The conditional solve freezes original prediction P and each local R_eff at original predicted coordinates. Independent epsilon variance remains unchanged research0.2²m²; genuine physical-plane latent covariance/group independence and prior-independence remain assumptions. No real common-Deskew covariance was fitted. Therefore residual self-consistency and valid optimizer derivatives do not calibrate a likelihood or a posterior.

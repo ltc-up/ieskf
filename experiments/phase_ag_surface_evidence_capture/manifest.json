@@ -1,0 +1,177 @@
+{
+  "phase": "AG",
+  "date": "2026-11-01",
+  "baseline_AF_commit": "057d89cfd5625969d6f188264e677c085edb1e1b",
+  "research_code_commit": "fc40ab1de163eae207d6fc7636cd03c81576d239",
+  "input_identity": {
+    "AA_complete_replay_sha256": "af789ef4a0cea1666e10f852c801930bb0f5e175967d4a2fa9be340de345ba59",
+    "first_Source_sha256": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "Target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "AB_first_fixed_refinement_record_sha256": "cf41503a4b0459f702d77098826f5b863bd4afd51bd3fe2acf0573e5b0fba050",
+    "event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "first_frozen_state_and_P_binding_sha256": "10b397a123b13fedadfeaf744bd8f2275a6cd6e07b36b567c2b36575c1f4a94b",
+    "identity_scope": "non-reconstructive digests only; raw Header timestamps/device frames/private matrices are excluded"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "public_numeric_config_file_sha256": "cb25184d76b20bec92303351772e95ee25b8495f77c01315a9aa3a1287bfd109",
+  "canonical_numeric_config_sha256": "c83d5498f59bb6927cd00bc6729372a6c53722b056c6e2f431a706cb81b5a4c7",
+  "AD_objective_sha256_unchanged": "b4539d52b17bd1ae1140dc0b079b7e81ea21832caa68660bf82e41f3c2402b38",
+  "AF_surface_factor_hashes": {
+    "surface_map_5.0.json": "560d6c196a931555efa76dd78d843b65b47451bd92c2206b7272ebfedbaa0d53",
+    "surface_map_2.5.json": "4885f32ce727a16887ca1a1160d6c76ab298d365971abb361bbd4e750e9d428a",
+    "surface_map_10.0.json": "bffbcb81a57eeb14c23f543e5f50c371b113e3f32d0a1f57ae44efa9d54a24dc"
+  },
+  "map_candidate_identity": [
+    {
+      "id": "M01",
+      "bytes": 52955360,
+      "sha256": "6f0b10c52fa9bbdc02fc83646ba52d85cfa69ccab129444098946c028bc78c92",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M02",
+      "bytes": 1076917202,
+      "sha256": "8ff42fd25add3a59bf68e413b2510dbb91bd48bdc421737d2735dcdb4055345c",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M03",
+      "bytes": 1076921104,
+      "sha256": "8561cd2254ed35164134a3146e89dfcd403643193ff11c84db93fde2b77ad52a",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M04",
+      "bytes": 52951517,
+      "sha256": "0dd39161197fa75da60600b710772dac860c8b61a0101742b336e4db66b19d5a",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M05",
+      "bytes": 1930527776,
+      "sha256": "5d165afc16f22aaad785711a37575673b09587f1d934edb5cb6dc85b2f52de8f",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M06",
+      "bytes": 667752070,
+      "sha256": "976af9e2ffc3ba28fa6741e56b93d209988952b64674c7572a22caa8714d4828",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M07",
+      "bytes": 22681552,
+      "sha256": "e8722a7b62e983a5b3167b30870ed280e51feb0ed08dc7a0a55d0c13ebc9db82",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M08",
+      "bytes": 3540904141,
+      "sha256": "0ebbc14aa6481f5332da96f1bbfa352d67d3ea764d25061120b9cab74b328228",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    },
+    {
+      "id": "M09",
+      "bytes": 642591493,
+      "sha256": "7d34abe29e3416400deeb9ddd51c1e549f42e19f4fcbd59568345712fce6d054",
+      "independent_acquisition": "NOT_VERIFIED",
+      "common_frame_datum": "NOT_VERIFIED"
+    }
+  ],
+  "data_version": "same AF native first event/map/prior/groups; no new deskew or altered map; no independent calibration found",
+  "software": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4"
+  },
+  "new_tests": 5,
+  "AF_foundation_tests_rerun": 0,
+  "executed": {
+    "data_inventory": 1,
+    "conditional_capture_nominal_starts": 3,
+    "endpoint_microqueries": 12,
+    "continuous_runs": 0,
+    "state_P_commits": 0
+  },
+  "reference_identity": [
+    {
+      "sha256": "2710e664cd7017e1b423f38304ba26b20fad8495ee3664d97839f4761705231f",
+      "qualification": "DERIVED_UNQUALIFIED_FOR_FIRST_FRAME"
+    },
+    {
+      "sha256": "7cd9aaa4f17d943db4138a77d6cf2136da6b3d6da8a8aac6a976de0f5f563d55",
+      "qualification": "DERIVED_UNQUALIFIED_FOR_FIRST_FRAME"
+    },
+    {
+      "sha256": "0f28eb36dbd39a232017abb5b5e35420b9c75c7efdf9f4e78581ee1ee37e7cf9",
+      "qualification": "DERIVED_UNQUALIFIED_FOR_FIRST_FRAME"
+    },
+    {
+      "sha256": "71b5e8b4f41c2d451ec115c20fe0d2d08462386a22d1700e47440878983c7466",
+      "qualification": "LATER_RECORDING_NO_FIRST_FRAME_COVERAGE"
+    },
+    {
+      "sha256": "1c03a470289c2d47904af918ee8ad333084d40088cccec647ce35b1a1ab9ded9",
+      "qualification": "LATER_RECORDING_NO_FIRST_FRAME_COVERAGE"
+    }
+  ],
+  "real_Sigma_scope": "UNCHANGED_AF_SYNTHETIC_TRANSFER_NOT_CALIBRATED",
+  "objective_scope": "constant R_eff at original predicted coordinates for EACH fixed source-plane assignment; outer problems distinct, not global likelihood",
+  "constraints": "original cumulative and per-step constraints; numerical feasibility1e-9 normalized, no physical limit change",
+  "reproducibility": "synthetic interface publicly reproducible; real map/Source/prior/frames/metadata require authorized local data",
+  "qualifications": {
+    "DATA_CALIBRATION_ELIGIBLE": "FAIL",
+    "PHYSICAL_PLANE_IDENTITY": "NOT_VALIDATED",
+    "REAL_COVARIANCE": "NOT_VALIDATED",
+    "CONDITIONAL_5M_CAPTURE": "PASS",
+    "CROSS_SCALE_CAPTURE": "FAIL",
+    "INDEPENDENT_VALIDATION": "NOT_VALIDATED",
+    "SHORT_CLOSED_LOOP_ELIGIBLE": "FAIL",
+    "PRODUCTION_CANDIDATE": "NOT_VALIDATED"
+  },
+  "implementation_hashes": {
+    "src/geometry_ieskf/surface_capture.py": "cf074a728bf7fa822f8879368f01ea6736bf1f2581f5c42db9f1225992020545",
+    "tests/test_surface_capture.py": "178ebb96c1473b46e2e32f7224782164046a74b7f82ddf1acd98e0b0cb533f84",
+    "experiments/phase_ag_surface_evidence_capture/probe_saved.py": "2d887f7734ab652201a46bc5623ee81242b01b2e983d61bd66dccfb113127f07",
+    "experiments/phase_ag_surface_evidence_capture/audit_inputs.py": "a6bc1abd13585c5709a430010c782a088935508b6217dcda9ebb6900705d3abb",
+    "experiments/phase_ag_surface_evidence_capture/run_surface_capture.py": "c3dc541046e855e0602e050c9c0669e9e4569cd243a42ff59cdc36b5e5f1b47d",
+    "experiments/phase_ag_surface_evidence_capture/plot_results.py": "04e35e4a83f752d590f4b1d1f941c76663a4a915653b5eb5da7eb5480f315a9d"
+  },
+  "payload_hashes": {
+    "INDEPENDENT_VALIDATION.md": "e79d60740c16ed985da5ec606dcd8ace5055d484d44c4dc35056ef63bfe70ec5",
+    "REPRODUCE.md": "c036eef585d48997bdc3d89b766c5932cc9e5bb633006fd49a65d1a7dd96bb5e",
+    "SOURCE_CORRELATION.md": "57e2a9443709f77128b91c83057eeda018400b1b1f0d071acad96e4df830b782",
+    "TEST_PLAN.md": "d4ac6f8564cd635b87fc803dfdf8ef63e43de00ae0abed1a6ff4e1ff6b77fe32",
+    "capture_evidence.png": "05e43ec368ec81eed0f417f42e7005589a9f1f816a169182aec1254312528980",
+    "key_results.json": "5d26595616b5bc1294ca4ac9c5ab1bc96c005cd2a7eb18ba702c1d1e7d924894",
+    "MAP_ERROR_EVIDENCE.md": "2ddd5ed83e722a9b8ee0ee3dc493bf0b757acd03ed12dc42a987dd0782ec2cf5",
+    "FIRST_FRAME_CONSTRAINED_SOLVE.md": "d83e12e14b6272fa75e523bf2933f4652ac8ba20e1c7709398be57ea87577d22",
+    "FINAL_CONCLUSION.md": "0ebf75ea14678e41dac7ea9858ae13757297165e5330d381803e173a5ad9f13e",
+    "probe_saved.py": "2d887f7734ab652201a46bc5623ee81242b01b2e983d61bd66dccfb113127f07",
+    "NUMERIC_TEST_LOG.txt": "8c5a69e172faa983967d108021bd18ce7bf2f01024a81f6a1f096e3b6ff8b384",
+    "audit_inputs.py": "a6bc1abd13585c5709a430010c782a088935508b6217dcda9ebb6900705d3abb",
+    "FAILURES.md": "e32c6cf5fc2597b1a2297e2c095d0bf440a92b6df184d4f2257d662077486228",
+    "run_surface_capture.py": "c3dc541046e855e0602e050c9c0669e9e4569cd243a42ff59cdc36b5e5f1b47d",
+    "plot_results.py": "04e35e4a83f752d590f4b1d1f941c76663a4a915653b5eb5da7eb5480f315a9d",
+    "PLANE_IDENTITY.md": "77517cc42bb5a2fb89dc24c4225fa6c456d414d7d39e85a15d0f8e70a1e1d344",
+    "DATA_PROVENANCE.md": "68756c915e3f99cf578c0b859ac768982b1350a95f5cb2a12b790c79fad3b662"
+  },
+  "protection": {
+    "production_files_unchanged": 45621,
+    "prior_private_counts": {
+      "phase_ac_geometry_capture": 106,
+      "phase_ad_association_objective": 77,
+      "phase_ae_measurement_information": 169,
+      "phase_af_surface_observation": 23
+    },
+    "original_git_state_unchanged": true
+  }
+}

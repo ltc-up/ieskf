@@ -1,0 +1,8 @@
+# Failures and incomplete qualifications
+
+- DATA_INSUFFICIENT:9 full PCD hashes,8 recording metadata and multiple reference products do not establish independent acquisition, common map datum or valid first-frame truth. No real Sigma/correlation is calibrated; AG2 physical-identity validation and AG3 real error estimation stop at evidence audit.
+-2.5m: cumulative position-boundary partial solution fails inherited KKT tolerance, then has no valid descent direction; final reassociation also invalidates its local endpoint. No relabeling as converged.
+-10m:20 outer queries exhausted despite each fixed local solve converging; association and fresh-objective optimality fail. No added budget/threshold/seed sweep.
+-5m: conditional stable endpoint exists but depends on AF's synthetic covariance transfer and unverified grouping. Full likelihood, true pose and probability calibration are not validated. Conditional sigmaZ0.03265m is not certified uncertainty; proposed dvZ0.730m/s is not an actual spike or improvement.
+- A new endpoint-probe CLI initially imported a same-named historical run_capture module because of search-path ordering. Argument parsing rejected the additional collection-root option before historical experiment execution. Renamed the NEW AG runner uniquely, preserved failure log, then the intended probe succeeded. Historical files/results are checked unchanged.
+- No continuous run, no real state/P commit, no production edits, no physical covariance calibration or independent accuracy ranking. All five NEW optimizer tests pass; AF23 tests are reused as historical evidence, not rerun.

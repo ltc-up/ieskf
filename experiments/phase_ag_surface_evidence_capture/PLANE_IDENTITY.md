@@ -1,0 +1,7 @@
+# Physical plane identity
+
+Executed evidence is limited to inherited AF geometry hypotheses and their saved cross-scale overlap diagnostics. No qualified independent acquisition/reference was found, so AG2 cross-acquisition surface matching was NOT performed. Unregistered alternate PCDs were not treated as ground truth or fitted into agreement.
+
+AF baseline5m had96 accepted groups,4 unresolved components excluded and26 groups touched at the original prediction. The group with most Source support carried55.26% of residuals but9.27% of conditional Z information. Six baseline groups split at2.5m; three split at10m, while17 coarse groups merged multiple baseline groups on common Target records. These are geometric overlap statements, not demonstrated physical parent identities. Whole-component TLS and relative normal/center gates cannot establish that adjacent patches share one stochastic error, or that separated patches have independent errors.
+
+Classification remains: accepted groups=GEOMETRIC_HYPOTHESIS_ONLY; rejected components=UNRESOLVED; cross-patch physical identity and acquisition-stable fit=NOT_VALIDATED. High-support/information and scale-sensitive groups remain priority inspection subjects, not forced merges or independent planes. Existing AF exact-alias invariance and independent-patch counterexample are reused without rerunning23 tests. Unknown same-plane splits can still create false information in real use.
