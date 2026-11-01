@@ -1,0 +1,13 @@
+test_fixed_geometry_stationarity_and_identity_certified (test_capture.CaptureTests.test_fixed_geometry_stationarity_and_identity_certified) ... ok
+test_infeasible_seed_rejected_not_clipped (test_capture.CaptureTests.test_infeasible_seed_rejected_not_clipped) ... ok
+test_low_support_not_promoted (test_capture.CaptureTests.test_low_support_not_promoted) ... ok
+test_no_budget_is_not_a_convergence_label (test_capture.CaptureTests.test_no_budget_is_not_a_convergence_label) ... ok
+test_predetermined_seeds_feasible_and_white_bounded (test_capture.CaptureTests.test_predetermined_seeds_feasible_and_white_bounded) ... ok
+test_prior_state_and_P_never_mutated (test_capture.CaptureTests.test_prior_state_and_P_never_mutated) ... ok
+test_seed_symmetry_and_zero_nominal (test_capture.CaptureTests.test_seed_symmetry_and_zero_nominal) ... ok
+test_trust_constraint_jacobian_with_nonzero_anchor (test_capture.CaptureTests.test_trust_constraint_jacobian_with_nonzero_anchor) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.007s
+
+OK

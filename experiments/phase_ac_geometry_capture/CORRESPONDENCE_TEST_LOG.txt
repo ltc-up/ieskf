@@ -1,0 +1,11 @@
+test_all_invalid_stays_unsupported (test_valid_correspondence.ValidCorrespondenceTests.test_all_invalid_stays_unsupported) ... ok
+test_invalid_nearest_does_not_hide_valid_second (test_valid_correspondence.ValidCorrespondenceTests.test_invalid_nearest_does_not_hide_valid_second) ... ok
+test_nearest_valid_choice_matches_brute_force (test_valid_correspondence.ValidCorrespondenceTests.test_nearest_valid_choice_matches_brute_force) ... ok
+test_normal_fit_matches_original_on_shared_targets (test_valid_correspondence.ValidCorrespondenceTests.test_normal_fit_matches_original_on_shared_targets) ... ok
+test_original_radius_never_expanded (test_valid_correspondence.ValidCorrespondenceTests.test_original_radius_never_expanded) ... ok
+test_target_normalization_unchanged (test_valid_correspondence.ValidCorrespondenceTests.test_target_normalization_unchanged) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.010s
+
+OK

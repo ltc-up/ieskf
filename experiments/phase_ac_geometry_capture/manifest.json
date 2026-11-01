@@ -1,0 +1,95 @@
+{
+  "phase": "AC",
+  "date": "2026-11-01",
+  "baseline_AB_commit": "5f8ddec331537c488110a58b842c57f8a5e9a735",
+  "capture_solver_commit": "22321f85697e32a804ddae1ea49900e4add3a9af",
+  "research_code_commit": "020baec3f9c06f0bdf7cbecccc4a532fc8d1db3b",
+  "code_commit_semantics": "committed solver and nearest-admissible candidate used for frozen experiments; later evidence tools and reports are tracked in this report history",
+  "input_identity": {
+    "AA_complete_replay_sha256": "af789ef4a0cea1666e10f852c801930bb0f5e175967d4a2fa9be340de345ba59",
+    "first_Source_sha256": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "Target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "AB_first_fixed_refinement_record_sha256": "cf41503a4b0459f702d77098826f5b863bd4afd51bd3fe2acf0573e5b0fba050",
+    "event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "first_frozen_state_and_P_binding_sha256": "10b397a123b13fedadfeaf744bd8f2275a6cd6e07b36b567c2b36575c1f4a94b",
+    "identity_scope": "non-reconstructive digests only; raw Header timestamps/device frames/private matrices are excluded"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "data_version": "unchanged corrected native-reference Source set; no deskew regeneration",
+  "unchanged": [
+    "full15 prior center and covariance",
+    "inertial/wheel model and Q/R",
+    "Source and map",
+    "Huber and Target-repeat weights",
+    "normal fit and validity thresholds",
+    "search radius",
+    "cumulative safety balls and step trust limits",
+    "AB posterior eligibility and atomic rollback"
+  ],
+  "explicit_candidate_change": "nearest among normal-admissible Targets inside the existing radius instead of nearest raw Target followed by rejection; selected factor domains differ",
+  "budgets": {
+    "original_and_candidate_starts_each": 13,
+    "outer_steps_max": 60,
+    "inner_SLSQP_maxiter": 200,
+    "inner_ftol": 1e-12,
+    "nominal_only_extension_cap_if_needed": 120,
+    "extension_used": false,
+    "posterior_commit_numerical_tolerance_inherited": 0.0001
+  },
+  "executed": {
+    "first_frame_solver_runs": 26,
+    "existing_representative_solver_runs": 6,
+    "unique_new_tests_pass": 14,
+    "qualified_endpoint_neighborhood_queries": 12,
+    "same_state_selection_order_isolation": 2,
+    "conditional_posterior_diagnostic_transactions": 1,
+    "failed_nominal_atomic_rollback_checks": 1,
+    "new_continuous_runs": 0,
+    "baseline_replays": 0,
+    "historical_AB_proofs_rerun": 0,
+    "deskew_runs": 0,
+    "production_changes": 0
+  },
+  "qualifications": {
+    "INPUT_PRIOR_AND_GUARDS_PRESERVED": "PASS",
+    "NEW_NUMERIC_INTERFACES": "PASS",
+    "NOMINAL_ORIGINAL_CAPTURE": "FAIL",
+    "NOMINAL_CANDIDATE_CAPTURE": "FAIL",
+    "CANDIDATE_ENDPOINT_EXISTENCE": "PASS",
+    "ROBUST_INITIAL_CAPTURE": "NOT_VALIDATED",
+    "LOCAL_NEIGHBORHOOD_ASSOCIATION_STABILITY": "CONDITIONAL",
+    "ISOLATED_POSTERIOR_TRANSACTION_NUMERIC": "PASS",
+    "CONTINUOUS_LIDAR_RETENTION": "NOT_VALIDATED",
+    "Z_VZ_IMPROVEMENT": "NOT_VALIDATED",
+    "CONTINUOUS_REPLAY_ELIGIBLE": "FAIL",
+    "LONGER_REPLAY_ELIGIBLE": "FAIL",
+    "INDEPENDENT_ACCURACY": "NOT_VALIDATED",
+    "STATISTICAL_CONSISTENCY": "NOT_VALIDATED",
+    "PRODUCTION_CANDIDATE": "FAIL"
+  },
+  "software_versions": {
+    "numpy": "1.26.4",
+    "scipy": "1.11.4",
+    "matplotlib": "3.6.3"
+  },
+  "reproduction_conditions": {
+    "synthetic_checks": "self-contained",
+    "real_data": "requires separately authorized immutable AA inputs and AB refinement record; private map/extrinsics/payloads not published",
+    "time_reference": "AA native common physical reference unchanged",
+    "independent_reference": "not qualified or used; no accuracy inferred",
+    "posterior": "model-conditional fixed-linearization IRLS, not calibrated uncertainty"
+  },
+  "report": "FINAL_CONCLUSION.md",
+  "aggregate_results": "key_results.json",
+  "evidence_tool_sha256": {
+    "summarize.py": "a34f50b2b7d1fc70ed41601f1e5e15d0c858865a1944353282ac19ca741c1d66",
+    "isolate_selection_order.py": "d14c9417cc87e7764983fa026250f37d77b4f64f5c50a8b5bed7b4bdf1f75fc3",
+    "audit_support_boundary.py": "849de2ddeb3e1b8bb0aa3af4dfd0b381c4c8a65e7a79f67df74bd31b6ebaffd3",
+    "analyze_endpoints.py": "58162700f5b99ca003ec4dbd3e95cf0ff692af80ed7665054f28505e322d1168",
+    "run_capture.py": "cb75fc767e00f68d4bc7d1a05e33d0008f01e6070b7e1923599719d4575f750d",
+    "audit_candidate_edge.py": "66400a0538238285ae45992b9fc425b98a52cad6e5fd4f6a6cfa13dbe1872a50",
+    "audit_cycle.py": "52224a1ede0ffad7a8e480aaa6a9114e07365ed0b54f087c2af41d09d6998519",
+    "compare_states.py": "b659c23264057ab53944206c2ad296b64ba14ed44130b7fb55c72a0ceef01f0a",
+    "run_valid_candidate.py": "0abe7a6007f154378e5db1c951a4f4125cfeb4be0a349d33545b69742a61d12d"
+  }
+}
