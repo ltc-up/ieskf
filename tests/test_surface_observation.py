@@ -54,6 +54,9 @@ class SurfaceObservationTests(unittest.TestCase):
   for count in [1,2,4,8]:
    patch=np.arange(len(r))%count;parent=np.array(['plane0' for k in patch]);correct=SharedPlaneNoise(parent,J,o.planes,C['lidar_sigma_m']**2);v=linear_surface_update(P,H,r,correct);np.testing.assert_allclose(v['information'],base['information'],atol=1e-12)
    ids=np.array(['patch'+str(k) for k in patch]);p=o.planes['plane0'];reg={k:Plane(k,p.normal,p.anchor,p.tangent,p.covariance) for k in np.unique(ids)};bad=linear_surface_update(P,H,r,SharedPlaneNoise(ids,J,reg,C['lidar_sigma_m']**2));self.assertLessEqual(bad['P_chart'][2,2],last+1e-12);last=bad['P_chart'][2,2]
+ def test_augmented_plane_latent_marginalization(self):
+  from scipy.linalg import block_diag
+  o=observation('horizontal',3,True);r,H,J,R=o.linearize(self.x);r=r+.04;out=linear_surface_update(self.P,H,r,R);Q=block_diag(self.P,o.planes['plane0'].covariance);L=np.linalg.cholesky(Q);A=np.c_[H,J]@L;M=np.eye(18)+A.T@A/C['lidar_sigma_m']**2;cov=L@np.linalg.solve(M,L.T);delta=L@np.linalg.solve(M,-A.T@r/C['lidar_sigma_m']**2);np.testing.assert_allclose(cov[:15,:15],out['P_chart'],atol=2e-12);np.testing.assert_allclose(delta[:15],out['delta'],atol=2e-12)
  def test_low_support_atomic_reject(self):
   o=observation();r,H,J,R=o.linearize(self.x);p=linear_surface_update(self.P,H,r,R);tx=atomic_surface_update(self.x,self.P,p,False);self.assertFalse(tx['accepted']);self.assertEqual(tx['covariance_updates'],0);np.testing.assert_array_equal(tx['P'],self.P)
  def test_joseph_dense_gain_full_cross_state(self):

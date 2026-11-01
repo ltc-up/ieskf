@@ -1,0 +1,90 @@
+{
+  "phase": "AF",
+  "date": "2026-11-01",
+  "baseline_AE_commit": "7c27abbf5110f3bf844cec457d2e0acf0b2c925e",
+  "research_code_commit": "ace9dce7f38111c342feaec695dfe276c71791d4",
+  "final_commit_scope": "final reporting commit also binds explicit-latent test, portable saved-factor analysis and all reports",
+  "input_identity": {
+    "AA_complete_replay_sha256": "af789ef4a0cea1666e10f852c801930bb0f5e175967d4a2fa9be340de345ba59",
+    "first_Source_sha256": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "Target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "AB_first_fixed_refinement_record_sha256": "cf41503a4b0459f702d77098826f5b863bd4afd51bd3fe2acf0573e5b0fba050",
+    "event_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "first_frozen_state_and_P_binding_sha256": "10b397a123b13fedadfeaf744bd8f2275a6cd6e07b36b567c2b36575c1f4a94b",
+    "identity_scope": "non-reconstructive digests only; raw Header timestamps/device frames/private matrices are excluded"
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "public_numeric_config_file_sha256": "cb25184d76b20bec92303351772e95ee25b8495f77c01315a9aa3a1287bfd109",
+  "canonical_numeric_config_sha256": "c83d5498f59bb6927cd00bc6729372a6c53722b056c6e2f431a706cb81b5a4c7",
+  "AD_objective_sha256_unchanged": "b4539d52b17bd1ae1140dc0b079b7e81ea21832caa68660bf82e41f3c2402b38",
+  "AD_saved_precision_results_sha256": "efb94c5af1cc4e6bbaedde1ab0684d50500746673d60da4572f6390c235f7e1d",
+  "data_version": "unchanged native first Source and AA prediction/P/map; saved AD candidate coordinates only; no redeskew or map overwrite",
+  "software": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4"
+  },
+  "tests": 23,
+  "synthetic_generative_law": "published in synthetic_cases.py; NOT map calibration",
+  "real_uncertainty_scope": "TRANSFERRED_SYNTHETIC_SCENARIO_NOT_MAP_CALIBRATION",
+  "real_runs": {
+    "frozen_analysis": 1,
+    "continuous_replay": 0,
+    "recursive_state_or_P_commits": 0
+  },
+  "reproducibility": {
+    "public": "AF synthetic checks independently reproducible",
+    "restricted": "real map/Source/state/P/extrinsics require separately authorized matching input contract; excluded"
+  },
+  "qualifications": {
+    "SYNTHETIC_OBSERVABILITY": "PASS",
+    "DUPLICATE_INVARIANCE": "PASS",
+    "SHARED_ERROR_NUMERIC": "PASS",
+    "FULL15_CONDITIONAL_POSTERIOR_NUMERIC": "PASS",
+    "REAL_MAP_COVARIANCE": "NOT_VALIDATED",
+    "REAL_GROUPING": "CONDITIONAL",
+    "INDEPENDENT_CANDIDATE_VALIDATION": "NOT_VALIDATED",
+    "CONTINUOUS_REPLAY_ELIGIBLE": "FAIL",
+    "STATISTICAL_CONSISTENCY": "NOT_VALIDATED",
+    "PRODUCTION_CANDIDATE": "NOT_VALIDATED"
+  },
+  "implementation_hashes": {
+    "src/geometry_ieskf/surface_observation.py": "1b4e455ebe0221ee4c13a0384ce8e825e0048404ab9b4cef906da2a8c8b8d09d",
+    "src/geometry_ieskf/surface_map.py": "63ddd448dbcbc87d5b02ae28e450c6c3f5b6dec5dbbdaa82deedd618f43bbe17",
+    "tests/test_surface_observation.py": "16af0b157d6ef0eaaac3edc1100605968bb4344755d07c23fe93c4c12b60a8ff",
+    "experiments/phase_af_surface_observation/run_synthetic.py": "a2ebe7e4ab96d74483ced89aea3aeed658ba78bac49ec5d01668375806398dce",
+    "experiments/phase_af_surface_observation/run_frozen.py": "4fed14907a6f0da15959e5a1243b9c9ecef50787cc82039c2eccc410a1fc6ab6",
+    "experiments/phase_af_surface_observation/analyze_saved.py": "063b19acad09cd60d097f4c859c0307eea986c90515ffc0990cd8ca573e95634",
+    "experiments/phase_af_surface_observation/plot_results.py": "f28f31a3e2c55dbc24b1bff0a6bb561f245c68902b1b2971712e6742b385b3eb",
+    "experiments/phase_af_surface_observation/synthetic_cases.py": "4f905d855a20799c7bd6d7316dcaf2658fcb59576f7951ada614a6295c90e722"
+  },
+  "payload_hashes": {
+    "DENSITY_INVARIANCE.md": "390ad6b7e6111aab98885661c28ed63f830b9dd460a0491eb717e50a24794393",
+    "GEOMETRIC_OBSERVABILITY.md": "0594e8099136753ea42fb14942f0b6c95971cfaac985f956add3e58829208790",
+    "run_synthetic.py": "a2ebe7e4ab96d74483ced89aea3aeed658ba78bac49ec5d01668375806398dce",
+    "REPRODUCE.md": "64ab53a99ee482dd053538bcc8b9107e74aa4669e81ba8d3323416b49b61afc2",
+    "TEST_PLAN.md": "b0eb44a2eaa6704cb7569be65082ce2f9de9df66f74e7d198e1133e3323e079a",
+    "key_results.json": "0a6409c35b6f07df0785ff4458e370fb95c730cd2633fb20926ae9472cc140a6",
+    "SURFACE_OBSERVATION_MODEL.md": "d506210148ed78a85a65514093fc6a32a42a7469ecb18217dff54b1d36e63594",
+    "FINAL_CONCLUSION.md": "c5b7af495c469d52217dd1e11d54b0ae6294a5aa99cf35c61eabb919fdae75b5",
+    "FRONTEND_BACKEND_COMPARISON.md": "bc7ed508fce3fa1f704253093048a4145e431de074b8488af791d6d3ee0f1004",
+    "NUMERIC_TEST_LOG.txt": "33c95d38dd2d2fcb66c66f7465b2b53ff92378aea345b2feddcb797175ff820a",
+    "surface_information.png": "017423ab5a74ad422cb1d608fcfea3935cadc8663615b9d84c2c3edb031afff3",
+    "run_frozen.py": "4fed14907a6f0da15959e5a1243b9c9ecef50787cc82039c2eccc410a1fc6ab6",
+    "analyze_saved.py": "063b19acad09cd60d097f4c859c0307eea986c90515ffc0990cd8ca573e95634",
+    "SHARED_PLANE_UNCERTAINTY.md": "7de45867b5cf44b974c61966e852f5de2d92d1142dcf3188f55b0c653d1dee41",
+    "FAILURES.md": "b52297fa029f5ec8911c1de0ca0a3b2242987641c541169ee4088f26aa1cca23",
+    "plot_results.py": "f28f31a3e2c55dbc24b1bff0a6bb561f245c68902b1b2971712e6742b385b3eb",
+    "synthetic_cases.py": "4f905d855a20799c7bd6d7316dcaf2658fcb59576f7951ada614a6295c90e722",
+    "FROZEN_IESKF_UPDATE.md": "008a20cb45becfad08984065d721c984201f51a9ab114cef7bb29ee31c10fc4a"
+  },
+  "protection": {
+    "production_files_unchanged": 45621,
+    "previous_private_artifact_counts": {
+      "phase_ac_geometry_capture": 106,
+      "phase_ad_association_objective": 77,
+      "phase_ae_measurement_information": 169
+    },
+    "original_git_state_unchanged": true
+  }
+}
