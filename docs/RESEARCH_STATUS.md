@@ -57,3 +57,9 @@ B was corrected to the requested kernel-base operator; earlier IMU-origin B excl
 ## Latest evidence: Phase AI
 
 Five existing NDT poses pass pose guards, but conditional full15 completion fails bias guards in three. Original four-loop strict qualification is 0/5 for both starts. One limited 16-loop diagnostic qualifies E5/NDT at loop 7; the first frame still fails from both starts. Its certified E5 conditional posterior is numerically valid, not statistically calibrated. No state/P commits or replay. NDT initialization is not a first-frame solution; stop expanding seeds/budgets and preserve the distinction between optimization and information credibility.
+
+## Latest evidence: Phase AJ
+
+Direct NDT XY/yaw is now an independent loose-observation comparison on the original15D predictor. Eleven focused tests and153 saved-prior checks validate the observation/Joseph/reset/atomic interface. A single causal14.70s replay commits66/284, rejects218 and has a5.50s LiDAR gap; no point-plane factor is fused. Direct LiDAR |dvz| peaks at.161m/s, yet unchanged-wheel full-P updates produce4.137m Z/.560m/s vz corrections. Final sigma Z47.596m documents missing vertical observability. The interface is useful as a negative engineering baseline, not stable3D localization, a repair of geometry convergence, calibrated noise, or20Hz production proof. Do not extend unchanged replay or tune R/guards to rescue this outcome; prioritize legitimate height/feedback evidence.
+
+AJ identifies a direct rejection mechanism:28/87 guard-rejected proposals have planar step <=.5m but unsafe full3D steps. At L079 a converged NDT with small XY innovation induces dZ−.551m through full P and loses the whole observation. This supports prioritizing vertical observability/feedback evidence over blaming only NDT convergence, or clipping hidden-state increments.

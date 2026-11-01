@@ -1,0 +1,11 @@
+# Phase AJ predeclared plan
+
+Baseline ac797fbf6905fdeba57a0660f23e8ca9ca6796da. Reuse identical AA native 14.70-second event window, initial state/P, raw inertial and wheel models. A=stored inertial/wheel-only control, B=stored AA partial-acceptance geometry diagnostic. C=new autonomous causal NDT XY/yaw branch, no point-plane updates. First validate its observation/Joseph/reset/atomic interface using synthetic and existing frozen AH observations.
+
+The measurement is map position XY of base_link and heading atan2(R10,R00); state position remains IMU origin. Use original right attitude error and full15 P. R uses the audited fitness-derived legacy covariance, low/high callback scaling and smoothing multiplier 5, once per frame. No repeat-five smoothing, no native NDT covariance, no weight/threshold search. This is a historical single-update engineering weight, not equal full-frame information to the legacy five-pass queue and not calibrated noise.
+
+Preserve original single-step translation/rotation trust bounds and cumulative position/attitude/bias guards for the actual Kalman proposal. No clipping, partial P commits, imposed Z/vz, new gates or extra iteration. No velocity limit is invented. Native NDT Z is diagnostics only. A rejected update retains both prediction objects.
+
+NDT runs only from C's current map-from-base prediction. Static original full Target cached once, same DIRECT7/GLL/fitness/configuration. Active cylinder follows the original radius, vertical offsets and movement-trigger policy, evaluated from C's past/current state, never a historical branch's pose. Retain same unchanged float32 backend interface. Source samples/order/reference time remain frozen. Persist every candidate, actual decision, complete private state/P and timing. No public raw trajectories or data.
+
+One C continuous replay after frozen tests pass; no baseline rerun needed if input/initial identity verified. No retuning in response to failure. Assess actual LiDAR retention, cross-coupled Z/vz/bias, P legality, missing height constraints, causal matching/feedback, recovery after rejection and full measured service costs. Offline physical-time sorting is not online scheduling. No independent accuracy/calibration/production claims.

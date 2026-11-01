@@ -1,0 +1,16 @@
+test_base_reference_lever (test_ndt_pose_observation.NdtPoseTests.test_base_reference_lever) ... ok
+test_existing_publisher_floor (test_ndt_pose_observation.NdtPoseTests.test_existing_publisher_floor) ... ok
+test_full_cross_can_update_vertical_and_bias (test_ndt_pose_observation.NdtPoseTests.test_full_cross_can_update_vertical_and_bias) ... ok
+test_full_right_error_jacobian (test_ndt_pose_observation.NdtPoseTests.test_full_right_error_jacobian) ... ok
+test_invalid_R_atomic_rejection (test_ndt_pose_observation.NdtPoseTests.test_invalid_R_atomic_rejection) ... ok
+test_invalid_fitness (test_ndt_pose_observation.NdtPoseTests.test_invalid_fitness) ... ok
+test_joseph_information_equivalence_and_reset (test_ndt_pose_observation.NdtPoseTests.test_joseph_information_equivalence_and_reset) ... ok
+test_legacy_piecewise_R (test_ndt_pose_observation.NdtPoseTests.test_legacy_piecewise_R) ... ok
+test_unsafe_proposal_atomic_rejection (test_ndt_pose_observation.NdtPoseTests.test_unsafe_proposal_atomic_rejection) ... ok
+test_yaw_wrap (test_ndt_pose_observation.NdtPoseTests.test_yaw_wrap) ... ok
+test_zero_residual_no_state_change_valid_P (test_ndt_pose_observation.NdtPoseTests.test_zero_residual_no_state_change_valid_P) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.004s
+
+OK
