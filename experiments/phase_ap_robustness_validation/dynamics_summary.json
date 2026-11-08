@@ -1,0 +1,18 @@
+{
+  "provenance": "real raw scalar wheel and Bosch body-rate magnitude, not independent speed/attitude truth",
+  "wheel_speed_m_s": {
+    "p50": 29.414407030070688,
+    "p95": 63.951119999999996,
+    "p99": 68.2835397672561,
+    "max": 70.15453387207032
+  },
+  "imu_rate_norm_rad_s": {
+    "p50": 0.054661137119480945,
+    "p95": 0.5220442841530883,
+    "p99": 0.7147056203987434,
+    "max": 0.9511310635468254
+  },
+  "high_speed_qualified_accuracy": false,
+  "independent_yaw_reference": false,
+  "reference_clock_qualified": false
+}

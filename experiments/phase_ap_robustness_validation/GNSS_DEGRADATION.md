@@ -1,0 +1,6 @@
+# GNSS degradation and recovery
+Same whole loop44 control receives9170 raw GPS/GPS2 observations in the processed interval. All are FIX_UNQUALIFIED because actual protocol/datum/lever/clock/noise qualifications remain unresolved; this does not label raw fix8 invalid. No GNSS position or yaw fusion is claimed.
+
+Middle-third absence removes3056 observations;6114 remaining observations are still unqualified.600ms receipt delay yields9170 STALE decisions under the frozen500ms freshness rule. Raw LLA outlier injection changes9170 raw positions, but qualification stops before coordinate conversion: the numerical innovation/outlier path is **not exercised**. The unchanged manager correctly does not turn raw LLA into map-base coordinates.
+
+All controls and fault cases have0 anchors and0 trusted coverage. There is therefore no qualified anchored-to-coasting-to-recovering real sequence, no real recovery time and no measured degradation relative to a GO normal baseline. GNSS cannot demonstrate NDT mode resolution here. Previous synthetic recovery tests remain synthetic and do not fill this gap. Required next evidence is actual receiver/config/clock/lever/map qualification and a source-independent reference or deterministic bounds.

@@ -1,0 +1,6 @@
+# Vertical behavior retained independently of global faults
+Frozen AO real results are unchanged: loop44 local Z span70.720km, maximum single wheel dZ150.939m, final vz-158.812m/s; loop8 local Z span310.906km, max wheel dZ597.146m, final vz-237.355m/s. These are model-output failures, not independently measured vehicle-height errors. Initialization, gravity/reference alignment and process/noise assumptions remain conditional.
+
+All225 P entries and bias/velocity correlations remain active. No fixed Z, vz clip, gain-row deletion or cross-covariance clearing was used. The actual wheel update can change Z/vz through full P; global Map/Odom layering does not eliminate that physical/statistical coupling.
+
+AP global observation injections only receive copied poses from a read-only local trace. Full trace SHA before/after all scenarios is identical. This establishes the permitted feedback boundary for the executed program, **not a cure** for vertical instability or proof of a correct global estimate. An invalid local trajectory must become an explicit publication eligibility failure; merely reporting `local_continuous=True` in the inherited manager is insufficient physical health evidence. No fault-time Q/R search was started.

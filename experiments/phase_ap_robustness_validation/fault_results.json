@@ -1,0 +1,320 @@
+{
+  "results": [
+    {
+      "scenario": "control",
+      "provenance": "real input, unqualified global observations",
+      "injected_observations": 0,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00529,
+        "p95": 0.030477,
+        "p99": 0.03235109000000008,
+        "max": 0.372625
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "gnss_dropout_middle_third",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 0,
+      "excluded_observations": 3056,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 6114
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.005405500000000001,
+        "p95": 0.030627,
+        "p99": 0.03257,
+        "max": 0.279201
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "gnss_delay_600ms",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 9170,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "STALE": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.005551,
+        "p95": 0.031178,
+        "p99": 0.03309209000000009,
+        "max": 0.262319
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "gnss_lla_outlier",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 9170,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00547,
+        "p95": 0.030917,
+        "p99": 0.032801,
+        "max": 0.280934
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "wrong_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {
+        "NO_BRACKET": 1
+      },
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00543,
+        "p95": 0.031168,
+        "p99": 0.034364,
+        "max": 0.899768
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "duplicate_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "DUPLICATE": 1,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00536,
+        "p95": 0.030717,
+        "p99": 0.032761,
+        "max": 0.654131
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "stale_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16315,
+        "FIX_UNQUALIFIED": 9170,
+        "OBS_TIME_ROLLBACK": 1
+      },
+      "states": {
+        "INITIALIZING": 7,
+        "UNAVAILABLE": 91700
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00554,
+        "p95": 0.031188,
+        "p99": 0.033523,
+        "max": 1.161456
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "ambiguous_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "AMBIGUOUS_NO_ANCHOR": 1,
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16315,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "AMBIGUOUS": 40,
+        "UNAVAILABLE": 91666
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.005541,
+        "p95": 0.030988,
+        "p99": 0.033232,
+        "max": 0.259404
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "ndt_absent_middle_third",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 0,
+      "excluded_observations": 5265,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 11051,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_reasons": {},
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.0055,
+        "p95": 0.031198,
+        "p99": 0.03322860000000003,
+        "max": 0.299499
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    }
+  ],
+  "local_trace_sha256_before": "a697ede8496e4f18155915bec26adc884d69709dfa9c15ec53720c7d2140e2d5",
+  "local_trace_sha256_after": "a697ede8496e4f18155915bec26adc884d69709dfa9c15ec53720c7d2140e2d5",
+  "local_trace_bitwise_unchanged": true,
+  "frozen_core_modified": false
+}

@@ -1,0 +1,45 @@
+{
+  "phase": "AP",
+  "frozen_AO_commit": "3667c9c6da84b82c1d9e4676b38436ed9f8f6da1",
+  "research_code_commit": "enclosing Phase AP Git commit",
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "code_sha256": {
+    "experiments/phase_ap_robustness_validation/run_faults.py": "e976db5b4fa0772bc7478a243e505167d8d67452bae4d7b126f17bb8c59aad61",
+    "experiments/phase_ap_robustness_validation/run_geometry_fault.py": "62381b358e81f00c70bc059e572aaa83258bb3f4a6366ce1083728628f8d7df4"
+  },
+  "AO_core_unchanged": true,
+  "raw_bag_sha256": {
+    "loop35_loc": "df113e7df75057354a7b3bcd8f613946bab6551db0860f99b9ad23480e8f395c",
+    "loop44": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+    "loop7_loc": "39a58bb1e6f98ce8fdff9b04945cb040ddb197449f6f29edac40c4a2cb727f22"
+  },
+  "raw_bag8_sha256": "3f2a553ef79528fc4802112a71a891cc5d8be1d1a76dd0c2190b3c4bab6020e5",
+  "raw_extraction_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "local_trace_sha256": "a697ede8496e4f18155915bec26adc884d69709dfa9c15ec53720c7d2140e2d5",
+  "local_trace_unchanged": true,
+  "historical_target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "geometry_source_sha256": [
+    "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+    "c6e2fb90910da9d9ad20f245cd06a5c9f5999b4c32c4d23470142de767a1b18e",
+    "7eb53e6250800998de406c35940c2b78f3bb79dcc10ed5ad652dc062cd1cb6b5",
+    "a4e3f70cee3d81180139161c908e158ba77dfe975808ca47df1c67d4193375a4",
+    "a3acf3a6d1cc84df3e5a9a37e0b3cb7c0f6c2c475b2df449ce7e89128fac8b34"
+  ],
+  "historical_multistart_sha256": "1fff8323c017de0d646209919e3d13043592991982de2ba0e49410df7632cb15",
+  "frozen_scope": "LIMITED_DIAGNOSIS_AND_DECLARED_INJECTION",
+  "AO_gate": "NO_GO",
+  "AP_gate": "NO_GO_ROBUSTNESS_ACCEPTANCE",
+  "fault_scenarios": 9,
+  "outputs_per_scenario": 91707,
+  "trusted_coverage": 0.0,
+  "tests": {
+    "passed": 134,
+    "failed": 0,
+    "cumulative": true
+  },
+  "new_GPU_execution": false,
+  "partial_LiDAR_execution": false,
+  "independent_reference": false,
+  "production_modified": false,
+  "private_payloads_committed": false
+}

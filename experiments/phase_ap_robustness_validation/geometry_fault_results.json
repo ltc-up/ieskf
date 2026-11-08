@@ -1,0 +1,507 @@
+{
+  "provenance": "real historical frozen geometry with artificial Target deletion; old GPU results re-audited, not new fits",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "target_points": 908013,
+  "removed_target_points": 3158,
+  "remaining_target_points": 904855,
+  "hole_radius_m": 20.0,
+  "geometry": [
+    {
+      "index": 0,
+      "source_sha256": "510a0b2aae22ede00acf73d27352cda71c1109d0981a9438c9bf4f6bf5a19ac2",
+      "control": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 4005,
+        "sampled": 1500,
+        "nearby_target_samples": 1495,
+        "nearby_fraction": 0.9966666666666667,
+        "unique_target_points": 1422,
+        "support_cells": 783,
+        "covered_sectors": 8,
+        "source_sectors": 8,
+        "planar_samples": 1399,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.030164289204456015,
+            0.28489651283816597,
+            0.32950239200848636,
+            2.011280181563024,
+            8.55058451661071,
+            18.524857499204238
+          ],
+          "normal_eigenvalues": [
+            0.03167780064410931,
+            0.29323712487577824,
+            0.6750850744801125
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "injected_map_hole": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 4005,
+        "sampled": 1500,
+        "nearby_target_samples": 1447,
+        "nearby_fraction": 0.9646666666666667,
+        "unique_target_points": 1372,
+        "support_cells": 749,
+        "covered_sectors": 8,
+        "source_sectors": 8,
+        "planar_samples": 1357,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.030615165947796487,
+            0.2730745274326592,
+            0.32964273190141374,
+            2.0763851428175215,
+            8.897233055481898,
+            19.30343274658023
+          ],
+          "normal_eigenvalues": [
+            0.03220927302315298,
+            0.28671891324334464,
+            0.6810718137335022
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "control_ms": 7.8177220002544345,
+      "injection_ms": 7.1667289994366,
+      "nearby_fraction_change": -0.03200000000000003
+    },
+    {
+      "index": 71,
+      "source_sha256": "c6e2fb90910da9d9ad20f245cd06a5c9f5999b4c32c4d23470142de767a1b18e",
+      "control": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 3731,
+        "sampled": 1500,
+        "nearby_target_samples": 1500,
+        "nearby_fraction": 1.0,
+        "unique_target_points": 1434,
+        "support_cells": 854,
+        "covered_sectors": 8,
+        "source_sectors": 8,
+        "planar_samples": 1291,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.06759845792559069,
+            0.15161911528330146,
+            0.4489659565087194,
+            2.494611978215581,
+            10.77085542488606,
+            18.991072561682522
+          ],
+          "normal_eigenvalues": [
+            0.06905400711549614,
+            0.3368454919460649,
+            0.5941005009384392
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "injected_map_hole": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 3731,
+        "sampled": 1500,
+        "nearby_target_samples": 1500,
+        "nearby_fraction": 1.0,
+        "unique_target_points": 1434,
+        "support_cells": 854,
+        "covered_sectors": 8,
+        "source_sectors": 8,
+        "planar_samples": 1291,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.06759845792559069,
+            0.15161911528330146,
+            0.4489659565087194,
+            2.494611978215581,
+            10.77085542488606,
+            18.991072561682522
+          ],
+          "normal_eigenvalues": [
+            0.06905400711549614,
+            0.3368454919460649,
+            0.5941005009384392
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "control_ms": 7.439807999617187,
+      "injection_ms": 7.309443999474752,
+      "nearby_fraction_change": 0.0
+    },
+    {
+      "index": 142,
+      "source_sha256": "7eb53e6250800998de406c35940c2b78f3bb79dcc10ed5ad652dc062cd1cb6b5",
+      "control": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 1918,
+        "sampled": 1500,
+        "nearby_target_samples": 1500,
+        "nearby_fraction": 1.0,
+        "unique_target_points": 1294,
+        "support_cells": 510,
+        "covered_sectors": 5,
+        "source_sectors": 5,
+        "planar_samples": 1221,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.05759447600533902,
+            0.13407818931328394,
+            0.42898223312296546,
+            2.603758356922675,
+            9.14066806550473,
+            15.863403651595364
+          ],
+          "normal_eigenvalues": [
+            0.13260073367057335,
+            0.3094826507108837,
+            0.5579166156185423
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "injected_map_hole": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 1918,
+        "sampled": 1500,
+        "nearby_target_samples": 1500,
+        "nearby_fraction": 1.0,
+        "unique_target_points": 1294,
+        "support_cells": 510,
+        "covered_sectors": 5,
+        "source_sectors": 5,
+        "planar_samples": 1221,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.05759447600533902,
+            0.13407818931328394,
+            0.42898223312296546,
+            2.603758356922675,
+            9.14066806550473,
+            15.863403651595364
+          ],
+          "normal_eigenvalues": [
+            0.13260073367057335,
+            0.3094826507108837,
+            0.5579166156185423
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "control_ms": 7.010627999989083,
+      "injection_ms": 6.936841000424465,
+      "nearby_fraction_change": 0.0
+    },
+    {
+      "index": 213,
+      "source_sha256": "a4e3f70cee3d81180139161c908e158ba77dfe975808ca47df1c67d4193375a4",
+      "control": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 1378,
+        "sampled": 1378,
+        "nearby_target_samples": 1378,
+        "nearby_fraction": 1.0,
+        "unique_target_points": 1066,
+        "support_cells": 369,
+        "covered_sectors": 6,
+        "source_sectors": 6,
+        "planar_samples": 1159,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.028975112553681782,
+            0.097379955157735,
+            0.5776867413226869,
+            1.2824223017317922,
+            4.5078572494161335,
+            15.906050329524211
+          ],
+          "normal_eigenvalues": [
+            0.029352209128411154,
+            0.216640049192869,
+            0.7540077416787199
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "injected_map_hole": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 1378,
+        "sampled": 1378,
+        "nearby_target_samples": 1378,
+        "nearby_fraction": 1.0,
+        "unique_target_points": 1066,
+        "support_cells": 369,
+        "covered_sectors": 6,
+        "source_sectors": 6,
+        "planar_samples": 1159,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.028975112553681782,
+            0.097379955157735,
+            0.5776867413226869,
+            1.2824223017317922,
+            4.5078572494161335,
+            15.906050329524211
+          ],
+          "normal_eigenvalues": [
+            0.029352209128411154,
+            0.216640049192869,
+            0.7540077416787199
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "control_ms": 6.046271000741399,
+      "injection_ms": 5.903984998440137,
+      "nearby_fraction_change": 0.0
+    },
+    {
+      "index": 283,
+      "source_sha256": "a3acf3a6d1cc84df3e5a9a37e0b3cb7c0f6c2c475b2df449ce7e89128fac8b34",
+      "control": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 2758,
+        "sampled": 1500,
+        "nearby_target_samples": 1499,
+        "nearby_fraction": 0.9993333333333333,
+        "unique_target_points": 1386,
+        "support_cells": 676,
+        "covered_sectors": 8,
+        "source_sectors": 8,
+        "planar_samples": 1331,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.1350850646317265,
+            0.14355941363492558,
+            0.505053774840243,
+            1.114527818790938,
+            4.428259914654934,
+            13.176231296332924
+          ],
+          "normal_eigenvalues": [
+            0.13600011601108936,
+            0.2291130650963543,
+            0.6348868188925565
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "injected_map_hole": {
+        "classification": "VALID_CANDIDATE",
+        "source_count": 2758,
+        "sampled": 1500,
+        "nearby_target_samples": 1499,
+        "nearby_fraction": 0.9993333333333333,
+        "unique_target_points": 1386,
+        "support_cells": 676,
+        "covered_sectors": 8,
+        "source_sectors": 8,
+        "planar_samples": 1331,
+        "rank": 6,
+        "geometry": {
+          "rank": 6,
+          "eigenvalues": [
+            0.1350850646317265,
+            0.14355941363492558,
+            0.505053774840243,
+            1.114527818790938,
+            4.428259914654934,
+            13.176231296332924
+          ],
+          "normal_eigenvalues": [
+            0.13600011601108936,
+            0.2291130650963543,
+            0.6348868188925565
+          ],
+          "normalization_m": 10.0,
+          "covariance": "NOT_A_COVARIANCE"
+        },
+        "point_count_is_information": false,
+        "map_missing_proven": false,
+        "per_lidar_support": "UNKNOWN_WITHOUT_POINT_LINEAGE"
+      },
+      "control_ms": 6.960513999729301,
+      "injection_ms": 7.052897000903613,
+      "nearby_fraction_change": 0.0
+    }
+  ],
+  "historical_multimode": [
+    {
+      "index": 0,
+      "classification": "AMBIGUOUS",
+      "clusters": [
+        [
+          0,
+          2,
+          4
+        ],
+        [
+          6
+        ]
+      ],
+      "converged": 4,
+      "fitness": [
+        0.1316473545440577,
+        0.13154830964908995,
+        0.13028132271237575,
+        0.13545298353080276,
+        0.12953044755006304,
+        0.13093870988660103,
+        0.2616894607753637
+      ],
+      "new_GPU_execution": false
+    },
+    {
+      "index": 71,
+      "classification": "UNKNOWN",
+      "clusters": [
+        [
+          0,
+          1,
+          2,
+          3
+        ]
+      ],
+      "converged": 4,
+      "fitness": [
+        0.10654577128374171,
+        0.10756292462521361,
+        0.10656361559021231,
+        0.10747213517020514,
+        0.10638723887337666,
+        0.1462857594234038,
+        4.138358231580468
+      ],
+      "new_GPU_execution": false
+    },
+    {
+      "index": 142,
+      "classification": "AMBIGUOUS",
+      "clusters": [
+        [
+          0,
+          4
+        ],
+        [
+          3
+        ],
+        [
+          5
+        ]
+      ],
+      "converged": 4,
+      "fitness": [
+        0.10743707523015264,
+        3.6341690077007325,
+        3.460714887887299,
+        0.7183836659508086,
+        0.10732754079379313,
+        3.2449083629921778,
+        5.741052193240611
+      ],
+      "new_GPU_execution": false
+    },
+    {
+      "index": 213,
+      "classification": "UNKNOWN",
+      "clusters": [
+        [
+          4
+        ]
+      ],
+      "converged": 1,
+      "fitness": [
+        0.3923853187287376,
+        0.10498668008493409,
+        0.8534103996883767,
+        1.051564825319412,
+        0.08532255730081109,
+        1.8072072079451484,
+        6.891735182305149
+      ],
+      "new_GPU_execution": false
+    },
+    {
+      "index": 283,
+      "classification": "UNKNOWN",
+      "clusters": [
+        [
+          4
+        ]
+      ],
+      "converged": 1,
+      "fitness": [
+        0.15401691772073295,
+        0.3225295524831095,
+        0.15458724042141125,
+        1.5048049578333085,
+        0.15257637594064882,
+        0.5831283416480088,
+        2.285767920222826
+      ],
+      "new_GPU_execution": false
+    }
+  ],
+  "wrong_peak_labels": "UNAVAILABLE",
+  "NDT_recomputed": false,
+  "GNSS_mode_selection": "NOT_QUALIFIED",
+  "GPU_performance": "NOT_MEASURED_THIS_PHASE",
+  "qualification": "LIMITED_DIAGNOSTIC"
+}

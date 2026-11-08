@@ -69,3 +69,7 @@ Same284-frame window plus146 raw GNSS messages processed. Two AM ambiguities ret
 ## Phase AO — real long-input validation, NO-GO
 
 Audited production delay/smoothing vs research; 2292 real temporal pose pairings and 43441 IMU/wheel events tested in three orders. Bounded checkpoint replay matches final Header state/full P exactly; online equivalence remains unvalidated. Extracted primary/backup whole raw records; loop35 has zero wheel Headers; loop7 stops at144.86s, loop44 processes917.07s, loop8 processes2455.68s. Long local vertical behavior fails (wheel dZ up to597.146m); no independent truth or qualified NDT/GNSS anchors,0 trusted availability.129 tests pass. AP restricted to diagnosis/injection. [Report](../experiments/phase_ao_full_lap_validation/FINAL_CONCLUSION.md) · [timing audit](../experiments/phase_ao_full_lap_validation/ENGINEERING_TIMING_AUDIT.md).
+
+## Phase AP — frozen real-input fault diagnosis, robustness NO-GO
+
+AO3667c9c frozen byte-for-byte. Nine917.07s global fault/control schedules retain local trace hash;0 trusted anchors/coverage,explicit duplicate/stale/rollback and supplied-ambiguity results.20m Target deletion removes3158 points but rank6/classification persist:partial-hole detection not passed. Historical GPU groups retain2 ambiguities;no true-peak labels/new GPU test/qualified GNSS recovery/partial-LiDAR frontend.134 tests pass. [AP](../experiments/phase_ap_robustness_validation/FINAL_CONCLUSION.md) · [AO–AP summary](../experiments/PHASE_AO_AP_FINAL_SUMMARY.md).

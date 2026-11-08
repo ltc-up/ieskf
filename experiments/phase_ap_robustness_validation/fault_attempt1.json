@@ -1,0 +1,309 @@
+{
+  "results": [
+    {
+      "scenario": "control",
+      "provenance": "real input, unqualified global observations",
+      "injected_observations": 0,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00531,
+        "p95": 0.030667,
+        "p99": 0.033362,
+        "max": 1.680783
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "gnss_dropout_middle_third",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 0,
+      "excluded_observations": 3056,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 6114
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.005541,
+        "p95": 0.030707,
+        "p99": 0.032701,
+        "max": 0.336908
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "gnss_delay_600ms",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 9170,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "STALE": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00553,
+        "p95": 0.031098,
+        "p99": 0.033853,
+        "max": 0.395888
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "gnss_lla_outlier",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 9170,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00551,
+        "p95": 0.030927,
+        "p99": 0.033122,
+        "max": 0.425283
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "wrong_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00559,
+        "p95": 0.031058,
+        "p99": 0.032791,
+        "max": 0.258772
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "duplicate_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16316,
+        "DUPLICATE": 1,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.005561,
+        "p95": 0.031027,
+        "p99": 0.032851,
+        "max": 0.263
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "stale_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16315,
+        "FIX_UNQUALIFIED": 9170,
+        "OBS_TIME_ROLLBACK": 1
+      },
+      "states": {
+        "INITIALIZING": 7,
+        "UNAVAILABLE": 91700
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00555,
+        "p95": 0.030977,
+        "p99": 0.032791,
+        "max": 0.278509
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "ambiguous_ndt_first",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 1,
+      "excluded_observations": 0,
+      "decisions": {
+        "AMBIGUOUS_NO_ANCHOR": 1,
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 16315,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "AMBIGUOUS": 40,
+        "UNAVAILABLE": 91666
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.005601,
+        "p95": 0.031209,
+        "p99": 0.033011,
+        "max": 0.279271
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    },
+    {
+      "scenario": "ndt_absent_middle_third",
+      "provenance": "real raw observation timing/local trajectory + declared artificial injection",
+      "injected_observations": 0,
+      "excluded_observations": 5265,
+      "decisions": {
+        "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 11051,
+        "FIX_UNQUALIFIED": 9170
+      },
+      "states": {
+        "INITIALIZING": 1,
+        "UNAVAILABLE": 91706
+      },
+      "output_slots": 91707,
+      "anchors": 0,
+      "published": 0,
+      "trusted_publications": 0,
+      "trusted_coverage": 0.0,
+      "max_continuous_no_trusted_s": 917.07,
+      "known_wrong_trusted_acceptances": 0,
+      "wrong_shadow_acceptances": 0,
+      "injected_shadow_displacement_m": 0.0,
+      "local_writable_handle": false,
+      "core_ms": {
+        "p50": 0.00531,
+        "p95": 0.030527,
+        "p99": 0.03251,
+        "max": 0.26307
+      },
+      "recovery": "NOT_QUALIFIED_REAL_ANCHORS",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "qualification": "LIMITED_DIAGNOSTIC_NO_GO_ROBUSTNESS"
+    }
+  ],
+  "local_trace_sha256_before": "a697ede8496e4f18155915bec26adc884d69709dfa9c15ec53720c7d2140e2d5",
+  "local_trace_sha256_after": "a697ede8496e4f18155915bec26adc884d69709dfa9c15ec53720c7d2140e2d5",
+  "local_trace_bitwise_unchanged": true,
+  "frozen_core_modified": false
+}
