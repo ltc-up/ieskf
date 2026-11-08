@@ -49,3 +49,7 @@ Goal: isolate kernel relative-Z vs RP effects on NDT and frozen15D updates. Exec
 | AI | NDT as numerical start of unchanged point-plane MAP | Five AH A events; four-loop strict 0/5 both starts, conditional 16-loop E5 only qualifies; first frame fails | CONDITIONAL local result; no trusted posterior or replay | [AI report](../experiments/phase_ai_ndt_seeded_geometry/FINAL_CONCLUSION.md) |
 
 | AJ | Causal NDT XY/yaw on unchanged full15 predictor | 11 tests,5 frozen observations,one14.70s C loop;66/284 submits,5.50s LiDAR gap; unchanged wheel can move Z4.137m; no point factors | Numeric recursion PASS; retention/height FAIL; no truth/real-time qualification | [AJ report](../experiments/phase_aj_ndt_pose_update/FINAL_CONCLUSION.md) |
+
+## Phase AK — NDT-centric multi-source architecture
+
+Executed pinned FAR-LIO source audit, primary-literature review,7 independent synthetic tests and94 existing tests. Recommend local15D + global Map/Odom with source support/direction/ambiguity management; selective/Schmidt remains optional. Layering isolates map errors from local dynamics but wrong global poses and missing vertical observability persist. No new real replay, calibrated NDT covariance, production changes or accuracy claim. [Final report](../experiments/phase_ak_fusion_architecture/FINAL_CONCLUSION.md) · [audit](../experiments/phase_ak_fusion_architecture/FAR_LIO_SOURCE_AUDIT.md) · [manifest](../experiments/phase_ak_fusion_architecture/manifest.json) · [failures](../experiments/phase_ak_fusion_architecture/FAILURES.md).

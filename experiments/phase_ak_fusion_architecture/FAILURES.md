@@ -1,0 +1,9 @@
+# Failures, negative results and unverified work
+
+Preserved negative outcomes: synthetic wrong Z and XY/yaw corrupt global output even with perfect local containment; direct15D unguarded updates corrupt local dynamics. GNSS position recovery leaves .4rad yaw error. Local sigmaZ grows despite layering. Equal-cost distinct Gaussian-cell peaks both have curvature25. Schmidt and subspace updates lose information relative to full Gaussian conditioning. All are intended falsification cases, not suppressed failed trials.
+
+A prototype revision initially treated returning GNSS as full pose. Review corrected this before delivery: GNSS recovery is position-only, retains prior global yaw and tests that yaw remains wrong. No real sensor result depended on that earlier draft. First inspection searched a nonexistent FAR-LIO kf_base.hpp; actual implementation is kalman_filter/base.hpp. Production read-only search initially targeted nonexistent root src/include; corrected to lidar_ndt_v1. Neither changed source.
+
+Limits: no CUDA synthetic fit or real multi-start peak campaign; the1D Gaussian mixture is an analytically interpretable NDT-style analogy. Missing-block case deletes two known surfaces, not a realistic map-hole distribution. Health code is a minimal event eligibility model, not the full proposed ROS state machine, hysteresis, clock handling or latency scheduler. Global correction uses direct synthetic anchor replacement, not a calibrated recursive6D estimator. Nonlinear Schmidt reset, unknown-correlation fusion, partial multi-LiDAR ROS operation, actual GNSS recovery and target vehicle speed policy remain UNVERIFIED.
+
+No independently referenced real accuracy, NDT covariance calibration, runtime qualification or production readiness. Historical AB/AE/AF/AH/AI/AJ failures remain binding. No extra real replay, guard loosening, covariance scaling, clipping or solver budget search was performed.

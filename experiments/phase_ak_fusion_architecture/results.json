@@ -1,0 +1,197 @@
+{
+  "hierarchy": {
+    "local_difference_max": 0.0,
+    "global_position_errors": [
+      0.0,
+      8.0,
+      11.180339887498949,
+      0.0
+    ],
+    "global_rotation_errors": [
+      0.0,
+      0.0,
+      0.4,
+      0.4
+    ],
+    "local_sigma_z_final": 3.004441305844844,
+    "direct_corrections": [
+      {
+        "step": 20,
+        "velocity": 0.0,
+        "bias": 0.0
+      },
+      {
+        "step": 40,
+        "velocity": 15.320327174425191,
+        "bias": 6.538657762120169
+      },
+      {
+        "step": 60,
+        "velocity": 49.060116606259704,
+        "bias": 14.533265159392556
+      },
+      {
+        "step": 90,
+        "velocity": 42.90927867687345,
+        "bias": 15.87983656950883
+      }
+    ],
+    "gnss_recovery": true,
+    "global_covariance": "UNCALIBRATED_CORRELATION_UNKNOWN",
+    "direct_max_sigma_z": 1.0800986994021122
+  },
+  "gaussian": {
+    "full_delta": [
+      0.5727699530516431,
+      -0.36384976525821594,
+      0.3568075117370892
+    ],
+    "schmidt_delta": [
+      0.5727699530516431,
+      -0.36384976525821594,
+      0.0
+    ],
+    "full_reference_error": 1.1102230246251565e-16,
+    "schmidt_reference_error": 0.0,
+    "schmidt_cross": [
+      -0.43943661971830983,
+      -0.0028169014084507005
+    ],
+    "schmidt_variance": 1.0,
+    "min_eigenvalues": [
+      0.09349766287349269,
+      0.24212545546333974,
+      0.09352559222464313
+    ],
+    "symmetry_errors": [
+      5.551115123125783e-17,
+      1.734723475976807e-18,
+      2.7755575615628914e-17
+    ],
+    "full_trace": 1.3112676056338026,
+    "schmidt_trace": 1.8014084507042254,
+    "projected_trace": 2.3674999999999997
+  },
+  "geometry": {
+    "ranks": {
+      "single": 3,
+      "orthogonal": 5,
+      "multi": 6,
+      "missing_block": 3
+    },
+    "repeated_peaks": [
+      1.3877787807814457e-17,
+      5.0
+    ],
+    "repeated_costs": [
+      2.4074124304840448e-33,
+      -0.0
+    ],
+    "repeated_curvature": [
+      25.000000000000004,
+      24.999999999883475
+    ],
+    "missing_support_fraction": 0.3333333333333333
+  },
+  "health": [
+    {
+      "source": "ndt",
+      "reason": "ACCEPTED",
+      "accepted": true,
+      "rank": 6,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "ndt",
+      "reason": "ACCEPTED_PARTIAL",
+      "accepted": true,
+      "rank": 3,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "ndt",
+      "reason": "AMBIGUOUS",
+      "accepted": false,
+      "rank": 6,
+      "converged": true,
+      "peaks": 2,
+      "received": true
+    },
+    {
+      "source": "gnss",
+      "reason": "ACCEPTED",
+      "accepted": true,
+      "rank": 3,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "gnss",
+      "reason": "STALE",
+      "accepted": false,
+      "rank": 3,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "kistler",
+      "reason": "MISSING",
+      "accepted": false,
+      "rank": 1,
+      "converged": true,
+      "peaks": 1,
+      "received": false
+    },
+    {
+      "source": "wheel",
+      "reason": "REJECTED_INCONSISTENT",
+      "accepted": false,
+      "rank": 1,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "ndt",
+      "reason": "NOT_CONVERGED",
+      "accepted": false,
+      "rank": 6,
+      "converged": false,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "ndt",
+      "reason": "REJECTED_INCONSISTENT",
+      "accepted": false,
+      "rank": 6,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "gnss",
+      "reason": "ACCEPTED",
+      "accepted": true,
+      "rank": 3,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    },
+    {
+      "source": "ndt",
+      "reason": "DUPLICATE",
+      "accepted": false,
+      "rank": 6,
+      "converged": true,
+      "peaks": 1,
+      "received": true
+    }
+  ]
+}

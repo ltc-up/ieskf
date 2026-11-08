@@ -1,0 +1,19 @@
+# NDT observability and ambiguity
+
+Three distinct questions must be reported: enough map support? enough directional geometry? unique matching basin? None is answered by fitness alone.
+
+Primary literature, read 2026-11-08:
+
+* [X-ICP v2](https://arxiv.org/html/2211.16335v2): analyzes correspondence alignment against principal optimization directions, classifies localizability and constrains the registration step. Useful for directional eligibility; not a global peak certificate. Its ICP constraints require adaptation to CUDA-NDT, not replacement of the backend.
+* [LF-GICP v1](https://arxiv.org/html/2608.19522v1), III-B–F: builds a planarity-weighted voxel-normal field before covariance regularization; normalized weakest mass detects anisotropy, absolute mass distinguishes absence from dilution, temporal gating stabilizes decisions. It diagnoses GICP curvature floors. NDT transfer remains UNVERIFIED; its weights/thresholds and claimed benchmark gains are not imported.
+* [SuperLoc v2](https://arxiv.org/html/2412.02901v2), III-A–C: evaluates point/normal constraints before optimization using n and p×n, then directional observability labels and external priors. Its covariance construction is not evidence of calibrated NDT covariance. Pre-match risk can be attached to our candidate interface.
+
+Independent diagnostic: for known plane residual nᵀ(Rq+t−a), J=[nᵀ,(q×n)ᵀ] at identity in translation-first chart. JᵀJ has rank3 for an infinite horizontal plane,5 for two orthogonal planes,6 for three. Use centered/scaled rotational lever arms and explicit chart. Normal-only M=Σw nnᵀ describes translation support, not all6DoF. Robust map-support diagnostics must include valid cell coverage, source matched fraction, spatial/angular distribution, normal concentration and overlap with available map tiles. Coverage loss can leave rank unchanged; rank alone misses poor support and map errors.
+
+For missing blocks, report map availability separately from raw cloud reception. For directional degeneracy, export eligible basis U and evidence/normalization plus conditional projected noise only if validated. Do not manufacture full6D R by inverting local Hessian. During initial shadow mode the noise status is UNCALIBRATED and no probabilistic update is authorized by the diagnostic alone.
+
+For wrong peaks, run a bounded predetermined set of physically plausible seeds, cluster SE(3) endpoints using translation/rotation metrics, compare support and objective on the SAME input, and retain all distinguishable basins. Similar poses across seeds can reflect shared basin capture, not uniqueness. Innovation against local motion, timestamped independent GNSS/RTK and temporal mode persistence can eliminate candidates only within their own uncertainty and correlation limits. NDT priors/Deskew reuse local motion; neither is independent validation. Multiple sensors sharing the same map/datum also need common-error treatment.
+
+Equal residual and positive local curvature at0/5m synthetic Gaussian-cell peaks demonstrate that local curvature cannot distinguish globally aliased positions. This is an NDT-style1D likelihood counterexample, not a GPU-NDT test. If no independent evidence separates modes, publish AMBIGUOUS with hypotheses; a narrow covariance around one chosen peak is misleading. No same-scan repeated fit contributes extra information. Multi-frame continuity can preserve a persistent wrong mode and is not proof of correctness.
+
+Acceptance requires time/frame validity, fresh data, solver success, adequate support, declared subspace and source consistency, uniqueness or explicit ambiguity handling, then an atomic backend transaction. Threshold calibration on held-out independently referenced data remains REQUIRED. Real wrong-peak rate and current NDT pose covariance: UNVERIFIED.

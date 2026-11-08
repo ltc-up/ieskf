@@ -1,0 +1,65 @@
+{
+  "phase": "AK",
+  "date": "2026-11-08",
+  "baseline_sha": "97df23be8b110164e29a48183bde70266ace4133",
+  "far_lio": {
+    "url": "https://github.com/TUMFTM/FAR-LIO.git",
+    "branch": "main",
+    "sha": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+    "tag_at_head": null,
+    "audit": "source_only"
+  },
+  "research_code_commit": "resolve git log -1 --format=%H -- experiments/phase_ak_fusion_architecture/prototype.py",
+  "configuration": {
+    "steps": 100,
+    "dt_s": 0.02,
+    "wrong_z_m": 8,
+    "wrong_xy_m": [
+      10,
+      -5
+    ],
+    "wrong_yaw_rad": 0.4,
+    "gnss_recovery": "position_only",
+    "data_version": "ak-synthetic-v1",
+    "seed": "deterministic_no_rng"
+  },
+  "configuration_sha256": "779245ce95e66bad3446ada4b07eed3f9a780e9d7f748949172b3a5356cd1998",
+  "input_identity": "independent synthetic construction plus public baseline reports; no private payload",
+  "data_version": "ak-synthetic-v1",
+  "runtime": {
+    "python": "3.12.3",
+    "numpy": "1.26.4",
+    "scipy": "1.11.4"
+  },
+  "tests": {
+    "new": 7,
+    "existing": 94,
+    "result": "PASS"
+  },
+  "qualifications": {
+    "algebra": "PASS",
+    "containment_synthetic": "PASS",
+    "real_accuracy": "UNVERIFIED",
+    "global_covariance_calibration": "UNVERIFIED",
+    "production": "NOT_QUALIFIED"
+  },
+  "file_sha256": {
+    "prototype.py": "b771d89d6f84ac80309c9f874acc6f8a7b13b202209417fdab462fe582e31aca",
+    "test_prototype.py": "13e9f8ba4d36dcf30cc5737f96df9832dccc95f658592ac5d024bdac0f6b59cd",
+    "results.json": "73f210ac78057efba3817b23c19dc3b8501a4451f9b226140945ecc5cab925ae"
+  },
+  "audited_source_sha256": {
+    "lib_cpp/state_estimation_cpp/state_estimation_constants/include/state_estimation_constants/EKF_2D.hpp": "e58961de03a709cac2e4f10a0451b71336d8ae00c83dcd9fa3a9300ef067995e",
+    "lib_cpp/state_estimation_cpp/state_estimation_constants/include/state_estimation_constants/EKF_3D.hpp": "f645eeec4ad5a35b9de6bf5036f663104aca1339f0ed3a749180e3bb3af3a6da",
+    "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/ekf_3d.hpp": "93a5ff3283bbfac715a8fe335d14bd109bb80e827a8e102b3d0e7d9b902038a5",
+    "ros_packages/tam_state_estimation_node/components/state_estimation_node.cpp": "43e42f35dee293bacb2f0c66743c258a7859aaae3688109c720368c676240dce",
+    "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/submodules/imu_handler.hpp": "39b6089d33cbe80d986300d095fcd76ccfcdda213950d9be14dbe988a7ca89d3",
+    "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/state_estimation.hpp": "97a587a93bac7824d29d15a729a629f1c4dac41367f97ca16ffe74f6211ec0ba",
+    "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/submodules/vehicle_model_handler.hpp": "9615e152617c90dc290781e0c792bb37f5096efd3d88d8f067a5a08231377df1",
+    "ros_packages/tam_state_estimation_node/include/tam_state_estimation_node/node.hpp": "6e3602370a7f9210662ab4d4d366cb9ad2b2c2ceebb9fb71b058acd762e51211",
+    "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/submodules/state_machine.hpp": "fe5a40a462294e3ed49afca61a70a9c17c5fd8002ceacb816b92284719052a57",
+    "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/base.hpp": "beabee6c03032fbb74ca4dffca291ee4910aaf277cd5cb237954c138bb2c768f",
+    "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/ekf.hpp": "fe13bae2b319a3d9d64bc772d499aecc3f0efac09e22695fa0fc8da1df0649c3",
+    "config/far-lio.yml": "ca4f5bf4177b18bc0ecfc80c1e85a1046c8ed17ea4970d7fd86c252ac22f4317"
+  }
+}
