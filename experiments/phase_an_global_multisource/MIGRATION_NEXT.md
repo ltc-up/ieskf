@@ -1,0 +1,10 @@
+# Next production migration boundary
+
+Overall NO-GO for production global fusion; CONDITIONAL for offline/isolated research. Existing production user modification was preserved.
+
+1. Add structured candidate export in CURRENT lidar_ndt frame-execution/registration/publication boundary,not only legacy GetNDTMatchingData. Carry native candidate_valid/converged/backend failure,publication MEASUREMENT vs FALLBACK vs NONE,scan reference time,map/extrinsic/base identities,seed parent and per-LiDAR point lineage. A fallback prior pose must never masquerade as a matched NDT observation. Keep old outputs in shadow mode and existing TF owner.
+2. Supply independently propagated local15D odom plus velocity/bias/full P and epoch; never reuse potentially NDT-corrected old EKF output as independent local motion. Audit local wheel physics/vertical observability before any stable3D claim. Preserve full correlations; no cosmetic stabilization.
+3. Verify receiver hardware/firmware fix mapping,surveyed map ENU/height datum,antenna-to-base calibration,clock and reported uncertainty units/frame/statistics. Separate raw GNSS position from dependent INS/attitude. Current converter covariance and optional NDT-derived heading are not an independent reference.
+4. Calibrate conditional NDT error and map/Source/prior/common-datum correlations on independently referenced data. Until then,NDT remains hypotheses/diagnostics,not a6D Gaussian update.5-group ambiguity evidence is a starting point,not validated detection rates.
+5. Add native typed ROS adapters,clock/epoch-reset lifecycle and bounded scheduling. Prewarm map/GPU while keeping localization unavailable until ready; cold batch223ms cannot be called20Hz. Measure combined Deskew,matching,diagnostics,global management and DDS under load.
+6. Admit a bounded real closed-loop trial only with frozen requirements,independent reference,input/map identity and observable dimensions. Acceptance includes no false trusted anchors,defined availability/latency budget and local invariance. Disable new consumers to rollback; never reset continuous local odom or take TF ownership during research.

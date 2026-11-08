@@ -77,3 +77,7 @@ Real284-frame input replay:155 shadow candidates/129 nonconvergences,0 trusted a
 ## Phase AM — real NDT integrity diagnostics, PARTIAL
 
 All284 frozen Sources assessed;35 new CUDA fits over5 fixed seven-seed groups. Two groups have competing converged low-fitness peaks (up to3.467m displacement), retained AMBIGUOUS without independent truth. Rank/support/normal diagnostics are not covariance;155 converged single-starts remain UNKNOWN. Warm batches22–28ms,cold223ms; no end-to-end20Hz qualification.6 new tests pass. [Report](../experiments/phase_am_ndt_integrity/FINAL_CONCLUSION.md).
+
+## Phase AN — executable global management; qualified real fusion NO-GO
+
+Same284-frame window plus146 raw GNSS messages processed. Two AM ambiguities retained; map/antenna/time/fix-code/statistical GNSS prerequisites remain unqualified,so0 anchors/0 trusted availability.118 tests pass; synthetic recovery and isolated ROS2 transport(3654 events) pass,not a real recovery/accuracy qualification. Local wheel dZ4.177m and sigmaZ51.783m persist. Strict controlled A/B/C and production/20Hz admission not established. [Report](../experiments/phase_an_global_multisource/FINAL_CONCLUSION.md) · [cross-stage summary](../experiments/PHASE_AL_AN_FINAL_SUMMARY.md).

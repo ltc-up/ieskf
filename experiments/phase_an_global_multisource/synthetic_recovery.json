@@ -1,0 +1,20 @@
+{
+  "evidence": "SYNTHETIC_ONLY",
+  "state_counts": {
+    "INITIALIZING": 1,
+    "RECOVERING": 2,
+    "PARTIAL": 13,
+    "AMBIGUOUS": 1,
+    "COASTING": 29,
+    "UNAVAILABLE": 6
+  },
+  "separately_qualified_orientation_state": "GLOBAL_TRACKING",
+  "position_anchors": 5,
+  "remaining_hypotheses_after_independent_bound": 1,
+  "unobserved_yaw_error_rad": 0.4,
+  "local_history_unchanged": true,
+  "global_covariance": "UNKNOWN_CORRELATION",
+  "statistical_fusion": false,
+  "real_sensor_claim": false,
+  "all_assertions_passed": true
+}

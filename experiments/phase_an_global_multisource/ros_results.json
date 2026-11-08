@@ -1,0 +1,19 @@
+{
+  "started": true,
+  "real_input_transport": true,
+  "received": 3654,
+  "output_states": {
+    "INITIALIZING": 19,
+    "UNAVAILABLE": 1355,
+    "AMBIGUOUS": 96
+  },
+  "observation_reasons": {
+    "FIX_UNQUALIFIED": 146,
+    "AMBIGUOUS_NO_ANCHOR": 2,
+    "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 155,
+    "NOT_CONVERGED_NO_QUALIFIED_NDT_OBSERVATION": 127
+  },
+  "global_corrections": 0,
+  "tf_published": false,
+  "live_closed_loop_qualified": false
+}

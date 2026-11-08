@@ -1,0 +1,42 @@
+{
+  "real_messages": 146,
+  "counts": {
+    "gnss1": 73,
+    "gnss2": 73
+  },
+  "fix_histogram": {
+    "8": 98,
+    "5": 5,
+    "7": 43
+  },
+  "enabled_position": 146,
+  "enabled_uncertainty": 146,
+  "finite_position": 146,
+  "all_positive_posu": 146,
+  "recorder_minus_header_ms": {
+    "min": 0.15779,
+    "p50": 0.4054605,
+    "max": 3.47828
+  },
+  "temporal_health": {
+    "gnss1": {
+      "nonmonotonic": 0,
+      "max_gap_ms": 229.854299
+    },
+    "gnss2": {
+      "nonmonotonic": 0,
+      "max_gap_ms": 229.854299
+    }
+  },
+  "qualified_global_observations": 0,
+  "rtk_fixed_evidence": "NOT_ESTABLISHED_FROM_THIS_MESSAGE_SCHEMA",
+  "cdr_group_sha256": "f63167dbad84c0bc106c17458fd9b09e9a505df9b9a20a858f976ac52039f0a0",
+  "failure_reasons": {
+    "MAP_DATUM_UNVERIFIED": 146,
+    "ANTENNA_LEVER_REFERENCE_UNVERIFIED": 146,
+    "HARDWARE_HEADER_ALIGNMENT_UNVERIFIED": 146,
+    "UNCERTAINTY_STATISTICS_UNVERIFIED": 146,
+    "CROSS_SOURCE_CORRELATION_UNKNOWN": 146
+  },
+  "coordinates_published": false
+}

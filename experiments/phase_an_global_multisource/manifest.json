@@ -1,0 +1,46 @@
+{
+  "phase": "AN",
+  "baseline_sha": "d84d8a387f56e9599f45638505a1856914f09415",
+  "research_code_commit": "enclosing AN commit; git log -1 -- src/ndt_global/global_manager.py",
+  "input_identity": {
+    "input_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "gnss_records_sha256": "72987e28c6195469c856b10eddc09c98e1112e110b89943a1cdf09db639965b8",
+    "AL_decisions_sha256": "22fdf06adb6343a7df13c74154b11fefb9568ffce88ab4549f59ec4b157fee18",
+    "AM_diagnostics_sha256": "8986324a69d3db19b5a94ccc43d2262fe8b6b7928461f21c3792df948f105db9",
+    "AM_multistart_sha256": "1fff8323c017de0d646209919e3d13043592991982de2ba0e49410df7632cb15"
+  },
+  "gnss_cdr_group_sha256": "f63167dbad84c0bc106c17458fd9b09e9a505df9b9a20a858f976ac52039f0a0",
+  "data_version": "same284-frame AL/AM window plus original raw GNSS146 messages",
+  "configuration": {
+    "fresh_ms": 500,
+    "coast_ms": 2000,
+    "recovery_fixes": 2,
+    "emulated_dispatch_delay_ms": 20,
+    "statistical_fusion": false,
+    "ndt_noise": null,
+    "real_GNSS_qualification": "blocked",
+    "orientation_qualified_real": false
+  },
+  "configuration_hash": "cb1b97efd558ebdb29ff8f23d68ce7783e1e1783350977dc9120c06b49dabb94",
+  "qualification": "PARTIAL_IMPLEMENTATION_NO_GO_REAL_QUALIFIED_FUSION",
+  "tests": {
+    "new_AN": 10,
+    "all_public_unit": 118,
+    "failed_unit": 0,
+    "synthetic_recovery_assertions": "PASS",
+    "qualified_real_recovery": "FAIL",
+    "strict_controlled_ABC": "FAIL",
+    "ROS2_real_input_transport": "PASS",
+    "end_to_end_20hz": "UNQUALIFIED"
+  },
+  "code_hashes": {
+    "src/ndt_global/global_manager.py": "227d1689efa96cb0fa5d6ea0b9e11c4928e67bc101371592d1b41a1b19ef71d0",
+    "src/ndt_global/geodesy.py": "0588457106ae2288603a8cfddad1200e2b6e49cefe2f6bf7b7f05975c9567dcf",
+    "src/ndt_global/ros_global.py": "dd7516a5377ee608d703af80103abee2084a47f46f507af1c46ff93089482309",
+    "tests/test_global_multisource.py": "875db3daadbc6d7819c376793446aade0adfd5c9701bd0415f332e34463ba9f9",
+    "experiments/phase_an_global_multisource/audit_gnss.py": "0dd841802d65f3aa1cae9c61ef802b83129a4a2348ed08ab4be1a9f658f5234b",
+    "experiments/phase_an_global_multisource/run_comparison.py": "c734db7dcde66938e8774c11885d20203cd696387e2aab61d22d9f6797ac5ef4",
+    "experiments/phase_an_global_multisource/run_recovery.py": "e67a728f181af229233e95a303720e51c154732d1368ac3830164a4a5b06c920"
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "qualification": "PARTIAL_IMPLEMENTATION_NO_GO_QUALIFIED_REAL_FUSION",
+  "same_window_frames": 284,
+  "real_gnss_messages": 146,
+  "comparison": {
+    "A_recorded_production": {
+      "samples": 1470,
+      "frame_reference_match": true,
+      "NDT_enabled_at_runtime": "UNVERIFIED",
+      "acceptance_events": "NOT_RECORDED",
+      "accuracy": "NO_INDEPENDENT_REFERENCE",
+      "map_version_runtime": "UNVERIFIED"
+    },
+    "B_AL_shadow": {
+      "ndt_received": 284,
+      "shadow_accepted": 155,
+      "trusted_anchors": 0,
+      "shadow_published": 284,
+      "max_correction_induced_global_jump_m": 12.64468339917419
+    },
+    "C_AN_manager": {
+      "ndt_received": 284,
+      "gnss_received": 146,
+      "coordinate_anchors": 0,
+      "trusted_anchors": 0,
+      "global_published": 0,
+      "local_full_state_P_equal": true
+    }
+  },
+  "observation_reasons": {
+    "FIX_UNQUALIFIED": 146,
+    "AMBIGUOUS_NO_ANCHOR": 2,
+    "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 155,
+    "NOT_CONVERGED_NO_QUALIFIED_NDT_OBSERVATION": 127
+  },
+  "output_states": {
+    "INITIALIZING": 19,
+    "UNAVAILABLE": 1355,
+    "AMBIGUOUS": 96
+  },
+  "output_slots": 1470,
+  "state_available_slots": 0,
+  "ambiguity_ndt_events": 2,
+  "ambiguous_window_fraction": 0.0653061224489796,
+  "local_vertical": {
+    "z_span_m": 27.552450637873797,
+    "wheel_max_abs_dZ_m": 4.176989955127931,
+    "wheel_max_abs_dvz_m_s": 0.5508773521016802,
+    "final_sigmaZ_m": 51.782664609834036,
+    "coupling_removed": false
+  },
+  "core_ms": {
+    "p50": 0.001854,
+    "p95": 0.0040475,
+    "max": 0.076751
+  },
+  "qualified_real_recovery": false,
+  "GNSS_resolved_real_ndt_modes": false,
+  "false_trusted_publications": 0,
+  "actual_gain_or_R_tuning": false,
+  "statistical_fusion": "UNQUALIFIED_NOT_EXECUTED",
+  "end_to_end_20hz": false,
+  "input_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "gnss_records_sha256": "72987e28c6195469c856b10eddc09c98e1112e110b89943a1cdf09db639965b8",
+  "AL_decisions_sha256": "22fdf06adb6343a7df13c74154b11fefb9568ffce88ab4549f59ec4b157fee18",
+  "AM_diagnostics_sha256": "8986324a69d3db19b5a94ccc43d2262fe8b6b7928461f21c3792df948f105db9",
+  "AM_multistart_sha256": "1fff8323c017de0d646209919e3d13043592991982de2ba0e49410df7632cb15",
+  "strict_controlled_ABC_qualified": false
+}
