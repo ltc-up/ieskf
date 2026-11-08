@@ -1,0 +1,9 @@
+# Independent interface v1
+
+Core dataclasses: Contract (map/extrinsic versions, epoch, map/odom frames, base reference, parent-from-child direction); Candidate (source/time/map pose, convergence-known, fitness, health, LiDAR aliases, seed hash, correlation group, failure). Support/directions/modes/covariance default UNKNOWN/None. Never infer R from score. Adapter verifies historical request/result/frame timestamps.
+
+PoseHistory owns copies of validated transforms, rejects nonmonotonic samples, retains a2s window plus bracketing sample and hard10000-sample cap; interpolation gap limit100ms. Translation interpolation is linear; rotation follows relative SO(3) geodesic. Exact integer Header times avoid epoch float precision. No extrapolation. Scheduling age limit500ms is an explicit research parameter, not a statistical gate. A changed map/extrinsic/epoch requires a new instance. Unique source correlation group is consumed once after acceptance; failed attempts do not add measurement information.
+
+ShadowCorrector computes Cτ=Mτ inverse(Oτ), then publishes Cτ O(t) only with historical support at t. Consumed candidate != new publication: a prior correction can be republished while new candidates reject. Every publication has trusted=false and UNCALIBRATED_CORRELATION_UNKNOWN. The core accepts only pose history, has no mutable15D state/P interface and never publishes production TF.
+
+Independent ROS2 package ros2/ndt_research_interfaces defines NdtCandidate, SourceHealth, GlobalCorrection and GlobalLocalizationStatus. The runnable Python adapter uses std_msgs/String JSON envelopes on /research/fusion/{input,correction,status}; this avoids requiring generated private vehicle messages. Typed messages are a migration contract, not claimed to be used by this transport test. No TF publisher. A native typed ROS adapter and real asynchronous sensor scheduling remain REQUIRED.

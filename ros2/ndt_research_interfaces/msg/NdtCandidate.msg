@@ -1,0 +1,22 @@
+std_msgs/Header header
+uint32 schema_version
+string source_id
+string correlation_group
+string map_version
+string extrinsic_version
+string odom_epoch
+string reference_point
+string transform_direction
+geometry_msgs/Pose pose
+bool convergence_known
+bool converged
+bool fitness_known
+float64 fitness
+string backend_health
+string[] lidar_sources
+string seed_id
+string failure_reason
+string geometry_status
+string support_status
+string ambiguity_status
+# No pose covariance: uncalibrated diagnostics cannot supply R.

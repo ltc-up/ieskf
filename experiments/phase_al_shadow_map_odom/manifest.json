@@ -1,0 +1,27 @@
+{
+  "phase": "AL",
+  "baseline_sha": "5ecc1c07872c94b56295f56d073f5052b3a6c081",
+  "research_code_commit": "enclosing commit: git log -1 -- src/ndt_global/shadow.py",
+  "input_identity": {
+    "input_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+    "ledger_sha256": "32fd23fa31ac6b1b80a63dea82aa4112c28f319439d8b238aa97259bd4d72f4d"
+  },
+  "data_version": "same AA-AJ284 frozen native Sources",
+  "configuration": {
+    "history_s": 2,
+    "max_gap_ms": 100,
+    "max_delay_ms": 500,
+    "noise": "original frozen15D config; no NDT R"
+  },
+  "qualification": "PARTIAL",
+  "real_executed": true,
+  "source_code_sha256": {
+    "src/ndt_global/shadow.py": "de9365b106ef3b814834a122ed2cde13b27740a47adbd7fb848d1bb97670c2a1",
+    "src/ndt_global/ros_shadow.py": "3a729a589c0591aa31e541bc3f550f32f7dfb38544229371335bfea7310b567e",
+    "experiments/phase_al_shadow_map_odom/run_real.py": "25b7c1bdb63355c075f77e740a0c85e69e4eeedd4ac7f758d1576567e37268d5",
+    "tests/test_shadow_map_odom.py": "260668365b18416eb4848f8d2c84bd615b2930513c4458a159ab9eed21b4008a"
+  },
+  "configuration_hash": "1f763d848ba3b8d5ca914e993035d0b6b0f850e27026effef78ed3d5143b3a46"
+}

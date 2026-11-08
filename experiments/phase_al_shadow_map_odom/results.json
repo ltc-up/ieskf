@@ -1,0 +1,31 @@
+{
+  "qualification": "PARTIAL",
+  "real_frames": 284,
+  "duration_s": 14.700655404,
+  "local_output_count": 1470,
+  "local_source": "fresh replay of Bosch IMU + historical scalar wheel channel; historical fused initialization only",
+  "source_hashes_checked": 284,
+  "local_full_state_P_bitwise_equal": true,
+  "shadow_decisions": {
+    "SHADOW_ACCEPTED": 155,
+    "NOT_CONVERGED": 129
+  },
+  "trusted_anchors": 0,
+  "published_shadow": 284,
+  "composition_max_abs": 3.410605131648481e-13,
+  "duplicate_reason": "DUPLICATE",
+  "delayed_reason": "STALE",
+  "injected_wrong_candidate_accepted_shadow": true,
+  "local_history_unchanged": true,
+  "core_ms": {
+    "p50": 0.041088,
+    "p95": 0.04701035,
+    "max": 0.071025
+  },
+  "statistical_calibration": false,
+  "causal_frontend": "NOT_REGENERATED; recorded AJ seeds and frozen historical Deskew are correlated inputs",
+  "input_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "ledger_sha256": "32fd23fa31ac6b1b80a63dea82aa4112c28f319439d8b238aa97259bd4d72f4d"
+}

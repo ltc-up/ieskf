@@ -1,0 +1,12 @@
+{
+  "started": true,
+  "transport": "std_msgs/String versioned JSON contract",
+  "received": 568,
+  "published": 284,
+  "reasons": {
+    "SHADOW_ACCEPTED": 155,
+    "NOT_CONVERGED": 129
+  },
+  "tf_published": false,
+  "live_sensor_test": false
+}

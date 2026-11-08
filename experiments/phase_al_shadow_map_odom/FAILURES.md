@@ -1,0 +1,7 @@
+# Failures and qualification limits
+
+AL is PARTIAL, not a statistically qualified locator.155 converged/valid historical candidates produce shadow corrections,129 reject;0 trusted anchors. Frozen candidate generation used AJ seeds; frozen Deskew has historical motion dependence. Local recursion is independent AFTER common historical initialization, not independent of all historical errors. NDT/local correlation is UNKNOWN; no global covariance or accuracy is claimed. Full source attribution and runtime calibration require future production export.
+
+A first real-run diagnostic mistakenly selected the last candidate for duplicate/fault tests; that candidate was nonconverged, so NOT_CONVERGED masked both tests. Corrected selection uses the last shadow-accepted candidate; DUPLICATE and accepted wrong-global/local-unchanged checks then execute. The initial diagnostic outcomes (NOT_CONVERGED, injected_accept=false) are retained here. Two control/shadow pairs were run because of this test-selection defect; no parameter tuning or matching rerun.
+
+ROS attempts: initial import failed because PYTHONPATH replaced sourced ROS paths; corrected by appending paths. First node init could not write default ROS log directory; redirected logs to temporary output. Sandboxed DDS could not enumerate network interfaces; same isolated-domain test succeeded with allowed local network access. These are environment failures, not missing sensor data. No production topic/TF was used. GPU nvidia-smi failed driver communication; no new GPU fit was claimed in AL.

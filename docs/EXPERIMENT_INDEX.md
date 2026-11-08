@@ -53,3 +53,7 @@ Goal: isolate kernel relative-Z vs RP effects on NDT and frozen15D updates. Exec
 ## Phase AK — NDT-centric multi-source architecture
 
 Executed pinned FAR-LIO source audit, primary-literature review,7 independent synthetic tests and94 existing tests. Recommend local15D + global Map/Odom with source support/direction/ambiguity management; selective/Schmidt remains optional. Layering isolates map errors from local dynamics but wrong global poses and missing vertical observability persist. No new real replay, calibrated NDT covariance, production changes or accuracy claim. [Final report](../experiments/phase_ak_fusion_architecture/FINAL_CONCLUSION.md) · [audit](../experiments/phase_ak_fusion_architecture/FAR_LIO_SOURCE_AUDIT.md) · [manifest](../experiments/phase_ak_fusion_architecture/manifest.json) · [failures](../experiments/phase_ak_fusion_architecture/FAILURES.md).
+
+## Phase AL — shadow implementation, PARTIAL
+
+Real284-frame input replay:155 shadow candidates/129 nonconvergences,0 trusted anchors; all1470 local state/P outputs equal no-map control bitwise. Time/version/epoch/interpolation/duplicate contracts implemented; ROS2 isolated real-input transport runs. Frozen AJ seeds/Deskew are retained and correlated, not an autonomous new frontend. No calibrated global covariance or accuracy. [Report](../experiments/phase_al_shadow_map_odom/FINAL_CONCLUSION.md).
