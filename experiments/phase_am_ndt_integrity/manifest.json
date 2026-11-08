@@ -1,0 +1,45 @@
+{
+  "phase": "AM",
+  "baseline_sha": "e9f86f1a56a4d0f93870006c19606944d7cad30f",
+  "research_code_commit": "enclosing AM commit; git log -1 -- src/ndt_global/integrity.py",
+  "input_identity": {
+    "input_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+    "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "ledger_sha256": "32fd23fa31ac6b1b80a63dea82aa4112c28f319439d8b238aa97259bd4d72f4d",
+    "service_binary_sha256": "7781354a8543cd154a0226dde2851eb55c7bdfd7d74fa8d1c6f86ddfc1b3fc7d"
+  },
+  "data_version": "AL/AJ same284 Sources; five predetermined multistart frames",
+  "configuration": {
+    "distance_m": 2.0,
+    "neighborhood": 20,
+    "cell_m": 2.0,
+    "rotation_scale_m": 10.0,
+    "max_source_samples": 1500,
+    "planarity_min": 0.2,
+    "relative_rank_tol": 1e-06,
+    "cluster_translation_m": 1.0,
+    "cluster_rotation_rad": 0.1,
+    "multistart_indices": [
+      0,
+      71,
+      142,
+      213,
+      283
+    ],
+    "seed_offsets": "0,+-1.5m x/y,+-.1rad yaw"
+  },
+  "configuration_hash": "8cc376265b61d908ebe456aab233248f773e189ddd12f22a5389bcedaa201e0b",
+  "executed": {
+    "real_geometry_frames": 284,
+    "new_CUDA_fits": 35,
+    "failed_device_access_attempts": 1,
+    "multistart_groups": 5
+  },
+  "qualification": "PARTIAL",
+  "code_hashes": {
+    "src/ndt_global/integrity.py": "b32293f4efb8321f3c4abda7f8f90408ec382b5901b8435141cdca13f185f1be",
+    "tests/test_ndt_integrity.py": "16c5207b42ca7a4fd766bd9819c601ae7e1cf6b6cb75aca4d85a69607def8f97",
+    "experiments/phase_am_ndt_integrity/run_real.py": "af3941e1d8b0495e06030eca327ebd91bafe55a080499a42d5aea353f3c0393f",
+    "experiments/phase_am_ndt_integrity/run_gpu.py": "5954514549d158927a7e9ab3289eb5ab02da8ca31996522bf4979e46ac5c90ef"
+  }
+}

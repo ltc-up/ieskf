@@ -1,0 +1,9 @@
+# Real validation
+
+All284 real native Sources and target hashes match AL. Numeric ranks:283 rank6,one rank0; rank0 occurs in a nonconverged result. Nearby Target fraction min0.0453,median0.9987,max1. Normalized weakest-to-strongest ratio median0.002492; full numeric rank does not imply strong localization.155 converged candidates remain UNKNOWN;129 are NOT_CONVERGED.144 converged fitness<1 candidates are still UNKNOWN. No original map-hole or correct/incorrect-match labels are available.
+
+First-event missing-map intervention reduces nearby fraction .996667→.884667. This detects changed available support, but cannot prove an original map hole or guarantee a semantic missing-map classification. Local curvature/rank alone is insufficient. No real sparse-map stochastic calibration was performed.
+
+35 real CUDA fits actually completed after device-access escalation,14 converged,13 converged fitness<1. Five predetermined groups yield cluster counts[2,1,3,1,1]; two groups have competing converged low-fitness peaks. Maximum displacement among converged candidates3.46684m; maximum over all endpoints including nonconverged is6.02619m. This establishes detectable real matching ambiguity, not which peak is wrong. No independent calibrated reference exists to compute false-positive/false-negative or wrong-peak identification rates. GNSS topics exist in the bag, but topic presence alone does not qualify datum,lever,time or independence; audit continues in AN.
+
+No alternative seed is promoted by fitness, no pose covariance is published, and multiple fits are not fused. Single-sensor production preprocessing exists in legacy source; actual reduced-LiDAR scheduling and per-point attribution remain UNVERIFIED. Frozen inputs list three source clouds but cannot support a per-LiDAR peak-consistency conclusion.

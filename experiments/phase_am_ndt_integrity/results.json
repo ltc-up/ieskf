@@ -1,0 +1,103 @@
+{
+  "qualification": "PARTIAL",
+  "real_frames": 284,
+  "states": {
+    "UNKNOWN": 155,
+    "NOT_CONVERGED": 129
+  },
+  "rank_histogram": {
+    "6": 283,
+    "0": 1
+  },
+  "nearby_fraction": {
+    "min": 0.04533333333333334,
+    "p50": 0.9986666666666667,
+    "max": 1.0
+  },
+  "low_fitness_converged_unknown": 144,
+  "real_wrong_peak_rate": "UNVERIFIED_NO_INDEPENDENT_TRUTH",
+  "real_multimode_rate": "5 predetermined real-source groups only; see multistart",
+  "injected_map_hole": {
+    "original_fraction": 0.9966666666666667,
+    "removed_fraction": 0.8846666666666667,
+    "proves_original_hole": false
+  },
+  "cpu_geometry_ms": {
+    "p50": 6.602809500236617,
+    "p95": 7.205439850258698,
+    "max": 8.441805000074964,
+    "tree_build_ms": 150.85057500073162
+  },
+  "gpu": {
+    "attempted": true,
+    "planned_jobs": 35,
+    "returned_results": 35,
+    "success": true,
+    "returncode": 0,
+    "rpc_ms": {
+      "p50": 3.6258140007703332,
+      "p95": 4.753153399997244,
+      "max": 198.60018700001092
+    },
+    "seven_seed_group_wall_ms": [
+      223.3935450003628,
+      27.759187999436108,
+      22.35990799999854,
+      22.16007900005934,
+      23.573593000037363
+    ],
+    "alignment_wall_ms": {
+      "p50": 3.296969,
+      "max": 4.607617
+    },
+    "group_20hz_budget_pass": false,
+    "end_to_end_20hz_qualified": false
+  },
+  "config": {
+    "distance_m": 2.0,
+    "neighborhood": 20,
+    "cell_m": 2.0,
+    "rotation_scale_m": 10.0,
+    "max_source_samples": 1500,
+    "planarity_min": 0.2,
+    "relative_rank_tol": 1e-06
+  },
+  "input_stream_sha256": "0d8d03a9dbb88db299498b30115095ae3cca767d35e3141583b590d14adb885b",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "ledger_sha256": "32fd23fa31ac6b1b80a63dea82aa4112c28f319439d8b238aa97259bd4d72f4d",
+  "service_binary_sha256": "7781354a8543cd154a0226dde2851eb55c7bdfd7d74fa8d1c6f86ddfc1b3fc7d",
+  "per_lidar_validation": "UNVERIFIED_NO_POINT_LINEAGE_IN_FROZEN_SOURCE",
+  "covariance": "NOT_PROVIDED",
+  "gpu_sandbox_failure": {
+    "attempted": true,
+    "planned_jobs": 35,
+    "returned_results": 0,
+    "returncode": 1,
+    "success": false,
+    "attempt_wall_s": 0.018558759999905305,
+    "alignment_latency_qualified": false
+  },
+  "multistart": {
+    "groups": 5,
+    "clusters_per_group": [
+      2,
+      1,
+      3,
+      1,
+      1
+    ],
+    "ambiguous_groups": 2,
+    "max_separation_m": 6.02619173221219,
+    "converged": 14,
+    "low_fitness_converged": 13,
+    "low_fitness_competing_groups": 2,
+    "independent_observations_per_source": 0,
+    "correct_peak_rate": "UNVERIFIED",
+    "max_converged_separation_m": 3.466843066352726
+  },
+  "normalized_weak_ratio": {
+    "min": 1.8057410161105844e-06,
+    "p50": 0.0024923679653181927,
+    "max": 0.012462018199334086
+  }
+}

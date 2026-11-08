@@ -57,3 +57,7 @@ Executed pinned FAR-LIO source audit, primary-literature review,7 independent sy
 ## Phase AL — shadow implementation, PARTIAL
 
 Real284-frame input replay:155 shadow candidates/129 nonconvergences,0 trusted anchors; all1470 local state/P outputs equal no-map control bitwise. Time/version/epoch/interpolation/duplicate contracts implemented; ROS2 isolated real-input transport runs. Frozen AJ seeds/Deskew are retained and correlated, not an autonomous new frontend. No calibrated global covariance or accuracy. [Report](../experiments/phase_al_shadow_map_odom/FINAL_CONCLUSION.md).
+
+## Phase AM — real NDT integrity diagnostics, PARTIAL
+
+All284 frozen Sources assessed;35 new CUDA fits over5 fixed seven-seed groups. Two groups have competing converged low-fitness peaks (up to3.467m displacement), retained AMBIGUOUS without independent truth. Rank/support/normal diagnostics are not covariance;155 converged single-starts remain UNKNOWN. Warm batches22–28ms,cold223ms; no end-to-end20Hz qualification.6 new tests pass. [Report](../experiments/phase_am_ndt_integrity/FINAL_CONCLUSION.md).
