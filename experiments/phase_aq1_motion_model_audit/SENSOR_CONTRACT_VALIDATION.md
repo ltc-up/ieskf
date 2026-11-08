@@ -1,0 +1,6 @@
+# Sensor contract qualification
+VERIFIED source paths: Bosch g-to-SI/rad conversion and optional axes; Kistler publishes sensor-frame x/y with km/h-to-m/s conversion and a non-observed Z variance, wheel producer forwards CAN timestamps, rear-radius/steering conversion; production converter chooses velocity source instead of always treating wheel as valid. Read-only source SHA identities are recorded. Runtime binary/parameter identity, tire radius/slip calibration, actual fix_autonoma, covariance interpretation and clock/lever survey remain NOT_VALIDATED.
+
+Raw Kistler normal-window message frame is checked `kistler`; recorded static TF provides an actual sensor-axis/lever model. Conditional scalar-x ablation is permitted without inventing3D velocity. Its publisher diagonal0.01 and inherited slip term are engineering numbers, not calibrated statistics. Kistler status and wheel/Kistler correlations remain unqualified; no simultaneous independent fusion is claimed.
+
+Initial stationary-candidate analysis using wheel+gyro alone was invalidated by the all-zero wheel channel; that failed assumption is retained. Revised diagnostic requires fresh Kistler-x also near zero, but is still not a certified stationary detector and is not used to tune bias/noise. GNSS/map qualification stays inherited NOT_VALIDATED.

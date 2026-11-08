@@ -89,3 +89,7 @@ Long real-input attempts now supersede any inference of local stability from14.7
 ## Phase AP — qualification boundary preserved, robustness acceptance NO-GO
 
 No AO source/config/threshold changes. Whole-record global injection tests prove no local writeback but0 trusted coverage is a localization failure,not robustness success. Map support ratio responds to a small injected hole while rank/classification miss it;existing historical multimodes lack true/wrong labels. GNSS and partial-LiDAR recovery remain unqualified;no20Hz/production admission.134 cumulative tests pass. First restore qualified local sensor/time/reference/vertical behavior and full candidate provenance,then isolated causal-lap/independent-reference validation. [Cross-stage conclusion](../experiments/PHASE_AO_AP_FINAL_SUMMARY.md).
+
+## AQ1 correction to AO/AP interpretation
+
+AO/AP tested no-NDT motion recursion, not complete15D NDT loose coupling. AQ1 verifies all-zero original8 wheel channel despite nonzero Kistler; long unobserved/unqualified prior then amplifies small innovations through full cross covariance. No wheel/F sign bug found; no gain/P masking or weight inflation. Restore real external pose constraints in a short causal normal test; keep physical/runtime calibration and covariance qualification explicit. [AQ1](../experiments/phase_aq1_motion_model_audit/FINAL_CONCLUSION.md).

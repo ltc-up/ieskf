@@ -1,0 +1,8 @@
+# AQ1 conclusion
+VERIFIED: no-NDT vertical drift is not a test of complete15D NDT localization; absolute translation is unobservable to velocity-only updates. Loop8 input channel is all-zero despite moving Kistler, a serious eligibility mismatch. Inertial drift occurs before large wheel dZ. The597.146m correction is exactly reproduced and decomposed:Kz=-2406.871s times innovation-0.248101m/s; large uncalibrated velocity/attitude cross correlations cause the gain. Loop44 also shows large gain with varying wheel data.
+
+VERIFIED mathematics: right-error midpoint F/G, wheel H and sensor-axis lever H pass independent finite differences. No sign/lever Jacobian implementation bug was found. Sampled-ZOH noise discretization differs from continuous white noise; calibration is absent. Physical gravity/initial attitude/bias/runtime axes and true slip/correlation remain NOT_VALIDATED. No unique hardware cause is invented.
+
+Do not increase Rw to hide dZ; qualify the channel and actual motion source first. Production/FAR-LIO source evidence supports typed health/source selection and vehicle-model separation, not speed-only invalidation or unqualified zero lateral/vertical constraints. Existing15D model retained; old results/config stay reproducible. Conditional Kistler scalar-x ablation runs, joint correlation qualification does not.
+
+AQ2 entry:CONDITIONAL for short normal causal CUDA-NDT/Deskew external pose feedback, preserving full P and explicitly engineering/un calibrated R. Not qualified for production, independent accuracy or long no-map runs. Six new focused tests plus134 baseline tests pass (140 total).

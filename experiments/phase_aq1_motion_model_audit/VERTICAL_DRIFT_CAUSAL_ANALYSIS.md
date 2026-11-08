@@ -1,0 +1,8 @@
+# Causal analysis
+VERIFIED: these were no-NDT IMU/scalar-wheel recursions, not full15D loose-coupled localization failures. Absolute translation including height is unobservable to this velocity model: changing p leaves every velocity observation invariant. Vertical v/tilt/bias observability depends on actual excitation and additional measurements; no generic claim of full vertical observability is justified.
+
+First |Z-initialZ|>=1m occurs at6.13s(loop44)/7.22s(loop8), when wheel dZ is only-0.000143m/-0.000036m. First |wheel dZ|>=1m occurs much later at146.67s/214.56s. Thus inertial drift precedes large wheel position jumps. Signed loop44 propagation and wheel increments sum to-67808.306m and-807.573m; loop8 to-395946.442m and+96642.994m. Wheel updates can greatly reshape an already invalid vertical trajectory; they are not the only source of drift.
+
+VERIFIED contributors: missing absolute position observations; false/unsupported loop8 zero-velocity channel; growing correlated prior; unchecked long nonlinear/model-conditional recursion. NOT_VALIDATED contributors: actual Bosch runtime axis option/calibration, gravity/map alignment, historical roll/pitch/bias quality, real slip, true noise correlations. F/H sign errors were not found. Q has a verified discretization approximation but no evidence it explains the massive drift by itself.
+
+Do not repair by gain masking, P surgery, fixed Z, speed-based noise inflation or calling the trajectory an independently measured height error. AQ2 may proceed as a short normal-input exploratory NDT external-observation experiment, with no production/statistical qualification and explicit input health/uncertainty flags.

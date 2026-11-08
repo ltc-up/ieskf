@@ -1,0 +1,6 @@
+# Controlled normal-input ablation
+Predetermined normal interval selected from existing input-binding window before estimating effects;~20.1s with common historical initialization, same IMU/TF/noise, no map. IMU-only and wheel use same starting state; Kistler scalar-x uses its measured frame/lever and actual timestamps, not a3D pseudo-velocity. Its branch includes the same common pre-window wheel initialization; the measured Kistler update is conditional on unqualified status/noise.
+
+Actual IMU-only Z span24.472m,final vz1.437m/s; wheel Z span108.793m,max wheel dZ2.839m,final vz-6.516m/s; Kistler Z span334.099m. Branch endpoints differ by<0.1s due actual source cadence; use common-time outputs for any trajectory comparison. These are model behaviors, not accuracy rankings. Different measurement rates/noise correlations prevent claiming superior calibrated information. Joint wheel/Kistler is NOT_QUALIFIED and not run. No Q/R was tuned to flatten Z.
+
+Physical wheel H is correct, but a longitudinal measurement can feed height through uncertain attitude/velocity prior correlations. Neither lower Z span nor raw-channel agreement validates truth. Full outputs/P remain private. AQ2 must test actual external map observations instead of extrapolating these results to complete loose coupling.

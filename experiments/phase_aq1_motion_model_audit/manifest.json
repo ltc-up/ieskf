@@ -1,0 +1,31 @@
+{
+  "phase": "AQ1",
+  "baseline": "d6b5441a7a12d8f2f282f75399fe8bec26c72831",
+  "research_commit": "enclosing Git commit",
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "production_source_sha256": {
+    "a2rl_vehicle/eav25_bsu/src/bosch_mm710.cpp": "eb0bf84ab41b1cbc11564562980cdca47b92831185047d274543ebf7ff07c562",
+    "a2rl_vehicle/eav25_bsu/src/kistler.cpp": "bb33446d2bb1b331aaeafe0cd2f44f15ab5613b516c0c814d170f92f2e609fe8",
+    "a2rl_localization/ekf_converter/src/ekf_converter.cpp": "ed31b1e10708963f1fa79f85f6a89e2b5ba39dc87e28485eaf4da5f6ed8f9c04"
+  },
+  "FAR_LIO_SHA": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+  "inputs": {
+    "gain44": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "gain8": "fe309e776194f6d1e86791b3724a409d1bbb41ce058df9eabd943ef15b957352"
+  },
+  "code_sha256": {
+    "experiments/phase_aq1_motion_model_audit/audit_sensor_contract.py": "09e09fb0d305e44b8d2ebe58de5d841e100d7d788e4a4aaf5a132d458ad10b09",
+    "experiments/phase_aq1_motion_model_audit/run_ablation.py": "5af2ddcbbd308ea995e73028130d7cb0c56fa9f10093ecc37e96d0885be23389",
+    "experiments/phase_aq1_motion_model_audit/extract_kistler.py": "6ca5c00f48f02dda3de1680553e4aa437282e28d4fefed138631223d0bbb9218",
+    "experiments/phase_aq1_motion_model_audit/run_gain_audit.py": "1b64bc483a68978b3750932a74241c3895e35bf86e7360195baa89a47e027dcd",
+    "src/geometry_ieskf/motion_audit.py": "1aec86aa564d1daff1b23fb40e84a5db4e3d78fd3fd2c42fd08f5acda1084778"
+  },
+  "private_state_P_committed": false,
+  "production_modified": false,
+  "tests": {
+    "passed": 140,
+    "failed": 0
+  },
+  "AQ2_entry": "CONDITIONAL_EXPLORATORY",
+  "statistical_calibration": false
+}

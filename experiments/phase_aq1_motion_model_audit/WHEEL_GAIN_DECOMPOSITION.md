@@ -1,0 +1,6 @@
+# Full-gain decomposition
+At loop8 maximum, elapsed526.830s: measured wheel0,prediction0.248100513m/s,innovation-0.248100513m/s,S=0.332053299(m/s)²,Pzz=15209304.961m²,Kz=-2406.870662s. Exactly dZ=Kz*r=597.145845330m. Block contributions to Kz:velocity-1388.3214515,attitude-1018.7736534,gyro-bias+0.2244429; position and accel-bias direct H blocks0. corr(Z,vz)=0.97105. dtheta norm0.002593rad,dbg norm1.54e-5rad/s,dba norm0.02124m/s². A small innovation and small orientation increment do not bound position gain.
+
+Loop44 maximum elapsed847.541s:innovation4.570552817m/s,Kz33.024137145s,dZ150.938563042m,S0.315306318. Velocity and attitude gain blocks-845.9775894 and+878.9988426 nearly cancel, plus gyro-bias0.0028839. Complete pre-state/P,H,K,actual innovation/delta are saved privately. Public aggregate records expose no full vehicle state/P/extrinsics.
+
+Kz is large because the prior contains large height uncertainty and large cross covariance projected through velocity/attitude/bias H. H has no direct position row, yet correlated height changes are mathematically legitimate under that assumed joint Gaussian. The prior correlations are not empirically calibrated; a long nonlinear/unobserved trajectory and bad input do not acquire statistical validity because P is SPD. Exact dZ identity checked for every accepted update. No rows/blocks are erased.

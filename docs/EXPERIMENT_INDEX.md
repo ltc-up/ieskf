@@ -73,3 +73,7 @@ Audited production delay/smoothing vs research; 2292 real temporal pose pairings
 ## Phase AP — frozen real-input fault diagnosis, robustness NO-GO
 
 AO3667c9c frozen byte-for-byte. Nine917.07s global fault/control schedules retain local trace hash;0 trusted anchors/coverage,explicit duplicate/stale/rollback and supplied-ambiguity results.20m Target deletion removes3158 points but rank6/classification persist:partial-hole detection not passed. Historical GPU groups retain2 ambiguities;no true-peak labels/new GPU test/qualified GNSS recovery/partial-LiDAR frontend.134 tests pass. [AP](../experiments/phase_ap_robustness_validation/FINAL_CONCLUSION.md) · [AO–AP summary](../experiments/PHASE_AO_AP_FINAL_SUMMARY.md).
+
+## AQ1 — inertial/wheel vertical causal audit
+
+Exact full-P gain decomposition reproduces597.146m jump:Kz−2406.871s × residual−0.248101m/s. Original8 wheel is all-zero246751 messages while Kistler moves; research source-eligibility mismatch verified. Inertial drift precedes large wheel jumps; F/G/H finite differences pass, sampled-ZOH Q approximation identified. No calibrated physical alignment/noise or complete-NDT failure claim. Conditional short normal NDT feedback entry. [Report](../experiments/phase_aq1_motion_model_audit/FINAL_CONCLUSION.md).

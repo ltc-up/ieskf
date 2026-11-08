@@ -1,0 +1,311 @@
+{
+  "records": {
+    "maximum": {
+      "elapsed_s": 847.5413561380001,
+      "predicted": 5.7578189605989465,
+      "innovation": 4.570552816597937,
+      "S": 0.3153063182227086,
+      "Kz_by_block": {
+        "position": 0.0,
+        "velocity": -845.9775894157216,
+        "attitude": 878.9988426497227,
+        "gyro_bias": 0.002883910619881933,
+        "accel_bias": 0.0
+      },
+      "Pzz": 468238.27451962716,
+      "correlation_z_velocity": [
+        -0.21617380289614738,
+        -0.20823400658418906,
+        0.5337445454237861
+      ],
+      "delta_Z": 150.9385630420645,
+      "delta_vz": 1.0996005958083133,
+      "derivatives": {
+        "F_max_abs": 1.7279625794529556e-06,
+        "G_max_abs": 1.7279625794529556e-06,
+        "H_max_abs": 9.165404435407254e-09
+      },
+      "Kz": 33.02413714462109,
+      "delta_attitude_norm_rad": 0.008468430419659853,
+      "delta_bg_norm": 0.00025117185772234704,
+      "delta_ba_norm": 0.005442064244530879
+    },
+    "first_abs_Z_change_ge_1m": {
+      "elapsed_s": 6.130130659000001,
+      "predicted": 0.002683338677843424,
+      "innovation": -0.002683338677843424,
+      "S": 0.2674624557776801,
+      "Kz_by_block": {
+        "position": 0.0,
+        "velocity": 0.030441768684331145,
+        "attitude": 0.02312623807549353,
+        "gyro_bias": -0.0001291958578362967,
+        "accel_bias": 0.0
+      },
+      "Pzz": 241.05159416065783,
+      "correlation_z_velocity": [
+        0.0657376430158275,
+        0.03153441396128971,
+        0.9407566228092122
+      ],
+      "delta_Z": -0.00014339442819126625,
+      "delta_vz": -3.5065805715526094e-05,
+      "derivatives": {
+        "F_max_abs": 6.370859364217301e-09,
+        "G_max_abs": 6.370859364217301e-09,
+        "H_max_abs": 5.931047319940319e-12
+      },
+      "Kz": 0.053438810901988376,
+      "delta_attitude_norm_rad": 6.008894908970045e-06,
+      "delta_bg_norm": 1.250461483236586e-06,
+      "delta_ba_norm": 7.136224162808792e-06
+    },
+    "first_wheel_abs_dZ_ge_1m": {
+      "elapsed_s": 146.673683028,
+      "predicted": 0.008244580678612848,
+      "innovation": -0.008244580678612848,
+      "S": 0.2907129369641308,
+      "Kz_by_block": {
+        "position": 0.0,
+        "velocity": 10504.096244260641,
+        "attitude": -10659.614674461045,
+        "gyro_bias": 0.06174726265869592,
+        "accel_bias": 0.0
+      },
+      "Pzz": 26031092.69223277,
+      "correlation_z_velocity": [
+        0.14390974251444263,
+        0.15170385253463473,
+        0.9954214817090434
+      ],
+      "delta_Z": 1.2816751645097777,
+      "delta_vz": 0.022978199019718513,
+      "derivatives": {
+        "F_max_abs": 3.3853575587272644e-07,
+        "G_max_abs": 2.833427897139145e-07,
+        "H_max_abs": 1.0183147658437974e-09
+      },
+      "Kz": -155.4566829377452,
+      "delta_attitude_norm_rad": 0.00022561406274259602,
+      "delta_bg_norm": 1.8036552785307817e-06,
+      "delta_ba_norm": 0.00010277897603465727
+    }
+  },
+  "max_gain_identity_error": 0.0,
+  "signed_Z_increment_sum": {
+    "propagation_m": -67808.30601426368,
+    "wheel_m": -807.5732851653149
+  },
+  "speed_groups": {
+    "low": {
+      "count": 28171,
+      "innovation_abs_p50_p95_max": [
+        0.002190354045346425,
+        0.24329037150607924,
+        4.809404024653474
+      ],
+      "wheel_abs_dZ_p50_p95_max": [
+        0.01755850461275509,
+        1.823736217797348,
+        148.34320016492666
+      ],
+      "angular_rate_p50_p95_max": [
+        0.002235111988154689,
+        0.16306272350854492,
+        0.769814098033558
+      ]
+    },
+    "medium": {
+      "count": 17436,
+      "innovation_abs_p50_p95_max": [
+        0.08889733946966771,
+        0.6949520266482194,
+        4.999578499354087
+      ],
+      "wheel_abs_dZ_p50_p95_max": [
+        0.2060815250133104,
+        5.119121485785065,
+        150.9385630420645
+      ],
+      "angular_rate_p50_p95_max": [
+        0.3471796126745645,
+        0.7134219986761685,
+        0.9505981794790022
+      ]
+    },
+    "high": {
+      "count": 44494,
+      "innovation_abs_p50_p95_max": [
+        0.16514032098667286,
+        0.633907581171919,
+        4.941718508809487
+      ],
+      "wheel_abs_dZ_p50_p95_max": [
+        0.22576328126623335,
+        3.4505232136731236,
+        149.9507113397661
+      ],
+      "angular_rate_p50_p95_max": [
+        0.07901880541903547,
+        0.4217311807121509,
+        0.7198312473979777
+      ]
+    }
+  },
+  "AO_result": {
+    "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+    "configuration_calibrated": false,
+    "raw_summary": {
+      "imu": {
+        "count": 183351,
+        "cdr_group_sha256": "838bd6c16b202f68f36a817683a9a83fbc518b3ef4ff88767c9a2a7e8e2ab45c",
+        "max_gap_ms": 6.213,
+        "header_rollback": 0,
+        "receipt_minus_header_ms": {
+          "min": 0.110787,
+          "p50": 0.340334,
+          "p95": 2.519489,
+          "p99": 4.902998,
+          "max": 23.550883
+        },
+        "fix_histogram": {}
+      },
+      "wheel": {
+        "count": 91777,
+        "cdr_group_sha256": "3ce8bb06cfb8c477726eebef1dc20f62fae72186f0c0a536d12f004822190789",
+        "max_gap_ms": 12.837526,
+        "header_rollback": 0,
+        "receipt_minus_header_ms": {
+          "min": 0.084822,
+          "p50": 0.149023,
+          "p95": 0.24887499999999999,
+          "p99": 0.5268640400000012,
+          "max": 20.836358
+        },
+        "fix_histogram": {}
+      },
+      "pose": {
+        "count": 91775,
+        "cdr_group_sha256": "f0cebef46bdac86ae2eca194cf3e90d6fbe37182d1ed9712ab203d61d5aedc32",
+        "max_gap_ms": 52.190557,
+        "header_rollback": 0,
+        "receipt_minus_header_ms": {
+          "min": 1.359975,
+          "p50": 3.776888,
+          "p95": 5.9167927,
+          "p99": 6.8609509599999905,
+          "max": 51.814943
+        },
+        "fix_histogram": {}
+      },
+      "ndt": {
+        "count": 16328,
+        "cdr_group_sha256": "355aa9392fa6c8380914211aacf553c10624e5022ee86478c0d1e1e8d06b3100",
+        "max_gap_ms": 150.005248,
+        "header_rollback": 0,
+        "receipt_minus_header_ms": {
+          "min": 52.401332,
+          "p50": 91.673979,
+          "p95": 136.001952,
+          "p99": 154.19940566,
+          "max": 192.064045
+        },
+        "fix_histogram": {}
+      },
+      "gps": {
+        "count": 4589,
+        "cdr_group_sha256": "d5f6b39a3beb2f15dfe75d3f84b29de8631989a78869f396b410f3fb1e30c6ea",
+        "max_gap_ms": 234.120119,
+        "header_rollback": 0,
+        "receipt_minus_header_ms": {
+          "min": 0.145988,
+          "p50": 0.263911,
+          "p95": 1.0093645999999998,
+          "p99": 1.8889607199999976,
+          "max": 4.850871
+        },
+        "fix_histogram": {
+          "8": 4227,
+          "5": 199,
+          "0": 11,
+          "7": 152
+        }
+      },
+      "gps2": {
+        "count": 4589,
+        "cdr_group_sha256": "6f6d6983d95697a833ec678389b38dd76590d86c43b68717538e551aa443a995",
+        "max_gap_ms": 234.120119,
+        "header_rollback": 0,
+        "receipt_minus_header_ms": {
+          "min": 0.245135,
+          "p50": 0.655906,
+          "p95": 2.4530881999999976,
+          "p99": 3.8992909199999986,
+          "max": 10.279703
+        },
+        "fix_histogram": {
+          "8": 3277,
+          "5": 146,
+          "4": 7,
+          "0": 116,
+          "3": 3,
+          "7": 1040
+        }
+      },
+      "tf": {
+        "count": 0,
+        "cdr_group_sha256": "3efe423474923cdf9b668e6b778f6e88ee9b491fd11041c90a8e8379e9b1119f",
+        "max_gap_ms": 0.0,
+        "header_rollback": 0,
+        "receipt_minus_header_ms": {},
+        "fix_histogram": {}
+      }
+    },
+    "closed_traverse": {
+      "duration_s": 324.75824693,
+      "historical_path_m": 3000.475935277457
+    },
+    "input_scope": "whole selected recording; no post-run window selection",
+    "Kistler_fusion": "NOT_QUALIFIED: no separately verified independent velocity channel model",
+    "map_feedback": false,
+    "online_equivalence": false,
+    "status": "FAIL",
+    "failure": "IMU_GAP_STOP_SEGMENT",
+    "processed_s": 917.07,
+    "requested_s": 917.778566768,
+    "outputs": 91707,
+    "counts": {
+      "IMU": 183348,
+      "wheel_ACCEPT": 90101,
+      "wheel_SLIP_OR_MISMATCH": 1604
+    },
+    "wheel_max_abs_delta_Z_m": 150.9385630420645,
+    "wheel_max_abs_delta_vz_m_s": 1.7893302979843826,
+    "Z_span_m": 70720.19621642283,
+    "final_vz_m_s": -158.81157085914032,
+    "final_sigma_Z_model_m": 770.4457893006465,
+    "final_bg_norm": 0.10318537668020988,
+    "final_ba_norm": 0.2666320916076745,
+    "timing": {
+      "propagation_ms": {
+        "p50": 0.070072,
+        "p95": 0.077286,
+        "p99": 0.10974119999999983,
+        "max": 2.217439
+      },
+      "wheel_ms": {
+        "p50": 0.075863,
+        "p95": 0.08736300000000002,
+        "p99": 0.12788620000000078,
+        "max": 7.483105
+      }
+    },
+    "wall_s": 37.30914459199994,
+    "local_trace_sha256": "a697ede8496e4f18155915bec26adc884d69709dfa9c15ec53720c7d2140e2d5",
+    "initialization": "one historical fused pose; causal wheel velocity; zero bias means, uncalibrated P",
+    "local_P_retained": true
+  },
+  "private_gain_records_sha256": "0eb727ea287c15fe865200b7f5de7a1f714b34beb8aff3c49168ca76c8444fc0",
+  "input_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "calibrated": false
+}

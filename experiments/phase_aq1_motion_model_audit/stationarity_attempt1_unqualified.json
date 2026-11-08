@@ -1,0 +1,29 @@
+{
+  "static_candidate_rule": "abs scalar wheel<0.2m/s and gyro norm<0.02rad/s; not a certified stationary detector",
+  "static_candidates": 238862,
+  "force_norm_m_s2_p5_p50_p95": [
+    9.295257211864659,
+    9.782503770843157,
+    10.44540245608917
+  ],
+  "vertical_acceleration_with_historical_attitude_p5_p50_p95": [
+    -0.5634051063975043,
+    -0.03174446769331052,
+    0.5181793861097402
+  ],
+  "stationary_gnss_independent": false,
+  "noise_calibrated": false,
+  "gravity_removed_input_evidence": false,
+  "interpretation": "force norm near gravity and publisher g-to-SI conversion support specific-force interpretation; actual fix_autonoma/runtime calibration remains unverified",
+  "wheel_minus_raw_Kistler_x": {
+    "low": {
+      "n": 245570,
+      "p5_p50_p95": [
+        -25.06,
+        -14.559999999999999,
+        0.0
+      ]
+    }
+  },
+  "Kistler_comparison": "raw sensor-x diagnostic only; not base velocity truth or a qualified joint observation"
+}
