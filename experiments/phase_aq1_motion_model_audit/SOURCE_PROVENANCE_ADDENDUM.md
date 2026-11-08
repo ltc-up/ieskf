@@ -1,0 +1,4 @@
+# User provenance clarification after AQ1 commit
+The user subsequently confirmed that a newer recording series had an eav24/eav25 protocol/producer mismatch; only loop10 should be treated as a credible newer wheel-topic candidate. Older eav24 use should rely on loop44. This is direct user acquisition provenance, separately identified from source/field evidence.
+
+It supports interpreting original8's all-zero wheel stream as an input/producer mismatch, not an informative zero-speed observation or a wheel-noise calibration dataset. Exact historical DBC/binary identity is still not independently reconstructed. AQ1's raw zero/nonzero evidence and gain decomposition remain unchanged. AQ2 uses the existing loop44 normal interval; new-series wheel evidence outside loop10 is excluded from physical qualification. No prior failure log or committed result is overwritten.

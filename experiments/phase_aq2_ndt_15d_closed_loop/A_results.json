@@ -1,0 +1,42 @@
+{
+  "startup_ms": 0.0,
+  "mode": "A",
+  "frames": 40,
+  "duration_s": 1.950085083,
+  "actual_raw_Deskew": false,
+  "actual_CUDA": false,
+  "own_causal_seed": true,
+  "delayed_15D_updates": 0,
+  "component_acceptance": {},
+  "decisions": {
+    "NO_NDT_CONTROL": 40
+  },
+  "Z_span_m": 4.363847911983097,
+  "vz_min_max": [
+    -3.5895343343827646,
+    0.15614125595886688
+  ],
+  "max_wheel_Z_state_change_m": 0.10477072884677271,
+  "max_ndt_Z_update_m": 0,
+  "max_ndt_velocity_delta_m_s": 0,
+  "final_bg_norm": 0.013369084604912172,
+  "final_ba_norm": 0.17265331226494465,
+  "final_sigmaZ_model_m": 3.9251327357787487,
+  "max_accepted_gap_s": null,
+  "max_no_NDT_observation_s": 2.1026001450000003,
+  "matching_converged": 0,
+  "wall_ms": {
+    "p50": 0.005896,
+    "p95": 0.010249999999999999,
+    "p99": 0.01045261,
+    "max": 0.01057
+  },
+  "pose_statistical_covariance": "UNQUALIFIED_HISTORICAL_ENGINEERING_RULE",
+  "independent_truth": false,
+  "GNSS_used": false,
+  "online_equivalence": false,
+  "transactions_sha256": "2982cb4da8650660b26e6acbea7e98ebfde7a167c8e077f9f5dc1b053c0a6271",
+  "input_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "qualification": "EXPLORATORY_CAUSAL_EXECUTION_ONLY"
+}

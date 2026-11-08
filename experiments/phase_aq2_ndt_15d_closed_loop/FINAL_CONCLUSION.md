@@ -1,0 +1,8 @@
+# AQ2 conclusion — real short causal feedback restored; normal continuation FAILED
+VERIFIED: actual raw loop44 cloud payloads, branch-local15D motion/Deskew, current-branch map/base NDT seeds, CUDA matching, historical external pose update and suffix repropagation form a true short offline loose-coupled feedback loop. It is not a frozen-Source-only or no-map integration surrogate. All15D correlations remain. No original point-plane Geometry-IESKF or production modification.
+
+Normal40 comparison: B28 XY/yaw updates,C30 XYZ/yaw updates,D19 geometric6D updates. C uses actual Z and shows smaller model height span; physical height accuracy is NOT_VALIDATED. A/E native-reference state/P parity is exact. Reference/frame/historical engineering R and own-seed/source identities are explicit. Five new focused mathematical/delay tests plus140 prior tests pass (145 total).
+
+C20 fails continuation:55 of401 requested frames/2.70s evaluated,32 updates, then0.55s no accepted observation. Valid but MAX_ITERATIONS low-fitness candidates remain rejected. No threshold/iteration/Q/R tuning, no blind long integration. Full normal lap and fault-window closed-loop are NOT_EXECUTED under this gate. AQ3 can continue independent geometry/covariance work and explicitly exploratory candidate feedback, not statistical or production acceptance.
+
+Highest qualification:CONDITIONALLY_VERIFIED short real offline feedback implementation. Continuous normal-lap qualification:FAILED. Independent precision, NDT correctness/covariance calibration and live20Hz:NOT_VALIDATED. Next work is candidate/uncertainty semantics and qualified source/physical/model/reference evidence, not declaring the entire15D architecture failed from velocity-only drift.

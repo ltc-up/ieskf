@@ -1,0 +1,10 @@
+# External pose measurement model
+State: p_map_IMU,v_map_IMU,R_map_body,bg_body,ba_body with right injection R Exp(dtheta). Base prediction is p_base=p−R l, so position H=[I,0,R[l]x,0,0]. Pose Source/reference is base at native scan-end; map transform is parent-from-child. No individual point residual enters the filter.
+
+For XYZ/yaw, yaw=atan2(R10,R00), u=R e_x, H_yaw,theta=[−u_y,u_x,0]/(u_x²+u_y²) (−R[e_x]x). Singular yaw chart rejects. XY/yaw is a subset. For full SO(3), use fixed anchor A at the linearization prior, h_rot=Log(A^T R), H_rot=Jr(h_rot)^−1. At A=Rprior, H_rot=I; measurement innovation is Log(Rprior^T R_ndt). Covariance must be expressed in this declared innovation chart, not silently reused across Euler/map/body coordinates. Independent finite differences validate position, Euler-yaw and anchored SO3 charts.
+
+Optional U projects the observation: r'=Ur,H'=UH,R'=URU^T. Full15D K=P H'^T(H'PH'^T+R')^-1 and Joseph/reset P+=Jreset[(I−KH')P(I−KH')^T+KR'K^T]Jreset^T. Reset is Jr(dtheta) in the right-error block. Full state correlations remain; a partial observation can still change height, velocity and biases. No gain/P row masking.
+
+Existing AJ XY/yaw implementation is preserved. New ExternalPose separates measurement/input validity, full-R SPD, attitude linearization domain and per-correction bias-change domains from GN/IRLS position trust-radius guards. Existing total-angle/bias-change constants are retained, not fitted; the optimizer's0.5m3D single-step restriction is not used as a Kalman eligibility rule. This does not certify arbitrary large position corrections, physical posterior correctness or calibrated innovation gates. Conditional NIS is diagnostic only.
+
+Geometry D uses AM basis in [dt_map,10m*dtheta_map] and maps the body-right pose innovation with diag(I,10Rprior) before projection. No eigenvalue becomes R. All40 diagnostic ranks are6, so this run does not demonstrate a genuinely reduced real subspace. Exact group identity prevents repeated Source fusion, including a duplicate with a different message ID. Same delayed event is repropagated from a pre-event checkpoint, not added again to its own posterior.

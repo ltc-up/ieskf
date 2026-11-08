@@ -93,3 +93,7 @@ No AO source/config/threshold changes. Whole-record global injection tests prove
 ## AQ1 correction to AO/AP interpretation
 
 AO/AP tested no-NDT motion recursion, not complete15D NDT loose coupling. AQ1 verifies all-zero original8 wheel channel despite nonzero Kistler; long unobserved/unqualified prior then amplifies small innovations through full cross covariance. No wheel/F sign bug found; no gain/P masking or weight inflation. Restore real external pose constraints in a short causal normal test; keep physical/runtime calibration and covariance qualification explicit. [AQ1](../experiments/phase_aq1_motion_model_audit/FINAL_CONCLUSION.md).
+
+## AQ2 — complete short loose-coupled dataflow restored
+
+Real raw120 clouds drive branch-own15D histories, CUDA Deskew, current seeds and delayed map updates; C30/40 uses actual Z. Persistent private adapter fixes cold process lifecycle without production/Q/R changes; earlier failures retained. Normal20s request stops at2.70s after55 evaluated frames, so no normal-lap qualification. Original8 all-zero wheel is a protocol/input-eligibility failure per new user provenance; newer wheel research should use loop10, older data loop44. No accuracy or covariance calibration claim. [AQ2](../experiments/phase_aq2_ndt_15d_closed_loop/FINAL_CONCLUSION.md).

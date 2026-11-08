@@ -1,0 +1,8 @@
+# NDT Z evidence
+The new actual40-frame normal CUDA/Deskew run is evaluated against the same immutable map, base reference, Source acquisition times and branch predictions. NDT Z is an actual returned map/base coordinate, not an artificial height pseudo-measurement.
+
+All40 sampled geometry diagnostics have rank6; nearby support fraction is at least0.9427. Mean normal-z² ranges0.330–0.511, with median0.420. This is directional evidence that sampled structures include vertical-translation constraint; it is not covariance, a uniqueness certificate or a labeled ground-truth surface decomposition. NDT Z minus current predicted base Z ranges−0.227 to+1.395m, median+0.037m. Those are innovations, not Z accuracy errors.
+
+Horizontal planes (normals near vertical) directly constrain Z but leave tangent XY/yaw unobservable; upright planes contribute little direct Z. Real surfaces are classified by normal direction only: ground/guardrail/roof labels are unavailable. The reused frontend crop retains body z1–15m, so no claim that it uses a complete ground surface is justified. Map missing/aliasing can still invalidate a locally full-rank Z estimate. Existing AM/AP map/multimode counterexamples remain relevant.
+
+C actually accepts30 XYZ/yaw updates out of40; model Z range is1.237m vs B4.137m and A4.364m at their recorded publication times. C20 continuation stops at2.70s after55 frames, not20s completed. No independent map-height/vehicle reference exists; neither reduced drift nor model sigmaZ validates physical height precision. NDT Z eligibility remains CONDITIONALLY_VERIFIED geometry and exploratory update only, not full statistical/peak correctness qualification.

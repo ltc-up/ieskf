@@ -77,3 +77,7 @@ AO3667c9c frozen byte-for-byte. Nine917.07s global fault/control schedules retai
 ## AQ1 — inertial/wheel vertical causal audit
 
 Exact full-P gain decomposition reproduces597.146m jump:Kz−2406.871s × residual−0.248101m/s. Original8 wheel is all-zero246751 messages while Kistler moves; research source-eligibility mismatch verified. Inertial drift precedes large wheel jumps; F/G/H finite differences pass, sampled-ZOH Q approximation identified. No calibrated physical alignment/noise or complete-NDT failure claim. Conditional short normal NDT feedback entry. [Report](../experiments/phase_aq1_motion_model_audit/FINAL_CONCLUSION.md).
+
+## AQ2 — real raw causal15D NDT pose feedback, short implementation verified / continuation FAIL
+
+Own-state raw Deskew/CUDA-NDT/delayed full15D update runs on40 normal loop44 triplets:B28,C30(with Z),D19 updates. A/E native-reference full-P parity exact. New analytic XYZ/yaw/SO3 Jacobians and delayed external-event/group-dedup tests pass. C20 continuation stops at55/401 frames(~2.70s),32 updates, after0.55s loss; full normal lap not run. Engineering R and independent accuracy remain unqualified. [Report](../experiments/phase_aq2_ndt_15d_closed_loop/FINAL_CONCLUSION.md).

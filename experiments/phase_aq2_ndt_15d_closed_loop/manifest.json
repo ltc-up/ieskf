@@ -1,0 +1,37 @@
+{
+  "phase": "AQ2",
+  "baseline_AQ1": "e442d915d2c04cc8f8a3f3db05bbe49d04afb814",
+  "research_commit": "enclosing Git commit",
+  "raw_bag_SHA256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "input_extraction_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "raw_normal_binding_sha256": "e5c7a14bea209bf509da8dd33c8a74777c8eb0c456643ddf3aad74faada419cd",
+  "new_continuous_binding_sha256": "e1f2c70613193894692d709ca1c04c1ad4ddbb348f6798f4a9ef9b7b2d47f0d2",
+  "target_SHA256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "config_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "code_sha256": {
+    "experiments/phase_aq2_ndt_15d_closed_loop/prepare_raw.py": "2b2913cbc0410fd7ec061162c1388da76324a413dbd3572b831fd8fdd59938ba",
+    "experiments/phase_aq2_ndt_15d_closed_loop/run_variants.py": "1ce82e5fc2ae2ed58b3090195efda9c05f10fef0dd91b0cb27c1179fc9940559",
+    "experiments/phase_aq2_ndt_15d_closed_loop/prepare_continuous.py": "7244188e46ae75d26989b84c2ec2357371728e05ffd175f3423292654261269f",
+    "experiments/phase_aq2_ndt_15d_closed_loop/analyze.py": "512dca4f39a3475a8e930adfb29678bd6b0d1c35a57e3e2fa619ada569047410",
+    "experiments/phase_aq2_ndt_15d_closed_loop/run_closed_loop.py": "ae6e4caa2f59628e7f88628bf5f2a12511fe121b1d54978cf15eb0de5dfae8aa",
+    "src/geometry_ieskf/external_pose.py": "29948e7077a7de54d4222823329d14b58e6edb3f2573b514aa0e2b3b565239bc",
+    "src/ndt_global/pose_delay.py": "143d8f6d6baea9977db1ef81fcfa299e981dee4a687d3d6dcb55be996787be30"
+  },
+  "private_binary_sha256": {
+    "persistent_Deskew": "51f873d97bf729dc01b3cf2fd67ae7518cc73267fba3334c85fee358648ab16f",
+    "Deskew_library": "cb3d15d1fca1b726e076ba0355341b95c1d866d670d2dec27dd864aed6159edd",
+    "CUDA_matcher_service": "7781354a8543cd154a0226dde2851eb55c7bdfd7d74fa8d1c6f86ddfc1b3fc7d"
+  },
+  "private_adapter_source_sha256": "ce3161c51b59828d5844dc5e40de4d8bd98cada2e0024c410658fe68cb23a120",
+  "new_tests": 5,
+  "total_tests": 145,
+  "failed_tests": 0,
+  "real_short_causal_closed_loop": true,
+  "normal_continuation": "FAILED at55/401 frames,2.70s",
+  "normal_lap": "NOT_EXECUTED",
+  "covariance_calibrated": false,
+  "independent_truth": false,
+  "production_modified": false,
+  "private_payloads_committed": false,
+  "new_user_provenance": "newer wheel eligibility limited to loop10; older loop44 eligible, original8 mismatch not a wheel calibration input"
+}
