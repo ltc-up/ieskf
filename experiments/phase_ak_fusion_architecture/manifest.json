@@ -9,7 +9,7 @@
     "tag_at_head": null,
     "audit": "source_only"
   },
-  "research_code_commit": "resolve git log -1 --format=%H -- experiments/phase_ak_fusion_architecture/prototype.py",
+  "research_code_commit": "fbb852d4c5a258a3e887fe35b3cf669f4558f450",
   "configuration": {
     "steps": 100,
     "dt_s": 0.02,
@@ -61,5 +61,12 @@
     "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/base.hpp": "beabee6c03032fbb74ca4dffca291ee4910aaf277cd5cb237954c138bb2c768f",
     "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/ekf.hpp": "fe13bae2b319a3d9d64bc772d499aecc3f0efac09e22695fa0fc8da1df0649c3",
     "config/far-lio.yml": "ca4f5bf4177b18bc0ecfc80c1e85a1046c8ed17ea4970d7fd86c252ac22f4317"
+  },
+  "git_delivery": {
+    "research_branch": "research/phase-ak-fusion-architecture",
+    "code_commit_pushed": true,
+    "transport": "SSH using existing local authentication; HTTPS credential unavailable",
+    "main_before_merge": "97df23be8b110164e29a48183bde70266ace4133",
+    "final_delivery_commit": "resolve git log -1 --format=%H -- experiments/phase_ak_fusion_architecture/manifest.json"
   }
 }
