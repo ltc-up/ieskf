@@ -1,0 +1,28 @@
+{
+  "window_origin": "pre-existing GNSS-derived lap_window artifact; discovered after whole-record execution, not an estimator-selected successful window",
+  "duration_s": 73.434533888,
+  "lap_certificate": "NOT_SURVEYED",
+  "input_counts": {
+    "imu": 14682,
+    "wheel": 7343,
+    "pose": 7344,
+    "ndt": 1304,
+    "gps": 368,
+    "gps2": 368
+  },
+  "local_output_count": 7344,
+  "local_output_span_s": 73.43,
+  "local_Z_span_m": 3012.0342848414084,
+  "local_vz_m_s": {
+    "p50": -13.18441770612231,
+    "p95": 10.464723240119364,
+    "p99": 11.493950909321493,
+    "max": 11.89351195931592
+  },
+  "accuracy_reference_qualified": false,
+  "local_state_reinitialized": false,
+  "complete_local_window_processed": true,
+  "trusted_global_output": 0,
+  "new_causal_NDT_frames": 0,
+  "qualification": "NO_GO"
+}

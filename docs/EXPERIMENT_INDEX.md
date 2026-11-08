@@ -65,3 +65,7 @@ All284 frozen Sources assessed;35 new CUDA fits over5 fixed seven-seed groups. T
 ## Phase AN — executable global management; qualified real fusion NO-GO
 
 Same284-frame window plus146 raw GNSS messages processed. Two AM ambiguities retained; map/antenna/time/fix-code/statistical GNSS prerequisites remain unqualified,so0 anchors/0 trusted availability.118 tests pass; synthetic recovery and isolated ROS2 transport(3654 events) pass,not a real recovery/accuracy qualification. Local wheel dZ4.177m and sigmaZ51.783m persist. Strict controlled A/B/C and production/20Hz admission not established. [Report](../experiments/phase_an_global_multisource/FINAL_CONCLUSION.md) · [cross-stage summary](../experiments/PHASE_AL_AN_FINAL_SUMMARY.md).
+
+## Phase AO — real long-input validation, NO-GO
+
+Audited production delay/smoothing vs research; 2292 real temporal pose pairings and 43441 IMU/wheel events tested in three orders. Bounded checkpoint replay matches final Header state/full P exactly; online equivalence remains unvalidated. Extracted primary/backup whole raw records; loop35 has zero wheel Headers; loop7 stops at144.86s, loop44 processes917.07s, loop8 processes2455.68s. Long local vertical behavior fails (wheel dZ up to597.146m); no independent truth or qualified NDT/GNSS anchors,0 trusted availability.129 tests pass. AP restricted to diagnosis/injection. [Report](../experiments/phase_ao_full_lap_validation/FINAL_CONCLUSION.md) · [timing audit](../experiments/phase_ao_full_lap_validation/ENGINEERING_TIMING_AUDIT.md).

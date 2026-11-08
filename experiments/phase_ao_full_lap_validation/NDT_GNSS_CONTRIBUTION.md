@@ -1,0 +1,8 @@
+# Actual source contribution
+Bosch supplies nominal inertial propagation. The existing scalar longitudinal wheel observation corrects the full correlated 15D state; its large vertical cross-effect remains visible. No independent Kistler lateral/NHC/vehicle-model constraint was invented. Kistler measurements are extracted where typed twist exists and inventoried elsewhere; the historical producer path and cross-source correlation must be established before adding another speed update.
+
+Recorded NDT map poses contribute received/freshness diagnostics, not qualified anchors: convergence, backend health, map identity, exact Source/reference/seed and multipath evidence are absent on the public pose topic. Existing AL/AM candidate/geometry interfaces remain available, but were not newly populated for an entire causal lap. CUDA-NDT and Deskew production code were not changed. Reusing a prior globally corrected prediction as independent local odom would violate the experiment.
+
+GNSS1/GNSS2 contribute raw receipt, fix-code and continuity evidence. They do not yet supply qualified map-base dimensions or independent accuracy reference. No single position fix is treated as yaw. D/E are NOT_QUALIFIED. The manager records this as unavailability, not a successful all-rejected solution.
+
+NDT/GNSS have no writable local-state/P handle. Global runs use read-only local trace arrays and copied SE(3) poses; trace hashes before/after agree. This proves the software boundary for the executed path, not full probabilistic optimality, new observability, or local height stability. No sensor contribution to improved real accuracy has been established.

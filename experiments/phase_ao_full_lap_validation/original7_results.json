@@ -1,0 +1,166 @@
+{
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "configuration_calibrated": false,
+  "raw_summary": {
+    "tf": {
+      "count": 0,
+      "zero_headers": 0,
+      "cdr_group_sha256": "5a2ebddcb12567a3ecdb2485b1c346e37b313c036cba37c96e0132b525a333e2",
+      "max_gap_ms": 0.0,
+      "fix_histogram": {},
+      "receipt_minus_header_ms": {}
+    },
+    "pose": {
+      "count": 138062,
+      "zero_headers": 0,
+      "cdr_group_sha256": "4eeeb1883d544795b710f5bb389424e27367ca95d80acfc3ace108258cec2ea4",
+      "max_gap_ms": 52859.265281,
+      "fix_histogram": {},
+      "receipt_minus_header_ms": {
+        "min": 0.605135,
+        "p50": 3.5836805,
+        "p95": 6.340843799999995,
+        "p99": 7.8927754799999965,
+        "max": 18.50362
+      }
+    },
+    "wheel": {
+      "count": 142459,
+      "zero_headers": 0,
+      "cdr_group_sha256": "56ce95d809e1a9abd5d4602c9fcafe85ce75cad4259f1cdb928abb501629510d",
+      "max_gap_ms": 8870.549992,
+      "fix_histogram": {},
+      "receipt_minus_header_ms": {
+        "min": 0.059543,
+        "p50": 0.160176,
+        "p95": 0.2412501,
+        "p99": 0.3204830000000007,
+        "max": 4.725283
+      }
+    },
+    "kistler": {
+      "count": 353689,
+      "zero_headers": 0,
+      "cdr_group_sha256": "2e5be223a7d4b542560a767c4ad28fa7db2dedcc2ec230bd347375135b31a473",
+      "max_gap_ms": 17910.054,
+      "fix_histogram": {},
+      "receipt_minus_header_ms": {
+        "min": 0.268872,
+        "p50": 1.477004,
+        "p95": 3.9177993999999954,
+        "p99": 7.3746660399999975,
+        "max": 50.199812
+      }
+    },
+    "imu": {
+      "count": 285898,
+      "zero_headers": 0,
+      "cdr_group_sha256": "fc3cc71e971f1339208dd1fba9cad24bedd90f41989fd8f60b4b466296090e65",
+      "max_gap_ms": 3227.157,
+      "fix_histogram": {},
+      "receipt_minus_header_ms": {
+        "min": 0.091331,
+        "p50": 0.279016,
+        "p95": 1.557319199999999,
+        "p99": 3.9339970999999827,
+        "max": 25.479414
+      }
+    },
+    "gps": {
+      "count": 7167,
+      "zero_headers": 0,
+      "cdr_group_sha256": "1fcb508a44cd3d5b44ee7e94b8cc71a4094d0ebec0db9a20642d4b7b67aad0ab",
+      "max_gap_ms": 271.837071,
+      "fix_histogram": {
+        "8": 7033,
+        "5": 76,
+        "0": 5,
+        "7": 53
+      },
+      "receipt_minus_header_ms": {
+        "min": 0.12065,
+        "p50": 0.25196,
+        "p95": 0.7226237,
+        "p99": 1.2769577600000004,
+        "max": 6.105506
+      }
+    },
+    "gps2": {
+      "count": 7167,
+      "zero_headers": 0,
+      "cdr_group_sha256": "64c5aa3f1b5deca9018e494c05652a00f25f7fd0e225cb6c36923fa750b69b3f",
+      "max_gap_ms": 271.837071,
+      "fix_histogram": {
+        "8": 6596,
+        "0": 157,
+        "5": 175,
+        "7": 225,
+        "4": 14
+      },
+      "receipt_minus_header_ms": {
+        "min": 0.271789,
+        "p50": 0.709474,
+        "p95": 1.8111906999999998,
+        "p99": 3.242220680000001,
+        "max": 11.833022
+      }
+    },
+    "ndt": {
+      "count": 27629,
+      "zero_headers": 0,
+      "cdr_group_sha256": "6ec1cbd11c1c2126b3c5c3c3376550e5ba863243987c275836e1b0bd8651daec",
+      "max_gap_ms": 51949.985536,
+      "fix_histogram": {},
+      "receipt_minus_header_ms": {
+        "min": 37.412405,
+        "p50": 52.594901,
+        "p95": 62.2671998,
+        "p99": 68.81818164000002,
+        "max": 141.053786
+      }
+    }
+  },
+  "closed_traverse": {
+    "duration_s": 715.84000541,
+    "historical_path_m": 3000.051613428724
+  },
+  "input_scope": "whole selected recording; no post-run window selection",
+  "Kistler_fusion": "NOT_QUALIFIED: no separately verified independent velocity channel model",
+  "map_feedback": false,
+  "online_equivalence": false,
+  "status": "FAIL",
+  "failure": "IMU_GAP_STOP_SEGMENT",
+  "processed_s": 144.86,
+  "requested_s": 1433.3756421290002,
+  "outputs": 14486,
+  "counts": {
+    "IMU": 28958,
+    "wheel_ACCEPT": 14486
+  },
+  "wheel_max_abs_delta_Z_m": 0.4647200766979376,
+  "wheel_max_abs_delta_vz_m_s": 0.0066827171539882374,
+  "Z_span_m": 640.2258085179809,
+  "final_vz_m_s": -8.953063165451193,
+  "final_sigma_Z_model_m": 4583.390293074175,
+  "final_bg_norm": 0.001173083698477498,
+  "final_ba_norm": 0.05278153197553227,
+  "timing": {
+    "propagation_ms": {
+      "p50": 0.067534,
+      "p95": 0.070459,
+      "p99": 0.07375919999999998,
+      "max": 0.971094
+    },
+    "wheel_ms": {
+      "p50": 0.046074,
+      "p95": 0.048669,
+      "p99": 0.05126999999999998,
+      "max": 2.044044
+    }
+  },
+  "wall_s": 5.106610477000686,
+  "local_trace_sha256": "fe489a40a3522b3dc08017aac4f8dae8dfc78f9fdc484547d1e6ae0bfbdb586c",
+  "initialization": "one historical fused pose; causal wheel velocity; zero bias means, uncalibrated P",
+  "local_P_retained": true,
+  "input_extraction_sha256": "b11dfd3808b2f2d53791af3d3107a6e29bf5909aeb8f3f597e35e3ee0ad63601"
+}

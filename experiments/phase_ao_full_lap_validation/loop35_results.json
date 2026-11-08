@@ -1,0 +1,118 @@
+{
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "configuration_calibrated": false,
+  "raw_summary": {
+    "imu": {
+      "count": 151471,
+      "cdr_group_sha256": "bcddc510cab47c44978b8c735a3e326d42e32e0ddd59b2d1d872d95b440fb83d",
+      "max_gap_ms": 6.214,
+      "header_rollback": 0,
+      "receipt_minus_header_ms": {
+        "min": 0.11174,
+        "p50": 0.264704,
+        "p95": 1.740027,
+        "p99": 3.5912009999999936,
+        "max": 10.793453
+      },
+      "fix_histogram": {}
+    },
+    "wheel": {
+      "count": 75754,
+      "cdr_group_sha256": "334013d87cedb77efd31bee3c643121e21230830c31f3ab52c383793516ba400",
+      "max_gap_ms": 0.0,
+      "header_rollback": 0,
+      "receipt_minus_header_ms": {
+        "status": "UNDEFINED_ZERO_HEADER"
+      },
+      "fix_histogram": {}
+    },
+    "pose": {
+      "count": 75755,
+      "cdr_group_sha256": "4347cbc82c3f1a17ae4289b27da458b3dc39d93278a0df521e72efa90dbeb7bc",
+      "max_gap_ms": 14.499351,
+      "header_rollback": 0,
+      "receipt_minus_header_ms": {
+        "min": 0.61035,
+        "p50": 3.599049,
+        "p95": 6.268829200000002,
+        "p99": 7.731620600000001,
+        "max": 14.053594
+      },
+      "fix_histogram": {}
+    },
+    "ndt": {
+      "count": 13889,
+      "cdr_group_sha256": "a44c9e33c1832ca15ba0197486c15ad31e7fd2479bcab0254ee3d86dd5eb1f0f",
+      "max_gap_ms": 500.006144,
+      "header_rollback": 0,
+      "receipt_minus_header_ms": {
+        "min": 52.615514,
+        "p50": 79.900383,
+        "p95": 130.53527599999998,
+        "p99": 142.2858867999999,
+        "max": 174.112791
+      },
+      "fix_histogram": {}
+    },
+    "gps": {
+      "count": 3789,
+      "cdr_group_sha256": "5cc78ffb99e4c3f96a47dc8cfbee99b2805dff2409f90ef7edc04398c9ca3cef",
+      "max_gap_ms": 221.720177,
+      "header_rollback": 0,
+      "receipt_minus_header_ms": {
+        "min": 0.149855,
+        "p50": 0.266337,
+        "p95": 1.1709949999999996,
+        "p99": 2.24082472,
+        "max": 4.396034
+      },
+      "fix_histogram": {
+        "8": 3628,
+        "5": 90,
+        "0": 12,
+        "7": 59
+      }
+    },
+    "gps2": {
+      "count": 3788,
+      "cdr_group_sha256": "65312626e322d7a6d9db5cb5dbba4849145a3e06abf12c6cad548d1730509092",
+      "max_gap_ms": 221.720177,
+      "header_rollback": 0,
+      "receipt_minus_header_ms": {
+        "min": 0.240998,
+        "p50": 0.696749,
+        "p95": 2.8317169499999997,
+        "p99": 4.083855520000001,
+        "max": 7.511988
+      },
+      "fix_histogram": {
+        "8": 3352,
+        "0": 73,
+        "3": 5,
+        "5": 59,
+        "7": 299
+      }
+    },
+    "tf": {
+      "count": 0,
+      "cdr_group_sha256": "99fcc71d48b8b71b94986910da7e5fb6ade115a708e86797b02c615faebf864a",
+      "max_gap_ms": 0.0,
+      "header_rollback": 0,
+      "receipt_minus_header_ms": {},
+      "fix_histogram": {}
+    }
+  },
+  "closed_traverse": {
+    "duration_s": 245.046043097,
+    "historical_path_m": 3000.1502895647745
+  },
+  "input_scope": "whole selected recording; no post-run window selection",
+  "Kistler_fusion": "NOT_QUALIFIED: no separately verified independent velocity channel model",
+  "map_feedback": false,
+  "online_equivalence": false,
+  "status": "NOT_QUALIFIED",
+  "failure": "WHEEL_ZERO_OR_MISSING_HEADER",
+  "processed_s": 0,
+  "outputs": 0,
+  "input_extraction_sha256": "9d7994abe96b7c470869fd7c026f40353414cbe5f4c5abbf1e9838f1b0c17de9"
+}

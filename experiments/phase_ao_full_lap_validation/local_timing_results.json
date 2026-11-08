@@ -1,0 +1,32 @@
+{
+  "real_events": 43441,
+  "duration_s": 144.85,
+  "header_order": "all qualified sensor events",
+  "arrival_order": "recorded receipt proxy, callback timestamps unavailable",
+  "arrival_rejections": {
+    "IMU_GAP": 1,
+    "LATE": 2263
+  },
+  "arrival_vs_header_state_delta_norm": 739.9464706255416,
+  "arrival_vs_header_P_max_abs": 1767293.4460242707,
+  "delay_reasons": {
+    "IN_ORDER": 41175,
+    "DEFERRED_IMU_GAP": 1,
+    "REPROPAGATED": 2265
+  },
+  "delay_vs_header_state_delta_norm": 0.0,
+  "delay_vs_header_P_max_abs": 0.0,
+  "pending_events": 0,
+  "max_buffer_events": 153,
+  "reapplied_suffix_operations": 45715,
+  "ingest_ms": {
+    "p50": 0.096318,
+    "p95": 0.206812,
+    "p99": 0.21552339999999998,
+    "max": 0.849286
+  },
+  "same_common_initialization": true,
+  "initialization": "first saved local output and preexisting latest IMU; not online startup validation",
+  "scope": "IMU+wheel sensor-time replay, no map and no ROS executor",
+  "online_equivalence": false
+}

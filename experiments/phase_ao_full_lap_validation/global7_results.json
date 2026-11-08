@@ -1,0 +1,32 @@
+{
+  "local_trace_sha256_before": "fe489a40a3522b3dc08017aac4f8dae8dfc78f9fdc484547d1e6ae0bfbdb586c",
+  "local_trace_sha256_after": "fe489a40a3522b3dc08017aac4f8dae8dfc78f9fdc484547d1e6ae0bfbdb586c",
+  "output_slots": 14486,
+  "output_states": {
+    "INITIALIZING": 3,
+    "UNAVAILABLE": 14483
+  },
+  "observation_reasons": {
+    "FIX_UNQUALIFIED": 1450,
+    "UNKNOWN_NO_QUALIFIED_NDT_OBSERVATION": 2896
+  },
+  "coordinate_anchors": 0,
+  "trusted_anchors": 0,
+  "published": 0,
+  "trusted_coverage_fraction": 0.0,
+  "max_continuous_no_trusted_s": 144.86,
+  "ndt_convergence": "UNKNOWN_PUBLIC_TOPIC",
+  "gnss_fusion": "NOT_QUALIFIED",
+  "map_contract": "UNVERIFIED",
+  "core_ms": {
+    "p50": 0.00524,
+    "p95": 0.030346,
+    "p99": 0.031649,
+    "max": 0.331427
+  },
+  "local_trace_sha256": "fe489a40a3522b3dc08017aac4f8dae8dfc78f9fdc484547d1e6ae0bfbdb586c",
+  "local_state_modified": false,
+  "online_equivalence": false,
+  "accuracy": "NOT_VALIDATED",
+  "qualification": "NO_GO"
+}

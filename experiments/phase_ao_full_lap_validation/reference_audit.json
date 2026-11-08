@@ -1,0 +1,20 @@
+{
+  "rows": 4409,
+  "flag_valid_rows": 3770,
+  "duration_s": 220.40001583099365,
+  "gnss_delay_corrections_ms": [
+    75.0
+  ],
+  "csv_sha256": "7cd9aaa4f17d943db4138a77d6cf2136da6b3d6da8a8aac6a976de0f5f563d55",
+  "reference_independent": false,
+  "qualified_accuracy": false,
+  "qualification_reasons": [
+    "derived from same raw GNSS, not an independent receiver",
+    "75ms correction provenance/calibration not established",
+    "fix8 interpretation not verified for actual model/firmware",
+    "lever, attitude, map datum and height convention not verified",
+    "interpolation validity flags do not establish metrological accuracy"
+  ],
+  "historical_lap_window_duration_s": 73.434533834,
+  "historical_lap_window_qualification": "prior derived window; not a surveyed lap certificate or new accuracy-based selection"
+}

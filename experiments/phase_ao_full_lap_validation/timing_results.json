@@ -1,0 +1,31 @@
+{
+  "real_odom_rows": 11680,
+  "real_ndt_rows": 2292,
+  "header_sorted_pairings": 2292,
+  "arrival_latest_pairings": 2292,
+  "delayed_historical_pairings": 2292,
+  "arrival_latest_correction_translation_difference_m": {
+    "p50": 2.968028399236146,
+    "p95": 18.704024876812664,
+    "p99": 30.773191772728925,
+    "max": 38.80773049452552
+  },
+  "delay_compensated_vs_header_max_matrix_difference": 0.0,
+  "receipt_minus_header_ms": {
+    "p50": 43.1059615,
+    "p95": 52.99467905,
+    "p99": 57.9917958,
+    "max": 102.542678
+  },
+  "rejections": {},
+  "diagnostic_wall_ms": {
+    "p50": 0.085148,
+    "p95": 0.0884195,
+    "p99": 0.09528870000000002,
+    "max": 0.194902
+  },
+  "qualification": "TIMING_DIAGNOSTIC_ONLY",
+  "local_delayed_15D_update": "SEPARATE_OFFLINE_CHECKPOINT_PROTOTYPE; see local_timing_results.json",
+  "actual_callback_order": "UNVERIFIED: recorder receive order only",
+  "online_equivalence": false
+}
