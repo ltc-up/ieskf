@@ -1,0 +1,16 @@
+{
+  "frames": 1468,
+  "native_time": true,
+  "history_seconds": [
+    0.5,
+    2.1
+  ],
+  "max_differences": {
+    "seed": 0.0,
+    "prior.P": 0.0,
+    "ndt.final": 0.0,
+    "update.delta": 0.0,
+    "update.P_after_native": 0.0
+  },
+  "all_source_SHA_equal": true
+}

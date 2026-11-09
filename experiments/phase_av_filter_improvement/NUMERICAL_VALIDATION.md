@@ -1,16 +1,11 @@
-# AV numerical validation
+# Numerical qualification
 
-195 tests pass,0 fail;12 new tests relative to AU183. New directed cases verify:
-- same static linear-Gaussian packet information for one R_packet update versus five repeated5R_packet updates, including full covariance; a single5R_packet update demonstrably loses information;
-- original legacy covariance default remains exact;
-- consistent guarded update matches original full15D state/P and stays SPD;
-- unchanged full-pose Jacobian agrees with finite differences with a nonzero lever;
-- a converged/low-fitness large innovation is rejected with prior mean/P intact;
-- competing local basins, weak/partial geometry, poor map support and failed probes have separate eligibility outcomes;
-- consensus does not certify a globally correct peak;
-- delayed correlation-group deduplication prevents repeated fusion;
-- invalid observation noise fails closed.
+Final regression: **210 tests passed,0 failed**; baseline183,27 newly added tests.12 packet/integrity tests,6 consensus-subspace tests,7 mixture tests and2 delayed-mixture/history tests. The initial order64 implementation failed one extreme-residual numerical convergence test before any CUDA experiment; its log/snapshot are retained. Final fixed order128 passes versus256. No old tests were removed or relaxed.
 
-Existing SO3, right-error F/G, full Joseph/reset, delay-history, numerical PSD and AU independent reconstruction tests remain unchanged. Native-pose R uses metre² translation and local-right rotation radian²; angular mapping is isotropic here and not an untransported Native Hessian. No eigenvalue-to-R mapping or state cross-term deletion occurs. Geometry eigenvalues are eligibility diagnostics only.
+Covered: information-form queue budget identity; unchanged legacy engineering_R default; full external-pose Jacobian finite differences with nonzero attitude/lever; full15D Joseph/right-reset and cross-gain preservation; unsupported input rejection; ambiguous/weak/missing support distinction; prior-anchored consensus annihilation; unobserved uncorrelated direction not artificially constrained; scalar mixture posterior versus independent adaptive integration; conditional+between total covariance; finite precision0<λ<1; soft outlier downweighting; full nonlinear residual-derivative finite differences; delayed replay/in-order equivalence, duplicate information groups, and bounded-history/forward-equation identity.
 
-Actual original-policy40 raw CUDA/Deskew replay has0 maximum seed/final-pose/15D-delta discrepancy against AR. Guarded40 raw CUDA/Deskew completes40/40 accepted with local three-start agreement. Numerical validity and short-run convergence do not establish statistical consistency, physical correct peaks, full-lap improvement or production qualification. True normal-lap and held-out behavior are reported after execution.
+Actual-data audit (`frozen_and_numeric_verification.json`): fresh direct legacy40 AND switchable legacy40 exactly reproduce historical AR seeds, full priorP, final CUDA poses, full K and15D delta (max difference0). All1468 V3 packet deltas equal logged effectiveK×innovation within6.67e−16. Recompute with independent256-point integration at130 predeclared/partial-projection frames: mean difference≤9.16e−16, full postreset covariance difference≤3.11e−15. All saved V3lap P are symmetric, minimum eigenvalue5.56e−7. These verify arithmetic under the stated linearized model, not physical P/R consistency.
+
+183 preexisting original source/report files byte-identical to c647ac3. AR/AS/AT used-input, transaction and AU diagnostic hashes are checked. New modules are opt-in; no original predictor, wheel, external-pose, reset, replay, default configuration or CUDA implementation is changed. Larger research history is a separately declared retention setting.
+
+PSD, exact reconstruction and model-based posterior precision are **not** calibrated accuracy, NIS/NEES acceptance, reliable correct-peak probability or production safety evidence. Statistical independence between adjacent cloud packets is still NOT_VALIDATED; W's data-dependent selection uncertainty is not empirically modelled.

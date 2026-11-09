@@ -1,0 +1,14 @@
+{
+  "policy": "V3",
+  "requested_frames": 4134,
+  "processed_frames": 1480,
+  "accepted": 1480,
+  "duration_s": 73.94956203400001,
+  "history_seconds": 0.5,
+  "failure": "DESKEW_HISTORY_COVERAGE_ASSERTION",
+  "last_model_age_ms": 505.458809,
+  "converged": 1480,
+  "completed": false,
+  "original_logs_preserved": true,
+  "global_correctness": "UNKNOWN"
+}

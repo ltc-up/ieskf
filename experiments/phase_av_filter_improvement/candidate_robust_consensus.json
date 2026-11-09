@@ -1,0 +1,22 @@
+{
+  "version": "AV_SINGLE_PACKET_ROBUST_CONSENSUS_V3",
+  "covariance_semantics": "one accepted update per point-cloud correlation group; no repeated queue smoothing",
+  "nis_probability": 0.9999,
+  "minimum_geometry_rank": 6,
+  "minimum_support_fraction": 0.5,
+  "probe_translation_m": 1.5,
+  "probe_yaw_rule": "atan(ndt_resolution/median_source_horizontal_range)",
+  "cluster_translation_m": 1.0,
+  "cluster_rotation_rad": 0.1,
+  "required_converged_hypotheses": 3,
+  "stop_after_no_observation_s": 2.0,
+  "calibrated_covariance": false,
+  "production_default": false,
+  "ambiguity_policy": "project_consensus",
+  "ambiguity_rotation_scale_m": 10.0,
+  "ambiguity_relative_rank_tolerance": 1e-06,
+  "likelihood": "Gaussian scale mixture; precision Beta(2,1)",
+  "mixture_quadrature_order": 128,
+  "innovation_handling": "marginalize_precision_not_hard_chi_square_rejection",
+  "precision_prior": "Beta(2,1) on (0,1), finite marginal noise covariance 2*R_packet"
+}

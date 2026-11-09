@@ -40,3 +40,20 @@ class NdtPacketTests(unittest.TestCase):
   r.ingest(dict(kind='imu',header_ns=self.x.t+10_000_000,message_id=1,omega=im['omega'],force=im['force']));r.ingest(dict(kind='clock',header_ns=self.x.t+15_000_000,message_id=2));r.ingest(dict(kind='imu',header_ns=self.x.t+20_000_000,message_id=3,omega=im['omega'],force=im['force']));e=dict(kind='ndt',header_ns=self.x.t+15_000_000,message_id=4,pose=self.T,R=packet_covariance(1.,self.components),observer=InnovationGuardedPose(self.l,self.components),correlation_group='unique');r.ingest(e);x,P,_=r.current();self.assertEqual(r.ingest(e|dict(message_id=5)),'DUPLICATE_INFORMATION_GROUP');y,Q,_=r.current();np.testing.assert_array_equal(x.p,y.p);np.testing.assert_array_equal(P,Q)
  def test_invalid_noise_keeps_prior(self):
   y,Q,info=InnovationGuardedPose(self.l,self.components).correct(self.x,self.P,self.T,np.zeros((6,6)));self.assertFalse(info['accepted']);np.testing.assert_array_equal(Q,self.P)
+ def test_consensus_projection_annihilates_all_chart_differences(self):
+  from geometry_ieskf.ndt_packet_observation import hypothesis_consensus_projection
+  from scipy.spatial.transform import Rotation
+  R=Rotation.from_euler('xyz',[.1,-.1,.3]).as_matrix();H=[]
+  for dx,dy,yaw in [(0,0,0),(2,.1,.02),(-1,.2,-.01)]:
+   T=np.eye(4);T[:3,:3]=R@Rotation.from_rotvec([0,0,yaw]).as_matrix();T[:3,3]=[dx,dy,0];H.append(self.h(T))
+  U,meta=hypothesis_consensus_projection(R,H);z=[np.r_[np.array(h['final'])[:3,3],Rotation.from_matrix(R.T@np.array(h['final'])[:3,:3]).as_rotvec()] for h in H];self.assertEqual(np.linalg.matrix_rank(U),len(U));np.testing.assert_allclose(np.array(z[1:]-np.array(z[0]))@U.T,0,atol=1e-12)
+ def test_projected_guard_matches_full_joseph_implementation(self):
+  U=np.eye(6)[1:];T=self.T.copy();T[1,3]+=.02;R=packet_covariance(1.,self.components);y,Q,info=InnovationGuardedPose(self.l,self.components).correct(self.x,self.P,T,R,U);z,S,ref=ExternalPose(self.l,self.components).correct(self.x,self.P,T,R,U);self.assertTrue(info['accepted']);np.testing.assert_allclose(info['delta'],ref['delta'],atol=1e-14);np.testing.assert_allclose(Q,S,atol=1e-14);self.assertEqual(info['observation_rank'],5)
+ def test_partial_observation_retains_cross_gain(self):
+  P=self.P.copy();P[0,1]=P[1,0]=.005;T=np.eye(4);T[1,3]=.02;U=np.eye(6)[1:2];y,Q,info=InnovationGuardedPose(np.zeros(3),self.components).correct(self.x,P,T,np.eye(6)*.01,U);self.assertTrue(info['accepted']);self.assertNotEqual(y.p[0],0);self.assertLess(Q[0,0],P[0,0]);self.assertNotEqual(Q[0,1],0)
+ def test_partial_uncorrelated_unobserved_axis_not_artificially_shrunk(self):
+  T=np.eye(4);T[1,3]=.02;U=np.eye(6)[1:];y,Q,info=InnovationGuardedPose(np.zeros(3),self.components).correct(self.x,self.P,T,np.eye(6)*.01,U);self.assertEqual(Q[0,0],self.P[0,0]);self.assertLess(Q[1,1],self.P[1,1])
+ def test_v2_ambiguity_keeps_only_explicit_partial_eligibility(self):
+  T=self.T.copy();T[1,3]+=3;c=self.config|dict(ambiguity_policy='project_consensus');v=assess_integrity(self.h(),[self.h(),self.h(T),self.h()],dict(rank=6,nearby_fraction=1),c);self.assertTrue(v['eligible']);self.assertEqual(v['reason'],'AMBIGUOUS_PARTIAL_PROJECTION_REQUIRED');self.assertEqual(v['global_peak_correctness'],'UNKNOWN')
+ def test_rank_deficient_projection_fails_closed(self):
+  U=np.ones((2,6));y,Q,info=InnovationGuardedPose(self.l,self.components).correct(self.x,self.P,self.T,np.eye(6),U);self.assertFalse(info['accepted']);np.testing.assert_array_equal(Q,self.P)

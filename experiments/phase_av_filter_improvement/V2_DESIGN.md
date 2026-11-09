@@ -1,0 +1,13 @@
+# V2 redesign after V1's measured loss
+
+V1 actually processed881/1468 frames and stopped after2s with no accepted NDT. It withheld79 competing-peak frames and6 innovation-inconsistent frames;796 updates succeeded. Both low-fitness longitudinal alternatives and later lateral alternatives occurred. This is an **operational failure of whole-pose rejection**, not justification to suppress ambiguity or tune a covariance multiplier. V1 data/config/source commit remain available.
+
+V2 keeps the same packet likelihood, Q, motion, matcher, probes, clustering, support and NIS probability. It changes only handling of fully converged multiple hypotheses: retain the measurement directions common to all explicitly tested poses rather than discarding all information.
+
+At actual delayed prior R0, form zi=[p_i, Log(R0ᵀR_i)] for the three candidates. Differences D have rows zi−z0. Normalize with B=diag(I,10I), using AM's existing translation/rotation convention. If DBᵀ=USVᵀ, the nullspace projection is W=V_nullᵀ B, so W(zi−z0)=0. Rank tolerance is the existing numerical1e−6 convention, not fitted to error. The retained observation is r'=Wr, H'=WH, R'=W R_packet Wᵀ. Full-row-rank W and SPD R imply SPD R'; original full15D Kalman/Joseph/reset applies. No state rows, P cross terms or K rows are manually removed. With three hypotheses the ambiguity span is at most rank2, retaining at least4 pose combinations, not necessarily four named independent DoFs.
+
+This is a hypothesis-invariant **local linearized measurement subspace**, distinct from geometry rank and from calibrated pose covariance. It does not choose a peak by fitness or make a globally wrong candidate set correct. Directional uncertainty remains in the full coupled posterior. Cases lacking all3 converged hypotheses or adequate geometry/support remain withheld. NIS uses the projected dimension and covariance exactly once. All candidates still share one cloud information group and produce at most one update.
+
+The original AR runner source is unchanged. Only V2's research executable adds an explicit per-event projection callback at the frozen covariance hook; the exact source replacement is asserted and each projection is stored with its prior anchor. Legacy and V1 use the unchanged runner. The observer passes original R and W to ExternalPose once, avoiding double projection. Reports label accepted ranks and PARTIAL_CONSTRAINT instead of claiming full6D tracking.
+
+Expected benefit: preserve Z/attitude/other consensus constraints through ambiguous regions and prevent a rejection-induced prediction-only gap. Whether lateral accuracy improves is left to fresh causal rematching, not assumed. Whole-lap Pareto/reference qualification and production-default rules remain unchanged.
