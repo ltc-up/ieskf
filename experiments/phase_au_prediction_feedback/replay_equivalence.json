@@ -1,0 +1,25 @@
+{
+  "frames": 1468,
+  "fixed_observation_replay": true,
+  "CUDA_rematched": false,
+  "envelope_trace_rows": 78054,
+  "max_errors": {
+    "prior_p": 0.0,
+    "prior_R": 0.0,
+    "prior_P": 0.0,
+    "seed": 0.0,
+    "R_rule": 0.0,
+    "delta": 0.0,
+    "K": 0.0,
+    "acceptance": 0,
+    "published_mean": 0.0,
+    "published_P": 0.0,
+    "published_time_ns": 0
+  },
+  "equivalent": true,
+  "schedule": "original available/complete envelope; pre-ingest advancement boundary not individually retained",
+  "new_sensor_latency_claim": false,
+  "canonical_trace_rows": 32360,
+  "canonical_events": 25003,
+  "canonical_prior_max_error": 0.0
+}

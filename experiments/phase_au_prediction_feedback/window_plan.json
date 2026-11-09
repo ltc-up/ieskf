@@ -1,0 +1,33 @@
+{
+  "frozen_before_mechanism_analysis": true,
+  "sections": [
+    {
+      "section": 1,
+      "first_frame": 1120,
+      "last_frame": 1167,
+      "representative_frame": 1144,
+      "start_relative_s": 56.00033116340637,
+      "end_relative_s": 58.350346326828,
+      "padding_s": 1.0
+    },
+    {
+      "section": 3,
+      "first_frame": 1317,
+      "last_frame": 1405,
+      "representative_frame": 1361,
+      "start_relative_s": 65.85038471221924,
+      "end_relative_s": 70.25017595291138,
+      "padding_s": 1.0
+    },
+    {
+      "section": 9,
+      "first_frame": 869,
+      "last_frame": 897,
+      "representative_frame": 883,
+      "start_relative_s": 43.4494423866272,
+      "end_relative_s": 44.85037422180176,
+      "padding_s": 1.0
+    }
+  ],
+  "counterfactual": "median frame; .25s fixed-observation suffix; skip one entire NDT or one subsequent wheel update; no matching"
+}

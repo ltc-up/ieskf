@@ -1,0 +1,13 @@
+{
+  "phase": "AU1",
+  "baseline": "ac8e87f5755805c23c0dae305794000939a82299",
+  "research_commit": "enclosing commit",
+  "motion_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "AR_transactions_sha256": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+  "config_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "fixed_observation_replay": true,
+  "CUDA_rematched": false,
+  "equivalence": "exact all1468 saved means/P/seeds/gains/deltas",
+  "GNSS_fused": false,
+  "production_modified": false
+}
