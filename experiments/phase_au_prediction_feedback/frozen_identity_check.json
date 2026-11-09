@@ -1,0 +1,60 @@
+{
+  "input_checks": {
+    "AT_motion": {
+      "sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+      "matched": true
+    },
+    "AT_as_npz": {
+      "sha256": "3f8a37b9c97ba90a88926c571480f72e3428c3cbe79ea1c41358142221463743",
+      "matched": true
+    },
+    "AT_gnss": {
+      "sha256": "7cd9aaa4f17d943db4138a77d6cf2136da6b3d6da8a8aac6a976de0f5f563d55",
+      "matched": true
+    },
+    "AT_historical_gnss_config": {
+      "sha256": "26a39d620560d1bdfeb1cec77b0b27db2d7f8fc5b44c6bb49711dd1d1f32c7a7",
+      "matched": true
+    },
+    "AT_historical_urdf": {
+      "sha256": "0e6483614dc2f8a44360e86c4af2477edd0af17d528737a03cb437d522404d98",
+      "matched": true
+    },
+    "AT_left": {
+      "sha256": "b4bbb5e0f8a05c61aa3191f7bb254a2a7ccde87152e1f6a29e4f9e6051ae7e3c",
+      "matched": true
+    },
+    "AT_right": {
+      "sha256": "4fccdef97771e510ca185e9170987d87e4ab88a2db86991e6ddcc68eea632a2b",
+      "matched": true
+    },
+    "AT_quality": {
+      "sha256": "90a5da2a0fe176ad016eeb556073929b067dab762ac2eef8df116cfb02c48500",
+      "matched": true
+    },
+    "AR_transactions": {
+      "sha256": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+      "matched": true
+    },
+    "AS_F_transactions": {
+      "sha256": "dfd6e4db1ef8b6aa2124b761f7601afb77edebd85fa9dab8963130bfe582f7c1",
+      "matched": true
+    },
+    "AS_N_transactions": {
+      "sha256": "f16d1d05cea280bc23458eb1bf3575b6e672dd6b764caedf9b3780c44fa85171",
+      "matched": true
+    },
+    "AT_causal": {
+      "sha256": "2f9904ac5c90f6a5e925cd0f82df043449227d2129e073f7687bc7754dd1b23a",
+      "matched": true
+    },
+    "frozen_config": {
+      "sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+      "matched": true
+    }
+  },
+  "AR_states_used_sha256": "aae1f671cb16a56e55c624a662d1ac10028801a7938678e191309415329dcd08",
+  "AR_bindings_used_sha256": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+  "original_algorithm_and_reports_unchanged": true,
+  "bag_map": "historical identities inherited; not read or rehashed by AU fixed-observation analysis"
+}

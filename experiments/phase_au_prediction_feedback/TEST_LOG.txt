@@ -1,0 +1,8 @@
+Phase AU final complete regression
+PYTHONPATH=src OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests
+183 passed;0 failed;12 new relative to frozen AT171.
+Real fixed-observation reconstruction1468 frames: every saved prior/seed/K/delta/acceptance/full published mean/P/time matches exactly.
+Independent full15D update: K/delta/Joseph-reset error below7e-16.
+Three 250ms-cutoff branch baselines match every canonical mean/P exactly; six conditional single-update skips executed.
+Original AR/AS/AT input/transaction hash and unchanged-source assertions pass.
+No actual CUDA rematch, GNSS fusion, calibrated covariance or true-accuracy claim.

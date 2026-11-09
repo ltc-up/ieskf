@@ -1,0 +1,30 @@
+{
+  "max_closure_m2": 4.440892098500626e-16,
+  "sections": [
+    {
+      "section": 1,
+      "mean_position_block_variance": 0.0053532514431821965,
+      "mean_attitude_lever_variance": 3.922125866091471e-05,
+      "mean_signed_cross_variance": -5.5277374457904245e-05,
+      "mean_total_variance": 0.005337195327385207,
+      "meaning": "exact HPH partition, not physical covariance calibration or cross-term removal"
+    },
+    {
+      "section": 3,
+      "mean_position_block_variance": 0.00394240739876635,
+      "mean_attitude_lever_variance": 3.193876586856108e-05,
+      "mean_signed_cross_variance": -5.518069806778203e-05,
+      "mean_total_variance": 0.003919165466567129,
+      "meaning": "exact HPH partition, not physical covariance calibration or cross-term removal"
+    },
+    {
+      "section": 9,
+      "mean_position_block_variance": 0.004814758182954387,
+      "mean_attitude_lever_variance": 3.693720053321105e-05,
+      "mean_signed_cross_variance": -5.589236654500554e-05,
+      "mean_total_variance": 0.004795803016942593,
+      "meaning": "exact HPH partition, not physical covariance calibration or cross-term removal"
+    }
+  ],
+  "inter_observation_mixing": "full-vs-scalar gain comparison conditions on full HPH; not evidence all state correlations are negligible"
+}

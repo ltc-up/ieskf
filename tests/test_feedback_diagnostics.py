@@ -20,3 +20,13 @@ class FeedbackDiagnosticsTests(unittest.TestCase):
   prior=np.array([[1.,2,0],[2,4,0],[4,5,0]]);post=prior+[.1,-.2,0];ref=np.array([[0.,0,0],[1,1,0],[2,3,0]]);axes=np.array([[1.,0,0],[0,1,0],[.6,.8,0]]);b=difference_balance(prior,post,ref,axes);np.testing.assert_allclose(b['closure'][1:],0,atol=1e-14);np.testing.assert_allclose(b['cumulative_closure'][1:],0,atol=1e-14)
  def test_true_common_motion_is_not_new_error(self):
   ref=np.array([[0.,0,0],[10,4,0],[20,10,0]]);prior=ref+[1,2,0];post=prior.copy();axes=np.tile([0.,1,0],(3,1));b=difference_balance(prior,post,ref,axes);np.testing.assert_allclose(b['new_difference'][1:],0)
+ def test_skip_preserves_time_split_and_held_imu_age(self):
+  from ndt_global.ar_replay import AuditedPoseReplay
+  from ndt_global.feedback_diagnostics import skip_information_step
+  x=self.x.copy();x.t=1_000_000_000;im=dict(header_ns=x.t,omega=np.zeros(3),force=np.array([0.,0,9.80665]));r=AuditedPoseReplay(x,self.P,im,self.lever);e=dict(kind='wheel',header_ns=x.t+10_000_000,message_id=1,speed=12.,variance=.1);a=skip_information_step(r,(x,self.P,im),e);b=r.step((x,self.P,im),e|dict(kind='clock'));np.testing.assert_array_equal(a[0].p,b[0].p);np.testing.assert_array_equal(a[1],b[1]);self.assertEqual(a[2]['header_ns'],im['header_ns']);self.assertEqual(e['kind'],'wheel')
+ def test_skip_rejects_imu_intervention(self):
+  from ndt_global.feedback_diagnostics import skip_information_step
+  with self.assertRaises(ValueError):skip_information_step(None,None,dict(kind='imu'))
+ def test_signed_covariance_partition_keeps_negative_cross_term(self):
+  from ndt_global.feedback_diagnostics import pose_variance_components
+  P=np.eye(15);P[1,8]=P[8,1]=.2;parts=pose_variance_components(P,np.eye(3),[1,0,0],[0,1,0]);np.testing.assert_allclose(parts,[1,1,-.4]);self.assertAlmostEqual(parts.sum(),1.6)

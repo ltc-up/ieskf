@@ -26,3 +26,17 @@ def difference_balance(prior,posterior,reference,axes):
  inherited=dot(prev,axes);new=dot(prior-prevpost-(reference-prevref),axes);update=dot(posterior-prior,axes);basis=dot(prev,axes-pre_axes);prior_error=dot(e0,axes);post_error=dot(e1,axes);closure=prior_error-inherited-new;post_change=np.r_[0.,np.diff(post_error)];cumulative_closure=post_change-new-update-basis
  closure[0]=np.nan;cumulative_closure[0]=np.nan
  return dict(inherited=inherited,new_difference=new,update=update,basis_change=basis,prior_difference=prior_error,posterior_difference=post_error,closure=closure,cumulative_closure=cumulative_closure)
+
+def skip_information_step(replay,checkpoint,event):
+ """Fixed-observation intervention: retain integration split, omit one full update.
+
+    A clock step retains held-IMU age and mean/covariance propagation. Removing
+    an event outright would also change integration intervals, a second intervention.
+    """
+ if event['kind'] not in ('wheel','ndt'):raise ValueError('NOT_AN_INFORMATION_EVENT')
+ return replay.step(checkpoint,event|dict(kind='clock'))
+
+def pose_variance_components(P,Rpose,lever,axis):
+ """Signed contributions; cross covariance is retained and can be negative."""
+ A=Rpose@cross_matrix(lever);n=np.asarray(axis);position=float(n@P[:3,:3]@n);attitude=float(n@A@P[6:9,6:9]@A.T@n);cross=float(n@(P[:3,6:9]@A.T+A@P[6:9,:3])@n)
+ return np.array([position,attitude,cross])

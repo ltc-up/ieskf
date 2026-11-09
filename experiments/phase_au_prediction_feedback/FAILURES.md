@@ -9,3 +9,9 @@ Physical GPS latency, antenna/INS/map reference and true Bias/attitude calibrati
 AU2 initial analysis was stopped because lazy NPZ field access repeatedly decompressed entire arrays inside the diagnostic loop. Arrays are now loaded once; cached rerun completed. This was a new analysis-script I/O defect, not a frozen estimator failure; first/corrected private logs are retained. No partial numbers were reported as results.
 
 Independent full-state matrix checks and nominal/balance closures pass. The .1m-scale current innovations are discrepancies to NDT, not known true errors. Axis transport is mandatory; omission would falsely attribute part of curved-frame coordinate change to new propagation bias.
+
+AU3 distinguishes posterior covariance chart projection from the prior chart: longitudinal/lateral/heading plots now use the post-injection attitude Jacobian. The original full-P Joseph/reset checks were already correct; primary gain/mean/balance conclusions are unchanged. Close scalar/full pose gains condition on full HPH and must not be misread as proof that all15D cross-covariances are unimportant; an explicit signed variance partition is retained.
+
+Nine short-window branches ran: three unchanged baselines and six single-update skips. Baseline means/P differences are0; future frozen NDT updates were accepted. No real rematch was executed, no physical correct-peak label exists and no GNSS score selects a covariance scale. Windows have a250ms cutoff and separately recorded actual event coverage. Counterfactuals do not prove full-lap accuracy improvement or a physical model defect.
+
+Final regression:183 passed,0 failed. New directed tests12. All original-data qualification failures remain active; numerical success does not convert them into passes.

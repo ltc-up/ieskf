@@ -1,0 +1,26 @@
+[
+  {
+    "section": 1,
+    "entry_frame": 1120,
+    "same_sign_run_begin_frame": 1101,
+    "relative_time_s": 55.050392157000005,
+    "begin_difference_m": -0.019761289766479066,
+    "interpretation": "same-sign prior minus NDT run only, not independently identified physical-error onset"
+  },
+  {
+    "section": 3,
+    "entry_frame": 1317,
+    "same_sign_run_begin_frame": 1298,
+    "relative_time_s": 64.90035392200001,
+    "begin_difference_m": 0.005775032307184464,
+    "interpretation": "same-sign prior minus NDT run only, not independently identified physical-error onset"
+  },
+  {
+    "section": 9,
+    "entry_frame": 869,
+    "same_sign_run_begin_frame": 822,
+    "relative_time_s": 41.100296197000006,
+    "begin_difference_m": 0.014614023912467607,
+    "interpretation": "same-sign prior minus NDT run only, not independently identified physical-error onset"
+  }
+]
