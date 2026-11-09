@@ -1,0 +1,41 @@
+{
+  "paired_valid": 1197,
+  "GNSS_reference": "engineering75ms only",
+  "initial_seeds_identical": true,
+  "initial_Source_identical": true,
+  "statistical_calibration": false,
+  "F": {
+    "XY": {
+      "rmse": 0.5734700080550144,
+      "p50": 0.4192059243365725,
+      "p95": 1.0346466618711263,
+      "max": 1.7516692645012175
+    },
+    "abs_lateral": {
+      "rmse": 0.24230081391408612,
+      "p50": 0.14051293779840512,
+      "p95": 0.49330442896907384,
+      "max": 0.6827681205023017
+    }
+  },
+  "N": {
+    "XY": {
+      "rmse": 0.6280718296926464,
+      "p50": 0.5075888190216196,
+      "p95": 1.0958454334063945,
+      "max": 1.7263672311784837
+    },
+    "abs_lateral": {
+      "rmse": 0.35300196309782456,
+      "p50": 0.25343355977516147,
+      "p95": 0.6793001434746369,
+      "max": 0.8363025537988722
+    }
+  },
+  "same_F_prior_direct_R_effect": {
+    "frames": 1468,
+    "F_median_delta_position": 0.014580742527767792,
+    "N_median_delta_position": 0.0020873401530262696,
+    "interpretation": "gain effect only; zero dummy dynamics means used only because pose H/residual independent of v/bias means, not claimed real trajectories"
+  }
+}

@@ -88,3 +88,5 @@ Own-state raw Deskew/CUDA-NDT/delayed full15D update runs on40 normal loop44 tri
 - [AR1 loop44/map0105](../experiments/phase_ar_loop44_map0105/FINAL_CONCLUSION.md): exact AQ2 interruption reproduced; derivative-only repair insufficient;100iteration/full-pose candidate completes401/40120s.156 tests.60s/lap pending.
 
 - [AR2 full-lap result](../experiments/phase_ar_loop44_map0105/FULL_LAP_VALIDATION.md): frozen full-pose100candidate401/40120s,1201/120160s,1468/1468 prior73.43s lap.100% converged/accepted; same-time production differences only, no independent accuracy. Functional/normal research availability GO; realtime/production unqualified. Durable private artifacts restored.
+
+- [AS1 accuracy/quality](../experiments/phase_as_accuracy_quality/FINAL_CONCLUSION.md): reusedARlap,4134continuous3-lap frames,1468Nativecausalframes;conditionalGNSS engineering differences,localright-turn reversals,time-sensitivityranking reversal,nooutline safetycertificate.160tests;offlinequalitynotcorrect-peakcertificate.

@@ -1,0 +1,28 @@
+{
+  "frames": 4134,
+  "geometry_scope": "same real Source/final pose, CPU diagnostics; 10m rotation normalization",
+  "rank_counts": {
+    "0": 0,
+    "1": 0,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 4134
+  },
+  "support": {
+    "min": 0.9666666666666667,
+    "p50": 0.9986666666666667,
+    "p95": 1.0,
+    "max": 1.0
+  },
+  "geo_eigen_ratio": {
+    "min": 0.0008304848386879242,
+    "p50": 0.004368720184668726,
+    "p95": 0.011237430766605837,
+    "max": 0.028463656212011152
+  },
+  "score_H_SPD_count": 4134,
+  "statistics_are_covariance": false,
+  "exact_association": "quality_correlation.json, original Source native timestamps"
+}

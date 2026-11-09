@@ -1,0 +1,8 @@
+{
+  "exhaustive_segment_vs_initial_candidate_distance_max_abs_m": {
+    "A": 0.0,
+    "B": 0.0,
+    "G": 0.0
+  },
+  "interpretation": "Boundary distances checked against every CSV segment; centerline uses dense nearest-vertex neighbors."
+}

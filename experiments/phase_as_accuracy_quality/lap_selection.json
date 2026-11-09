@@ -1,0 +1,110 @@
+{
+  "selection": "fixed prior AR gate/production only; no new localization results",
+  "direction": 1,
+  "track_length_m": 3001.7073382920403,
+  "all_laps": [
+    {
+      "id": 0,
+      "start_ns": 1763205693365469811,
+      "end_ns": 1763205766786942061,
+      "duration_s": 73.42147225,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 1468,
+      "GNSS_valid_fraction": 0.8188010899182562,
+      "selected": true,
+      "selection_reason": "prior AR lap and next two complete production-gate laps"
+    },
+    {
+      "id": 1,
+      "start_ns": 1763205766786942061,
+      "end_ns": 1763205834397601633,
+      "duration_s": 67.610659572,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 314,
+      "GNSS_valid_fraction": 0.9171974522292994,
+      "selected": true,
+      "selection_reason": "prior AR lap and next two complete production-gate laps"
+    },
+    {
+      "id": 2,
+      "start_ns": 1763205834397601633,
+      "end_ns": 1763205900074459184,
+      "duration_s": 65.676857551,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 0,
+      "GNSS_valid_fraction": 0.0,
+      "selected": true,
+      "selection_reason": "prior AR lap and next two complete production-gate laps"
+    },
+    {
+      "id": 3,
+      "start_ns": 1763205900074459184,
+      "end_ns": 1763205965035644894,
+      "duration_s": 64.96118571,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 0,
+      "GNSS_valid_fraction": 0.0,
+      "selected": false,
+      "selection_reason": "outside preselected three-lap reference block; retained, not estimator-selected exclusion"
+    },
+    {
+      "id": 4,
+      "start_ns": 1763205965035644894,
+      "end_ns": 1763206030660468860,
+      "duration_s": 65.624823966,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 0,
+      "GNSS_valid_fraction": 0.0,
+      "selected": false,
+      "selection_reason": "outside preselected three-lap reference block; retained, not estimator-selected exclusion"
+    },
+    {
+      "id": 5,
+      "start_ns": 1763206030660468860,
+      "end_ns": 1763206095744375580,
+      "duration_s": 65.08390672,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 0,
+      "GNSS_valid_fraction": 0.0,
+      "selected": false,
+      "selection_reason": "outside preselected three-lap reference block; retained, not estimator-selected exclusion"
+    },
+    {
+      "id": 6,
+      "start_ns": 1763206095744375580,
+      "end_ns": 1763206162640021231,
+      "duration_s": 66.895645651,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 0,
+      "GNSS_valid_fraction": 0.0,
+      "selected": false,
+      "selection_reason": "outside preselected three-lap reference block; retained, not estimator-selected exclusion"
+    },
+    {
+      "id": 7,
+      "start_ns": 1763206162640021231,
+      "end_ns": 1763206233799906036,
+      "duration_s": 71.159884805,
+      "usable": true,
+      "reason": "production fixed-gate complete crossing",
+      "GNSS_rows": 0,
+      "GNSS_valid_fraction": 0.0,
+      "selected": false,
+      "selection_reason": "outside preselected three-lap reference block; retained, not estimator-selected exclusion"
+    }
+  ],
+  "selected_ids": [
+    0,
+    1,
+    2
+  ],
+  "selected_start_ns": 1763205693365469811,
+  "selected_end_ns": 1763205900074459184
+}

@@ -1,0 +1,49 @@
+{
+  "phase": "AS1",
+  "baseline": "44d65f3c55c3a70b21f5d0df754751a644b7661d",
+  "research_commit": "enclosing commit",
+  "AR_algorithm_unchanged": true,
+  "production_modified": false,
+  "GNSS_fused": false,
+  "new_tests": 4,
+  "total_tests": 160,
+  "failed_tests": 0,
+  "reference_certification": "engineering only; not independent certified truth",
+  "full_footprint_qualified": false,
+  "input_sha256": {
+    "centerline": "7e1db115a0a318049bbcf3c6054ee5caf83b50428ffde44db3349d8b0085ce1f",
+    "launch_left": "b4bbb5e0f8a05c61aa3191f7bb254a2a7ccde87152e1f6a29e4f9e6051ae7e3c",
+    "launch_right": "4fccdef97771e510ca185e9170987d87e4ab88a2db86991e6ddcc68eea632a2b",
+    "GNSS_engineering75": "7cd9aaa4f17d943db4138a77d6cf2136da6b3d6da8a8aac6a976de0f5f563d55",
+    "context_current_raceline": "edb941af16a0b4e0f671c7d89b54e49f1d5cc577b05c652acd137a1afcb2868c"
+  },
+  "bag_sha256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "actual_new_F_multilap_frames": 4134,
+  "actual_new_N_lap_frames": 1468,
+  "private_execution_ledger_sha256": {
+    "F_multilap": "dfd6e4db1ef8b6aa2124b761f7601afb77edebd85fa9dab8963130bfe582f7c1",
+    "N_lap": "f16d1d05cea280bc23458eb1bf3575b6e672dd6b764caedf9b3780c44fa85171"
+  },
+  "public_code_sha256": {
+    "experiments/phase_as_accuracy_quality/quality_analysis.py": "dd60589af8e854db98dc9ebad8472d5ff9ff3fa9c4ea69076bab0e7cc0a9ab55",
+    "experiments/phase_as_accuracy_quality/compare_native.py": "86942a697d7a6392f3aff613813befcfbd56772a6e3df5a718177c6bc440f5ee",
+    "experiments/phase_as_accuracy_quality/select_laps.py": "b8faeab06ca285db9ff63feb112f123e0e3e17acdcc72967bd43eb5ae5c38025",
+    "experiments/phase_as_accuracy_quality/evaluate_reference.py": "a3c1e9cf2f84971baa12b8fa9d7fb4f1b411fd1a3efa0ca1dc4554e3f1b5388a",
+    "experiments/phase_as_accuracy_quality/summary_figures.py": "f1d31309b1ffbb51393eae80144a629f78e95df6010b9ba63f8833b62d213dcc",
+    "experiments/phase_as_accuracy_quality/run_native.py": "8146c7a0dda114f231fb42991ea95de3523a41542bce6475c508f8de604a3b2f",
+    "experiments/phase_as_accuracy_quality/join_quality.py": "802c0853e785e543ebf89a438b445c2cd1eda1b1c5968286f3cd0af27eb07acd",
+    "experiments/phase_as_accuracy_quality/multilap_analysis.py": "983cbed64aafe4e05b4872247430ed0ead9b52e49dea1c6ccb20cbb8f4588698",
+    "src/ndt_global/track_evaluation.py": "37714c7880ca8eac6eac5c77739330a4ea6675e1dc61adc9bd53eca1b3b01810",
+    "tests/test_track_evaluation.py": "59db4cd5422ee87c023d13c2d7a1e5ac802652ef2c5becf7c7a39574b1c99134"
+  },
+  "private_plot_inventory": [
+    "single_lap/track_overlay.png",
+    "single_lap/map_csv_overlay.png",
+    "single_lap/corner_1..9.png",
+    "single_lap/progress_error_margins.png",
+    "multilap/all_reference_overlays.png",
+    "multilap/multilap_overlay.png",
+    "native/track_overlay.png"
+  ]
+}

@@ -109,3 +109,7 @@ Target freshly exported from map0105 equals AQ2 SHA. Original35iteration55-frame
 ## AR2 — loop44/map0105 actual normal lap completed
 
 Same frozen full-pose100iteration candidate runs all1468 lap triplets through real CUDA Deskew/NDT and historical full15D updates,100%accepted; max accepted gap51.004ms, no LOST.20s401/401 and60s1201/1201;40-frame native-reference rerun exact. Wheel maxZcorrection3.32mm on lap, Zspan10.324m follows similar production height shape without proof of true accuracy. Independent reference/engineering R statistics and ROS20Hz tails remain unqualified; recovery not exercised. Functional and declared normal research availability GO, production NO-GO. Earlier XYZ/yaw and derivative-only failures retained.
+
+## AS1 — engineering-reference accuracy and multilap study
+
+75ms historicalGPS1 engineering-reference comparison givesAR15D/EKF XYRMSE.577/1.138m on81.5%lap,not intrinsic superiority:−75ms sensitivity reversesranking;right-curvaturesegments3/9 worsen lateralP95.3continuouslaps4134/4134updates,common2mbin lateralrangeP95.994m versusold.837m includes realdriving. Thirdlapreference absent. Native1468/1468butpairedreferenceXYRMSE.628vsFitness.573,lateralP95.679vs.493: no advantage established. Geometry/rank andfitness do not certifypeak;4007VALID-diagnostics/127DEGRADED,heldoutaccuracy unavailable. No actualbody/tyre safetyGO or productionadmission. [ASreport](../experiments/phase_as_accuracy_quality/FINAL_CONCLUSION.md).

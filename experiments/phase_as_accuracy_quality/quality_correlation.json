@@ -1,0 +1,46 @@
+{
+  "time_alignment": "NDT Source native reference; GNSS/base/geometry/update all at identical timestamp",
+  "paired_valid": 1484,
+  "training_frames": 1468,
+  "heldout_frames": 1314,
+  "heldout_reference_valid": 0,
+  "innovation_99pct_training_threshold": 0.7045789795584604,
+  "offline_labels": {
+    "DEGRADED": 127,
+    "VALID": 4007
+  },
+  "heldout_labels": {
+    "DEGRADED": 81,
+    "VALID": 1233
+  },
+  "peak_correctness": "NOT_PROVEN; no wrong-peak labels or multi-start evidence this stage",
+  "correlation_Spearman_abs_NDT_lateral_reference_difference": {
+    "fitness": -0.01385531068097004,
+    "iterations": 0.17057677719855233,
+    "support": -0.04295609718457527,
+    "geo_eigen_ratio": -0.10031278463955726,
+    "geo_lat": -0.15062007533921934,
+    "geo_long": 0.14191026116877592,
+    "geo_Z": 0.14152306921426125,
+    "geo_roll": 0.04165480076623985,
+    "geo_pitch": 0.09389465848962789,
+    "geo_yaw": -0.20082817586857082,
+    "innovation_metric": 0.25234058270865356,
+    "native_lat_sigma": -0.004465008027394318,
+    "translation_update": 0.213956542375479,
+    "velocity_update": 0.18961344455307483
+  },
+  "correlation_inference": "descriptive only, autocorrelated samples, not detector accuracy",
+  "low_fitness_training_median": 0.15131809676927244,
+  "low_fitness_reference_lateral_gt_half_m": 0,
+  "low_fitness_reference_lateral_gt_one_m": 0,
+  "low_fitness_reference_XY_gt_one_m": 36,
+  "false_positive_or_miss_rate": "NOT_VALIDATED",
+  "current_R_calibrated": false,
+  "conditional_geometry_rank6_count": 4134,
+  "engineering_reference_XY_over_one_axis_R_sigma_p50_p95": [
+    2.360409738847573,
+    5.216819379437387
+  ],
+  "ratio_note": "not NEES/NIS, radial mismatch vs one-axis engineering scale with unqualified reference/time; no confidence level"
+}
