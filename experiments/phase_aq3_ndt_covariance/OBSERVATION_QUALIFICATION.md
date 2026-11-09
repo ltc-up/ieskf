@@ -1,0 +1,3 @@
+# Distinct information semantics
+Correct peak, constrained directions and actual conditional error distribution are separate questions. Convergence/fitness/normal rank/Hessian do not replace them. Candidate generation, eligibility, actual acceptance and publication remain separate. Full Joseph/right-reset/cross P retained.
+User provenance: only loop10 has trustworthy newer wheel topic after eav24/eav25 protocol transition; use loop44 for old eav24. Original8 zero wheel is input mismatch, not physical high-speed reliability. AQ2 uses loop44. Kistler is conditional one-dimensional sensor-frame speed, not3D velocity; unknown source correlation prevents naive joint fusion.

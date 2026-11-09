@@ -1,0 +1,3 @@
+# NOT_VALIDATED
+No independent qualified reference. Historical native_covariance_20261024/qualified_reference.json describes sensitivity-only assumptions, including fix8 interpretation, uncertain timing/heading and separate map/input. Its name is not qualification. Own filter residuals cannot establish coverage of its chosen R; GNSS used for fusion is not independent truth. No real RMSE/NEES/NIS pass claimed.
+Required: receiver protocol/posu units, map/geodetic/height basis, antenna/IMU/base lever and clocks, independent held-out reference with uncertainty, correlation-aware conditional residual statistics and separate calibration/evaluation data. Preserve selection coverage and temporal correlation.

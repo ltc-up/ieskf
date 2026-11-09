@@ -1,0 +1,3 @@
+# AQ3 outcome
+CONDITIONALLY_VERIFIED mathematics: coordinate transport, conditional/marginal distinction, duplication and source-floor limitations; eight new tests,153 total pass. NOT_VALIDATED statistical NDT R and independent accuracy. FAILED continuous normal qualification in AQ2; AQ3 prior Native attempt did not resolve it. FAILED reproducibility of AQ3 GPU outputs after temporary environment loss; transcript aggregates cannot substitute for retained artifacts.
+Retain Native as an exploratory candidate only. Close physical/reference contracts and runtime Hessian provenance, explain MAX_ITERATIONS, rebuild/re-execute bounded normal loop with durable ignored artifacts before full-lap or production admission.

@@ -1,0 +1,21 @@
+{
+  "raw_bag_SHA256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "target_SHA256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "config_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "phase": "AQ3",
+  "baseline": "4a57f4d1c8789f5ba550d23e7982146487bcf078",
+  "research_commit": "enclosing commit",
+  "new_tests": 8,
+  "total_tests": 153,
+  "failed_tests": 0,
+  "private_execution_artifacts": "LOST after temporary environment replacement",
+  "GPU_aggregates": "transcript-only, not rerun/requalified",
+  "statistical_calibration": false,
+  "independent_reference": false,
+  "production_modified": false,
+  "code_sha256": {
+    "src/geometry_ieskf/pose_uncertainty.py": "73c0f5ee499735891769346741fa37bd0b64a1158add211efc351306b4203907",
+    "tests/test_pose_uncertainty.py": "06aaab31b36ec807a67ab3fa2433ecbe643c92cb979f44ee06078c2b2dc2d7bb",
+    "experiments/phase_aq3_ndt_covariance/run_feedback.py": "d77b3352529f3e7fb5982e3079feca35754d6c17bf2f75050ad4211a04f3b102"
+  }
+}

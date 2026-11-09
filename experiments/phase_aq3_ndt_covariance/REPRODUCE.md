@@ -1,0 +1,3 @@
+# Reproduction boundary
+`PYTHONPATH=src OPENBLAS_NUM_THREADS=1 python3 -m unittest discover -s tests` runs153 mathematical/interface tests. See AQ2 REPRODUCE.md for original loop44 extraction/configuration and source identities. Restored run_feedback.py --help exposes all explicit private input/target/Deskew/matcher arguments; it imports frozen AQ2 runner, replaces only covariance factory, preserves500ms stop. Do not erase ROS PYTHONPATH.
+Prior temporary persistent Deskew binary/source and new bindings/raw-output records were lost. Authorized adapter rebuild and raw re-extraction are REQUIRED before real-data replay. Public outputs cannot reconstruct full private state/P or restricted SDK code. No private source/map/trajectory is committed.

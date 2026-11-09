@@ -81,3 +81,6 @@ Exact full-P gain decomposition reproduces597.146m jump:Kz−2406.871s × residu
 ## AQ2 — real raw causal15D NDT pose feedback, short implementation verified / continuation FAIL
 
 Own-state raw Deskew/CUDA-NDT/delayed full15D update runs on40 normal loop44 triplets:B28,C30(with Z),D19 updates. A/E native-reference full-P parity exact. New analytic XYZ/yaw/SO3 Jacobians and delayed external-event/group-dedup tests pass. C20 continuation stops at55/401 frames(~2.70s),32 updates, after0.55s loss; full normal lap not run. Engineering R and independent accuracy remain unqualified. [Report](../experiments/phase_aq2_ndt_15d_closed_loop/FINAL_CONCLUSION.md).
+
+- [Phase AQ3](../experiments/phase_aq3_ndt_covariance/FINAL_CONCLUSION.md): restored uncertainty math/core,153 tests; covariance uncalibrated, normal continuation fails; temporary GPU artifacts lost and explicitly unqualified.
+- [Phase AQ final22-question summary](../experiments/PHASE_AQ_FINAL_SUMMARY.md): real short15D NDT closure, no lap/production acceptance; source protocol correction and reproduction-loss disclosure.

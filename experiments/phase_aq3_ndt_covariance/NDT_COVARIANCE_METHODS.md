@@ -1,0 +1,7 @@
+# Candidates A–E
+A fitness engineering R: frozen heuristic metres²/radians², not a statistical calibration. Retain score eligibility separately from noise magnitude.
+B Native: source-average Gauss–Newton information Ibar=sum(JᵀΣinvJ)/N, robust residual scale and eigenvalue floor; not full score-Hessian inverse. Internal RxRyRz must be transported through body-right/yaw innovation chart using full covariance, not diagonal copying. Native coordinate correctness does not imply noise coverage. Duplication normalization cancels repeated identical points but does not prove consistency.
+Score Laplace conditional XY inverts −Hxy with nuisance fixed; marginal XY uses a block of full inverse/Schur complement. Never fill unspecified6D noise with invented values. Score Hessian curvature cannot identify correct peak.
+C normalized directional geometry: [dp_map,10m*dtheta_map], fixed reference/perturbation, projection of r,H,R with complete15D P. Information rank is not R. Map density and correlations affect both curvature candidates.
+D FAR-LIO source health, validity, configured floors and recovery are useful patterns; not automatic NDT covariance calibration or a15D dynamics replacement. Floor illustration explicitly discards source cross covariance and is not deployed.
+E independent residual calibration: unavailable until map/time/lever/protocol/reference independence is qualified. No candidate is production-approved.

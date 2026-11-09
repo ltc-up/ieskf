@@ -97,3 +97,7 @@ AO/AP tested no-NDT motion recursion, not complete15D NDT loose coupling. AQ1 ve
 ## AQ2 — complete short loose-coupled dataflow restored
 
 Real raw120 clouds drive branch-own15D histories, CUDA Deskew, current seeds and delayed map updates; C30/40 uses actual Z. Persistent private adapter fixes cold process lifecycle without production/Q/R changes; earlier failures retained. Normal20s request stops at2.70s after55 evaluated frames, so no normal-lap qualification. Original8 all-zero wheel is a protocol/input-eligibility failure per new user provenance; newer wheel research should use loop10, older data loop44. No accuracy or covariance calibration claim. [AQ2](../experiments/phase_aq2_ndt_15d_closed_loop/FINAL_CONCLUSION.md).
+
+## AQ3 and final qualification
+
+Native chart transport mathematics tested; no statistically calibrated NDT R or independent accuracy. AQ2 preserved real short XYZ/yaw closure30/40, normal extension stops55/401 at2.70s. AQ3 prior Native/multistart GPU logs lost with temporary environment; transcript summaries cannot replace retained artifacts.153 tests pass (19 added across AQ), but normal-lap/production NO-GO. Rebuild private adapter/re-extract and durably rerun before extending normal qualification. [Final summary](../experiments/PHASE_AQ_FINAL_SUMMARY.md).
