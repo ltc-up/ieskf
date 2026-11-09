@@ -1,0 +1,8 @@
+{
+  "actual_raw_Deskew": true,
+  "actual_CUDA": true,
+  "frames": 40,
+  "seed_max_difference": 0.0,
+  "NDT_pose_max_difference": 0.0,
+  "delta15_max_difference": 0.0
+}

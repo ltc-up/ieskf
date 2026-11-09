@@ -1,0 +1,15 @@
+{
+  "version": "AV_SINGLE_PACKET_V1",
+  "covariance_semantics": "one accepted update per point-cloud correlation group; no repeated queue smoothing",
+  "nis_probability": 0.9999,
+  "minimum_geometry_rank": 6,
+  "minimum_support_fraction": 0.5,
+  "probe_translation_m": 1.5,
+  "probe_yaw_rule": "atan(ndt_resolution/median_source_horizontal_range)",
+  "cluster_translation_m": 1.0,
+  "cluster_rotation_rad": 0.1,
+  "required_converged_hypotheses": 3,
+  "stop_after_no_observation_s": 2.0,
+  "calibrated_covariance": false,
+  "production_default": false
+}

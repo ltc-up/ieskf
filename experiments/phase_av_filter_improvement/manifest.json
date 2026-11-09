@@ -1,0 +1,15 @@
+{
+  "phase": "AV_design",
+  "baseline": "c647ac3224adee775d30dc6f9553c9b83612c060",
+  "research_commit": "enclosing commit",
+  "production_modified": false,
+  "candidate_default": false,
+  "config_sha256": "d651e6478f2ab6493bd8c83c526c10ad730e4ea59a8fbc4a9fd0cfbad3874563",
+  "source_evidence_sha256": {
+    "src/measurement.cpp": "1b7749922907c4d6e0d166cd1b019919799c0583eb9c78cc869b51d519b12222",
+    "src/ekf_localizer.cpp": "50d04f0a026e9020ad8c0c4ce9cd18df0c193260410bea6d8e6d05aef1293e7d",
+    "include/ekf_localizer/aged_object_queue.hpp": "a590ff6ba9e73b74174145b6f55d4a1e017f62e7e78b482167491a3b0271147e",
+    "config/ekf_localizer.param.yaml": "5391d1d562121533b6856f51bbb2177bf1b37d298ec54f645247d35f64680aaf"
+  },
+  "frozen_AR_ledger_sha256": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc"
+}
