@@ -1,0 +1,9 @@
+{
+  "frames": 850,
+  "reference_stamps_equal": true,
+  "seed_max_abs": 0.0,
+  "matching_final_max_abs": 0.0,
+  "update_delta_max_abs": 0.0,
+  "all_acceptances_equal": true,
+  "comparison": "same native reference, not variable-latency publication timestamps"
+}

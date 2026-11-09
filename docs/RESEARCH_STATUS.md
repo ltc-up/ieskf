@@ -113,3 +113,7 @@ Same frozen full-pose100iteration candidate runs all1468 lap triplets through re
 ## AS1 — engineering-reference accuracy and multilap study
 
 75ms historicalGPS1 engineering-reference comparison givesAR15D/EKF XYRMSE.577/1.138m on81.5%lap,not intrinsic superiority:−75ms sensitivity reversesranking;right-curvaturesegments3/9 worsen lateralP95.3continuouslaps4134/4134updates,common2mbin lateralrangeP95.994m versusold.837m includes realdriving. Thirdlapreference absent. Native1468/1468butpairedreferenceXYRMSE.628vsFitness.573,lateralP95.679vs.493: no advantage established. Geometry/rank andfitness do not certifypeak;4007VALID-diagnostics/127DEGRADED,heldoutaccuracy unavailable. No actualbody/tyre safetyGO or productionadmission. [ASreport](../experiments/phase_as_accuracy_quality/FINAL_CONCLUSION.md).
+
+## AS2 — CPU/GC long-tail reproduced without estimator changes
+
+Instrumented850framecausalprefixmatchesARseeds/finalposes/full15Ddeltasexactly. Worst368.05msframecontains321.59msgen2GCwithin325msNDTingest;originalAR360mshadnotGCtrace,sooriginalcauseconditional.4/1468ARderivedcomputeintervals>50ms,profile1/850fullframes>50ms. RecordedmodelcompleteomitslaterCPU/logwork;notphysicalROSpublishtime. Targetbuild_msisretainedstartupmetadata. Needboundedmemory/logging/actualarrivalpublicationaudit;noalgorithm/GCdisabletuning. ROSonlineandproductionnotqualified. [FinalASqualifications](../experiments/phase_as_accuracy_quality/FINAL_CONCLUSION.md).

@@ -1,5 +1,55 @@
-# AS1 conclusion
-VERIFIED execution: existingAR1468evaluated;continuous4134frames across3laps andNative1468genuinecausalframes completed,ARfrozen.160tests pass,4added. CONDITIONAL engineering-reference precision:81.54%single-lap valid,75ms convention15D/EKF XYRMSE.577/1.138m,lateralP95.506/.691m. Time sensitivity can reverseXYranking; no independently certified accuracy improvement. Right-curvaturesegments3and9 are local counterexamples to uniform lateral improvement.
-CONDITIONAL center margins1.584/1.139m,new/old,0center-outside. Actualbody/tyre crossing safety NOT_VALIDATED. Multilap repeatability includes real driving;new/old2mbinrangeP95.994/.837m,not evidence new is uniformly better. Laterreference missing.
-NDT diagnostic mechanism implemented offline,VALID4007/DEGRADED127; no correct-peak labels/held-out GNSS,detectoraccuracyNOT_VALIDATED. Fitness lateral-reference correlation~−.014; curvature/rank/innovation alone do not prove correctness. NativepairedXYRMSE.628vsFitness.573m,lateralP95.679vs.493m,no demonstratedadvantage. No statisticalRcalibration/feedbackG.
-AS2 latency/deadline qualification follows in separate commit. ROSonline/safety/production NO-GO. Full frozen raw/state/trajectory/build artifacts remain durable ignored/private; no production edits or TF.
+# Phase AS 最终结论
+
+AR成功配置及历史结果保持不变。GNSS仅用于离线工程参考，没有参与融合；生产源码只读，没有发布生产TF。新增真实运行包括：连续三圈4134帧、Native独立闭环1468帧，以及用于分段测时的850帧真实因果前缀。160项测试全部通过，新增4项。
+
+## 精度与安全：问题1–7
+
+1. **CONDITIONAL**：在历史75ms GPS1参考约定下，新15D的XY参考RMSE为0.5766m，P50/P95/P99为0.4150/1.0615/1.4469m，最大1.7363m。有效参考1197/1468帧，覆盖81.54%。这些是GNSS-reference error，不是已认证真值误差。
+2. 同一有效样本上，旧EKF的XY参考RMSE为1.1380m，P50/P95为0.8062/2.0790m，最大2.5635m。不能据此宣布独立精度优于生产算法。
+3. 新旧差异主要在纵向：有符号纵向均值约+1.242m，横向绝对差异P95约0.771m。时间与沿轨偏差是重要候选原因，尚未唯一定位。
+4. 新旧相对参考的横向绝对差异P95分别为0.506/0.691m，但不是每个弯段都改善。右弯曲率分段3中，新/旧为0.734/0.441m；分段9为0.656/0.242m。这里的编号来自固定曲率规则，不是官方弯号。每段及入口/中部/出口统计全部保留。
+5. CSV走廊下，新15D中心点最小裕量1.584m，旧EKF为1.139m，均未发现中心点越界。**实际车身或轮胎压线NOT_VALIDATED**。
+6. Launch引用、CSV字段、map发布坐标及全线段距离核查已验证；历史测绘版本、map_0105的控制点关系和旧车外廓证书未确认。中心裕量只能作条件性几何评价，不能作安全验收。
+7. 时间敏感性很强：查询时间−75ms时，新/旧XY参考RMSE变为3.420/2.230m，排序反转；+75ms时为2.687/3.978m。没有选择对新算法最有利的偏置。Z参考差约−29m，表明高度基准仍未闭合，不能解释为车辆高度误差。系统性时间、坐标与参考误差的分解仍未完成。
+
+## 多圈：问题8–14
+
+8. 原生产轨迹固定门线得到8个完整圈候选。AR是首个完整圈，因此最初“取AR之前三圈”的选择失败。随后在新算法运行前冻结AR及后两圈，未根据新结果选圈；其他候选与未完成的前后区间均有记录。
+9. **VERIFIED**：连续206.65秒、4134/4134帧实际CUDA/Deskew/15D更新，逐圈1468/1352/1314帧，只有开始前一次初始化，跨圈不重置。
+10. 861个共同2m弧长分箱中，新/旧跨圈横向范围P95为0.994/0.837m，最大1.609/1.596m。这包含真实驾驶路线变化，不能当作纯定位误差，也不支持新算法重复性全面更优。
+11. 同一区域的重复偏移可在私有叠加图中检查，但定位偏移与驾驶路线差异尚不能唯一分离。
+12. 单圈局部差异全部保留；没有独立错误峰标签，不能将其直接命名为定位故障。
+13. 没有出现无界数值漂移，但首/次/第三圈有效GNSS参考只有1197/287/0帧，因此不能认证跨圈真实累计误差。
+14. 新旧估计的纵向和弯道差异结构不同；主参考下的总体RMSE优势不能推广为所有弯道、所有圈次都更准确。
+
+## NDT可信度：问题15–21
+
+15. Fitness与NDT横向参考差异的Spearman相关约−0.014，单调关联很弱；不能用低Fitness证明正确。
+16. 36个低Fitness样本存在大于1m的XY参考差异，但在冻结的低Fitness定义下，没有大于0.5m的横向参考差异样本。沿轨时间误差可能解释其中一部分。没有证明这些样本落入错误峰，**错峰检测率NOT_VALIDATED**。
+17. 几何、方向性和创新与参考差异只有弱相关，尚不足以解释所有弯道偏移。不得将相关性扩展为因果关系。
+18. 4134帧均为几何秩6、局部负目标Hessian正定，但规范化几何特征值比中位数仅0.00437，最小0.00083，仍存在明显方向强弱差异。单位和参考点明确，未将特征值映射成新R。
+19. 离线综合诊断得到VALID 4007帧、DEGRADED 127帧。VALID仅表示已列诊断条件通过，不代表已证明正确峰。首圈用于创新阈值，第三圈作为留出，但第三圈参考覆盖为0，因此误报/漏报准确率无法验证。本轮也没有竞争峰证据来验证AMBIGUOUS。
+20. Native真实闭环1468/1468帧完成。相同原生时间、1197个有效参考样本上，Fitness/Native的XY参考RMSE为0.573/0.628m，横向P95为0.493/0.679m。**本次没有显示Native优势**；未做缩放调参，未完成统计标定，也不宣称普遍劣于Fitness。
+21. 综合来源、几何和创新的机制可继续作为离线研究工具，但尚无资格接入生产权重或拒绝策略。较小更新量、满秩和协方差正定均不能替代独立错误标签。
+
+## 实时性：问题22–25
+
+22. **VERIFIED（新增前缀）**：850帧测时前缀复现368ms长尾，其中第二代GC约322ms，发生在NDT延迟更新调用内部；初值、CUDA最终位姿和完整15D更新量与AR前缀完全一致。原AR约360ms事件没有GC追踪，因此对原事件的同因归因只能是CONDITIONAL。
+23. 原最慢帧CUDA匹配仅1.26ms，新增长尾的matcher IPC约3.05ms。CUDA核心不是所观察长尾的主要瓶颈。Target没有逐帧重建；日志build_ms是持续保留的启动统计，不能累计成重建次数。
+24. 离线研究线程50ms截止期**FAILED**：AR推导处理区间4/1468超限，测时前缀完整帧1/850超限。ROS2在线20Hz/100Hz为NOT_VALIDATED，研究脚本没有100Hz ROS发布器。需要有界内存/日志、实际到达队列、发布截止期和调度验证；本轮没有关闭GC或调算法掩盖长尾。
+25. AR模型队列等待最大294.86ms、观测年龄最大402.76ms，处于500ms历史范围内；实际最大缓存占用、GPU分配和操作系统调度未追踪。complete是模拟进度标记，不是物理ROS发布时间，还可能遗漏后续CPU/日志成本。已测试运行没有历史拒绝，不等于在线缓存裕量已获保证。
+
+## 资格汇总
+
+| 项目 | 结论 |
+|---|---|
+| 单圈GNSS工程参考评价 | CONDITIONAL；认证精度NOT_VALIDATED |
+| 连续多圈执行与数值重复性 | VERIFIED；误差归因CONDITIONAL |
+| 弯道中心点裕量 | CONDITIONAL；车身/轮胎安全NOT_VALIDATED |
+| NDT综合诊断原型 | 实现VERIFIED；正确峰与检测准确率NOT_VALIDATED |
+| Native实际反馈 | 执行VERIFIED；主参考下未显示优势，统计资格NOT_VALIDATED |
+| 离线时延与GC诊断 | 新前缀VERIFIED；原帧归因CONDITIONAL；50ms截止期FAILED |
+| ROS2在线实时资格 | NOT_VALIDATED |
+| 生产部署 | NO-GO |
+
+完整XY轨迹、车辆/TF、地图、原始点云和状态/P均保留在持久Git忽略目录。公开图仅含粗分箱误差、质量及时延统计。

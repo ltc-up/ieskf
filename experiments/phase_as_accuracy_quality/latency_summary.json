@@ -1,0 +1,235 @@
+{
+  "AR_frames": 1468,
+  "AR_inferred_processing_ms": {
+    "p50": 14.0866945,
+    "p95": 19.04008055,
+    "p99": 31.38039879999983,
+    "max": 345.697257
+  },
+  "AR_sensor_arrival_ms": {
+    "p50": 56.8762605,
+    "p95": 59.7475227,
+    "p99": 67.41455556999996,
+    "max": 88.05241699999999
+  },
+  "AR_queue_wait_ms": {
+    "p50": 0.0,
+    "p95": 0.0,
+    "p99": 19.14707276999939,
+    "max": 294.85979499999996
+  },
+  "AR_observation_age_ms": {
+    "p50": 71.400194,
+    "p95": 78.80820969999999,
+    "p99": 128.53387479999952,
+    "max": 402.76320999999996
+  },
+  "AR_processing_over50ms_count": 4,
+  "AR_age_over500ms_count": 0,
+  "AR_worst_frame": 785,
+  "AR_worst_modules": {
+    "inferred_processing_ms": 345.697257,
+    "align_ms": 1.256914,
+    "deskew_ms": 2.454727,
+    "crop_ms": 0.58452
+  },
+  "target_rebuild_evidence": "persistent service key unchanged; build_ms field is retained startup duration, not rebuild event; setActiveRegion does not rebuild Gaussians",
+  "profile_frames": 850,
+  "profile_full_frame_wall_ms": {
+    "p50": 15.039836,
+    "p95": 20.01423825,
+    "p99": 21.68740101,
+    "max": 368.050699
+  },
+  "profile_over50ms_count": 1,
+  "profile_inclusive_categories": {
+    "sensor_ingest": {
+      "p50": 0.120056,
+      "p95": 0.28346959999999977,
+      "p99": 0.4235109200000001,
+      "max": 1.049464
+    },
+    "advance": {
+      "p50": 0.6967559999999999,
+      "p95": 1.8468035,
+      "p99": 1.8950803299999996,
+      "max": 13.67343
+    },
+    "checkpoint": {
+      "p50": 0.016626000000000002,
+      "p95": 0.022334999999999997,
+      "p99": 0.028757539999999984,
+      "max": 0.05311
+    },
+    "raw_file_hash": {
+      "p50": 0.372486,
+      "p95": 0.49004054999999985,
+      "p99": 0.7041216699999979,
+      "max": 8.055933
+    },
+    "json_dumps": {
+      "p50": 0.039534,
+      "p95": 0.1830505,
+      "p99": 0.1891017,
+      "max": 0.231185
+    },
+    "write_text": {
+      "p50": 0.075547,
+      "p95": 0.08567049999999998,
+      "p99": 3.322967759999998,
+      "max": 10.997917
+    },
+    "deskew_ipc": {
+      "p50": 4.704529,
+      "p95": 8.502376,
+      "p99": 9.21734683,
+      "max": 9.785116
+    },
+    "matcher_ipc": {
+      "p50": 2.308217,
+      "p95": 5.3059620999999995,
+      "p99": 6.67227484,
+      "max": 7.212817
+    },
+    "ndt_ingest": {
+      "p50": 2.5518255,
+      "p95": 2.9151542,
+      "p99": 4.587781949999991,
+      "max": 325.006011
+    }
+  },
+  "profile_worst": {
+    "frame": 745,
+    "wall_ms": 368.050699
+  },
+  "profile_gc_at_worst": [
+    {
+      "frame": 745,
+      "generation": 2,
+      "ms": 321.585947
+    }
+  ],
+  "profile_nested_categories_at_worst": {
+    "sensor_ingest": {
+      "p50": 0.109546,
+      "p95": 0.18087,
+      "p99": 0.2517251999999999,
+      "max": 0.32937
+    },
+    "advance": {
+      "p50": 1.485344,
+      "p95": 12.454621399999999,
+      "p99": 13.42966828,
+      "max": 13.67343
+    },
+    "checkpoint": {
+      "p50": 0.020739,
+      "p95": 0.020739,
+      "p99": 0.020739,
+      "max": 0.020739
+    },
+    "raw_file_hash": {
+      "p50": 5.3059,
+      "p95": 7.7809297,
+      "p99": 8.00093234,
+      "max": 8.055933
+    },
+    "json_dumps": {
+      "p50": 0.064451,
+      "p95": 0.17489639999999998,
+      "p99": 0.19350088,
+      "max": 0.198152
+    },
+    "write_text": {
+      "p50": 3.210168,
+      "p95": 3.210168,
+      "p99": 3.210168,
+      "max": 3.210168
+    },
+    "deskew_ipc": {
+      "p50": 4.70514,
+      "p95": 4.70514,
+      "p99": 4.70514,
+      "max": 4.70514
+    },
+    "matcher_ipc": {
+      "p50": 3.052302,
+      "p95": 3.052302,
+      "p99": 3.052302,
+      "max": 3.052302
+    },
+    "ndt_ingest": {
+      "p50": 325.006011,
+      "p95": 325.006011,
+      "p99": 325.006011,
+      "max": 325.006011
+    }
+  },
+  "profile_GC_generation2_max_ms": 321.585947,
+  "original_AR_GC_attribution": "CONDITIONAL, original lacked GC tracing; separate same-algorithm prefix reproduces same-scale GC tail",
+  "categories_overlap": true,
+  "ROS20Hz_qualified": false,
+  "output100Hz_qualified": false,
+  "history_horizon_ms": 500,
+  "actual_buffer_max_occupancy": "NOT_LOGGED",
+  "per_frame_GPU_memory_allocation_or_scheduler_trace": "NOT_LOGGED",
+  "profile_category_peaks": {
+    "sensor_ingest": {
+      "frame": 250,
+      "native_elapsed_s": 12.500188861000002,
+      "ms": 1.049464
+    },
+    "advance": {
+      "frame": 745,
+      "native_elapsed_s": 37.249512424,
+      "ms": 13.67343
+    },
+    "checkpoint": {
+      "frame": 655,
+      "native_elapsed_s": 32.750331153000005,
+      "ms": 0.05311
+    },
+    "raw_file_hash": {
+      "frame": 745,
+      "native_elapsed_s": 37.249512424,
+      "ms": 8.055933
+    },
+    "json_dumps": {
+      "frame": 467,
+      "native_elapsed_s": 23.349586514000002,
+      "ms": 0.231185
+    },
+    "write_text": {
+      "frame": 735,
+      "native_elapsed_s": 36.750397230000004,
+      "ms": 10.997917
+    },
+    "deskew_ipc": {
+      "frame": 276,
+      "native_elapsed_s": 13.799491207,
+      "ms": 9.785116
+    },
+    "matcher_ipc": {
+      "frame": 621,
+      "native_elapsed_s": 31.049564498000002,
+      "ms": 7.212817
+    },
+    "ndt_ingest": {
+      "frame": 745,
+      "native_elapsed_s": 37.249512424,
+      "ms": 325.006011
+    }
+  },
+  "profile_GC_fraction_of_worst_frame": 0.8737544796783553,
+  "profile_peak_RSS_MiB": 598.9296875,
+  "modelled_completion_warning": "AR complete is a simulated progress marker computed before final advance CPU/log serialization; not a measured ROS publish timestamp",
+  "profile_unchanged_causal_outputs": {
+    "frames": 850,
+    "reference_stamps_equal": true,
+    "seed_max_abs": 0.0,
+    "matching_final_max_abs": 0.0,
+    "update_delta_max_abs": 0.0,
+    "all_acceptances_equal": true,
+    "comparison": "same native reference, not variable-latency publication timestamps"
+  }
+}

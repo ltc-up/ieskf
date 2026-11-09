@@ -5,3 +5,5 @@
 - Native does not improve primary paired engineering-reference metrics; preserve full run,do not tune scale.
 - AggregateXYranking reverses under−75msquery sensitivity,so intrinsic accuracy-superiority claim is unqualified.
 - No actual wrong-peak labels,operational ambiguity proof or line-crossing ground truth. No safety/productionGO. AS2separate timing audit follows; no baseline optimization hidden.
+
+AS2: researchthread50msdeadlinefailsdespiteall850updates. Same-scaleGCtailreproduced,butoriginalARhadnoGCtrace,allocator/schedulertraceorcachemaxoccupancy;theseattributionsremainlimited. Nooptimization/GCdisableintroduced. No ROS100Hzpublisher/deadline qualification. Modelcompletiontimestampunder-countslaterCPU/logcost. Auxiliarytimingdoesnotreplaceactualonlinequeuevalidation.

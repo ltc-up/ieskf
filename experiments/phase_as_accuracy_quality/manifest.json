@@ -1,5 +1,5 @@
 {
-  "phase": "AS1",
+  "phase": "AS1+AS2",
   "baseline": "44d65f3c55c3a70b21f5d0df754751a644b7661d",
   "research_commit": "enclosing commit",
   "AR_algorithm_unchanged": true,
@@ -35,7 +35,9 @@
     "experiments/phase_as_accuracy_quality/join_quality.py": "802c0853e785e543ebf89a438b445c2cd1eda1b1c5968286f3cd0af27eb07acd",
     "experiments/phase_as_accuracy_quality/multilap_analysis.py": "983cbed64aafe4e05b4872247430ed0ead9b52e49dea1c6ccb20cbb8f4588698",
     "src/ndt_global/track_evaluation.py": "37714c7880ca8eac6eac5c77739330a4ea6675e1dc61adc9bd53eca1b3b01810",
-    "tests/test_track_evaluation.py": "59db4cd5422ee87c023d13c2d7a1e5ac802652ef2c5becf7c7a39574b1c99134"
+    "tests/test_track_evaluation.py": "59db4cd5422ee87c023d13c2d7a1e5ac802652ef2c5becf7c7a39574b1c99134",
+    "experiments/phase_as_accuracy_quality/profile_causal_prefix.py": "e1f0d0782b2b0a00d618c535e35783f72fe4de42824898511266f47d7264e184",
+    "experiments/phase_as_accuracy_quality/latency_audit.py": "bcc607944057a36f1d8125dd79729ed041a3fdc216be304c3935cbfc2601397f"
   },
   "private_plot_inventory": [
     "single_lap/track_overlay.png",
@@ -45,5 +47,13 @@
     "multilap/all_reference_overlays.png",
     "multilap/multilap_overlay.png",
     "native/track_overlay.png"
-  ]
+  ],
+  "AS1_commit": "990ad92f3eab9b9781b99a28bdd77b4cd06221ff",
+  "AS2_commit": "enclosing commit",
+  "actual_new_instrumented_prefix_frames": 850,
+  "profiled_outputs_identical_to_AR": true,
+  "ROS_online_qualified": false,
+  "production_qualified": false,
+  "model_completion_is_physical_publication": false,
+  "private_profile_sha256": "4e5e5404ca0b62324da1c7245953222ac198953037ade8bda820dde3291de153"
 }
