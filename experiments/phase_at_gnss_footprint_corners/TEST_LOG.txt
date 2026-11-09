@@ -1,0 +1,5 @@
+Phase AT directed + complete regression
+Python unittest discover -s tests; PYTHONPATH=src; no ROS/GPU dependency for mathematical tests.
+171 tests passed; 0 failed; 11 new tests.
+Real offline computation:1468 native CUDA transactions,1197 valid engineering reference matches; not a new CUDA estimator run.
+Original AR and both AS transaction SHA256 assertions passed.

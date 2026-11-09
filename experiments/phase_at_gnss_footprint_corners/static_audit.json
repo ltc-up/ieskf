@@ -1,0 +1,19 @@
+{
+  "recorded_ant1_tf": false,
+  "known_TF_max_translation_difference_m": 0.0,
+  "known_TF_max_rotation_difference_rad": 0.0230000000000001,
+  "recorded_vs_candidate_rotation_mismatch_links": [
+    "lidar_front",
+    "lidar_left",
+    "lidar_right"
+  ],
+  "reference_chain_max_rotation_difference_rad": 0.0,
+  "missing_links_from_explicit_candidate": [
+    "vectornav_ant1",
+    "vectornav_ant2",
+    "vectornav_enu"
+  ],
+  "antenna_tf_source": "historical project-copy URDF; installation uncalibrated",
+  "body_source": "historical visual box; not measured body",
+  "tyre_geometry_available": false
+}
