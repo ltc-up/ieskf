@@ -1,0 +1,21 @@
+{
+  "actual_sha256": {
+    "map": "8561cd2254ed35164134a3146e89dfcd403643193ff11c84db93fde2b77ad52a",
+    "target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "AR": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+    "AS_F": "dfd6e4db1ef8b6aa2124b761f7601afb77edebd85fa9dab8963130bfe582f7c1",
+    "AS_N": "f16d1d05cea280bc23458eb1bf3575b6e672dd6b764caedf9b3780c44fa85171",
+    "config": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+    "reference_cache": "287dbba10a7801666f33de30a82f73908f08edb95d252298cc0c0fe2fee01f68"
+  },
+  "old_source_and_report_files_unchanged": 183,
+  "bag_sha256_inherited": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "bag_66GB_not_rehashed": true,
+  "each_raw_cloud_verified_by_frozen_binding": true,
+  "original_GNSS_CSV_currently_missing": true,
+  "GNSS_cache_native_time_verified": true,
+  "production_HEAD": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "production_stash0": "c964ce45adc5298a473f2d8387ee7a53ba5ec516",
+  "user_untracked_fusion_vendor_untouched": true
+}

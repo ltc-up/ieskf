@@ -6,7 +6,9 @@ from geometry_ieskf.pose_uncertainty import euler_xyz_to_body
 
 def ndt_native_information(row,length=10.):
  C=np.asarray(row['native_internal'],float);alpha=np.asarray(row['parameters_internal']).reshape(6)[3:];R=np.asarray(row['final'])[:3,:3];J=euler_xyz_to_body(alpha);A=np.zeros((6,6));A[:3,:3]=R;A[3:,3:]=np.linalg.inv(J)/length
- # Recovers the floored average GN information, NOT raw exact score Hessian.
+ # Shape proxy only: logged kappa is evaluated at rounded float pose, whereas
+ # native C is formed at internal parameters. The scalar cancels in trace/axis
+ # shape comparisons; exact original GN magnitude is not reconstructible.
  info=float(row['kappa_at_float_pose'])*np.linalg.inv(C)
  return A.T@info@A
 

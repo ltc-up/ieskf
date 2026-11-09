@@ -1,0 +1,205 @@
+{
+  "cases": [
+    {
+      "corner": 5,
+      "candidate_set_correctness": "UNKNOWN",
+      "evaluated_at_actual_converged_or_returned_poses": true,
+      "ndt": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999989581323886,
+          "weak_axis_abs_cosine": 0.9999851577561274,
+          "relative_information_change": 0.001571902194185671
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999982380225692,
+          "weak_axis_abs_cosine": 0.9999987175424097,
+          "relative_information_change": 0.0027524983798532924
+        }
+      ],
+      "gicp": [
+        {
+          "converged": false,
+          "shape_cosine": 0.9998662738150497,
+          "weak_axis_abs_cosine": 0.999982024454237,
+          "relative_information_change": 0.02651070286039013
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999993394643981,
+          "weak_axis_abs_cosine": 0.9999997126288893,
+          "relative_information_change": 0.001240636221436279
+        }
+      ]
+    },
+    {
+      "corner": 0,
+      "candidate_set_correctness": "UNKNOWN",
+      "evaluated_at_actual_converged_or_returned_poses": true,
+      "ndt": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999996660752773,
+          "weak_axis_abs_cosine": 0.999998668988083,
+          "relative_information_change": 0.0010016758747508753
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999997483949129,
+          "weak_axis_abs_cosine": 0.9999949775277314,
+          "relative_information_change": 0.0007094320747458411
+        }
+      ],
+      "gicp": [
+        {
+          "converged": true,
+          "shape_cosine": 0.999999862208723,
+          "weak_axis_abs_cosine": 0.9999999992346871,
+          "relative_information_change": 0.0005567504754609682
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999997311795962,
+          "weak_axis_abs_cosine": 0.999999995884837,
+          "relative_information_change": 0.001099534552932905
+        }
+      ]
+    },
+    {
+      "corner": 8,
+      "candidate_set_correctness": "UNKNOWN",
+      "evaluated_at_actual_converged_or_returned_poses": true,
+      "ndt": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999999992507598,
+          "weak_axis_abs_cosine": 0.9999999775647948,
+          "relative_information_change": 4.9151045094779464e-05
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999983027725775,
+          "weak_axis_abs_cosine": 0.9999841180432544,
+          "relative_information_change": 0.001843833019536532
+        }
+      ],
+      "gicp": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999999999999889,
+          "weak_axis_abs_cosine": 0.9999999999999999,
+          "relative_information_change": 1.6124322033237947e-07
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999999947932194,
+          "weak_axis_abs_cosine": 0.9999999926683777,
+          "relative_information_change": 0.0001247546265069109
+        }
+      ]
+    },
+    {
+      "corner": 9,
+      "candidate_set_correctness": "UNKNOWN",
+      "evaluated_at_actual_converged_or_returned_poses": true,
+      "ndt": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999996053902201,
+          "weak_axis_abs_cosine": 0.9999945707736,
+          "relative_information_change": 0.0008884002832009174
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999999973398741,
+          "weak_axis_abs_cosine": 0.9999997986954403,
+          "relative_information_change": 8.324207796194717e-05
+        }
+      ],
+      "gicp": [
+        {
+          "converged": true,
+          "shape_cosine": 0.99999622826608,
+          "weak_axis_abs_cosine": 0.999964359901139,
+          "relative_information_change": 0.0027660324716481926
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999999999999999,
+          "weak_axis_abs_cosine": 1.0,
+          "relative_information_change": 1.0040693568817501e-14
+        }
+      ]
+    },
+    {
+      "corner": 1,
+      "candidate_set_correctness": "UNKNOWN",
+      "evaluated_at_actual_converged_or_returned_poses": true,
+      "ndt": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999999838193064,
+          "weak_axis_abs_cosine": 0.9999956118437395,
+          "relative_information_change": 0.00019149525335016016
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.999999938130078,
+          "weak_axis_abs_cosine": 0.9999973139389041,
+          "relative_information_change": 0.0004882120490366802
+        }
+      ],
+      "gicp": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999982368416306,
+          "weak_axis_abs_cosine": 0.9999976943612319,
+          "relative_information_change": 0.0021353416882503983
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999981918320167,
+          "weak_axis_abs_cosine": 0.999997614939717,
+          "relative_information_change": 0.002169613508509327
+        }
+      ]
+    },
+    {
+      "corner": 3,
+      "candidate_set_correctness": "UNKNOWN",
+      "evaluated_at_actual_converged_or_returned_poses": true,
+      "ndt": [
+        {
+          "converged": true,
+          "shape_cosine": 0.9999988750476182,
+          "weak_axis_abs_cosine": 0.9997528628403685,
+          "relative_information_change": 0.0015024781146603598
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999992589813445,
+          "weak_axis_abs_cosine": 0.9995970937238722,
+          "relative_information_change": 0.001258277259689059
+        }
+      ],
+      "gicp": [
+        {
+          "converged": false,
+          "shape_cosine": 0.9998807230622031,
+          "weak_axis_abs_cosine": 0.9999051889427565,
+          "relative_information_change": 0.027311219700664625
+        },
+        {
+          "converged": true,
+          "shape_cosine": 0.9999985932825403,
+          "weak_axis_abs_cosine": 0.9999999731148412,
+          "relative_information_change": 0.0028953447774622823
+        }
+      ]
+    }
+  ],
+  "pose_chart_transport": "all directions transported to the central body axes; same base reference",
+  "not_fixed_pose_FD": true,
+  "not_statistical_covariance": true
+}

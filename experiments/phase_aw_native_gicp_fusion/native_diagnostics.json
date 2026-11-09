@@ -62,9 +62,11 @@
       "min": 0.9657137259550455
     }
   },
-  "regularization_floor_binding_frames": 0,
   "normalized_negative_score_H_nonpositive": 0,
   "existing_native_pose_R_reused": true,
   "new_R_designed": false,
-  "score_H_is_not_native_GN_information": true
+  "score_H_is_not_native_GN_information": true,
+  "rounded_pose_scale_proxy_near_floor_frames": 0,
+  "native_internal_kappa_not_logged": true,
+  "absolute_information_scale_exact": false
 }

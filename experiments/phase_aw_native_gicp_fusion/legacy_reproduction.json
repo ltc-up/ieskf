@@ -1,0 +1,11 @@
+{
+  "actual_CUDA_frames": 40,
+  "streaming_runtime_max_differences": {
+    "seed": 0.0,
+    "prior.P": 0.0,
+    "ndt.final": 0.0,
+    "update.K": 0.0,
+    "update.delta": 0.0
+  },
+  "source_SHA_all_equal": true
+}
