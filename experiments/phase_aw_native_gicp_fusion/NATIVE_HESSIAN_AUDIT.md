@@ -1,0 +1,17 @@
+# Existing Native is more specific than “inverse of the optimizer Hessian”
+
+Reused `geometry_ieskf/pose_uncertainty.py::native_pose_R` unchanged. Actual CUDA binary is AR `match_fixed100`, with its preserved fixed source/build. Read `cuda/ndt_linearize.cu::finalQualityKernel`, host `ndt_gpu_matcher.cpp::evaluateFinalQuality`, config defaults and adapter serialization. Do not assume the currently checked-out production branch is the source of the old binary.
+
+Two different matrices exist. Optimizer maximizes its gated DIRECT7 Gaussian score, with gradient and exact local score Hessian in parameters `[tx,ty,tz,RxRyRz]`; minimization curvature is negative scoreH. Native quality instead chooses the **best Mahalanobis voxel** from available neighbors for each point, adds JᵀΣ_voxel⁻¹J only if d²<11.3448667, averages by all Source countN, and computes κ=Σmin(d²,11.3448667)/(3N), assigning the cap to unmatched points. It forms
+
+`C_internal = covariance_scale * κ * V diag(1/max(λ_i,1e−6)) Vᵀ`, scale=1.
+
+Thus it is a floored, source-average, hard-inlier Gauss–Newton surrogate with a clipped residual factor, NOT simply inverse exact scoreH and not a calibrated pose error covariance. Missing matches, best-neighbor selection, voxel covariance regularization, outliers, surface dependence and source-count normalization affect its meaning. Duplicating the same points does not supply independent information. Binary100 is reused, not rebuilt to redesign this method.
+
+`native_pose_R` verifies internal RxRyRz against finalR, preserves full6×6, transports Euler increments through the body-right angular Jacobian and the actual prior-anchored Log chart. Map translation/base reference remains distinct from IMU state; ExternalPoseH contains the rear-reference/IMU lever. No diagonal-only copying or omitted cross terms.
+
+AW reuses those calculations diagnostically. For a common normalized coordinate `u=[δp_body(m),10*δθ_body(rad)]`, A=diag(R,J_euler→body⁻¹/10), I_native,u=Aᵀ[κ*C_internal⁻¹]A. This recovers the **regularized averaged** information, not lost raw data or a newR. GICP information is transported separately from its right `[rotation,translation]` convention. Trace-normalized shapes can be compared; objective/absolute information units cannot.
+
+Actual1468-frame Native lateral noise-scale diagnostic: median0.605m, P950.782m; historical Fitness median0.195m/P950.281m. Native max off-diagonal correlation median0.504/P950.850. These substantial differences are not proof which scale is physically right. No internal information floor binds in these1468 frames (minimum recovered eigenvalue0.557≫1e−6). Normalized negative scoreH is positive in1468/1468; Native/negative-scoreH shape cosine median0.994, min0.943. They often indicate similar local shape here but remain distinct objectives/estimators. Nonzero score gradient also makes naive nonlinear Hessian-coordinate transport only a local diagnostic.
+
+Native historical actual causal lap is reused and evaluated on the same1197-mask native times: XY RMSE0.631m, lateralP950.679m versus Fitness0.577/0.493m. Earlier0.628/0.573 used a different reference sampling convention; do not label this a new Native algorithm or use the difference to tune its scale. Real statistical calibration remains NOT_VALIDATED.
