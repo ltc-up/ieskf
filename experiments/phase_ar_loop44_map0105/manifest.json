@@ -1,5 +1,5 @@
 {
-  "phase": "AR1",
+  "phase": "AR1+AR2",
   "baseline": "6977a1bff442ab13c3f4af7641ced422820559c0",
   "research_commit": "enclosing commit",
   "bag_sha256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
@@ -17,5 +17,84 @@
     "deskew_service": "3c8ddda9dbaf11458f619053a1c8ea214f39d51dcd2c8361fdcef6112701a5ce",
     "build_original/libndt_gpu_matcher.so": "247f9c0bbf2a6e12b361e17baa58e820928f8d7d81ae4ad651a64433c7d4c64d",
     "build_fixed/libndt_gpu_matcher.so": "64681da4436ab996211411d8962bff8f64f51a11359d6b07947a81bcf7ead002"
-  }
+  },
+  "AR1_commit": "2ec5abafaa1a23b0ad40d383b1645dda54cf779d",
+  "AR2_commit": "enclosing commit",
+  "frozen_runtime_source_commit": "2ec5abafaa1a23b0ad40d383b1645dda54cf779d",
+  "normal20_frames": 401,
+  "normal60_frames": 1201,
+  "lap_frames": 1468,
+  "lap_accepted": 1468,
+  "lap_input_inventory": {
+    "frozen_window_s": 73.434533834,
+    "triplets": 1468,
+    "raw_message_clouds": 4404,
+    "source_time_span_s": 73.350073732,
+    "input_counts": {
+      "imu": 14682,
+      "wheel": 7343,
+      "kistler_exported": 0
+    },
+    "max_header_gap_ms": {
+      "imu": 6.111,
+      "wheel": 11.089858999999999
+    },
+    "rejected_triplets": 0,
+    "all_three_lidars": true,
+    "loop_certificate": "historical GNSS-derived lap, not surveyed independent truth",
+    "bindings_sha256": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+    "raw_Kistler": {
+      "topic": "/sensor/kistler/measurement",
+      "type": "eav25_bsu_msgs/msg/Kistler",
+      "frames": [
+        "kistler"
+      ],
+      "header_count": 18358,
+      "max_header_gap_ms": 5.413,
+      "fused": false
+    },
+    "Kistler_note": "Not present in old motion export, but verified directly in raw bag; not fused."
+  },
+  "functional_qualification": "GO research normal lap",
+  "availability_qualification": "GO declared normal research criteria",
+  "precision": "NOT_VALIDATED",
+  "realtime20Hz": "NOT_VALIDATED",
+  "production": "NO_GO",
+  "GNSS_fused": false,
+  "Kistler_fused": false,
+  "operational_recovery": "NOT_EXERCISED_NOT_IMPLEMENTED_MULTISTART",
+  "private_ledger_sha256": {
+    "fullpose100_60": "182b9d58a9b7996aa699a951eafac8393a4659aafe5e03a92c52b9548d3a08e8",
+    "fullpose100_lap": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+    "repeat40": "87cf603a7612af8292259d7494bba964697e22100e3a7ff6a0669d657904b26c"
+  },
+  "research_code_sha256": {
+    "experiments/phase_ar_loop44_map0105/run_closed_loop.py": "8e4ca290f8ff51020d55d47e34f9b4faedabd9aa9de4a4cfc0c79ba0fad33c90",
+    "experiments/phase_ar_loop44_map0105/analyze_runs.py": "a27f750d7411652c4077e9f99a45908d34a917acb7610fd570c2eb3aa04fe005",
+    "src/ndt_global/ar_replay.py": "d58206ebdd5dd59f19af05ad8d10a2f953499d8ec56de05ad2f65c98d2573801",
+    "experiments/phase_ar_loop44_map0105/prepare_matcher_snapshot.py": "dbde1830d2836b102c42d37efa1c43d6b848b2906029397c12803f3724d9951e",
+    "experiments/phase_ar_loop44_map0105/map_export.cpp": "b72006b771404ff487752b8c42801629f73222e251fc99d43f99db7f3a1f767d",
+    "experiments/phase_ar_loop44_map0105/verify_repeatability.py": "ac93cc02401be2978b1470e6aa54af273827833bea1c756ec580219889d2b111"
+  },
+  "rotation_derivative_validation": {
+    "original": {
+      "cases": 20,
+      "max_J_error": 2.29618e-07,
+      "max_H_error": 1.16296
+    },
+    "corrected": {
+      "cases": 20,
+      "max_J_error": 2.29618e-07,
+      "max_H_error": 2.54279e-07
+    },
+    "patch_reproduction": {
+      "original_sha256": "44fba934225e62219ee8e6dc6341ffac7b418a7bc6519f58de67b549e8836ca7",
+      "corrected_sha256": "d0ef1173e3b15fbb587f13fa895c5d56f07a6febfa92ebf94cf5db4d7dd7d939",
+      "changed_expression_count": 1,
+      "production_modified": false,
+      "exact_matches_executed_fixed_source": true
+    }
+  },
+  "configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "public_map_export_reproduces_target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968"
 }

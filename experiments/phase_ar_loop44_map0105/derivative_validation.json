@@ -1,0 +1,19 @@
+{
+  "original": {
+    "cases": 20,
+    "max_J_error": 2.29618e-07,
+    "max_H_error": 1.16296
+  },
+  "corrected": {
+    "cases": 20,
+    "max_J_error": 2.29618e-07,
+    "max_H_error": 2.54279e-07
+  },
+  "patch_reproduction": {
+    "original_sha256": "44fba934225e62219ee8e6dc6341ffac7b418a7bc6519f58de67b549e8836ca7",
+    "corrected_sha256": "d0ef1173e3b15fbb587f13fa895c5d56f07a6febfa92ebf94cf5db4d7dd7d939",
+    "changed_expression_count": 1,
+    "production_modified": false,
+    "exact_matches_executed_fixed_source": true
+  }
+}

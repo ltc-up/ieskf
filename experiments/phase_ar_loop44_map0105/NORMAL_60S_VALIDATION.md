@@ -1,0 +1,3 @@
+# Executed60s, frozen candidate
+1201/1201 triplets,1201 converged and accepted full15D pose updates,59.999813012s. No restart, no new Q/R, source/own-state/seed chain unchanged. Max adjacent accepted gap0.050952918s; no COASTING/LOST samples. Zspan10.320831m, vz[-1.3360775586285518, 2.3004727694230946], maxwheel dZ0.021604m. Complete outputs and all matching/health/gain transactions retained private.
+Functional continuous processing PASS. Freshness/convergence availability PASS under declared research rule, not peak correctness or independent accuracy. Full pose candidate remains different from failed XYZ/yaw baseline. No real outage was triggered; recovery qualification not inferred.

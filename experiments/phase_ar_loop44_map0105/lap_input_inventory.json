@@ -1,0 +1,30 @@
+{
+  "frozen_window_s": 73.434533834,
+  "triplets": 1468,
+  "raw_message_clouds": 4404,
+  "source_time_span_s": 73.350073732,
+  "input_counts": {
+    "imu": 14682,
+    "wheel": 7343,
+    "kistler_exported": 0
+  },
+  "max_header_gap_ms": {
+    "imu": 6.111,
+    "wheel": 11.089858999999999
+  },
+  "rejected_triplets": 0,
+  "all_three_lidars": true,
+  "loop_certificate": "historical GNSS-derived lap, not surveyed independent truth",
+  "bindings_sha256": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+  "raw_Kistler": {
+    "topic": "/sensor/kistler/measurement",
+    "type": "eav25_bsu_msgs/msg/Kistler",
+    "frames": [
+      "kistler"
+    ],
+    "header_count": 18358,
+    "max_header_gap_ms": 5.413,
+    "fused": false
+  },
+  "Kistler_note": "Not present in old motion export, but verified directly in raw bag; not fused."
+}

@@ -1,2 +1,6 @@
 # Preserved stage1 failures
 Original35 and corrected35 halt at55; corrected100 XYZ/yaw halts75. These runs are not overwritten by F success. AQ3 temporary artifacts lost historically; AR recovered from original bag/sources and stores durable records. Original map origin/sensor calibration/statistical R and independent reference remain unqualified. No CPU/OMP or real ROS scheduling qualification. Recovery not yet exercised on a natural F outage. Modern production CAN decoder is not assumed identical to old recorded wheel producer.
+
+Stage2 retains no new frame failure on F60/lap; this does not erase C35/C100 failures. No operational recovery trial, independent truth, covariance calibration, CPU/OMP comparison or production realtime qualification. Full pose is necessary in the tested successful candidate; XYZ/yaw alone did not pass. One~360ms research-time tail and irregular publication intervals remain engineering risks. No false peak labels were available. Full trajectory and static extrinsics remain private.
+
+Supplementary Kistler inventory initially attempted a broad status-topic Header assumption and failed; then a newer twist-topic query found none. Actual old measurement topic was verified from AQ1 extractor and bag schema,18358messages found, correcting the export-zero interpretation. No filter inputs or frozen configuration changed.

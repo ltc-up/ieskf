@@ -105,3 +105,7 @@ Native chart transport mathematics tested; no statistically calibrated NDT R or 
 ## AR1 — real20s continuous pose feedback restored
 
 Target freshly exported from map0105 equals AQ2 SHA. Original35iteration55-frame failure reproduced; corrected derivative alone unchanged.100budget XYZ/yaw stops75frames with drifting pitch. Existing fullSO3 map pose observation plus100budget completes401/40120s with unchanged engineering R/Q; no production modification or low-fitness promotion. Frozen extension candidate, not independent accuracy or whole-lap admission.
+
+## AR2 — loop44/map0105 actual normal lap completed
+
+Same frozen full-pose100iteration candidate runs all1468 lap triplets through real CUDA Deskew/NDT and historical full15D updates,100%accepted; max accepted gap51.004ms, no LOST.20s401/401 and60s1201/1201;40-frame native-reference rerun exact. Wheel maxZcorrection3.32mm on lap, Zspan10.324m follows similar production height shape without proof of true accuracy. Independent reference/engineering R statistics and ROS20Hz tails remain unqualified; recovery not exercised. Functional and declared normal research availability GO, production NO-GO. Earlier XYZ/yaw and derivative-only failures retained.
