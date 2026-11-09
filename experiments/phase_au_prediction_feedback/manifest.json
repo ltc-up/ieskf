@@ -1,5 +1,5 @@
 {
-  "phase": "AU1",
+  "phase": "AU1+AU2",
   "baseline": "ac8e87f5755805c23c0dae305794000939a82299",
   "research_commit": "enclosing commit",
   "motion_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
@@ -9,5 +9,10 @@
   "CUDA_rematched": false,
   "equivalence": "exact all1468 saved means/P/seeds/gains/deltas",
   "GNSS_fused": false,
-  "production_modified": false
+  "production_modified": false,
+  "new_tests": 9,
+  "total_tests": 180,
+  "failed_tests": 0,
+  "full_matrix_reconstruction": "K/delta/Joseph reset max error below7e-16",
+  "truth_qualification": "conditional NDT/engineering GNSS differences only"
 }
