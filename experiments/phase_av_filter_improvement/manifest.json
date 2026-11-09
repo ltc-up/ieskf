@@ -1,21 +1,124 @@
 {
-  "phase": "AV_design_implementation",
+  "phase": "AV",
   "baseline": "c647ac3224adee775d30dc6f9553c9b83612c060",
-  "research_commit": "enclosing commit",
+  "algorithm_revision": "1a8fc35fe2072a95b8d04dc1cfed507db8ef14e4",
+  "final_reporting_commit": "enclosing commit",
+  "branch": "research/phase-av-filter-improvement",
+  "main_merge": false,
+  "main_merge_reason": "failed candidate acceptance and unresolved runtime backlog; retain independent research branch",
   "production_modified": false,
-  "candidate_default": false,
-  "config_sha256": "d651e6478f2ab6493bd8c83c526c10ad730e4ea59a8fbc4a9fd0cfbad3874563",
+  "original_models_and_defaults_modified": false,
+  "GNSS_fused": false,
+  "absolute_accuracy": "NOT_VALIDATED",
+  "candidate_repair": "FAILED",
+  "single_lap_function": "VERIFIED_CONDITIONAL_RESEARCH",
+  "three_lap_completion": "FAILED_3458_OF_4134",
+  "statistical_covariance": "NOT_VALIDATED",
+  "ROS_realtime": "NOT_VALIDATED",
+  "production": "NO_GO",
+  "tests": {
+    "baseline": 183,
+    "new": 27,
+    "passed": 210,
+    "failed_final": 0,
+    "historical_failed_quadrature64_tests": 1
+  },
+  "bag_sha256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "map_sha256": "8561cd2254ed35164134a3146e89dfcd403643193ff11c84db93fde2b77ad52a",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "motion_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "frozen_motion_configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "matcher_sha256": "b3980f4e727d9eaf64fa966313ceda68c8eae0d2868816357a38e2447596a1cc",
+  "deskew_sha256": "3c8ddda9dbaf11458f619053a1c8ea214f39d51dcd2c8361fdcef6112701a5ce",
+  "frozen_AR_transaction_sha256": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
   "source_evidence_sha256": {
     "src/measurement.cpp": "1b7749922907c4d6e0d166cd1b019919799c0583eb9c78cc869b51d519b12222",
     "src/ekf_localizer.cpp": "50d04f0a026e9020ad8c0c4ce9cd18df0c193260410bea6d8e6d05aef1293e7d",
     "include/ekf_localizer/aged_object_queue.hpp": "a590ff6ba9e73b74174145b6f55d4a1e017f62e7e78b482167491a3b0271147e",
     "config/ekf_localizer.param.yaml": "5391d1d562121533b6856f51bbb2177bf1b37d298ec54f645247d35f64680aaf"
   },
-  "frozen_AR_ledger_sha256": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
-  "new_tests": 12,
-  "total_tests": 195,
-  "failed_tests": 0,
-  "guarded40_actual_CUDA": true,
-  "guarded40_accepted": 40,
-  "original_models_modified": false
+  "config_sha256": {
+    "candidate_consensus_subspace.json": "2efe86aa0c7dde506c1bd48e47bd70657803d64e6ca1c1a4df9787ef4913fd91",
+    "candidate.json": "d651e6478f2ab6493bd8c83c526c10ad730e4ea59a8fbc4a9fd0cfbad3874563",
+    "candidate_robust_consensus.json": "7ee9480ee40942eb409e39dd66c18bec257f7944bc2e09dd46f1ad8179bae853"
+  },
+  "actual_runs": {
+    "baseline40": {
+      "frames": 40,
+      "ledger_sha256": "a11f47f4751b23a77bf58a02198f3465619d3305627c3179c7ffef3445d4289e",
+      "actual_CUDA": true
+    },
+    "legacy_switch40": {
+      "frames": 40,
+      "ledger_sha256": "723fa51291ea0111e9ff7d6d5c540a92efb54477a9c0124c434d86e261df885f",
+      "actual_CUDA": true
+    },
+    "guarded40": {
+      "frames": 40,
+      "ledger_sha256": "53726e3f8d28390f7c7bc9752d49249dc2f0218fb99fb15ffa95137574973d51",
+      "actual_CUDA": true
+    },
+    "guarded_lap": {
+      "frames": 881,
+      "ledger_sha256": "74efdaf20c018874ac2be5d4d33e175798f62a1780425331c20f500ab3fc199a",
+      "actual_CUDA": true
+    },
+    "single_use_lap": {
+      "frames": 1468,
+      "ledger_sha256": "e8777cae9c5799810a952fd258bbc53ebe95c6db4e816946ca561d5385431b48",
+      "actual_CUDA": true
+    },
+    "v2_40": {
+      "frames": 40,
+      "ledger_sha256": "b6f16c77b6a04f865a55c5dba9489233dc0eec5b3cbc54982e938a4db4f1f9b7",
+      "actual_CUDA": true
+    },
+    "v2_lap": {
+      "frames": 1159,
+      "ledger_sha256": "d7d6904b1dc3edbdb4a3719ee7a9b0b3d563a53fd79b0e79258cb369b0812d4a",
+      "actual_CUDA": true
+    },
+    "v3_40": {
+      "frames": 40,
+      "ledger_sha256": "1011f3957465c042714478481a7015b3819d73a2d3b9acfe37a89acb40313940",
+      "actual_CUDA": true
+    },
+    "v3_lap": {
+      "frames": 1468,
+      "ledger_sha256": "48053151fd88e3861a92cc29ea7b64a7b7bcf741c617fe07209df6db2e81a265",
+      "actual_CUDA": true
+    },
+    "v3_multilap": {
+      "frames": 1480,
+      "ledger_sha256": "36679b10a320fba16ecd7ec96039d658b04b4ea87b695c27ab8658cbced81a6e",
+      "actual_CUDA": true
+    },
+    "v3_multilap_history21b": {
+      "frames": 3458,
+      "ledger_sha256": "4cbf871dd030d0288c654eb5b33210bae5a8d4520f0507cdd2a519ecf905e3d7",
+      "actual_CUDA": true
+    }
+  },
+  "zero_frame_failed_runtime_adapter": true,
+  "used_reference": {
+    "hypotheses_ms": [
+      0,
+      75,
+      150
+    ],
+    "historical_single_lap_common_samples": 1197,
+    "raw_first_lap_samples": 1204,
+    "raw_extension": "same frozen AT conversion; engineering only",
+    "physical_time_installation_calibrated": false
+  },
+  "numerical_verification_sha256": "5352e4a7749acd3e0e60bf768a65f3674b1823bed171de3495c4021b54564e1b",
+  "final_test_log_sha256": "4ff558e6d9e4616f07f091bba16ea8c5451ddabbd6a8e15012a53322f5c8a47a",
+  "code_sha256": {
+    "src/geometry_ieskf/ndt_packet_observation.py": "881168ce1f4afac25a054a32df0bd0d29902e94f2ef65ee9766e54ba90b75138",
+    "src/geometry_ieskf/robust_packet_pose.py": "fa11c1f48d2ddc1858b9cf21544e1b71364e92ba6531f4a087dcdf81c448951c",
+    "experiments/phase_av_filter_improvement/run_candidate.py": "424c52aa21d59732225632a39da5cb2f32799947301864646c7a66d4029c1ec9",
+    "experiments/phase_av_filter_improvement/matcher_integrity.py": "b07e1ed39fa176db716a8015f69bf1b0035ca84be4bff662ce6a037671d5efdc",
+    "experiments/phase_av_filter_improvement/evaluate.py": "e7bfc44240a21a7500401cc43de227dd36f7c7d166bcf201e52d1ee944d5e970"
+  },
+  "private_payloads_published": false
 }

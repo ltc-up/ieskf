@@ -1,0 +1,11 @@
+# Offline timing and failed deadline qualification
+
+Actual V3 single-lap startup465.787ms includes Target/GPU and CPU map-support preparation. Persistent contexts/Target are reused; no per-frame rebuild. Reported complete processing-section wall P50/P95/P99/max29.435/38.312/41.472/419.738ms. Original AR section P95 was19.24ms; extra hypotheses/geometry/robust likelihood cost is real, not free. Do not compare module P95 sums as transaction P95.
+
+Center CUDA alignment P50/P95/P99/max = 2.029/3.995/4.859/6.292ms. Two extra matches, CPU support, IPC,128-node mixture and delayed suffix work add overhead. Mixture-alone/individual CPU scheduler/GC timings were not instrumented in this run, so precise bottleneck attribution is NOT_VALIDATED. AS GC findings are not proof of these exact pauses.
+
+Interrupted3458-frame model Header-to-completion P50/P95/P99/max89.082/151.077/1032.714/2128.105ms. Center CUDA P954.069ms/P995.616ms/max7.178ms. Increasing cache retention500→2100ms permitted more processing but did not stop backlog growth. Completed native updates at50ms intervals are not fresh online localization when observed data arrive/finish seconds late. Health labels `TRACKING`/`PARTIAL_CONSTRAINT` in JSON describe native observation freshness only; do not present them as deadline-valid current output.
+
+Original runner loses in-memory final wall array on assertion. Only per-transaction committed clocks and center/proxy timing survive; the multilap archive explicitly marks full wall-summary NOT_SAVED. Posthoc recovery does not fabricate omitted timings. Estimated completion clock omits some final advance/serialization work; it is not physical ROS end-to-end age. No new process-affinity, GC-disable or accelerated-clock trick was used.
+
+Offline20Hz full-run deadline **FAILED** (long tails/cache loss). ROS20Hz observation and100Hz publisher **NOT_VALIDATED**: no production TF/node or live executor was run. Research runner produces state snapshots perLiDAR frame, not a qualified100Hz publisher. More cache is not a deadline fix. Next runtime work is bounded/chunked sensor/log retention, profiling actual allocation/GC/reprop/IPC, bounded latest-frame scheduling with explicit skipped/stale status, then independent end-to-end replay. No automatic algorithm/default change follows.
