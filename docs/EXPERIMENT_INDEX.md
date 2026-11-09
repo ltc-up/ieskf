@@ -84,3 +84,5 @@ Own-state raw Deskew/CUDA-NDT/delayed full15D update runs on40 normal loop44 tri
 
 - [Phase AQ3](../experiments/phase_aq3_ndt_covariance/FINAL_CONCLUSION.md): restored uncertainty math/core,153 tests; covariance uncalibrated, normal continuation fails; temporary GPU artifacts lost and explicitly unqualified.
 - [Phase AQ final22-question summary](../experiments/PHASE_AQ_FINAL_SUMMARY.md): real short15D NDT closure, no lap/production acceptance; source protocol correction and reproduction-loss disclosure.
+
+- [AR1 loop44/map0105](../experiments/phase_ar_loop44_map0105/FINAL_CONCLUSION.md): exact AQ2 interruption reproduced; derivative-only repair insufficient;100iteration/full-pose candidate completes401/40120s.156 tests.60s/lap pending.

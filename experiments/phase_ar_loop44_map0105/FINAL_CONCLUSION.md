@@ -1,0 +1,2 @@
+# AR1 interim conclusion
+Reproduction PASS: actual original40 and AQ2 original20 failure identical. Derivative error verified but not event root cause.35iteration budget plus attitude-feedback deficiency are separated by controlled runs; corrected100+full map attitude completes401/40120s. Freeze this candidate for60s and prior-lap stages; no whole-lap claim yet. Functional20s GO, independent accuracy/production NOT_VALIDATED/NO-GO.

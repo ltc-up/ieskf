@@ -1,0 +1,53 @@
+{
+  "requested_frames": 401,
+  "processed_frames": 401,
+  "stop_reason": null,
+  "startup_ms": 294.022024,
+  "mode": "F",
+  "frames": 401,
+  "requested_duration_s": 19.999890229000002,
+  "duration_s": 19.999890229000002,
+  "actual_raw_Deskew": true,
+  "actual_CUDA": true,
+  "own_causal_seed": true,
+  "delayed_15D_updates": 401,
+  "component_acceptance": {
+    "x": 401,
+    "y": 401,
+    "z": 401,
+    "rx": 401,
+    "ry": 401,
+    "rz": 401
+  },
+  "decisions": {
+    "EXTERNAL_POSE_UPDATE": 401
+  },
+  "Z_span_m": 2.9359544602350667,
+  "vz_min_max": [
+    -0.917998222124584,
+    1.2475388494758908
+  ],
+  "max_wheel_Z_state_change_m": 0.021603904896733583,
+  "max_ndt_Z_update_m": 0.7741126897838635,
+  "max_ndt_velocity_delta_m_s": 0.551123586787418,
+  "final_bg_norm": 0.002205856531147075,
+  "final_ba_norm": 0.02521450156920303,
+  "final_sigmaZ_model_m": 0.06098159488198445,
+  "max_accepted_gap_s": 0.050901342,
+  "max_no_NDT_observation_s": 0.152515062,
+  "matching_converged": 401,
+  "wall_ms": {
+    "p50": 13.699743,
+    "p95": 17.958139,
+    "p99": 19.42761,
+    "max": 22.815835
+  },
+  "pose_statistical_covariance": "UNQUALIFIED_HISTORICAL_ENGINEERING_RULE",
+  "independent_truth": false,
+  "GNSS_used": false,
+  "online_equivalence": false,
+  "transactions_sha256": "8ed73d4475bcedd64b3d0ad0e5921374c3dc3f1ec3acdb67f2c261e039316e30",
+  "input_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "qualification": "EXPLORATORY_CAUSAL_EXECUTION_ONLY"
+}

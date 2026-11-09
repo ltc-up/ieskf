@@ -1,0 +1,21 @@
+{
+  "phase": "AR1",
+  "baseline": "6977a1bff442ab13c3f4af7641ced422820559c0",
+  "research_commit": "enclosing commit",
+  "bag_sha256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "map_sha256": "8561cd2254ed35164134a3146e89dfcd403643193ff11c84db93fde2b77ad52a",
+  "target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "new_tests": 3,
+  "total_tests": 156,
+  "failed_tests": 0,
+  "production_modified": false,
+  "private_artifacts": "durable ignored directory",
+  "runtime_sha256": {
+    "match_original": "9c8515d096dd732f384711165b30bdeaa1a6e31812d81227d12bc97b27b12ab0",
+    "match_fixed": "cc0290e0913390e8be5213536651f2daca4c0706edf864acac9edf5335c24934",
+    "match_fixed100": "b3980f4e727d9eaf64fa966313ceda68c8eae0d2868816357a38e2447596a1cc",
+    "deskew_service": "3c8ddda9dbaf11458f619053a1c8ea214f39d51dcd2c8361fdcef6112701a5ce",
+    "build_original/libndt_gpu_matcher.so": "247f9c0bbf2a6e12b361e17baa58e820928f8d7d81ae4ad651a64433c7d4c64d",
+    "build_fixed/libndt_gpu_matcher.so": "64681da4436ab996211411d8962bff8f64f51a11359d6b07947a81bcf7ead002"
+  }
+}

@@ -101,3 +101,7 @@ Real raw120 clouds drive branch-own15D histories, CUDA Deskew, current seeds and
 ## AQ3 and final qualification
 
 Native chart transport mathematics tested; no statistically calibrated NDT R or independent accuracy. AQ2 preserved real short XYZ/yaw closure30/40, normal extension stops55/401 at2.70s. AQ3 prior Native/multistart GPU logs lost with temporary environment; transcript summaries cannot replace retained artifacts.153 tests pass (19 added across AQ), but normal-lap/production NO-GO. Rebuild private adapter/re-extract and durably rerun before extending normal qualification. [Final summary](../experiments/PHASE_AQ_FINAL_SUMMARY.md).
+
+## AR1 — real20s continuous pose feedback restored
+
+Target freshly exported from map0105 equals AQ2 SHA. Original35iteration55-frame failure reproduced; corrected derivative alone unchanged.100budget XYZ/yaw stops75frames with drifting pitch. Existing fullSO3 map pose observation plus100budget completes401/40120s with unchanged engineering R/Q; no production modification or low-fitness promotion. Frozen extension candidate, not independent accuracy or whole-lap admission.

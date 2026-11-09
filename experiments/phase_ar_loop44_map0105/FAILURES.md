@@ -1,0 +1,2 @@
+# Preserved stage1 failures
+Original35 and corrected35 halt at55; corrected100 XYZ/yaw halts75. These runs are not overwritten by F success. AQ3 temporary artifacts lost historically; AR recovered from original bag/sources and stores durable records. Original map origin/sensor calibration/statistical R and independent reference remain unqualified. No CPU/OMP or real ROS scheduling qualification. Recovery not yet exercised on a natural F outage. Modern production CAN decoder is not assumed identical to old recorded wheel producer.
