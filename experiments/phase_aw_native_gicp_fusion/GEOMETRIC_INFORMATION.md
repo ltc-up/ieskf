@@ -1,21 +1,21 @@
 # Coupled shape comparison, not noise calibration
 
-Unified chart is `[body translation(m),10*body-right rotation(rad)]` at the base reference. NDT internal-map/Euler and GICP right-twist charts are transported by full congruences. Retain matrix eigenvectors, eigenvalues, cross blocks and conditional-axis energy. For translation marginal information use Schur complement `Itt−Itr Irr⁻¹Irt`; conditional diagonal is not an independent direction covariance. Relative shape is normalized by trace; no comparison of raw objective scores or raw cross-algorithm eigenvalue magnitude.
+Unified chart is `[body translation(m),10*body-right rotation(rad)]` at the base reference, transported to the SAME frozen-seed axes for both backends. NDT internal-map/Euler and GICP right-twist charts are transported by full congruences. Retain matrix eigenvectors, eigenvalues, cross blocks and conditional-axis energy. For translation marginal information use Schur complement `Itt−Itr Irr⁻¹Irt`; conditional diagonal is not an independent direction covariance. Relative shape is normalized by trace; no comparison of raw objective scores or raw cross-algorithm eigenvalue magnitude.
 
-1468 actual same-input matches: full-matrix shape cosine median0.900, weakest-vector absolute cosine median0.447 (range≈0..1). Broad anisotropic structure agrees more than individual weakest directions. NDT and GICP do NOT always identify the same weak pose combination. This is consistent with voxel-best-neighbor/inlier modelling versus planar source+target local covariance and correspondence changes; it is not proof one matcher is geometrically correct.
+1468 actual same-input matches: full-matrix shape cosine median0.900, weakest-vector absolute cosine median0.446 (range≈0..1). Broad anisotropic structure agrees more than individual weakest directions. NDT and GICP do NOT always identify the same weak pose combination. This is consistent with voxel-best-neighbor/inlier modelling versus planar source+target local covariance and correspondence changes; it is not proof one matcher is geometrically correct.
 
 |Fixed segment|NDT marginal lateral share|GICP marginal lateral share|NDT lateral–Yaw normalized coupling|GICP coupling|
 |---|---:|---:|---:|---:|
 |0|0.407|0.597|0.096|0.017|
-|1|0.337|0.353|0.022|0.143|
-|3|0.396|0.841|0.024|0.197|
-|5|0.331|0.143|0.121|0.093|
-|8|0.282|0.174|−0.331|−0.165|
-|9|0.353|0.363|0.112|0.607|
+|1|0.337|0.352|0.021|0.139|
+|3|0.395|0.842|0.024|0.196|
+|5|0.331|0.143|0.122|0.097|
+|8|0.282|0.175|−0.331|−0.168|
+|9|0.353|0.363|0.112|0.606|
 
 Full normalized matrices/eigenvectors remain private; de-identified corner aggregates are public. A high lateral share is relative to other directions, not a small lateral error bar. Right9's strong GICP lateral–Yaw coupling shows why diagonal scaling loses meaningful local structure. It does not establish a good statisticalR.
 
-Marginal lateral shape versus absolute engineering lateral error Spearman: NDT≈+0.051, GICP≈−0.055 on the common valid reference interval. No reliable monotone error/noise mapping is supported. Adjacent frames and repeated track locations are correlated; these are descriptive associations, not detection precision/recall or calibration.
+Marginal lateral shape versus absolute engineering lateral error Spearman: NDT≈+0.049, GICP≈−0.056 on the common valid reference interval. No reliable monotone error/noise mapping is supported. Adjacent frames and repeated track locations are correlated; these are descriptive associations, not detection precision/recall or calibration.
 
 Six preselected segment-midpoint cases expose final-factor fixed-correspondence cost±axis perturbations. Numerical gradient uses the frozen Mahalanobis factors; GN curvature can differ from true nonlinear frozen-factor curvature by residual second-order terms. Real rematching changes correspondences/weights, so these trials do not bound global pose error. Public aggregate probes retain actual differences. Multiple local solutions up to0.319m for GICP in segment5 and0.152m in3 are observed under fixed±seed probes; independent correct-peak labels are absent. Full rank/low residual/consistent probes are never treated as a correctness certificate.
 
@@ -24,3 +24,7 @@ Reused [X-ICP](https://arxiv.org/html/2211.16335v3) §V information analysis and
 Actual returned-pose geometry stability is separately retained in local_geometry_stability.json: both methods' whole shape cosines remain extremely close to1 across the selected perturbed initializations, including GICP's0.319m alternative. Matrices are transported to each central solution's body axes before comparison. Stable local information shape therefore does not distinguish these nearby solutions or certify the right basin. This is not a fixed-pose FD experiment. AR's existing corrected-source point derivative FD is reused (20 cases, max second-derivative error≈2.54e−7); AW does not rebrand it as a new fullNDT objective/Native covariance validation.
 
 Native log caveat: qualityκ is recomputed at rounded float pose while nativeC uses internal double parameters. Absolute rawGN magnitude/floor occupancy cannot be exactly reconstructed from these retained fields. AW uses trace-normalized shapes, condition ratios and couplings for which the global scalar cancels; no statistical calibration or exact raw-information recovery is claimed.
+
+Eigenvector uniqueness caveat: the minimum singular cosine between the two lowest-dimensional2D subspaces has median0.914, higher than the single-vector comparison. Nearby eigenvalues permit basis rotation; a small single-vector cosine alone cannot establish a fundamentally different degenerate subspace or choose the correct matcher. Aggregate spectra/gaps are in eigenstructure_metrics.json; full private matrices/eigenvectors remain available.
+
+Exact common-axis perturbation convention: at each returned base pose, p′=p+R_seed*u_translation and R′=Exp(R_seed*u_rotation/10)*R. This is an orientation perturbation about the fixed base reference, not a wholeSE3 left perturbation about the map origin. Congruences use first-order pose Jacobians. The ESKF innovation Log chart additionally needs its existing Jr transport when formingR; AW does not equate these geometric matrices with that statistical observation covariance.

@@ -18,3 +18,6 @@ class MatcherGeometryTests(unittest.TestCase):
   R=Rotation.from_euler('xyz',[.1,-.3,.5]).as_matrix();p=np.array([2.,1.,.7]);eps=1e-6;skew=np.array([[0,-p[2],p[1]],[p[2],0,-p[0]],[-p[1],p[0],0]]);J=np.c_[R@skew,-R]
   def residual(d):return -R@(Rotation.from_rotvec(d[:3]).apply(p)+d[3:])
   fd=np.column_stack([(residual(eps*np.eye(6)[j])-residual(-eps*np.eye(6)[j]))/(2*eps) for j in range(6)]);np.testing.assert_allclose(fd,J,atol=1e-9)
+ def test_common_anchor_full_coupling_transport(self):
+  from ndt_global.matcher_geometry import transport
+  R=Rotation.from_euler('xyz',[.1,.2,.3]).as_matrix();anchor=Rotation.from_euler('xyz',[-.2,.3,-.1]).as_matrix();Q=np.zeros((6,6));Q[:3,:3]=R.T@anchor;Q[3:,3:]=R.T@anchor;I=np.eye(6);I[1,5]=I[5,1]=.5;out=transport(I,R,anchor);np.testing.assert_allclose(out,Q.T@I@Q,atol=1e-14);self.assertGreater(np.linalg.eigvalsh(out)[0],0)

@@ -12,9 +12,9 @@ No per-lap reset, slowed input clock, extended retention, discarded slow frame o
 
 |Preselected lap|Frames|GICP updates|GNSS raw valid|GICP XY RMSE|original NDT XY RMSE m|
 |---|---:|---:|---:|---:|---:|
-|1|1468|see manifest|1204|0.596|0.578|
-|2|1352|see manifest|1235|0.640|0.626|
-|3|1314|see manifest|1196|0.715|0.501|
+|1|1468|1401|1204|0.596|0.578|
+|2|1352|1293|1235|0.640|0.626|
+|3|1314|1262|1196|0.715|0.501|
 
 
 Per-lap engineering-reference results worsen relative to originalNDT, most strongly in third lap. Different1204 raw-mask versus1197 historical-mask first-lap RMSE values must not be mixed. Extended raw reference uses the same frozen AT math and explicit masks, not a newly fitted truth.

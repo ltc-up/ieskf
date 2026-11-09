@@ -12,7 +12,9 @@ source=Path(__file__).parents[1]/'phase_ar_loop44_map0105/run_closed_loop.py';te
 for key in ['ledger','outputs','wheel_records']:text=text.replace('json.dumps('+key+')','journal_json('+key+')')
 needle=' for i,job in enumerate(jobs):';assert text.count(needle)==1;text=text.replace(needle,' gc.collect();gc.freeze()\n'+needle);ns=dict(__name__='aw_frozen_runner',Journal=Journal,journal_json=journal_json,gc=gc);exec(compile(text,str(source),'exec'),ns)
 if a.backend in ('gicp','ndt_fixed'):
- def covariance(ndt,components,prior):return np.diag([.5**2 if k in ('x','y','z') else np.deg2rad(1.)**2 for k in components])
+ def covariance(ndt,components,prior):
+  if a.backend=='gicp' and ndt.get('backend')!='small_gicp':raise ValueError('MATCHER_BACKEND_IDENTITY_MISMATCH')
+  return np.diag([.5**2 if k in ('x','y','z') else np.deg2rad(1.)**2 for k in components])
  ns['pose_covariance']=covariance
 profiler=None
 if a.profile:

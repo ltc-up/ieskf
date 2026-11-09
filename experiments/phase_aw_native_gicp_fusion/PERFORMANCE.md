@@ -1,5 +1,7 @@
 # Offline throughput measured; strict deadline/ROS qualification absent
 
+Measured warm-start startup: GICP lap490.189ms,3lap538.986ms, including original Deskew context and static CPU target preparation; separate from per-frame processing.
+
 Same-input AB align P95: CUDA-NDT2.820ms, small_gicp6.950ms. Continuous own-state GICP alignP958.357ms; prior loop7's18.79ms cannot be compared as the same workload. Current Source is only a few thousand voxel points and Target/preprocessing differ from those older experiments. No claim of CUDA GICP, GPU acceleration of GICP or algorithm score comparability.
 
 |Component, actual continuous3lap samples|P50|P95|P99|max ms|
@@ -29,4 +31,4 @@ GICP4134 processing-section wall P50/P95/P99/max17.740/26.966/37.187/109.653ms. 
 
 Fully profiled actual1468 replay resource record:48.14s userCPU,3.17s systemCPU,30.34s elapsed,169% jobCPU,610020KiB time-reported maximumRSS. This is the reported process-family maximum, not summed simultaneous processes, device memory or portable CPU utilization. TBB arena4 is frozen. Static global target prep/tree/covariance happens once; per-frame Source prep, finalH refresh and own-state replay remain included. CUDA Deskew persists; GPU per-process peak/utilization was NOT_LOGGED and is not fabricated.
 
-Runtime memory management streams JSONL, retains bounded Python records and freezes static input GC generation while GC stays enabled; it does not disableGC, fake completion or extend history. Legacy40 and complete profiling equivalence are verified. Actual4134 completion is a meaningful improvement over AV's growing-ledger runtime failures, not proof all-load real-time behavior. ROS20Hz/100Hz NOT_VALIDATED; production NO-GO. CPU GICP is not currently expensive enough, nor accurate enough, to justify a CUDA port as the priority.
+Runtime memory management streams JSONL, retains bounded Python records and freezes static input GC generation while GC stays enabled; it does not disableGC, fake completion or extend history. Legacy40 and complete profiling equivalence are verified. Actual4134 completion is a meaningful improvement over AV's growing-ledger runtime failures, not proof all-load real-time behavior. No controlled AV-V3 rerun with this memory change was performed; algorithm costs also differ, so current completion cannot prove GC/ledger retention was the unique cause or cure of AV failures. ROS20Hz/100Hz NOT_VALIDATED; production NO-GO. CPU GICP is not currently expensive enough, nor accurate enough, to justify a CUDA port as the priority.

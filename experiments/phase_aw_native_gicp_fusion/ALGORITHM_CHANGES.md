@@ -13,3 +13,5 @@
 Original IMU dynamics/noise, wheel model/protocol, Q, Bias process, SO3 reset, lever, state/P cross terms, delay equations and CUDA-NDT binary remain unchanged. Native is not redesigned. No shared-cloud double fusion; no hard NIS gating; no new adaptive covariance promoted. Original research/production defaults remain untouched. Public glue/tests are independent; restricted production source/binaries and vehicle dimensions are not published.
 
 Rollback: use original AR runner or `run_loop --backend ndt_legacy` with original matcher. `ndt_fixed` and`gicp` are explicit experimental policies, not production ROS backend defaults. The private immutable journal is authoritative; final JSON is materialized only after timing the live processing loop.
+
+Final diagnostic-coordinate audit additionally transports both Native and GICP matrices to the SAME frozen-seed axes before comparison, rather than comparing two nearby estimated-body tangent frames directly. This full block congruence has its own PSD/cross-coupling unit test; no matched pose/filter output is changed. Final195 tests pass (12 new over183).

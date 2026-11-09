@@ -1,4 +1,4 @@
-#1468 same-Source/same-float-seed actual matcher transactions
+# 1468 same-Source/same-float-seed actual matcher transactions
 
 Every frame uses frozen AR Deskew Source SHA and the same historical float seed; neither backend supplies feedback in this **diagnosticAB**. Both matchers actually run. CUDA results reproduce original1468 final transforms exactly (max0). small_gicp uses its actual CPU solver, not stored NDT poses. Closed-loop evidence is separately reported.
 

@@ -1,20 +1,28 @@
-"""Full pose-geometry diagnostics in [body translation(m), 10*right rotation(rad)].
+"""Full local pose-geometry diagnostics in chosen common-anchor axes.
+Translation(m), 10*rotation(rad); orientation rotates about base, not map origin.
 No new measurement covariance or correct-peak probability is produced.
 """
 import numpy as np
+from scipy.spatial.transform import Rotation
 from geometry_ieskf.pose_uncertainty import euler_xyz_to_body
 
-def ndt_native_information(row,length=10.):
- C=np.asarray(row['native_internal'],float);alpha=np.asarray(row['parameters_internal']).reshape(6)[3:];R=np.asarray(row['final'])[:3,:3];J=euler_xyz_to_body(alpha);A=np.zeros((6,6));A[:3,:3]=R;A[3:,3:]=np.linalg.inv(J)/length
+def ndt_native_information(row,length=10.,anchor_rotation=None):
+ C=np.asarray(row['native_internal'],float);alpha=np.asarray(row['parameters_internal']).reshape(6)[3:];R=Rotation.from_euler('XYZ',alpha).as_matrix();J=euler_xyz_to_body(alpha);A=np.zeros((6,6));A[:3,:3]=R;A[3:,3:]=np.linalg.inv(J)/length
  # Shape proxy only: logged kappa is evaluated at rounded float pose, whereas
  # native C is formed at internal parameters. The scalar cancels in trace/axis
  # shape comparisons; exact original GN magnitude is not reconstructible.
  info=float(row['kappa_at_float_pose'])*np.linalg.inv(C)
- return A.T@info@A
+ out=A.T@info@A
+ return transport(out,R,anchor_rotation)
 
-def gicp_information(row,length=10.):
+def gicp_information(row,length=10.,anchor_rotation=None):
  H=np.asarray(row['H_right_rotation_translation'],float);B=np.zeros((6,6));B[:3,3:]=np.eye(3)/length;B[3:,:3]=np.eye(3)
- return B.T@H@B/max(row['source_n'],1)
+ return transport(B.T@H@B/max(row['source_n'],1),np.asarray(row['final'])[:3,:3] if anchor_rotation is not None else np.eye(3),anchor_rotation)
+
+def transport(I,pose_rotation,anchor_rotation):
+ if anchor_rotation is None:return I
+ Q=np.zeros((6,6));Q[:3,:3]=pose_rotation.T@anchor_rotation;Q[3:,3:]=pose_rotation.T@anchor_rotation
+ return Q.T@I@Q
 
 def describe(I):
  I=np.asarray(I,float);I=(I+I.T)/2

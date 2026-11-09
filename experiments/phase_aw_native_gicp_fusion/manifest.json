@@ -1,0 +1,244 @@
+{
+  "phase": "AW1_AW2_AW3_AW4",
+  "baseline": "c647ac3224adee775d30dc6f9553c9b83612c060",
+  "final_reporting_commit": "enclosing commit",
+  "actual_implementation_commit": "042d00a",
+  "AW1_commit": "2f0c50a",
+  "source_recovery": {
+    "production_HEAD": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+    "production_branch": "ndt_test",
+    "preserved_stashes": [
+      "c964ce45adc5298a473f2d8387ee7a53ba5ec516",
+      "c4ecdcf7f1c9688095e0e1e2b2a46bd9da1b1453",
+      "65505cefdb33b7e75d571077628ef2bc20de6635"
+    ],
+    "stash0_untracked_tree_empty": true,
+    "third_party_revision": "fa0cfc983417c044b6036f71dfa448038bb9c820",
+    "license": "MIT",
+    "production_modified": false
+  },
+  "configuration": {
+    "GICP_threads_TBB": 4,
+    "kNN": 20,
+    "max_iterations": 50,
+    "translation_epsilon_m": 0.001,
+    "rotation_epsilon_rad": 0.0017453292519943296,
+    "maximum_correspondence_m": 4.0,
+    "extra_source_target_voxel": false,
+    "fixed_observation_std_m": 0.5,
+    "fixed_observation_std_rotation_deg": 1.0,
+    "common_geometry_rotation_length_m": 10.0,
+    "original_state_Q_wheel_bias_reset_unchanged": true,
+    "GNSS_fused": false,
+    "AV_used_as_default": false
+  },
+  "tests": {
+    "baseline": 183,
+    "new": 12,
+    "passed": 195,
+    "failed": 0,
+    "skipped_final": 0,
+    "executable_tests": 3,
+    "log_sha256": "267ea775d65b28cc81dee7ecc1cd9249d75fa5c2915487adcc3aee7638f95425"
+  },
+  "input_identity": {
+    "actual_sha256": {
+      "map": "8561cd2254ed35164134a3146e89dfcd403643193ff11c84db93fde2b77ad52a",
+      "target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+      "motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+      "AR": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+      "AS_F": "dfd6e4db1ef8b6aa2124b761f7601afb77edebd85fa9dab8963130bfe582f7c1",
+      "AS_N": "f16d1d05cea280bc23458eb1bf3575b6e672dd6b764caedf9b3780c44fa85171",
+      "config": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+      "reference_cache": "287dbba10a7801666f33de30a82f73908f08edb95d252298cc0c0fe2fee01f68"
+    },
+    "old_source_and_report_files_unchanged": 183,
+    "bag_sha256_inherited": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+    "bag_66GB_not_rehashed": true,
+    "each_raw_cloud_verified_by_frozen_binding": true,
+    "original_GNSS_CSV_currently_missing": true,
+    "GNSS_cache_native_time_verified": true,
+    "production_HEAD": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+    "production_stash0": "c964ce45adc5298a473f2d8387ee7a53ba5ec516",
+    "user_untracked_fusion_vendor_untouched": true
+  },
+  "actual_runs": {
+    "legacy40": {
+      "frames": 40,
+      "duration_s": 1.9501902750000002,
+      "updates": 40,
+      "matcher": "cuda_ndt",
+      "CUDA_Deskew": true,
+      "own_state_matching": true,
+      "transactions_sha256": "3ef3684de066506582bd46e9c83aabc2d2a8c3f96fc6eb3b3fd7c7b0b284c7ba",
+      "states_sha256": "53928dde559edec1b2850184d366cfcb533de8b5caad1ed2b18a97c78d434f58",
+      "summary_sha256": "6b1baa2828184108eb8c6b92fd330f22fb4b7611d86fe8a46c645151506343bf",
+      "history_horizon_ms": 500
+    },
+    "gicp_lap": {
+      "frames": 1468,
+      "duration_s": 73.350073732,
+      "updates": 1401,
+      "matcher": "small_gicp_cpu",
+      "CUDA_Deskew": true,
+      "own_state_matching": true,
+      "transactions_sha256": "7071d0b55742d5ba529b22df4bdd546072e0cc3e4043f03f5a6fa043594e11c8",
+      "states_sha256": "1c429097e9606ff95df5840cc58763448578b6d66aaf828aa295a76e53e9a13c",
+      "summary_sha256": "8ce04e2cba0762c5e4e084bc370326a1c11fe35cbad6568f7cf04a1e3d06dd16",
+      "history_horizon_ms": 500
+    },
+    "gicp_multilap": {
+      "frames": 4134,
+      "duration_s": 206.65003375400002,
+      "updates": 3956,
+      "matcher": "small_gicp_cpu",
+      "CUDA_Deskew": true,
+      "own_state_matching": true,
+      "transactions_sha256": "a603411bc1509f482b396f9d5b8dc648b99fd33903da61c49027bb34c4faee56",
+      "states_sha256": "b9ffd5cf9662369fada8bb6c92a3d2ecce45fd0c8619f0950f1ed72523a62a89",
+      "summary_sha256": "d4b86d288febfa47fccc7f0b36662aa3bf918bf07ffe4c9632542c78dcd7f28f",
+      "history_horizon_ms": 500,
+      "preselected_lap_updates": [
+        1401,
+        1293,
+        1262
+      ]
+    },
+    "ndt_fixed_lap": {
+      "frames": 1468,
+      "duration_s": 73.350073732,
+      "updates": 1468,
+      "matcher": "cuda_ndt",
+      "CUDA_Deskew": true,
+      "own_state_matching": true,
+      "transactions_sha256": "41bd2f259cfca5c0af8b26f4cef9460ef3b31779193e1b90c428c15f32ce0b98",
+      "states_sha256": "fdc8f46f99c064c7f4edbc8ecab607d8dfdf5dfd926c428decf44eba43ea8bbf",
+      "summary_sha256": "aeca984c732eac0103372cb9ce7de7f7ea670cad036167cd23dc52a8967e4706",
+      "history_horizon_ms": 500
+    },
+    "gicp_profile200": {
+      "frames": 200,
+      "duration_s": 9.950406708000001,
+      "updates": 189,
+      "matcher": "small_gicp_cpu",
+      "CUDA_Deskew": true,
+      "own_state_matching": true,
+      "transactions_sha256": "c09743f3fe9a2e68333e805e13759b7694861654960b46b233982e14c06747eb",
+      "states_sha256": "166e2d48172dad659a142fbd9d6b4282de5df25221bd7f10913e2ea5e9934d2f",
+      "summary_sha256": "60eb2d068c407fa7c16d5d2bbb78c26df630e05d4eba3dae9eab3874147cf4b4",
+      "history_horizon_ms": 500
+    },
+    "gicp_profile_lap": {
+      "frames": 1468,
+      "duration_s": 73.350073732,
+      "updates": 1401,
+      "matcher": "small_gicp_cpu",
+      "CUDA_Deskew": true,
+      "own_state_matching": true,
+      "transactions_sha256": "27d8bde920e9206c4c820b3f057f5120f3819f98c646d91318fdf5b7b420b52a",
+      "states_sha256": "e37d6fe910d9e3b2773bab53b0ac6408492ecfab9988cc361bfff37c92d02e85",
+      "summary_sha256": "6a77c1ef5eeea98e2f6bbfc87708a7a6c0611ff111b08214c8d38fc99bbde770",
+      "history_horizon_ms": 500
+    }
+  },
+  "same_input_AB": {
+    "frames": 1468,
+    "ndt_valid_converged": 1468,
+    "gicp_valid_converged": 1399,
+    "matches_sha256": "36a36ba4831e58ce99bd6b96137ac977b8bd780620e489b6d88a11f2a65fbff8",
+    "probes_sha256": "e500a3700100bfa18bba306550e33fe209a9c999df96ab159f464a5394cf464c"
+  },
+  "preserved_failed_adapter": {
+    "frames": 1468,
+    "valid_GICP": 0,
+    "matches_sha256": "5c6588afd1c5cec71a9a10cfb0ae0218da33a7da2c058464290aee9ab43a66b4",
+    "snapshot_sha256": "2c18496d1b205344da38ae39ba30f7974709aa65b12620784e84155c648bdf1e",
+    "original_binary_observed_sha256": "deca16ae88bb29421314d26dd50e19a45626445a658a72528fa30adbf973d9d3",
+    "old_binary_not_retained_but_source_and_logs_preserved": true
+  },
+  "backend_binary_sha256": "9b7b492140841681e7785e3279d77369c4b09a12715080fecd083cc3583076b0",
+  "source_code_sha256": {
+    "src/ndt_global/matcher_geometry.py": "43cb01ac98d83786f19ce566415cfa16fc68c35f1402288b6ccc2405ec1dd20f",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/evaluate.py": "d998af258d91d2fe8595afe119c86157844dd59a664310cae7c96431959635ab",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/build_reports.py": "076ce189a14716f899c9ab213acdd42343cc919d13c3798442f8800c71dcabe7",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/profile_runtime.py": "c63d536de13f047e2b60dc06f1c86e682b5a7c1b30f7001772138eec02c57871",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/analyze_ab.py": "0a677412b48c4296dfd0cffddd5b2131651d72e11a6b96ed3b28522c57118029",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/match_ab.py": "45270bd73ab36173c395720cf430fbc82eefe8b51ae1591bf95bbcd0be9edf9b",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/feedback_diagnostics.py": "cd5179285d38809d2b4edc08e5975608a4b05dded7514e1a3f61e4685c787917",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/geometry_stability.py": "42602b2b15e8efb7aae58e094c463b901986a090b419c07c080be0069876b943",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/runtime_journal.py": "c40fae5e47c27f984c8368b251852567c35252cdca1b5ab30c3f5e1325076c7b",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/eigenstructure.py": "f28be7e89961000c734a7c098e1c00e4dfa54a22447a8bbf7dcba271c6d86ba9",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/native_diagnostics.py": "dd73ff9f69097cd483f3f95299436d9e44a73f13b8fccafdb3c7fc3c67863ce6",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/run_loop.py": "c1a081f45029fccd7f919846059031ca0ef0b2dc4481d35baf752ec68248f5c9",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/seal.py": "dea134d06c3a9b271729a67469f4626cbcc453a6930228e3d9995fd8db27b655",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/gicp_service.cpp": "07587f5467596c30f236f6b67be43559b67519fa67f289173196cd4cd89c985e",
+    "/home/ltc/flyagle/ieskf-aw/experiments/phase_aw_native_gicp_fusion/build_gicp.sh": "dde7206663a5535e58b2ef00257122354470796d8e16c0ad2e0de828a48f8fcc"
+  },
+  "reference_cache_sha256": "287dbba10a7801666f33de30a82f73908f08edb95d252298cc0c0fe2fee01f68",
+  "GNSS_original_CSV_currently_missing": true,
+  "preexisting_source_report_files_unchanged": 183,
+  "qualification": {
+    "source_numeric_function": "VERIFIED",
+    "single_and_three_lap_execution": "VERIFIED",
+    "engineering_reference": "CONDITIONAL",
+    "replacement_accuracy": "FAILED",
+    "adaptive_directional_R": "NOT_IMPLEMENTED_INSUFFICIENT_EVIDENCE",
+    "covariance_calibration": "NOT_VALIDATED",
+    "strict_offline_50ms_deadline": "FAILED",
+    "ROS20Hz100Hz": "NOT_VALIDATED",
+    "production": "NO_GO"
+  },
+  "main_merge": false,
+  "branch": "research/phase-aw-native-gicp",
+  "private_payloads_committed": false,
+  "reference_input_identity": {
+    "motion": {
+      "exists": true,
+      "expected_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+      "actual_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c"
+    },
+    "as_npz": {
+      "exists": true,
+      "expected_sha256": "3f8a37b9c97ba90a88926c571480f72e3428c3cbe79ea1c41358142221463743",
+      "actual_sha256": "3f8a37b9c97ba90a88926c571480f72e3428c3cbe79ea1c41358142221463743"
+    },
+    "gnss": {
+      "exists": false,
+      "expected_sha256": "7cd9aaa4f17d943db4138a77d6cf2136da6b3d6da8a8aac6a976de0f5f563d55",
+      "actual_sha256": null
+    },
+    "historical_gnss_config": {
+      "exists": true,
+      "expected_sha256": "26a39d620560d1bdfeb1cec77b0b27db2d7f8fc5b44c6bb49711dd1d1f32c7a7",
+      "actual_sha256": "26a39d620560d1bdfeb1cec77b0b27db2d7f8fc5b44c6bb49711dd1d1f32c7a7"
+    },
+    "historical_urdf": {
+      "exists": true,
+      "expected_sha256": "0e6483614dc2f8a44360e86c4af2477edd0af17d528737a03cb437d522404d98",
+      "actual_sha256": "0e6483614dc2f8a44360e86c4af2477edd0af17d528737a03cb437d522404d98"
+    },
+    "left": {
+      "exists": true,
+      "expected_sha256": "b4bbb5e0f8a05c61aa3191f7bb254a2a7ccde87152e1f6a29e4f9e6051ae7e3c",
+      "actual_sha256": "b4bbb5e0f8a05c61aa3191f7bb254a2a7ccde87152e1f6a29e4f9e6051ae7e3c"
+    },
+    "right": {
+      "exists": true,
+      "expected_sha256": "4fccdef97771e510ca185e9170987d87e4ab88a2db86991e6ddcc68eea632a2b",
+      "actual_sha256": "4fccdef97771e510ca185e9170987d87e4ab88a2db86991e6ddcc68eea632a2b"
+    },
+    "quality": {
+      "exists": true,
+      "expected_sha256": "90a5da2a0fe176ad016eeb556073929b067dab762ac2eef8df116cfb02c48500",
+      "actual_sha256": "90a5da2a0fe176ad016eeb556073929b067dab762ac2eef8df116cfb02c48500"
+    }
+  },
+  "reference_bound_sha256": "d4dadae5448c88541742bfc1eb098257d8271b1e31fb39062323883ffd896a06",
+  "private_visual_outline_sha256": "a2450e12179acd1bb1049d94b48f579c2e811bff49899648c4d313c2ae2de9cf",
+  "runtime_binary_sha256": {
+    "CUDA_NDT": "b3980f4e727d9eaf64fa966313ceda68c8eae0d2868816357a38e2447596a1cc",
+    "CUDA_Deskew": "3c8ddda9dbaf11458f619053a1c8ea214f39d51dcd2c8361fdcef6112701a5ce",
+    "CUDA_NDT_library": "64681da4436ab996211411d8962bff8f64f51a11359d6b07947a81bcf7ead002"
+  },
+  "compiler_version": "c++ (Ubuntu 13.3.0-6ubuntu2~24.04.1) 13.3.0"
+}
