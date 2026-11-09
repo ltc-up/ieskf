@@ -1,5 +1,5 @@
 {
-  "phase": "AV_design",
+  "phase": "AV_design_implementation",
   "baseline": "c647ac3224adee775d30dc6f9553c9b83612c060",
   "research_commit": "enclosing commit",
   "production_modified": false,
@@ -11,5 +11,11 @@
     "include/ekf_localizer/aged_object_queue.hpp": "a590ff6ba9e73b74174145b6f55d4a1e017f62e7e78b482167491a3b0271147e",
     "config/ekf_localizer.param.yaml": "5391d1d562121533b6856f51bbb2177bf1b37d298ec54f645247d35f64680aaf"
   },
-  "frozen_AR_ledger_sha256": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc"
+  "frozen_AR_ledger_sha256": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+  "new_tests": 12,
+  "total_tests": 195,
+  "failed_tests": 0,
+  "guarded40_actual_CUDA": true,
+  "guarded40_accepted": 40,
+  "original_models_modified": false
 }
