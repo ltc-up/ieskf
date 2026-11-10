@@ -1,0 +1,27 @@
+{
+  "observation_modes": [
+    "sensor_x",
+    "sensor_planar_speed"
+  ],
+  "sensor_covariance_m2_s2": [
+    [
+      0.26,
+      0
+    ],
+    [
+      0,
+      0.26
+    ]
+  ],
+  "low_speed_m_s": 1.0,
+  "timeout_s": 0.1,
+  "recovery_dwell_s": 0.1,
+  "gross_dynamic_innovation_change_m_s": 5.0,
+  "optical_zero_m_s": 0.001,
+  "wheel_zero_conflict_m_s": 5.0,
+  "history_s": 0.5,
+  "source_overlap": "exclusive forward update, never independent wheel+optical",
+  "GNSS_runtime": false,
+  "geometry_policy": false,
+  "statistical_covariance_qualified": false
+}
