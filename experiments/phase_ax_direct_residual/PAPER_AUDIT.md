@@ -1,0 +1,11 @@
+# Papers actually accessible and implementation scope
+
+[FAST-LIO2](https://arxiv.org/html/2107.06829v1), IV-B2/3: read direct implicit point-plane residual, fixed propagation prior, iterative manifold linearization and state-size information solve. AX borrows this structural pattern, using its own fixed-map/full15D/lever/delay conventions and explicit common-noise marginalization. It does not port ikd-Tree/online mapping/extrinsic estimation or claim the algorithm is novel.
+
+[UVP-LIO](https://www.mdpi.com/2220-9964/15/9/380),3.3–3.5: read uncertainty-aware voxel candidate search, plane-consistency association, plane-thickness residual weighting and covariance-weighted incremental map statistics. AX borrows the separation of association, surface quality and residual uncertainty. Its fixed PCD has neither validated point covariance nor online pose-weighted map history, so those mapping/update equations and chi-square confidence meanings are not transplanted. Using predictedP again inside residual noise would need correlation analysis.
+
+[TIM2025.3650261](https://ieeexplore.ieee.org/abstract/document/11322542): publisher abstract/introduction confirm IESKF and point/line/plane uncertainty theme. Full algorithm/PDF retrieval was blocked by publisher access/robot checks in this environment; the author page's abstract appears to describe a different Voxel-LIVO system. Therefore detailed equations/reproduction are **NOT_VALIDATED**, and no claim is made to implement its specific uncertainty model.
+
+[Empirical uncertainty evaluation](https://research.uni-hannover.de/en/publications/empirical-uncertainty-evaluation-for-the-pose-of-a-kinematic-lida/): primary university record describes calibrated laboratory Laser-Tracker reference and Mahalanobis consistency evaluation. Full publisher PDF was inaccessible. AX follows the distinction between numerical covariance and independently tested uncertainty; it cannot reproduce that laboratory consistency test with the unqualified GNSS reference. No NEES/NIS pass is asserted and no inaccessible algorithm is claimed as implemented.
+
+These access limitations remain failures to fully satisfy requested paper-level replication, not a reason to invent citations or stop actual implementation. All implemented mathematics is derived and tested separately in ITERATED_MODEL.md and numerical tests.

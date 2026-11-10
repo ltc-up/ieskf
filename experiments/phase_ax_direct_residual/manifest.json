@@ -1,0 +1,29 @@
+{
+  "phase": "AX",
+  "stage": "implementation_and_numerical_validation",
+  "frozen_main": "c647ac3224adee775d30dc6f9553c9b83612c060",
+  "AW_source": "e15e7a235a096dbf67dcf154b5d88c8ec3e6e4e4",
+  "research_code_commit": "CONTAINING_COMMIT; final results manifest records implementation commit",
+  "small_gicp_upstream": "fa0cfc983417c044b6036f71dfa448038bb9c820",
+  "map_target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+  "motion_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+  "frozen_configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+  "code_sha256": {
+    "src/geometry_ieskf/direct_iterated.py": "ae7f6ffaab12c4818d5a2492fafaf8cc0d5a9e0cd6e3e571c2f9da2488b8f9a7",
+    "experiments/phase_ax_direct_residual/direct_service.cpp": "f8b5a08720a2990b07370b18a858ffab6af141f183c47f0c1875e811063a8b31",
+    "experiments/phase_ax_direct_residual/run_loop.py": "7800b18a2308641d6fc14ca924e2b606b38c2785c90e2deee44ad9c0b0ac8677"
+  },
+  "tests": {
+    "passed": 204,
+    "failed": 0,
+    "skipped": 0,
+    "new_AX": 9
+  },
+  "qualification": "EXPERIMENTAL_ONLY_NO_DEFAULT_CHANGE",
+  "actual_A_frames": [
+    1468,
+    4134
+  ],
+  "actual_B_frames": 531,
+  "private_payloads": "EXTERNAL_AUTHORIZED_PERSISTENT_STORAGE_ONLY"
+}

@@ -1,0 +1,8 @@
+// AX standalone readout adapter. Original authorized CUDA library is external.
+#include "gpu_voxel_map.cuh"
+#include <fstream>
+#include <vector>
+#include <iostream>
+using namespace ndt_gpu;
+template<class T>std::vector<T> readgpu(const T*p,size_t n){std::vector<T> x(n);if(cudaMemcpy(x.data(),p,n*sizeof(T),cudaMemcpyDeviceToHost)!=cudaSuccess)throw std::runtime_error("CUDA_COPY");return x;}
+int main(int argc,char**argv){if(argc!=3)return 2;std::ifstream f(argv[1],std::ios::binary);uint64_t n;f.read((char*)&n,8);if(!f||n>20000000)return 3;PointCloud p(n);f.read((char*)p.data(),12*n);if(!f)return 4;cudaStream_t s;cudaEvent_t a,b;cudaStreamCreate(&s);cudaEventCreate(&a);cudaEventCreate(&b);cuda_detail::GpuNdtTarget t;NdtGpuConfig cfg;cfg.resolution=1.5;cuda_detail::enqueueTargetBuild(t,p,1,cfg,s,a,b,nullptr);cudaStreamSynchronize(s);size_t k=t.voxel_slots;auto counts=readgpu(t.count.data(),k);auto keys=readgpu(t.keys.data(),k);auto x=readgpu(t.mean_x.data(),k),y=readgpu(t.mean_y.data(),k),z=readgpu(t.mean_z.data(),k),xx=readgpu(t.icov_xx.data(),k),xy=readgpu(t.icov_xy.data(),k),xz=readgpu(t.icov_xz.data(),k),yy=readgpu(t.icov_yy.data(),k),yz=readgpu(t.icov_yz.data(),k),zz=readgpu(t.icov_zz.data(),k);uint64_t valid=0;for(auto c:counts)valid+=c>0;std::ofstream o(argv[2],std::ios::binary);o.write((char*)&valid,8);for(size_t i=0;i<k;i++)if(counts[i]){o.write((char*)&keys[i],8);o.write((char*)&counts[i],4);float row[9]={x[i],y[i],z[i],xx[i],xy[i],xz[i],yy[i],yz[i],zz[i]};o.write((char*)row,36);}std::cout<<"{\"input_points\":"<<n<<",\"gaussians\":"<<valid<<",\"resolution_m\":1.5,\"actual_CUDA_builder\":true}"<<std::endl;cudaStreamDestroy(s);cudaEventDestroy(a);cudaEventDestroy(b);}

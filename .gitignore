@@ -40,3 +40,6 @@ experiments/**/large/
 
 *.egg-info/
 .pytest_cache/
+
+# Linked research worktrees use a private data symlink.
+/data
