@@ -1,0 +1,135 @@
+{
+  "phase": "BB",
+  "parent_BA": "3606769f3ec1c2c8d4dc55538e7a4c868787af66",
+  "frozen_original": "c647ac3224adee775d30dc6f9553c9b83612c060",
+  "research_code_commit": "fa085142e5816fa617532ddb6f915fae7c0cc1d5",
+  "AY": "364d246f282d7f62b4794e9ccfb26731b8cdcd45",
+  "AW_source": "e15e7a235a096dbf67dcf154b5d88c8ec3e6e4e4",
+  "FAR_LIO_source": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+  "production_read_only": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "small_gicp": "fa0cfc983417c044b6036f71dfa448038bb9c820",
+  "bag_sha256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "map_sha256": "8561cd2254ed35164134a3146e89dfcd403643193ff11c84db93fde2b77ad52a",
+  "bag_map_identity": "Inherited original raw bag/PCD SHA, not rehashed in BB; actual Target and per-frame raw sources verified during CUDA loop",
+  "input_sha256": {
+    "motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "single_lap_bindings": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+    "multilap_bindings": "c2ccf4bd3a98ef071c6e9e0e298b493be67d1300124d100a16bbd59220b337e8",
+    "target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "frozen_config": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+    "CUDA_matcher": "b3980f4e727d9eaf64fa966313ceda68c8eae0d2868816357a38e2447596a1cc",
+    "CUDA_Deskew": "3c8ddda9dbaf11458f619053a1c8ea214f39d51dcd2c8361fdcef6112701a5ce",
+    "scan_pair_runtime": "9b7b492140841681e7785e3279d77369c4b09a12715080fecd083cc3583076b0",
+    "reference_cache": "287dbba10a7801666f33de30a82f73908f08edb95d252298cc0c0fe2fee01f68",
+    "optical": "441a961e0a6b2e60082a09450b53d57b9d87b07c5c17d23c61aa06a2d1e76a7b",
+    "BA_filtered": "514ad97f953a03d5a952bbb221e07a49e992bd27661e0c3351216b333ad6655e"
+  },
+  "private_artifacts_sha256": {
+    "frozen_pairs.jsonl": "ddde0b79f13b0ed3425012d2fcf3c99ad9e27fbc7a6195b733574897d9af0a81",
+    "frozen_velocity.json": "8e53a5ae4cbec53965d8134b9a94e095d10816358db947882215e3417299b4c6",
+    "source_study.json": "da5b81cd218db7f6f9e4cf4ecea9026930c603b46a9ba2160d667ae65a0e6718",
+    "peak_checks.private.json": "43a3b53d875ade42476c01bff73f1717f9c832f69d47049824da69dac2df5022",
+    "rebuilt_pairs.jsonl": "d9189eadb7ca74656dd73848ea17f859798286eb088a0c0b47c65f85d182f899",
+    "scan_pair_service_rebuilt": "5956a6e40531ecdf85b74415fe3f4585e64f7aa3b1bbda17df500bd168b2d52d",
+    "final_prefix_parity.json": "9e396a90e95bf0ba030ab59d10efecad23a772aa2c50be3dbe73b81e1b932738",
+    "frozen_checks.json": "ca904c39c0e8f1e1dc59bd07d7abc349e59c0ce06dfe7847868ca3803e1d3300",
+    "inherited_byte_audit.json": "65dba47483ef9855a807ddfb7441e2a063823256ce1e37fb09e447c65fffea10",
+    "tests_final.log": "2987a5ac5e1fb8ed48bd9b77b2287d85dd89b95bb7c2fc2d882f204d086cd076",
+    "final_R40_parity.json": "9e396a90e95bf0ba030ab59d10efecad23a772aa2c50be3dbe73b81e1b932738"
+  },
+  "public_files_sha256": {
+    "experiments/phase_bb_lidar_velocity/ALGORITHM.md": "3cc5dc534ee0ff7129eb50496c8cb6668e20103e2677a7c6a992e2cf7e087626",
+    "experiments/phase_bb_lidar_velocity/FAILURES.md": "a74f935c356e3394c8cb4a36fa74ee5ecf9dd7e16c015ed0e8dc014c37369646",
+    "experiments/phase_bb_lidar_velocity/FINAL_CONCLUSION.md": "9f5435b6707a92ef5d4eb07dcb558f53b01f22d193ce3f8ea6aefa756a1454af",
+    "experiments/phase_bb_lidar_velocity/REPRODUCE.md": "b80cfac196c7de18f1522ddc6eca9187dc04eef927cf917c5f0a1f4476789a45",
+    "experiments/phase_bb_lidar_velocity/RESULTS.md": "92e99dc5f48e52213a8178df14919448384b780c25b0ba46893116fc409ef62c",
+    "experiments/phase_bb_lidar_velocity/TEST_PLAN.md": "216985ce9b412b3257beaaca59a8b94cccc2865d0d74625c8ad7dbc07427ea42",
+    "experiments/phase_bb_lidar_velocity/THIRD_PARTY_NOTICES.md": "b78fc66818e7097ea7dd5e6163170dd8cafdbe7d9e90ee5ea2e164b0be6a2cd7",
+    "experiments/phase_bb_lidar_velocity/aggregate.py": "e21e7bce76c487d8306eaafb2521d3648a5a16a2b19ff7532d49eaa532e0f07b",
+    "experiments/phase_bb_lidar_velocity/analyze_velocity.py": "953d002108da3901ddfdc7763783808e51a3ee142488779ad7df15c5e11d4574",
+    "experiments/phase_bb_lidar_velocity/build_pair.sh": "d8402e7d752ff20757525cc7d5fe2c282c282c1f97aab2986e05195a33c4dc37",
+    "experiments/phase_bb_lidar_velocity/diagnose_pairs.py": "f4626e7c273a7fac13b1da5c189da645d27948cfaf2c54c83e1271c57915c8ac",
+    "experiments/phase_bb_lidar_velocity/launch.py": "568ce184935e78a55a6bc1c75a59425effd229fdda0e0420cc775e857a977490",
+    "experiments/phase_bb_lidar_velocity/peak_checks.py": "24e8664404789c96719556a8c7bdc36147e0b43528f227a1b20c127fee60da04",
+    "experiments/phase_bb_lidar_velocity/results/aggregate.json": "fe013d8ebccdf7751d25479a17399e07fb6db4721a600366551d964f8773b2e0",
+    "experiments/phase_bb_lidar_velocity/results/corners.png": "73be161edce41fbe2fc41181e3677d2d0e3eff06bb9ff89d664f6b6dc7711656",
+    "experiments/phase_bb_lidar_velocity/results/reference_multilap.png": "71cde8bc2ebb5cc2d4ce325773b76a230622e048563d12f014be25dc08037d8c",
+    "experiments/phase_bb_lidar_velocity/results/speed_latency.png": "09660c8d283285b358e891789ff02145d623fd5c944242eb929688a8e4bfb0a3",
+    "experiments/phase_bb_lidar_velocity/run_loop.py": "4881addd61cd0105edefe42eaf3a9d8cf626977012dc95394d2c9c21bf436bdd",
+    "experiments/phase_bb_lidar_velocity/scan_pair_service.cpp": "07587f5467596c30f236f6b67be43559b67519fa67f289173196cd4cd89c985e",
+    "experiments/phase_bb_lidar_velocity/source_study.py": "1081128f044809e548dd007f5e1a86c452cec4b2917bf9dcf9ac2c0d891aaa11",
+    "experiments/phase_bb_lidar_velocity/write_reports.py": "4a667a649c51eda0ed1bb2f4fbee5ee9c4ff2c7352d6b756e34e128e8e1bc5df",
+    "src/geometry_ieskf/lidar_velocity.py": "883606bcda67b568417b5d4051da6960447d958de5eef9ca5a1bfa08ce59eb9f",
+    "src/ndt_global/lidar_speed.py": "e931f1b99a2ed820b7b856fba9c9a0fc982d15bd8755feb0e698c7609f7ea87d",
+    "tests/test_bb_lidar_velocity.py": "9b53e4d06830150f441e77f5e7bf30100d8e0e5b63c3e1d712abcbde6e8d294a"
+  },
+  "tests": {
+    "total": 234,
+    "new": 14,
+    "failed": 0
+  },
+  "runs": {
+    "P_lap": {
+      "frames": 1468,
+      "NDT_accepted": 1468,
+      "transactions_sha256": "2487536eb81b9d62956dbce5f884a74f623bea1772fdb50e9001007df5ff7d85"
+    },
+    "L_lap": {
+      "frames": 1468,
+      "NDT_accepted": 1468,
+      "transactions_sha256": "1a852a0330d65d802d89b0ff23b27f95c6c4f426d0e7b2ea2bc600c5abbfb49e"
+    },
+    "P_multilap": {
+      "frames": 4134,
+      "NDT_accepted": 4134,
+      "transactions_sha256": "7db6a5567a1f158b8dba6c4bee6fb502035fb64ce8ff67ed88e6b84c6a29c2cc"
+    },
+    "P_final_multilap": {
+      "frames": 4134,
+      "NDT_accepted": 4134,
+      "transactions_sha256": "7b8149409b5a6926afc09a0e1796a82989db6fe59931ecf23f2c7736e5ded8fd"
+    },
+    "P_fault": {
+      "frames": 1468,
+      "NDT_accepted": 1468,
+      "transactions_sha256": "371adc6ee04f1204df42c79408e3cbb91fe618a04006b726892b5f63dfb091f9"
+    },
+    "R_lap": {
+      "frames": 1468,
+      "NDT_accepted": 1468,
+      "transactions_sha256": "9d899a3535bee272c36bc1c822c1f4dfb6db706c578729b20de83a35fde78df6"
+    },
+    "R_multilap": {
+      "frames": 4134,
+      "NDT_accepted": 4134,
+      "transactions_sha256": "50b9535e28be5c668747302cddc0a942761f4abf3769a85bdd18d0f8e4843243"
+    }
+  },
+  "prefix_runs": {
+    "P40": 40,
+    "M40": 40,
+    "R40": 40,
+    "R_final40": 40
+  },
+  "real_CUDA_Deskew": true,
+  "real_CUDA_NDT": true,
+  "real_scan_to_scan_GICP": true,
+  "own_state_feedback": true,
+  "lap_reset": false,
+  "lidar_usage": "Velocity-only next-NDT-seed auxiliary; no independent Kalman velocity/relative pose/pseudoposition update",
+  "source_uncertainty": "Uncalibrated geometry, interval and shared errors; no statistical R synthesized",
+  "overall_repair": "FAILED",
+  "independent_accuracy": "NOT_VALIDATED",
+  "GNSS_evaluation": "CONDITIONAL fixed0/75/150ms; no feedback",
+  "realtime": "Hard50ms failed, ROS2 online not validated",
+  "main_modified": false,
+  "production_modified": false,
+  "private_reproduction": "Requires authorized original loop44/map0105/raw sensor bindings and existing CUDA services; no private payload redistributed",
+  "final_guard_normal40_parity": {
+    "seed": 0.0,
+    "P": 0.0,
+    "NDT": 0.0,
+    "K": 0.0,
+    "delta": 0.0
+  }
+}
