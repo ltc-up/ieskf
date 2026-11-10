@@ -1,0 +1,14 @@
+# Retained failures and limits
+
+1. **Overall repair FAILED.** Every candidate improves some engineering metrics but segment8 lateralP95 regresses; neither a lower global RMSE nor100% NDT convergence overrides that failure. No candidate becomes default or merges into main.
+2. L is a real attribution experiment: adding only lateral optical information does not yield meaningful global improvement. XY forward-source substitution provides much of the overall benefit; it would be misleading to credit all benefit to lateral sensing alone.
+3. Static mounting-yaw16D does not solve the remaining normal-section regression. Its modeled calibration precision is not physical calibration, and it is not selected over the simplerXY15D candidate.
+4. The first calibration numerical test exposed a12x12 noise Q incorrectly embedded into a15D process block. Corrected implementation embeds GQG.T; retained private `calibration_numeric.log` records the failure. Corrected numerical tests passed before any C real run.
+5. Initial frozen verification encountered a missing original historical GNSS CSV path. The final verification explicitly records ORIGINAL_PATH_UNAVAILABLE; actual evaluation uses the already frozen AT/AW reference cache. Historical raw CSV byte revalidation at that original location is not claimed. The failed check log remains private.
+6. Installed sensor-axis/lever, clock, optical R, axis correlations and effective independent sample rate remain uncalibrated. The actual raw optical stream is verified; its absolute physical accuracy is not.
+7. Non-fused optical packets are same-instrument and temporally correlated; their residual improvement is consistency evidence, not independent truth or a valid calibration/NIS test. No NEES/NIS PASS, certified correct-peak rate or independent RMSE is claimed.
+8. Optical substitution fallback is tested, but real recorded data have little qualified-status interruption. No assertion of safe behavior under long optical failure or wrong-but-valid optical values.
+9. Real single/triple-lap runs complete; occasional CPU long tails remain. The original transaction timer excludes pre-match sensor advancement. Additional cycle profiling includes it and still exceeds50ms at least once. Actual ROS2 scheduling/100Hz publication, stale queues and hard deadlines are NOT_VALIDATED.
+10. Vehicle/tyre physical boundary safety, true map datum and GNSS physical0/75/150ms delay remain unresolved. Historical visualization geometry is not certified safety evidence; it is not used to choose this candidate.
+
+All run directories, state/P, original points, sources, NDT records, full optical revisions, stdout/stderr and evaluations remain in the authorized persistent private AY directory. No failed run is overwritten. No future reference or historical final NDT pose is a candidate runtime input.

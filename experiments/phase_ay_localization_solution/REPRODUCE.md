@@ -1,0 +1,17 @@
+# Authorized reproduction
+
+Check out this independent AY branch. Requires the already authorized AR CUDA matcher100 and persistent Deskew service, same map0105 Target, raw loop44 bag, original motion/static TF bindings, original AS/AT reference cache, ROS2 message installation and CUDA driver. Public Git intentionally cannot reconstruct restricted points/maps/extrinsics. No new large dataset or new production source is required. Exact actual file SHA identities are in manifest.json; bag/PCD SHA are inherited, not freshly recomputed by AY. Actual Target/motion/config/cache/binaries were hashed.
+
+1. Restore the existing private `data` bindings/symlink, without copying them into Git. Source ROS2 and the authorized original message install. Set `AY_BAG` to the loop44 SQLite file and `AY_PRIVATE` to a new persistent private output directory. No script deletes/overwrites existing run directories.
+2. Run `bash experiments/phase_ay_localization_solution/reproduce.sh`. It extracts raw optical/status without GNSS, then runs original40 and the three candidate1468/4134 causal jobs and separate evaluation. The explicitly fixed reference cache is read only by evaluation. The restored AW utilities are byte-exact from e15e7a2; the C evaluator only selects physical15 rows for gain diagnostics, not estimator covariance truncation.
+3. For performance add `--profile` to a fresh XY single-lap run named `XY_cycle_lap`. Keep an unprofiled XY run for exact seed/P/NDT/K/delta parity. Historical initial `XY_profile_lap` is preserved separately. Full cycle begins before sensor advance; original processing timer starts after it. Neither changes recorded event time.
+4. `PYTHONPATH=src OPENBLAS_NUM_THREADS=1 PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests`
+5. `PYTHONPATH=src python3 experiments/phase_ay_localization_solution/verify_frozen.py`
+6. Run mechanism diagnostics with `--private-root "$AY_PRIVATE" --motion data/phase_ao_ap_validation/loop44.json --baseline-priors data/phase_au_prediction_feedback/native_full_priors.json --as-evaluation data/phase_as_accuracy_quality/single_lap/evaluation.npz --output "$AY_PRIVATE/mechanism.json"`. Full state/reference outputs stay private.
+7. `PYTHONPATH=src python3 experiments/phase_ay_localization_solution/aggregate.py --private-root "$AY_PRIVATE" --output experiments/phase_ay_localization_solution/results`
+
+The runner creates real Sources from original threeLiDAR and its own trajectory; every NDT update enters the existing bounded historical checkpoint replay. Map, crop,100iterations, FitnessR, IMU and initial state stay frozen. Optical source rules/model are in ALGORITHM_AND_EVIDENCE.md. No geographic segment index or GNSS reference is available to source selection.
+
+Private retained artifacts: extraction/audit, baseline40, optical_lateral40, XY40,C40; L_lap/L_multilap,XY_lap/XY_multilap,C_lap/C_multilap; both profile runs; states/fullP,transactions,rawSource/Target binding,all optical update revisions,metrics,evaluation plots,mechanism time series,stdout/stderr,initial failed numerical/frozen-check logs and final regression. Public results contain only aggregates and de-identified plots.
+
+Qualification: overall repair FAILED; standalone optional candidate only. Do not merge into main, change production defaults or treat engineering reference as certified truth. Revert by selecting original baseline policy or using frozen main; original files are untouched.

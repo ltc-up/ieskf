@@ -1,0 +1,106 @@
+{
+  "phase": "AY",
+  "research_commit": "enclosing commit",
+  "baseline_commit": "c647ac3224adee775d30dc6f9553c9b83612c060",
+  "branch": "research/phase-ay-localization-solution",
+  "bag_sha256_inherited_from_AX": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "bag_rehashed_in_AY": false,
+  "map_PCD_sha256_inherited": "8561cd2254ed35164134a3146e89dfcd403643193ff11c84db93fde2b77ad52a",
+  "actual_used_input_sha256": {
+    "motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "lap_bindings": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+    "multilap_bindings": "c2ccf4bd3a98ef071c6e9e0e298b493be67d1300124d100a16bbd59220b337e8",
+    "reference_cache": "287dbba10a7801666f33de30a82f73908f08edb95d252298cc0c0fe2fee01f68",
+    "optical": "441a961e0a6b2e60082a09450b53d57b9d87b07c5c17d23c61aa06a2d1e76a7b",
+    "frozen_config": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+    "matcher_binary": "b3980f4e727d9eaf64fa966313ceda68c8eae0d2868816357a38e2447596a1cc",
+    "deskew_binary": "3c8ddda9dbaf11458f619053a1c8ea214f39d51dcd2c8361fdcef6112701a5ce"
+  },
+  "frozen_verification": {
+    "frozen_checks": {
+      "AT_motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+      "AT_as_npz": "3f8a37b9c97ba90a88926c571480f72e3428c3cbe79ea1c41358142221463743",
+      "AT_gnss": {
+        "status": "ORIGINAL_PATH_UNAVAILABLE",
+        "expected_sha256": "7cd9aaa4f17d943db4138a77d6cf2136da6b3d6da8a8aac6a976de0f5f563d55"
+      },
+      "AT_historical_gnss_config": "26a39d620560d1bdfeb1cec77b0b27db2d7f8fc5b44c6bb49711dd1d1f32c7a7",
+      "AT_historical_urdf": "0e6483614dc2f8a44360e86c4af2477edd0af17d528737a03cb437d522404d98",
+      "AT_left": "b4bbb5e0f8a05c61aa3191f7bb254a2a7ccde87152e1f6a29e4f9e6051ae7e3c",
+      "AT_right": "4fccdef97771e510ca185e9170987d87e4ab88a2db86991e6ddcc68eea632a2b",
+      "AT_quality": "90a5da2a0fe176ad016eeb556073929b067dab762ac2eef8df116cfb02c48500",
+      "AR_transactions": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+      "AS_F_transactions": "dfd6e4db1ef8b6aa2124b761f7601afb77edebd85fa9dab8963130bfe582f7c1",
+      "AS_N_transactions": "f16d1d05cea280bc23458eb1bf3575b6e672dd6b764caedf9b3780c44fa85171",
+      "frozen_config": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f"
+    },
+    "original_tracked_files_unchanged": 183
+  },
+  "total_tests": 195,
+  "new_tests": 12,
+  "failed_final_tests": 0,
+  "initial_failed_test": "16D process noise mapping; fixed before C real runs; retained private failure log",
+  "actual_CUDA": true,
+  "actual_Deskew": true,
+  "GNSS_runtime_input": false,
+  "own_causal_seeds": true,
+  "per_lap_reinitialization": false,
+  "baseline_regression_frames": 40,
+  "baseline_key_matrix_max_error": 0,
+  "profiling_regression_frames": 1468,
+  "profiling_key_matrix_max_error": 0,
+  "candidates": {
+    "optical_lateral": {
+      "single_lap_frames": 1468,
+      "continuous_frames": 4134,
+      "all_NDT_accepted": true
+    },
+    "optical_xy": {
+      "single_lap_frames": 1468,
+      "continuous_frames": 4134,
+      "all_NDT_accepted": true
+    },
+    "optical_xy_static_yaw": {
+      "single_lap_frames": 1468,
+      "continuous_frames": 4134,
+      "all_NDT_accepted": true
+    }
+  },
+  "statistical_covariance": "NOT_VALIDATED",
+  "independent_accuracy": "NOT_VALIDATED",
+  "overall_acceptance": "FAILED_NORMAL_SEGMENT_REGRESSION",
+  "production": "NO_GO",
+  "main_changed": false,
+  "source_reuse": {
+    "AW_commit": "e15e7a235a096dbf67dcf154b5d88c8ec3e6e4e4",
+    "files": [
+      "runtime_journal.py",
+      "evaluate.py",
+      "profile_runtime.py",
+      "run_loop.py",
+      "THIRD_PARTY_NOTICES.md"
+    ]
+  },
+  "code_sha256": {
+    "experiments/phase_ay_localization_solution/aggregate.py": "8dbdd84937018e0abecee45539b305c8be462b584fb29749d343b0e23376f63e",
+    "experiments/phase_ay_localization_solution/evaluate.py": "32a8a31cadd4dbbff842963c606e251714a861266df157391fecab3f7f00c079",
+    "experiments/phase_ay_localization_solution/extract_optical.py": "ff7e7f3918060db1866cdc0f368796736b33bbee84d00ff70c48c1ffbdf601df",
+    "experiments/phase_ay_localization_solution/mechanism.py": "b640b21d0379e7562f6cbbd13a3dd1350fc7d3aab93df05976fdac5d6ec92a85",
+    "experiments/phase_ay_localization_solution/reproduce.sh": "7a699be6ec23bc87b5f963f30205fa66b9aa1ff1866c26f482992343386a57bd",
+    "experiments/phase_ay_localization_solution/run_loop.py": "786c92071a916ae880fa7203f7c90a6cb1c21b047967a68b3c55c3a1ef527c1a",
+    "experiments/phase_ay_localization_solution/runtime_probe.py": "49cda328a46cc235f31805800d4cbc143bcc357311c456915f122502f1a44fff",
+    "experiments/phase_ay_localization_solution/verify_frozen.py": "d6b66596fe8b3c69b937c76d156f864840d417be3f961534c97d4c86b56262be",
+    "src/geometry_ieskf/optical_calibration.py": "81805dd704d2e76c2b94ab6ae307ecf66cf6923ccb234fec6c3ff9743dcbb8a2",
+    "src/geometry_ieskf/optical_velocity.py": "a16d014e462c45f8ad0b4894bedf0f5710b0ad8ad6ab457356018e172be82197",
+    "src/ndt_global/optical_replay.py": "155b8a39bb5a45aa1c1a11ba0f6b489540fb266a580ab95ecff214a3d9840cc4",
+    "tests/test_ay_optical.py": "c50f93d1ec10dcfdf4c6aedb8d4b4c97fbc7ec596c7e0dc3a9f69f0dffdc4007"
+  },
+  "implementation_commit": "6d9a71a795b17b01e0328590a20262419368a0f4",
+  "public_results_sha256": {
+    "aggregate.json": "20cf75c91b2a2b79131c5b4bdd215aaed2e9da94baf2cdbe5fab3124b653e747",
+    "corners.png": "c2065253874a0763f4047d8500a4915f180a15dfee154a73b95f12701ffaba53",
+    "latency.png": "bd26315be315c868f606d188d6681682a6f19e85db19a7330f05051034e869ae",
+    "reference_and_multilap.png": "1dfe48508bbd3ace957907639834aa39fded21d4921c5b012a5c6775d1d191c6"
+  }
+}
