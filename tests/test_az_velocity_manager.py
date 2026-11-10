@@ -36,6 +36,12 @@ class VelocityManagerTests(unittest.TestCase):
   for i in range(1,14):r.ingest(self.imu(i*10_000_000+1))
   e=self.opt(131_000_001,0.);r.ingest(e);self.assertEqual(e['last_update']['reason'],'LOW_SPEED_WHEEL')
 
+ def test_planar_zero_prediction_keeps_wheel_fallback(self):
+  from geometry_ieskf.planar_speed import OpticalPlanarSpeed
+  r=self.replay();x,P,imu=r.base;x.v[:]=0;r.base=(x,P,imu);r.optical=OpticalPlanarSpeed(np.zeros(3),np.eye(4),(0,));e=self.opt(1_000_001,0.);r.ingest(e);self.assertEqual(e['last_update']['reason'],'LOW_SPEED_WHEEL')
+ def test_malformed_optical_has_no_partial_measurement_update(self):
+  r=self.replay();e=self.opt(1_000_001);e['velocity']=[];r.ingest(e);self.assertEqual(e['last_update']['reason'],'OPTICAL_BAD_STATUS');self.assertAlmostEqual(r.current()[0].v[0],10.)
+
 class PlanarSpeedTests(unittest.TestCase):
  def test_complete_jacobian(self):
   from geometry_ieskf.planar_speed import OpticalPlanarSpeed

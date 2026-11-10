@@ -15,8 +15,13 @@ class ManagedVelocityReplay(AuditedPoseReplay):
   x,P,imu=checkpoint;t=e['header_ns'];meta=dict(imu.get('velocity_manager',{}));phase=meta.get('phase','INITIALIZING');last=meta.get('last_good_ns',-10**30)
   if phase=='OPTICAL_ACTIVE' and t-last>self.TIMEOUT_NS:phase='STALE';meta['phase']=phase;meta.pop('recovery_start',None)
   if e['kind']=='optical':
-   advance=dict(kind='imu',header_ns=t,omega=imu['omega'],force=imu['force']);u,Q,_=DelayedLocalReplay.step(self,checkpoint,advance);z=np.asarray(e['velocity'],float).copy();z[0]=self.optical.raw_speed(z) if hasattr(self.optical,'raw_speed') else z[0];pred=self.optical.model(u,imu['omega'])[0][0];reason=None
-   if not e['status_good'] or not np.isfinite(z).all():reason='OPTICAL_BAD_STATUS'
+   advance=dict(kind='imu',header_ns=t,omega=imu['omega'],force=imu['force']);u,Q,_=DelayedLocalReplay.step(self,checkpoint,advance);z=np.asarray(e['velocity'],float).copy();reason=None
+   if z.shape!=(2,) or not e['status_good'] or not np.isfinite(z).all():reason='OPTICAL_BAD_STATUS';z=np.zeros(2)
+   elif hasattr(self.optical,'raw_speed'):z[0]=self.optical.raw_speed(z)
+   try:pred=self.optical.model(u,imu['omega'])[0][0]
+   except ValueError as err:
+    if str(err)!='PLANAR_SPEED_UNOBSERVABLE_AT_ZERO':raise
+    pred=0. # Health bookkeeping only; the observation updater still rejects undefined H.
    if reason is None and abs(z[0])<1e-3 and abs(meta.get('wheel_speed',0))>5 and 0<=t-meta.get('wheel_ns',-10**30)<=self.TIMEOUT_NS:reason='OPTICAL_ZERO_CONFLICT'
    # Difference of successive innovations cancels constant sensor offset. Existing
    # 5m/s envelope is reused; this is a gross fault rule, not a calibrated NIS.
