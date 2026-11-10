@@ -1,0 +1,39 @@
+{
+  "cases": [
+    {
+      "exact_copies": 1,
+      "stored_records": 49,
+      "mean": [
+        0.75,
+        0.75,
+        0.5
+      ],
+      "inverse_covariance_eigenvalues": [
+        5.658465385437012,
+        5.658465385437012,
+        50.02083206176758
+      ],
+      "normal_anisotropy": 8.839999198913574,
+      "eligible": false,
+      "actual_CUDA_builder": true
+    },
+    {
+      "exact_copies": 10,
+      "stored_records": 490,
+      "mean": [
+        0.75,
+        0.75,
+        0.5
+      ],
+      "inverse_covariance_eigenvalues": [
+        6.183904647827148,
+        6.183904647827148,
+        491.0020446777344
+      ],
+      "normal_anisotropy": 79.4000015258789,
+      "eligible": true,
+      "actual_CUDA_builder": true
+    }
+  ],
+  "qualification": "FAILED_SAMPLING_INVARIANCE_NATIVE_GAUSSIAN_SCALE_OR_ELIGIBILITY"
+}

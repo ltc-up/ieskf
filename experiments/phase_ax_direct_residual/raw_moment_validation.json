@@ -1,0 +1,9 @@
+{
+  "actual_CUDA_gaussians": 60362,
+  "nonclamped_reconstructible": 60362,
+  "raw_surface_eligible": 22616,
+  "checked_raw_voxels": 256,
+  "covariance_max_abs_difference_m2": 3.333665515858897e-08,
+  "qualification": "NUMERIC_RAW_GEOMETRY_ONLY_NOT_SENSOR_COVARIANCE",
+  "clamped_case": "REJECTED_NOT_UNREGULARIZED"
+}

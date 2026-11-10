@@ -40,6 +40,11 @@ class RealService(unittest.TestCase):
    pp=self.client.call(q|dict(op='evaluate',seed_common=(T@E).tolist()));mm=self.client.call(q|dict(op='evaluate',seed_common=(T@np.linalg.inv(E)).tolist()));self.assertAlmostEqual((pp['cost']-mm['cost'])/(2*eps),np.array(mid['gradient'])[k,0],places=5)
  def test_shared_frame_frozen_gradient_and_budget(self):
   p=np.array([[a,b,0] for a in np.linspace(-4,4,21) for b in np.linspace(-4,4,21)]);q=self.request(p)|dict(shared_frame=True);r=self.client.call(q);H=np.array(r['H']);self.assertLess(H[5,5],4.000001);T=np.eye(4);T[2,3]=.04;v=self.client.call(q|dict(op='evaluate',seed_common=T.tolist()));plus=T.copy();minus=T.copy();plus[2,3]+=1e-5;minus[2,3]-=1e-5;ep=self.client.call(q|dict(op='evaluate',seed_common=plus.tolist()))['cost'];em=self.client.call(q|dict(op='evaluate',seed_common=minus.tolist()))['cost'];self.assertAlmostEqual((ep-em)/2e-5,np.array(v['gradient'])[5,0],places=6)
+ def test_actual_cpp_shared_blocks_against_dense(self):
+  u=np.linspace(-4,4,15);p=np.array([[a,b,0] for a in u for b in u],dtype=np.float32).astype(float);q=self.request(p);r=self.client.call(q);J=np.c_[p[:,1],-p[:,0],np.zeros((len(p),3)),np.ones(len(p))];R=np.eye(len(p))*.05**2;keys=np.floor(p/5).astype(int);C=np.diag([.25**2]*3+[np.deg2rad(1.)**2]*3)
+  for key in np.unique(keys,axis=0):
+   ix=np.flatnonzero(np.all(keys==key,axis=1));v=p[ix]-(key+.5)*5;B=np.c_[np.zeros((len(ix),2)),np.ones(len(ix)),v[:,1],-v[:,0],np.zeros(len(ix))];R[np.ix_(ix,ix)]+=B@C@B.T
+  np.testing.assert_allclose(r['H'],J.T@np.linalg.solve(R,J),atol=1e-7,rtol=1e-9)
  def test_two_three_planes_rank(self):
   u=np.linspace(-3,3,13);plane=lambda k:np.array([[a,b,0] for a in u for b in u])[:,np.roll(np.arange(3),k)]
   for n,rank in [(2,5),(3,6)]:

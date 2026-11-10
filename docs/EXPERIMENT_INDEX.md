@@ -103,4 +103,4 @@ Frozen AS baseline fe55fd3. Real raw GPS1/GPS2/attitude audit and1468 native AR-
 
 ## Phase AX — direct geometric residual research (independent branch)
 
-Implemented actual current-state GICPFactor/normal-subspace and native-CUDA-Gaussian surface factors, full15D iterative MAP with shared-noise marginalization. A completed1468/4134 own-state frames; B failed531/1468 after451 updates. Default remains frozen; no main promotion. [AX design](../experiments/phase_ax_direct_residual/ITERATED_MODEL.md), final reports follow on this branch.
+Implemented actual current-state GICPFactor/normal-subspace and native-CUDA-Gaussian surface factors, full15D iterative MAP with shared-noise marginalization. A completed1468/4134 own-state frames; B failed531/1468 after451 updates. Default remains frozen; no main promotion. [AX design](../experiments/phase_ax_direct_residual/ITERATED_MODEL.md), [final](../experiments/phase_ax_direct_residual/FINAL_CONCLUSION.md), [results](../experiments/phase_ax_direct_residual/ACCURACY_COMPARISON.md).205 tests pass; all priors/defaults remain frozen.

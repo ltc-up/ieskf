@@ -1,0 +1,109 @@
+{
+  "probes": [
+    {
+      "index": 380,
+      "backend": "NDT",
+      "converged": true,
+      "valid": true,
+      "iterations": 8,
+      "shift_m": 0.20892822052723722,
+      "Z_shift_m": 0.20261389572084454,
+      "rotation_shift_deg": 0.5018891487220813,
+      "fitness": 0.15742894473363267,
+      "pairs": 3374,
+      "align_ms": 1.135562
+    },
+    {
+      "index": 420,
+      "backend": "NDT",
+      "converged": false,
+      "valid": true,
+      "iterations": 100,
+      "shift_m": 2.3597696031046214,
+      "Z_shift_m": -1.6780520448548408,
+      "rotation_shift_deg": 9.189252106315157,
+      "fitness": 2.547011155316575,
+      "pairs": 1870,
+      "align_ms": 5.562646
+    },
+    {
+      "index": 450,
+      "backend": "NDT",
+      "converged": true,
+      "valid": true,
+      "iterations": 49,
+      "shift_m": 7.732404535295321,
+      "Z_shift_m": -7.484128138801147,
+      "rotation_shift_deg": 10.795907624148377,
+      "fitness": 23.172878520835543,
+      "pairs": 471,
+      "align_ms": 3.380006
+    },
+    {
+      "index": 480,
+      "backend": "NDT",
+      "converged": false,
+      "valid": true,
+      "iterations": 100,
+      "shift_m": 16.532199346515974,
+      "Z_shift_m": 8.74392951512585,
+      "rotation_shift_deg": 49.370124068981596,
+      "fitness": 15.220504852506082,
+      "pairs": 1769,
+      "align_ms": 5.624452
+    },
+    {
+      "index": 380,
+      "backend": "GICP",
+      "converged": true,
+      "valid": true,
+      "iterations": 5,
+      "shift_m": 0.19222249159680124,
+      "Z_shift_m": 0.1776748616659347,
+      "rotation_shift_deg": 0.38107626086754826,
+      "fitness": null,
+      "pairs": 1755,
+      "align_ms": 0.72763
+    },
+    {
+      "index": 420,
+      "backend": "GICP",
+      "converged": true,
+      "valid": true,
+      "iterations": 11,
+      "shift_m": 1.1876149373513536,
+      "Z_shift_m": -0.004997531675865474,
+      "rotation_shift_deg": 17.6136057750259,
+      "fitness": null,
+      "pairs": 1511,
+      "align_ms": 1.403423
+    },
+    {
+      "index": 450,
+      "backend": "GICP",
+      "converged": false,
+      "valid": true,
+      "iterations": 49,
+      "shift_m": 2.9983796667303046,
+      "Z_shift_m": -0.6665053467056197,
+      "rotation_shift_deg": 13.595965857373145,
+      "fitness": null,
+      "pairs": 1154,
+      "align_ms": 10.40191
+    },
+    {
+      "index": 480,
+      "backend": "GICP",
+      "converged": false,
+      "valid": true,
+      "iterations": 49,
+      "shift_m": 18.164402899499457,
+      "Z_shift_m": 15.658260830674234,
+      "rotation_shift_deg": 70.90061896897946,
+      "fitness": null,
+      "pairs": 1678,
+      "align_ms": 12.155988
+    }
+  ],
+  "scope": "FROZEN_SOURCE_DIAGNOSTIC_NOT_CLOSED_LOOP_NOT_TRUTH"
+}

@@ -1,0 +1,30 @@
+# AX final decision — real direct-residual loop exists; replacement FAILED
+
+**Retain original CUDA-NDT+15D pose-fusion default.** AX-A normal-subspace GICP direct-IESKF actually completes1468/1468 and4134/4134 updates, but worsens full-lap and difficult/normal engineering-reference differences. AX-B's full distribution fails geometric qualification; its raw-moment plane alternative fails after531/1468 actual frames. No candidate is promoted or merged into main. Short-window architecture expansion is not justified by these results.
+
+|Required question|Answer and evidence qualification|
+|---|---|
+|1. Can GICP residual enter15D iterated filter?|VERIFIED: actual GICPFactor/current-state correspondence, fresh residual/Jacobian, full15 prior/crossP, exact nonlinear scan nuisance, one marginal/reset commit, actual Deskew/delayed feedback. Running observation is normal-subspace GICP, not unchanged full3D GICP.|
+|2. What changes versus final-pose fusion?|No separate registration endpoint/R packet enters the update; prior participates while geometry is linearized, supported directions and common errors are explicit. Real trajectory changes; accuracy does not improve.|
+|3. Bypass main6×6R problem?|Only the final-pose interface is bypassed. Point/local-map/common-scan uncertainty is still required. The scan nuisance itself uses a declared6D engineering envelope. No calibrated noise problem is magically removed.|
+|4. Point/cross-frame noise remains?|YES, NOT_VALIDATED statistically. Feature covariances are geometry; source/Deskew/prior/map errors are correlated and persistent. Their full joint law is absent.|
+|5. Old information overcontraction repeated?|Patch-only real candidate fails after4 updates, demonstrating inadequacy of that information model. Explicit scan nuisance limits same-frame information; ideal null/duplicate/Schur/Joseph tests pass. Arbitrary density/cross-frame physical consistency remains NOT_VALIDATED.|
+|6. NDT Gaussian direct feasible?|Full distribution FAILED plane-null test. Raw-moment surface extraction numerically VERIFIED against original map voxels, but real B localization FAILED at531/1468.|
+|7. Which improves right3/9?|Neither proven: A lateralP950.7965/0.7936m versus original0.6740/0.6675m at75ms; B never reaches those windows. AW poseGICP remains0.8326/0.7369. All CONDITIONAL reference differences.|
+|8. Normal road degradation?|FAILED no-regression: A normal1/5/8P950.9611/1.2191/1.6814m versus original0.3366/0.4137/0.3436m. All other fixed segments are reported, not selected.|
+|9. Full/three laps improve?|NO. A singleXY0.7778 versus original0.5771m/AWGICP0.5957m. Raw-reference three-lap AX≈0.7767/1.0930/1.7508m versus original0.5785/0.6255/0.5006m. No per-lap reset; functional success is not precision success.|
+|10. Numerical/statistical consistency?|VERIFIED205 tests, actual dense/FD/Joseph/delay/legacy/repeat checks. Statistical calibration/certified truth/NEES/NIS/correct-peak detection NOT_VALIDATED.|
+|11.20Hz hopeful?|OfflineA3lapP95/P99≈38.10/47.27ms, max109.67ms; nominal budget plausible but strict deadline FAILED. ROS20Hz/100Hz NOT_VALIDATED, production NO-GO.|
+|12. What is actually new?|Engineering integration of existing GICP/native maps with shared-noise conditional15D iteration, exact nuisance marginalization, delay feedback, real continuous failures/comparison. Not a novel GICP, FAST-LIO2, plane-error theory or statistically validated method.|
+|13. Invest in A/B/sliding window?|Keep A as a diagnostic research prototype, not default. Do not expand B/short-window blindly. Prioritize qualified raw surface/association coverage, persistent shared-error identity and independent reference before more information or a factor graph. Original loose-coupled NDT remains practical baseline.|
+|14. Academic research value?|CONDITIONAL as reproducible negative/ablation evidence. Need calibrated source/map noise and cross-frame dependencies, independent time/datum/reference, held-out environments, wrong-peak labels, qualified geometric models and live runtime evidence before superiority/publication-method claims.|
+
+## Mechanism evidence, not a forced root-cause story
+
+AD's warning survives:175 outer association refreshes increase the newly queried objective. The final conditional inner solve avoids treating those changes as a single smooth likelihood. This improves functionality but does not establish a globally correct correspondence field. Exact whole-lap re-execution and finite differences give no evidence of a state-update/Joseph/lever/reset arithmetic defect.
+
+A's cell/common-error model changes both geometry and information. Its right3/9 local unit lateral responses≈0.0626/0.0610 are smaller than the old~0.10, while prior lateral sigma is larger. The explicit common nuisance absorbs fitted disagreement; merely moving from pose-levelR to point factors does not force better correction. Source geometry, associated surface bias, reference timing and persistent fitted discrepancy cannot be uniquely separated by the available uncalibrated reference. No scale tuning is used to conceal this.
+
+B's regularized kernel was not a valid plane-thickness statistic. The analytic raw-moment correction is verified, but the remaining sparse qualified factors/direct7 local capture fail to sustain full-state constraints. Before total loss the estimate develops large tilt/height/velocity and the own-source alternative matcher probes also cease to provide healthy local agreement. The exact first physically wrong association is UNKNOWN; a new equation error is not demonstrated. It is a measurement/association/observability failure under the declared model, not proof that original CUDA-NDT is unusable.
+
+Highest qualification: **AX-A direct-residual closed-loop functionality VERIFIED; accuracy replacement FAILED; statistical consistency NOT_VALIDATED; AX-B full-lap FAILED; production NO-GO.** All source/input/history assets and defaults remain available for rollback. See ACCURACY_COMPARISON.md, CAUSAL_CLOSED_LOOP.md, NDT_RESIDUAL_MODEL.md, NOISE_AND_INFORMATION.md and FAILURES.md.

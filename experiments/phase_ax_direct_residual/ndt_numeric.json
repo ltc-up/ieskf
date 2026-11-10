@@ -1,0 +1,9 @@
+{
+  "projected_rank": 3,
+  "full_distribution_rank": 6,
+  "projected_tangential_information": 0.0,
+  "raw_tangential_information": 2528.9303120959066,
+  "full_distribution_qualification": "FAILED_INFINITE_PLANE_OBSERVABILITY",
+  "projected_qualification": "CONDITIONAL_GEOMETRY_ONLY",
+  "same_Gaussian_count": 81
+}

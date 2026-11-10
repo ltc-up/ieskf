@@ -133,3 +133,5 @@ AU3: lawful fixed-state P/R scaling shows gain alone cannot separate P versus R 
 ## Phase AX — actual direct residual loop, not a precision repair
 
 Opt-in direct geometry uses actual raw/Deskew and historical15D updates; no matcher pose is fused. A completes1468/4134, but75ms engineering XY0.778m versus frozen0.577m and normal/right regions regress. NDT full-distribution fails plane tangential observability; native-kernel covariance must be distinguished from raw surface moments. B raw-moment surface variant fails531/1468. Numerical and accuracy qualifications remain separate; all prior defaults/production unchanged.
+
+AX final:205/205 numeric tests (10 new AX), exact legacy40 and instrumented1468 parity; native raw surface moments verified3.33e−8m² but B451/531 before loss. A real continuous3laps completes yet reference errors worsen. No calibrated covariance, certified accuracy or production/ROS realtime qualification. [Final](../experiments/phase_ax_direct_residual/FINAL_CONCLUSION.md).

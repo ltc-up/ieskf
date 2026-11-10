@@ -1,29 +1,122 @@
 {
   "phase": "AX",
-  "stage": "implementation_and_numerical_validation",
   "frozen_main": "c647ac3224adee775d30dc6f9553c9b83612c060",
-  "AW_source": "e15e7a235a096dbf67dcf154b5d88c8ec3e6e4e4",
-  "research_code_commit": "CONTAINING_COMMIT; final results manifest records implementation commit",
+  "implementation_commit": "aa25f121f7ebd8110e9249c5845edfac9529cf44",
+  "containing_results_commit": "THIS_COMMIT; do not self-hash",
+  "AW_reuse": "e15e7a235a096dbf67dcf154b5d88c8ec3e6e4e4",
   "small_gicp_upstream": "fa0cfc983417c044b6036f71dfa448038bb9c820",
-  "map_target_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
-  "motion_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
-  "frozen_configuration_sha256": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
-  "code_sha256": {
-    "src/geometry_ieskf/direct_iterated.py": "ae7f6ffaab12c4818d5a2492fafaf8cc0d5a9e0cd6e3e571c2f9da2488b8f9a7",
-    "experiments/phase_ax_direct_residual/direct_service.cpp": "f8b5a08720a2990b07370b18a858ffab6af141f183c47f0c1875e811063a8b31",
-    "experiments/phase_ax_direct_residual/run_loop.py": "7800b18a2308641d6fc14ca924e2b606b38c2785c90e2deee44ad9c0b0ac8677"
+  "production_head": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "actual_bag_sha256": "0be29d090557accc27581007b45660cb5b0063dbcbdd3f3b798e33ff64c1db14",
+  "private_input_sha256": {
+    "motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "config": "c595a50d62c841c8c6379a42c37bf6afc79592985daef8db77fbdff5c43da29f",
+    "AR_transactions": "cac59aa187bec29f0e23039ff8a28e9414ad30939600ede811dae3612a21c7fc",
+    "AS_transactions": "dfd6e4db1ef8b6aa2124b761f7601afb77edebd85fa9dab8963130bfe582f7c1",
+    "AW_transactions": "7071d0b55742d5ba529b22df4bdd546072e0cc3e4043f03f5a6fa043594e11c8",
+    "AT_causal": "2f9904ac5c90f6a5e925cd0f82df043449227d2129e073f7687bc7754dd1b23a",
+    "AR_bindings": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+    "AS_bindings": "c2ccf4bd3a98ef071c6e9e0e298b493be67d1300124d100a16bbd59220b337e8",
+    "reference_cache": "287dbba10a7801666f33de30a82f73908f08edb95d252298cc0c0fe2fee01f68"
   },
+  "original_estimator_files_unchanged": 45,
+  "code_sha256": {
+    "experiments/phase_ax_direct_residual/evaluate.py": "e539704e111cfa329a942270fe8c9e14f8d49e3962d111fed614d7f45ba7c90c",
+    "experiments/phase_ax_direct_residual/build_reports.py": "044f797638c09245c347353808ba9d92ae9e9ddb2b6098faafc39424de8a1de8",
+    "experiments/phase_ax_direct_residual/failure_probe.py": "75f88fe056fd9c9f9ba2308caab678b2a7f093692f25a69d84f59987a353a6d6",
+    "experiments/phase_ax_direct_residual/ndt_density.py": "9d46aaf769fee0ac01155495e25db0ba2b4655b8a5ee0a3da373cbdd03000c29",
+    "experiments/phase_ax_direct_residual/raw_moment_validation.py": "6c2a00b943e76bc3e2a4df25e624c90648f2faeef231c476b4ba97da014a3522",
+    "experiments/phase_ax_direct_residual/diagnostics.py": "a4e66b964377540604e557ca638c166e98f4bb3be4689d03d5fafcacd6a09426",
+    "experiments/phase_ax_direct_residual/run_loop.py": "7800b18a2308641d6fc14ca924e2b606b38c2785c90e2deee44ad9c0b0ac8677",
+    "experiments/phase_ax_direct_residual/seal.py": "3899477f02d9c4c20865b575756c9a690e5e7e85461546d152fab6fc50f62ddd",
+    "experiments/phase_ax_direct_residual/ndt_numeric.py": "eb51c2597d9757f5f65981f909d3f70f8e7953706ec743e531872252adf81fff",
+    "experiments/phase_ax_direct_residual/check_real_gradient.py": "415a88d65736871ab0f1a431ac1ae2dd2319a2702ad331beaf16939c966eb32b",
+    "experiments/phase_ax_direct_residual/export_gaussians.cpp": "bde291714d31cc30fb46d02a0b6fdf830c4ee85f9deaeecf75d1bf409b336204",
+    "experiments/phase_ax_direct_residual/direct_service.cpp": "f8b5a08720a2990b07370b18a858ffab6af141f183c47f0c1875e811063a8b31",
+    "experiments/phase_ax_direct_residual/build.sh": "b13da7dc73c5dc4b7aa1c35b18f9d09242570861b4afc85967bd122a1675ddad",
+    "src/geometry_ieskf/direct_iterated.py": "ae7f6ffaab12c4818d5a2492fafaf8cc0d5a9e0cd6e3e571c2f9da2488b8f9a7",
+    "tests/test_ax_direct.py": "e77be933829491b31187eac6378c826798be9e93ea564a0d62f749f958f39278"
+  },
+  "binary_sha256": {
+    "direct_service": "450fff10c92e9934b3510465b0cf563b41037004ac17594967113feb9e84ae0e",
+    "direct_service_v3": "2618d1dabd6405dd7e8ede85b703ed745b865eba81771db5421ed980be225992",
+    "direct_service_rawplanes": "4a5fde42083ecb5508849796b648ba37d0cbf3e263b75ed336d89590f195ade3",
+    "export_gaussians": "4e7fef16fb7ece5e55e3052f4b56e908db9a0788a57b6e3256b1974b25997d32"
+  },
+  "private_artifact_sha256": {
+    "A40_v1": {
+      "transactions.json": "f7b4ad5b5f8a936b97fc36f791c78e1cf02f67e0077e3f201c2be91b1db10948",
+      "states.json": "232410c2e31669ee39d0f947ae57c0daa6cf28c0908a576c2358424846db553c"
+    },
+    "A40_v2": {
+      "transactions.json": "3c964ea4ee37c7744261369c55a0e0de3d21e44eb626b2c66dc9507eac179cc6",
+      "states.json": "d3196e7dd05084eb256f69398f32de0732d3dda0839869965f92ceb29b0ffea9"
+    },
+    "A40_v3": {
+      "transactions.json": "bc3f1e16e0f1e972dddc73b37531cdfa97372d0ea80662221b90a062e4ddfa5a",
+      "states.json": "a83fc8ff035bd59fd792c078f8c1345854af4ef960892e54af228622fc32a12c"
+    },
+    "A40_v4": {
+      "transactions.json": "8ea050c7ee49d186bcf01b01c9cc74539bd3d046fb3750738be9ba15935b61ef",
+      "states.json": "ebf13c593879ff3eeb20c570224e4320828601575b670c0b3d42d33cfe92ac53"
+    },
+    "A_lap": {
+      "transactions.json": "b18523997142a5a400d01a0d37c26b847d4571af60e8d49df5f88cb1b4825951",
+      "states.json": "1a89c829d24a93be9b5827b5f77ddd89dc5fc70b8030ebcac062ef5df088f486"
+    },
+    "A_multilap": {
+      "transactions.json": "98704bf0059e37442e18cebdc6c365c250c5c1c531ad74ad4315e99ed6dd75c2",
+      "states.json": "cfe5e9bb720aa2af8c48a251237adcddf6fa8cd75e50fb4fee577ce5f5ce76b6"
+    },
+    "A_instrumented_lap": {
+      "transactions.json": "9ff3dd11db515f03f2015fddcdf611da292fe3a7681e01232571d8cddc71237e",
+      "states.json": "e760d6cc7b3bbc689c05e6d1dfd311142140710da1949e348d313b96769dbe2c"
+    },
+    "B40": {
+      "transactions.json": "46a22037cc64a9db1b091fbf29b9d92eb6289c3f6334ffc860ce417afc2385c0",
+      "states.json": "d15242daddc3965946bb0f35cee0ab2b7c482b619fcfc7f9d0af19aceca64aa6"
+    },
+    "B40_rawplanes": {
+      "transactions.json": "040049a056fcf2abc69e9ab781d7bada1a14ed54e074c03eb5fba44bb4357b1f",
+      "states.json": "bc3348dc0175c27582149e2d462a4bd6c5f7ea6572394f33cf01833304fd1673"
+    },
+    "B_lap": {
+      "transactions.json": "0e02af0888e240e6099a5ee7b9889d50c7b1d0902457d0ec01a2170c1ba458f7",
+      "states.json": "93b5cb0d1efc14699d389b88041666adfb9c637cea176cd45e031a6bbe70c916"
+    },
+    "legacy40": {
+      "transactions.json": "c35ebc59cc2c0ef19ddb0023f137c449791aed23d54d68024880e7f1c18afbdd",
+      "states.json": "b8216644359ec5c1592c642e525c7f216073cdf8b7fa7f2c2ab7dccd738cbf4b"
+    }
+  },
+  "gaussian_export_sha256": "a6bafe337b6a30bb2bdfb1e3ca2d6bdd4d1593757b5cbed0d1fbf6b8d6bba930",
   "tests": {
-    "passed": 204,
+    "passed": 205,
     "failed": 0,
     "skipped": 0,
-    "new_AX": 9
+    "new_AX": 10,
+    "reused_AW": 12,
+    "frozen": 183
   },
-  "qualification": "EXPERIMENTAL_ONLY_NO_DEFAULT_CHANGE",
-  "actual_A_frames": [
-    1468,
-    4134
-  ],
-  "actual_B_frames": 531,
-  "private_payloads": "EXTERNAL_AUTHORIZED_PERSISTENT_STORAGE_ONLY"
+  "actual_data": {
+    "A_lap_frames": 1468,
+    "A_lap_updates": 1468,
+    "A_multilap_frames": 4134,
+    "A_multilap_updates": 4134,
+    "B_lap_requested": 1468,
+    "B_lap_processed": 531,
+    "B_lap_updates": 451,
+    "B_three_laps": "NOT_EXECUTED"
+  },
+  "qualifications": {
+    "A_function": "VERIFIED_CONDITIONAL_DIRECT_MAP",
+    "A_accuracy_replacement": "FAILED",
+    "B_lap": "FAILED",
+    "statistical_consistency": "NOT_VALIDATED",
+    "certified_reference": "NOT_VALIDATED",
+    "ROS20Hz": "NOT_VALIDATED",
+    "production": "NO_GO",
+    "main_merge": "NOT_AUTHORIZED_ON_FAILED_ACCEPTANCE"
+  },
+  "privacy": "Only code, synthetic controls, aggregate statistics and deidentified plots; private full payloads remain external"
 }

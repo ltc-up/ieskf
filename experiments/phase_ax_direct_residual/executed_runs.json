@@ -1,0 +1,194 @@
+{
+  "A40_v1": {
+    "requested_frames": 40,
+    "processed_frames": 38,
+    "delayed_15D_updates": 0,
+    "duration_s": 1.850289735,
+    "stop_reason": "NDT_OBSERVATION_LOSS_CONTINUATION_GATE",
+    "decisions": {
+      "DIRECT_MAX_ITERATIONS": 38
+    },
+    "wall_ms": {
+      "p50": 47.740373500000004,
+      "p95": 53.46929179999999,
+      "p99": 57.47916443000001,
+      "max": 59.563693
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "A40_v2": {
+    "requested_frames": 40,
+    "processed_frames": 40,
+    "delayed_15D_updates": 4,
+    "duration_s": 1.9501902750000002,
+    "stop_reason": null,
+    "decisions": {
+      "DIRECT_GEOMETRY_UPDATE": 4,
+      "DIRECT_FROZEN_LINESEARCH_FAILED": 36
+    },
+    "wall_ms": {
+      "p50": 20.141892,
+      "p95": 25.587068449999993,
+      "p99": 28.32975926,
+      "max": 28.558676
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "A40_v3": {
+    "requested_frames": 40,
+    "processed_frames": 38,
+    "delayed_15D_updates": 0,
+    "duration_s": 1.850289735,
+    "stop_reason": "NDT_OBSERVATION_LOSS_CONTINUATION_GATE",
+    "decisions": {
+      "DIRECT_MAX_ITERATIONS": 4,
+      "DIRECT_FROZEN_LINESEARCH_FAILED": 34
+    },
+    "wall_ms": {
+      "p50": 25.694805000000002,
+      "p95": 30.5135818,
+      "p99": 31.29121165,
+      "max": 31.734011
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "A40_v4": {
+    "requested_frames": 40,
+    "processed_frames": 40,
+    "delayed_15D_updates": 40,
+    "duration_s": 1.9501902750000002,
+    "stop_reason": null,
+    "decisions": {
+      "DIRECT_GEOMETRY_UPDATE": 40
+    },
+    "wall_ms": {
+      "p50": 23.241792,
+      "p95": 25.245894,
+      "p99": 25.81065819,
+      "max": 26.019261
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "A_lap": {
+    "requested_frames": 1468,
+    "processed_frames": 1468,
+    "delayed_15D_updates": 1468,
+    "duration_s": 73.350073732,
+    "stop_reason": null,
+    "decisions": {
+      "DIRECT_GEOMETRY_UPDATE": 1468
+    },
+    "wall_ms": {
+      "p50": 26.438932,
+      "p95": 36.9606143,
+      "p99": 41.46654553999997,
+      "max": 137.716143
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "A_multilap": {
+    "requested_frames": 4134,
+    "processed_frames": 4134,
+    "delayed_15D_updates": 4134,
+    "duration_s": 206.65003375400002,
+    "stop_reason": null,
+    "decisions": {
+      "DIRECT_GEOMETRY_UPDATE": 4134
+    },
+    "wall_ms": {
+      "p50": 27.229177999999997,
+      "p95": 38.0988969,
+      "p99": 47.27314977,
+      "max": 109.671216
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "A_instrumented_lap": {
+    "requested_frames": 1468,
+    "processed_frames": 1468,
+    "delayed_15D_updates": 1468,
+    "duration_s": 73.350073732,
+    "stop_reason": null,
+    "decisions": {
+      "DIRECT_GEOMETRY_UPDATE": 1468
+    },
+    "wall_ms": {
+      "p50": 26.465099,
+      "p95": 36.351711,
+      "p99": 41.26967791999999,
+      "max": 84.152502
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "B40": {
+    "requested_frames": 40,
+    "processed_frames": 38,
+    "delayed_15D_updates": 0,
+    "duration_s": 1.850289735,
+    "stop_reason": "NDT_OBSERVATION_LOSS_CONTINUATION_GATE",
+    "decisions": {
+      "NDT_NOT_CONVERGED_OR_INVALID": 38
+    },
+    "wall_ms": {
+      "p50": 8.854954500000002,
+      "p95": 9.80568615,
+      "p99": 25.110522400000058,
+      "max": 33.580481
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "B40_rawplanes": {
+    "requested_frames": 40,
+    "processed_frames": 40,
+    "delayed_15D_updates": 40,
+    "duration_s": 1.9501902750000002,
+    "stop_reason": null,
+    "decisions": {
+      "DIRECT_GEOMETRY_UPDATE": 40
+    },
+    "wall_ms": {
+      "p50": 15.841661,
+      "p95": 17.233745199999994,
+      "p99": 54.43570344999997,
+      "max": 77.01013
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "B_lap": {
+    "requested_frames": 1468,
+    "processed_frames": 531,
+    "delayed_15D_updates": 451,
+    "duration_s": 26.49957393,
+    "stop_reason": "NDT_OBSERVATION_LOSS_CONTINUATION_GATE",
+    "decisions": {
+      "DIRECT_GEOMETRY_UPDATE": 451,
+      "DIRECT_MAX_ITERATIONS": 11,
+      "DIRECT_NO_QUALIFIED_FACTORS": 67,
+      "DIRECT_FROZEN_LINESEARCH_FAILED": 2
+    },
+    "wall_ms": {
+      "p50": 16.231564,
+      "p95": 26.4349075,
+      "p99": 28.229574400000004,
+      "max": 75.195929
+    },
+    "semantic_note": "direct updates are conditional MAP; legacy matching_converged/component labels do not certify per-direction observability"
+  },
+  "legacy40": {
+    "requested_frames": 40,
+    "processed_frames": 40,
+    "delayed_15D_updates": 40,
+    "duration_s": 1.9501902750000002,
+    "stop_reason": null,
+    "decisions": {
+      "EXTERNAL_POSE_UPDATE": 40
+    },
+    "wall_ms": {
+      "p50": 11.7532405,
+      "p95": 14.192225549999996,
+      "p99": 16.48767986,
+      "max": 17.018987
+    },
+    "semantic_note": "actual original CUDA-NDT pose filter"
+  }
+}
