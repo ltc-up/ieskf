@@ -1,0 +1,214 @@
+{
+  "phase": "BE-E0-E4",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "research_parent": "16c0a830d3cf9ba889603c675c07e0216823e9b9",
+  "research_code_commit": "00de60bd9b7e1d2ee9c475e82e33aa66923f85e5",
+  "production_source_head": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "research_remote_main_verified_before_publication": "05b73c0aae6b9f5440f8497477dfe9909ebfe9e1",
+  "standalone_git_objects": true,
+  "configuration_sha256": "4c29be4841a9101a679143a3068a9deae6878a31e8f5b0dc02f9ffdb32f96e04",
+  "data_version": {
+    "lap": {
+      "frames": 1468,
+      "clouds": 4404,
+      "bindings_sha256": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+      "monotonic_ref": true
+    },
+    "multilap": {
+      "frames": 4134,
+      "clouds": 12402,
+      "bindings_sha256": "c2ccf4bd3a98ef071c6e9e0e298b493be67d1300124d100a16bbd59220b337e8",
+      "monotonic_ref": true
+    }
+  },
+  "raw_dependency_files": 16812,
+  "raw_audit_failures": 0,
+  "input_sha256": {
+    "motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "optical": "441a961e0a6b2e60082a09450b53d57b9d87b07c5c17d23c61aa06a2d1e76a7b",
+    "target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "ndt": "8ae76d7ece996cf89f498fba2519ba4c73d76b8f64beb69ffd5884a243ea1c08",
+    "gicp": "9b7b492140841681e7785e3279d77369c4b09a12715080fecd083cc3583076b0",
+    "deskew": "3c8ddda9dbaf11458f619053a1c8ea214f39d51dcd2c8361fdcef6112701a5ce"
+  },
+  "frozen_requests": 1469,
+  "frozen_target_hash_mismatches": 0,
+  "frozen_identity_ledger_sha256": "01cc4ce4a75a6b0aac53d2613fa424487accaacc6f8ccfb9c885d8abb4b560be",
+  "results": {
+    "files": 509070,
+    "bytes": 455166849430,
+    "seconds": 783.5069305896759
+  },
+  "result_index": {
+    "records": 509070,
+    "changed_during_hash": 0,
+    "index_sha256": "db287e724fbc7136338b89704ef6ea27ffbfc22a87b66513621bba7177ee90d9"
+  },
+  "queue_header_sha256": "a590ff6ba9e73b74174145b6f55d4a1e017f62e7e78b482167491a3b0271147e",
+  "queue_test_binary_sha256": "f58cd0c78514ebd9093eb3561ee2deedc3b509856db5480c2002d64c04176188",
+  "publication_tests": {
+    "passed": 218,
+    "failed": 0,
+    "log_sha256": "969f4c37e43b7ab777085a6bc7b75aa1f74e3f91a30fc8f1e58f5e7f79ea76f8"
+  },
+  "GNSS_online": false,
+  "reference": {
+    "position_lags_ms": [
+      0,
+      75,
+      150
+    ],
+    "independent_truth": false,
+    "antenna_to_base_conversion": "historical full attitude/lever convention, uncalibrated residual timing and map datum",
+    "yaw": "shared scan-time attitude; attitude lag not independently calibrated"
+  },
+  "selected_runs": {
+    "fullbaseline_lap": {
+      "run": "controlled2_fullbaseline_lap",
+      "frames": 1468,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "matched_lap": {
+      "run": "controlled2_matched_lap",
+      "frames": 1468,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "directional_lap": {
+      "run": "controlled2_directional_lap",
+      "frames": 1468,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "optical_lap": {
+      "run": "revised_optical_lap",
+      "frames": 1468,
+      "source_sha256": {
+        "run_loop.py": "7669143233d79c85a69f392ae2262a614e7ed9cb8056f461feb2c0d54328c098",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "aa8b373c18cbc4b4ebed975122541319784cac09f447df991f24be5126b05b09",
+        "multihypothesis.py": "43c2aaa24ff368f73069bc99f67a94b3105390b6f38837a2af5699d7c9c4e996",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "dual_lap": {
+      "run": "controlled2_dual_lap",
+      "frames": 1468,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "gmf_lap": {
+      "run": "revised_gmf_lap",
+      "frames": 1468,
+      "source_sha256": {
+        "run_loop.py": "7669143233d79c85a69f392ae2262a614e7ed9cb8056f461feb2c0d54328c098",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "aa8b373c18cbc4b4ebed975122541319784cac09f447df991f24be5126b05b09",
+        "multihypothesis.py": "43c2aaa24ff368f73069bc99f67a94b3105390b6f38837a2af5699d7c9c4e996",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "robust_lap": {
+      "run": "revised_robust_lap",
+      "frames": 1468,
+      "source_sha256": {
+        "run_loop.py": "7669143233d79c85a69f392ae2262a614e7ed9cb8056f461feb2c0d54328c098",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "aa8b373c18cbc4b4ebed975122541319784cac09f447df991f24be5126b05b09",
+        "multihypothesis.py": "43c2aaa24ff368f73069bc99f67a94b3105390b6f38837a2af5699d7c9c4e996",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "fullbaseline_multilap": {
+      "run": "controlled2_fullbaseline_multilap",
+      "frames": 4134,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "matched_multilap": {
+      "run": "controlled2_matched_multilap",
+      "frames": 4134,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "directional_multilap": {
+      "run": "controlled2_directional_multilap",
+      "frames": 4134,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "optical_multilap": {
+      "run": "controlled2_optical_multilap",
+      "frames": 4134,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    },
+    "dual_multilap": {
+      "run": "controlled2_dual_multilap",
+      "frames": 4134,
+      "source_sha256": {
+        "run_loop.py": "1b3a067d3e28b7ccbb61b16e0571ecd368ec864e69b39ab43807ea62efb7cc4b",
+        "runtime.py": "cf6b72b2cd9f308882463d387d9fb254cf40828229e298abf8e6418d9ddc0a8f",
+        "managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+        "multihypothesis.py": "108d82d185c69405aace6545379ef1ee63dd37251f15d1535e434286a2a124d9",
+        "directional_shadow.py": "a43952cc55f0867d57ee5b9df07b770bacfc157dbe5ad90a9fd19ad365646f0a"
+      }
+    }
+  },
+  "source_recovery": "selected revised-run modules byte-match startup digests; see source_versions/",
+  "limitations": [
+    "GMF three-lap stops4052/4134; robust three-lap4035/4134",
+    "Current-control source/YAML GLL3 distinguished from historicalc647 OFF; deployed component/binary equivalence unknown",
+    "Frozen1468 script did not save a pre-run code digest; retrospective code and known target-reference fix retained, not claimed byte-proven pre-run identity",
+    "Reused service binary identities verified; exact source rebuild parity not established",
+    "No calibrated mixture likelihood, independent mode truth, joint map/odom covariance or controller validation",
+    "Complete50ms qualification failed; current Python/forensic-IO workload is not a bound on future compiled code"
+  ],
+  "qualification": "FAILED / PRODUCTION_NO_GO",
+  "BE5": "deferred read-only audit/design; A/C only, no B; explicit approval before BE5 code",
+  "supplemental_runtime_library_sha256": {
+    "libdeskew_ablation.so": "cb3d15d1fca1b726e076ba0355341b95c1d866d670d2dec27dd864aed6159edd"
+  },
+  "runtime_dependency_note": "Historical read-only Deskew dependency was identified post-run, byte-preserved on the new volume and verified to resolve there via library path. No old directory was an output/work directory."
+}

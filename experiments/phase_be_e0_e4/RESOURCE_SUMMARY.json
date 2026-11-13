@@ -1,0 +1,52 @@
+{
+  "gpu_resources": {
+    "samples": 512,
+    "values": {
+      "memory.used [MiB]": {
+        "max": 1539.0,
+        "mean": 1268.232421875
+      },
+      "utilization.gpu [%]": {
+        "max": 21.0,
+        "mean": 2.369140625
+      },
+      "utilization.memory [%]": {
+        "max": 24.0,
+        "mean": 1.46875
+      },
+      "power.draw [W]": {
+        "max": 45.8,
+        "mean": 17.02234375
+      }
+    },
+    "contract": "whole-device totals including unrelated display/driver use; partial monitoring interval, not per-process GPU allocation"
+  },
+  "gpu_resources2": {
+    "samples": 263,
+    "values": {
+      "memory.used [MiB]": {
+        "max": 1095.0,
+        "mean": 1060.6463878326997
+      },
+      "utilization.gpu [%]": {
+        "max": 22.0,
+        "mean": 10.091254752851711
+      },
+      "utilization.memory [%]": {
+        "max": 17.0,
+        "mean": 1.3193916349809887
+      },
+      "power.draw [W]": {
+        "max": 29.37,
+        "mean": 19.646045627376424
+      }
+    },
+    "contract": "whole-device totals including unrelated display/driver use; partial monitoring interval, not per-process GPU allocation"
+  },
+  "cpu": {
+    "samples": 260,
+    "max_sum_rss_mib": 1306.6015625,
+    "max_sum_ps_cpu_percent": 206.5,
+    "contract": "sum of sampled research process RSS (shared pages may be double-counted); ps CPU is lifetime-average per process, not an instantaneous core load"
+  }
+}

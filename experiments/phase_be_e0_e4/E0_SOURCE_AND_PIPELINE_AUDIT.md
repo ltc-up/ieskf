@@ -1,0 +1,35 @@
+# E0 — Source, storage and input audit
+
+Status: implemented research replay; production integration is not claimed.
+
+The independent full Git clone is on the mounted volume labelled 新加卷. `lsblk -f`, `findmnt`, `df -h`, branches, working trees, stash and remote refs were recorded before work. No old checkout was deleted. The research parent is `16c0a830d3cf9ba889603c675c07e0216823e9b9`; research main was `05b73c0`. The production repository HEAD is `aa50e35467f89b4963f882d1f5abaace46d0ce70`, on a different repository history: research commits are not production objects. It is invalid to describe these as the same source revision. Production has pre-existing untracked content and three stash entries; all are preserved.
+
+## Confirmed data flow
+
+The research platform is an offline executable, not a deployed ROS node. Its 15D error state is position/velocity at the IMU origin, right SO(3) error, gyro bias and accelerometer bias. Nominal attitude is SO(3); P is full 15×15. Raw Bosch IMU and raw wheel records enter the existing propagation/velocity adapters. The production EKF converter is not in this replay chain. Existing transforms rotate raw axes, convert wheel units and move NDT base pose to the IMU-state observation convention. The optional AY optical adapter transforms sensor velocity and its lever arm; it is independent of the production six-state twist update.
+
+Each actual raw three-LiDAR scan is CUDA-deskewed using that branch's own propagated state history. Fitting uses the existing research map, crop, timestamps and initialization. The reused 15D research matcher configuration is GLL3. Re-reading aa50 lidar_ndt/ndt_process.cpp and its YAML confirms enabled GLL with window3; the old c647 OFF conclusion is historical, not the current aa50 configuration. A stale MT comment does not override executable assignments. Actual deployed component/binary selection, including lidar_ndt_v1, is not established by this offline audit. No historical fixed trajectory replaces branch feedback. The final indexed immutable source-history archive retains the requested scan interval and supports deskew even when processing is late; the measurement rollback window remains 500ms. Old pose observations expire rather than receiving fabricated recent timestamps. A three-lap run initializes once and never resets at lap boundaries.
+
+The loop schedules recorded input stamps and measured processing delays; it does not reproduce a ROS executor's undocumented callback interleaving. Full runtime is inclusive of cloud preparation, matching, diagnostic/update work and logging. Service cache-warm time and service target construction are recorded separately; the reported startup field does not include all Python/service-launch and validation-tree initialization. This is true CUDA/state-feedback replay, not a certification of the deployed node.
+
+## Sensor semantics and limits
+
+The Kistler adapter uses the saved raw two-component optical measurement, its existing axis transform, angular velocity and reference-point offset. The chosen XY research policy suppresses the wheel update while a valid recent optical update is active; the control retains the wheel model. It is not a newly identified tire model. Timestamp/lever conversions are implemented from recorded definitions, but physical installation calibration and residual transport delay were not independently re-surveyed. Sideslip, attitude error and sensor delay cannot be distinguished solely from one disagreement trace.
+
+Production GNSS remains controlled by existing `use_gps` semantics (0 off, 1 on, 2 existing planner AUTO). No RAIM/FDE, FIX8-based enable or alternate position prior is added. Research online events whitelist IMU, wheel, optional optical, clock and LiDAR pose. GNSS is not imported by matching, weighting or admission code. The historic initial-pose provenance is not independently certified GNSS-free; its frozen value is preserved. Subsequent online propagation/updates do not consume GNSS.
+
+The old GPS1 converter labels antenna ENU coordinates as map coordinates while the antenna-to-base subtraction is commented out. No correction in the downstream planar EKF proves these are rear-axle coordinates. A separate TF-capable VectorNav adapter is a different input path and is not evidence this input is corrected. Converter and TF remain unchanged. Offline evaluation uses the historical full-attitude antenna-to-base conversion and remains an engineering proxy, not a verified rear-axle truth system.
+
+## Integrity evidence
+
+The private input audit hashes 16,812 unique files, including raw scan paths and motion/map/optical/runtime dependencies; no missing/hash-read failures were found. Single lap has 1,468 frames, continuous three laps 4,134. Bindings are monotonic. Paths, installation details and full trajectories remain private. Public manifest contains only non-reconstructive identities; raw input availability is a reproduction prerequisite.
+
+## Evidence qualifications
+
+CONFIRMED in the historical source audit: the loop44 optical publisher distinguishes raw sensor vx/vy from internally corrected velocity and converts CAN speed units to m/s. Research selects raw channels, one packet per fixed header-time bin, and only status that had already arrived. The original loop44 wheel adapter is the historically verified EAV24-style stream; a newer EAV26 name in a task description is not evidence that this archived protocol changed. No new wheel adapter was silently substituted.
+
+CONFIRMED in code: full-state lever/axis handling, raw-header preservation, optional optical source and no converter in the 15D path. UNKNOWN independently: optical ground measurement point versus installation-frame origin, physical exposure/transport delay, residual mount calibration and the geodetic/attitude truth quality. Normal-section regression has not uniquely identified any of those causes.
+
+NDT timestamp audit at aa50: both node variants stamp their published pose from the incoming cloud/header context; the planar EKF computes age from the pose header plus its configured additional delay, and does not replace it with callback arrival time. The new 15D replay uses the archived bindings' explicit native scan reference. Equality between that reference and a field-deployed node's physical exposure convention still requires runtime tracing. The production queue header fingerprint is retained in the private metadata and public manifest; its source is not redistributed.
+
+Final dependency audit found one inherited Deskew library resolving from an old home-based installation. It was read-only during the recorded runs, not a working/output directory. Its exact SHA is now snapshotted under the private new-volume runtime/deps directory; ldd with that library path resolves no home dependency. Source runtime/replay_environment.sh before reproduction, or set LD_LIBRARY_PATH to that directory explicitly. Dependency fingerprinting was post-run; it is not presented as a pre-run complete dependency audit. Original library and checkout remain untouched.

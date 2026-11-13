@@ -1,0 +1,28 @@
+{
+  "samples": 1,
+  "translation_difference_m": 0.6368593718488872,
+  "ndt": {
+    "converged": false,
+    "candidate_valid": true,
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS"
+  },
+  "gicp": {
+    "converged": true,
+    "candidate_valid": true,
+    "iterations": 11,
+    "exit": "UPDATE_TOLERANCE"
+  },
+  "ndt_validation": {
+    "cost": 0.6096355993566727,
+    "coverage": 0.9928716904276986,
+    "samples": 982
+  },
+  "gicp_validation": {
+    "cost": 0.5023575823280784,
+    "coverage": 0.9928716904276986,
+    "samples": 982
+  },
+  "cycle_ms": 281.72803999999996,
+  "qualification": "single frozen historical sample; no independently established correct mode label"
+}

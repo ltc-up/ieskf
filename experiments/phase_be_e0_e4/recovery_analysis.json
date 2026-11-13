@@ -1,0 +1,53 @@
+{
+  "lap": {
+    "requested_retraction_groups": 7,
+    "successful_weight_revisions": 5,
+    "nonrevocable_groups": 1,
+    "branch_ledgers": {
+      "ndt": {
+        "statuses": {
+          "ACCEPTED": 1242,
+          "REJECTED": 36,
+          "EXPIRED": 190
+        },
+        "revisions": 5
+      },
+      "gicp": {
+        "statuses": {
+          "ACCEPTED": 1184,
+          "REJECTED": 111,
+          "EXPIRED": 173
+        },
+        "revisions": 5
+      }
+    },
+    "first_selected_accepted_index_after_rejection": 330,
+    "first_reentry_correction_m": 0.3602536080520992,
+    "reentry_and_later_correction_m": {
+      "n": 948,
+      "rmse": 0.028530342731741366,
+      "p50": 0.01648990264111738,
+      "p95": 0.05567728130278702,
+      "p99": 0.07963928831637411,
+      "max": 0.3602536080520992
+    },
+    "divergence_from_matched_at_end_of_interval_m": 0.495987417789093,
+    "divergence_first_ten_recovery_frames_m": {
+      "n": 10,
+      "rmse": 0.2075318373379663,
+      "p50": 0.2077111783858311,
+      "p95": 0.23835145309695205,
+      "p99": 0.24190969017547087,
+      "max": 0.2427992494451006
+    },
+    "whole_loop_divergence_m": {
+      "n": 1468,
+      "rmse": 0.06376671394093873,
+      "p50": 0.004634021355995372,
+      "p95": 0.1518474054542799,
+      "p99": 0.23232563034869272,
+      "max": 0.495987417789093
+    },
+    "interpretation": "Different closed-loop matching/latency feedback; not pure prediction drift or certified ground-truth error"
+  }
+}

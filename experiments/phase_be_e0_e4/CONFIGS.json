@@ -1,0 +1,62 @@
+{
+  "windows": {
+    "lap": 1468,
+    "multilap": 4134
+  },
+  "common": [
+    "--archive-source-history"
+  ],
+  "profiles": {
+    "fullbaseline": [
+      "--max-iterations",
+      "100",
+      "--legacy-lifecycle"
+    ],
+    "matched": [
+      "--holdout"
+    ],
+    "directional": [
+      "--holdout",
+      "--directional",
+      "--project-directional"
+    ],
+    "optical": [
+      "--holdout",
+      "--directional",
+      "--optical",
+      "xy"
+    ],
+    "dual": [
+      "--holdout",
+      "--directional",
+      "--candidates"
+    ],
+    "gmf": [
+      "--holdout",
+      "--directional",
+      "--candidates",
+      "--gmf"
+    ],
+    "robust": [
+      "--holdout",
+      "--directional",
+      "--candidates",
+      "--gmf",
+      "--reject-start",
+      "300",
+      "--reject-end",
+      "330",
+      "--retract-every",
+      "200"
+    ]
+  },
+  "GNSS_online": false,
+  "matcher": "existing research DIRECT7/GLL3, no production optimizer change",
+  "measurement_noise": "unchanged legacy 15D pose rule; existing AY optical model; GICP explicit uncalibrated AW engineering rule",
+  "q_and_bias_model": "unchanged inherited model",
+  "reference_position_lags_ms": [
+    0,
+    75,
+    150
+  ]
+}

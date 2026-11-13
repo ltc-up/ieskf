@@ -1,0 +1,152 @@
+[
+  {
+    "run": "baseline_multilap",
+    "completed_prefix": 1657,
+    "reason": "ValueError: INPUT_OUTSIDE_FORWARD_HORIZON"
+  },
+  {
+    "run": "baseline_multilap_uninterrupted",
+    "completed_prefix": 908,
+    "reason": "ValueError: PRIOR_TIMESTAMP_MISSING"
+  },
+  {
+    "run": "final_gmf_multilap",
+    "completed_prefix": 2305,
+    "reason": "ValueError: INVALID_HISTORICAL_FITNESS_COVARIANCE"
+  },
+  {
+    "run": "final_optical_lap",
+    "completed_prefix": 533,
+    "reason": "ValueError: TRUNCATED_CLOUD"
+  },
+  {
+    "run": "final_robust_lap",
+    "completed_prefix": 800,
+    "reason": "ValueError: REVOCATION_OUTSIDE_HISTORY"
+  },
+  {
+    "run": "final_robust_multilap",
+    "completed_prefix": 2518,
+    "reason": "ValueError: INVALID_HISTORICAL_FITNESS_COVARIANCE"
+  },
+  {
+    "run": "gmf_lap",
+    "completed_prefix": 73,
+    "reason": "ValueError: PRIOR_TIMESTAMP_MISSING"
+  },
+  {
+    "run": "gmf_multilap",
+    "completed_prefix": 646,
+    "reason": "AssertionError"
+  },
+  {
+    "run": "gmf_warm_lap",
+    "completed_prefix": 244,
+    "reason": "AssertionError"
+  },
+  {
+    "run": "gmf_warm_multilap",
+    "completed_prefix": 578,
+    "reason": "ValueError: PRIOR_TIMESTAMP_MISSING"
+  },
+  {
+    "run": "original_full_multilap",
+    "completed_prefix": 1760,
+    "reason": "ValueError: PRIOR_TIMESTAMP_MISSING"
+  },
+  {
+    "run": "projection_multilap",
+    "completed_prefix": 1914,
+    "reason": "ValueError: PRIOR_TIMESTAMP_MISSING"
+  },
+  {
+    "run": "revised_gmf_multilap",
+    "completed_prefix": 4052,
+    "reason": "ValueError: INPUT_OUTSIDE_FORWARD_HORIZON"
+  },
+  {
+    "run": "revised_robust_multilap",
+    "completed_prefix": 4035,
+    "reason": "ValueError: INPUT_OUTSIDE_FORWARD_HORIZON"
+  },
+  {
+    "run": "robust_lap",
+    "completed_prefix": 166,
+    "reason": "ValueError: PRIOR_TIMESTAMP_MISSING"
+  },
+  {
+    "run": "robust_multilap",
+    "completed_prefix": 742,
+    "reason": "AssertionError"
+  },
+  {
+    "run": "robust_warm_lap",
+    "completed_prefix": 1016,
+    "reason": "ValueError: PRIOR_TIMESTAMP_MISSING"
+  },
+  {
+    "run": "robust_warm_multilap",
+    "completed_prefix": 655,
+    "reason": "ValueError: SOURCE_DESKEW_HISTORY_MISSING"
+  },
+  {
+    "run": "controlled_directional_lap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_directional_multilap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_dual_lap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_dual_multilap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_fullbaseline_lap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_fullbaseline_multilap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_matched_lap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_matched_multilap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "controlled_optical_multilap",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  },
+  {
+    "run": "final_integrated_smoke",
+    "completed_prefix": 0,
+    "reason": "IndentationError: unindent does not match any outer indentation level",
+    "classification": "startup compile failure, no scans processed"
+  }
+]

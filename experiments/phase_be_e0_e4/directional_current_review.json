@@ -1,0 +1,322 @@
+{
+  "controlled2_matched_lap": {
+    "retained_directions": {},
+    "lateral_energy": {
+      "n": 0
+    },
+    "relative_minimum_eigenvalue": {
+      "n": 0
+    },
+    "segments": {
+      "0": {
+        "reference_missing": 244,
+        "ambiguous": 409,
+        "ambiguous_accepted": 408,
+        "proxy_good": 295,
+        "proxy_good_accepted": 295,
+        "ambiguous_rejected": 1,
+        "proxy_bad": 1,
+        "proxy_bad_accepted": 1
+      },
+      "1": {
+        "ambiguous": 6,
+        "ambiguous_accepted": 6,
+        "proxy_good": 42,
+        "proxy_good_accepted": 42
+      },
+      "2": {
+        "ambiguous": 30,
+        "ambiguous_accepted": 30,
+        "reference_missing": 13
+      },
+      "3": {
+        "ambiguous": 77,
+        "ambiguous_accepted": 77,
+        "proxy_good": 12,
+        "proxy_good_accepted": 12
+      },
+      "4": {
+        "reference_missing": 7,
+        "proxy_good": 21,
+        "proxy_good_accepted": 21,
+        "ambiguous": 22,
+        "ambiguous_accepted": 22
+      },
+      "5": {
+        "proxy_good": 79,
+        "proxy_good_accepted": 79,
+        "ambiguous": 25,
+        "ambiguous_accepted": 25
+      },
+      "6": {
+        "proxy_good": 13,
+        "proxy_good_accepted": 13
+      },
+      "7": {
+        "proxy_good": 14,
+        "proxy_good_accepted": 14
+      },
+      "8": {
+        "proxy_good": 98,
+        "proxy_good_accepted": 98,
+        "ambiguous": 31,
+        "ambiguous_accepted": 31
+      },
+      "9": {
+        "ambiguous": 26,
+        "ambiguous_accepted": 26,
+        "proxy_good": 3,
+        "proxy_good_accepted": 3
+      }
+    },
+    "interpretation": "L=10m; admission labels are offline engineering proxies, not true peak labels"
+  },
+  "controlled2_directional_lap": {
+    "retained_directions": {
+      "3": 1468
+    },
+    "lateral_energy": {
+      "n": 1468,
+      "rmse": 1.0,
+      "p50": 1.0,
+      "p95": 1.0000000000000009,
+      "p99": 1.000000000000001,
+      "max": 1.0000000000000013
+    },
+    "relative_minimum_eigenvalue": {
+      "n": 1468,
+      "rmse": 0.019099058072053896,
+      "p50": 0.017553476104242675,
+      "p95": 0.028156927764176207,
+      "p99": 0.03667043333570848,
+      "max": 0.04184621264196154
+    },
+    "segments": {
+      "0": {
+        "reference_missing": 244,
+        "ambiguous": 409,
+        "ambiguous_accepted": 408,
+        "proxy_good": 295,
+        "proxy_good_accepted": 295,
+        "ambiguous_rejected": 1,
+        "proxy_bad": 1,
+        "proxy_bad_accepted": 1
+      },
+      "1": {
+        "ambiguous": 6,
+        "ambiguous_accepted": 6,
+        "proxy_good": 42,
+        "proxy_good_accepted": 42
+      },
+      "2": {
+        "ambiguous": 30,
+        "ambiguous_accepted": 30,
+        "reference_missing": 13
+      },
+      "3": {
+        "ambiguous": 77,
+        "ambiguous_accepted": 77,
+        "proxy_good": 12,
+        "proxy_good_accepted": 12
+      },
+      "4": {
+        "reference_missing": 7,
+        "proxy_good": 21,
+        "proxy_good_accepted": 21,
+        "ambiguous": 22,
+        "ambiguous_accepted": 22
+      },
+      "5": {
+        "proxy_good": 79,
+        "proxy_good_accepted": 79,
+        "ambiguous": 25,
+        "ambiguous_accepted": 25
+      },
+      "6": {
+        "proxy_good": 13,
+        "proxy_good_accepted": 13
+      },
+      "7": {
+        "proxy_good": 14,
+        "proxy_good_accepted": 14
+      },
+      "8": {
+        "proxy_good": 98,
+        "proxy_good_accepted": 98,
+        "ambiguous": 31,
+        "ambiguous_accepted": 31
+      },
+      "9": {
+        "ambiguous": 26,
+        "ambiguous_accepted": 26,
+        "proxy_good": 3,
+        "proxy_good_accepted": 3
+      }
+    },
+    "interpretation": "L=10m; admission labels are offline engineering proxies, not true peak labels"
+  },
+  "controlled2_matched_multilap": {
+    "retained_directions": {},
+    "lateral_energy": {
+      "n": 0
+    },
+    "relative_minimum_eigenvalue": {
+      "n": 0
+    },
+    "segments": {
+      "0": {
+        "reference_missing": 425,
+        "ambiguous": 1262,
+        "ambiguous_accepted": 1261,
+        "proxy_good": 971,
+        "proxy_good_accepted": 971,
+        "ambiguous_rejected": 1,
+        "proxy_bad": 9,
+        "proxy_bad_accepted": 9
+      },
+      "1": {
+        "ambiguous": 30,
+        "ambiguous_accepted": 30,
+        "proxy_good": 107,
+        "proxy_good_accepted": 107
+      },
+      "2": {
+        "ambiguous": 58,
+        "ambiguous_accepted": 58,
+        "reference_missing": 53,
+        "proxy_good": 11,
+        "proxy_good_accepted": 11
+      },
+      "3": {
+        "ambiguous": 216,
+        "ambiguous_accepted": 216,
+        "proxy_good": 42,
+        "proxy_good_accepted": 42
+      },
+      "4": {
+        "reference_missing": 21,
+        "proxy_good": 63,
+        "proxy_good_accepted": 63,
+        "ambiguous": 58,
+        "ambiguous_accepted": 58
+      },
+      "5": {
+        "proxy_good": 238,
+        "proxy_good_accepted": 238,
+        "ambiguous": 56,
+        "ambiguous_accepted": 56
+      },
+      "6": {
+        "proxy_good": 35,
+        "proxy_good_accepted": 35
+      },
+      "7": {
+        "proxy_good": 36,
+        "proxy_good_accepted": 36,
+        "ambiguous": 2,
+        "ambiguous_accepted": 2
+      },
+      "8": {
+        "proxy_good": 275,
+        "proxy_good_accepted": 275,
+        "ambiguous": 85,
+        "ambiguous_accepted": 85
+      },
+      "9": {
+        "ambiguous": 65,
+        "ambiguous_accepted": 65,
+        "proxy_good": 16,
+        "proxy_good_accepted": 16
+      }
+    },
+    "interpretation": "L=10m; admission labels are offline engineering proxies, not true peak labels"
+  },
+  "controlled2_directional_multilap": {
+    "retained_directions": {
+      "3": 4134
+    },
+    "lateral_energy": {
+      "n": 4134,
+      "rmse": 1.0,
+      "p50": 1.0,
+      "p95": 1.0000000000000009,
+      "p99": 1.000000000000001,
+      "max": 1.0000000000000018
+    },
+    "relative_minimum_eigenvalue": {
+      "n": 4134,
+      "rmse": 0.01913875852217735,
+      "p50": 0.01761125632732511,
+      "p95": 0.028255753383858027,
+      "p99": 0.0366843269516166,
+      "max": 0.04203430169824503
+    },
+    "segments": {
+      "0": {
+        "reference_missing": 425,
+        "ambiguous": 1262,
+        "ambiguous_accepted": 1261,
+        "proxy_good": 971,
+        "proxy_good_accepted": 971,
+        "ambiguous_rejected": 1,
+        "proxy_bad": 9,
+        "proxy_bad_accepted": 9
+      },
+      "1": {
+        "ambiguous": 30,
+        "ambiguous_accepted": 30,
+        "proxy_good": 107,
+        "proxy_good_accepted": 107
+      },
+      "2": {
+        "ambiguous": 58,
+        "ambiguous_accepted": 58,
+        "reference_missing": 53,
+        "proxy_good": 11,
+        "proxy_good_accepted": 11
+      },
+      "3": {
+        "ambiguous": 216,
+        "ambiguous_accepted": 216,
+        "proxy_good": 42,
+        "proxy_good_accepted": 42
+      },
+      "4": {
+        "reference_missing": 21,
+        "proxy_good": 63,
+        "proxy_good_accepted": 63,
+        "ambiguous": 58,
+        "ambiguous_accepted": 58
+      },
+      "5": {
+        "proxy_good": 238,
+        "proxy_good_accepted": 238,
+        "ambiguous": 56,
+        "ambiguous_accepted": 56
+      },
+      "6": {
+        "proxy_good": 35,
+        "proxy_good_accepted": 35
+      },
+      "7": {
+        "proxy_good": 36,
+        "proxy_good_accepted": 36,
+        "ambiguous": 2,
+        "ambiguous_accepted": 2
+      },
+      "8": {
+        "proxy_good": 275,
+        "proxy_good_accepted": 275,
+        "ambiguous": 85,
+        "ambiguous_accepted": 85
+      },
+      "9": {
+        "ambiguous": 65,
+        "ambiguous_accepted": 65,
+        "proxy_good": 16,
+        "proxy_good_accepted": 16
+      }
+    },
+    "interpretation": "L=10m; admission labels are offline engineering proxies, not true peak labels"
+  }
+}

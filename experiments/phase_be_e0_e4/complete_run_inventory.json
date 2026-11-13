@@ -1,0 +1,317 @@
+[
+  {
+    "run": "baseline_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 12,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "controlled2_directional_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 3,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_directional_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 28,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_dual_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 3,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_dual_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 22,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_fullbaseline_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 0,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_fullbaseline_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 117,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_matched_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 3,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_matched_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 28,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "controlled2_optical_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 47,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "dual_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 10,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "dual_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 38,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_directional_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 7,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_directional_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 304,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_dual_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 1,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_dual_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 330,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_fullbaseline_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 67,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_fullbaseline_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 489,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_gmf_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 435,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_integrated_smoke2",
+    "frames": 30,
+    "requested": 30,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 2,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_matched_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 2,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_matched_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 313,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "final_optical_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 387,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "gmf_smoke",
+    "frames": 5,
+    "requested": 5,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 1,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "gmf_smoke_v2",
+    "frames": 30,
+    "requested": 30,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 21,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "gmf_warm_smoke",
+    "frames": 5,
+    "requested": 5,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 0,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "optical_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 14,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "optical_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 48,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "original_full_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 13,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "original_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 11,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "original_multilap",
+    "frames": 4134,
+    "requested": 4134,
+    "window": "multilap",
+    "GNSS_online": false,
+    "over_50ms": 43,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "projection_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 12,
+    "selected_in_main_comparison": false
+  },
+  {
+    "run": "revised_gmf_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 44,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "revised_optical_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 8,
+    "selected_in_main_comparison": true
+  },
+  {
+    "run": "revised_robust_lap",
+    "frames": 1468,
+    "requested": 1468,
+    "window": "lap",
+    "GNSS_online": false,
+    "over_50ms": 299,
+    "selected_in_main_comparison": true
+  }
+]
