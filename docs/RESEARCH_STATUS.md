@@ -148,3 +148,8 @@ P0 conditional75ms gains with150ms reversal and normal5 regression; true CUDA146
 
 
 BD publication: committed locally on the new-volume independent branch; Git HTTPS authentication failed. No remote-access claim, force push or main modification. See PUBLICATION_STATUS.md in the phase directory.
+
+
+## Phase BE design status
+
+BE is documentation-only on an independent research branch, based on05b73c0. Literature and official source snapshots support a staged plan: observation lifecycle/reference-point audit, coupled directional diagnostics and lateral-velocity audit, matched-input NDT/small_gicp Shadow, then a two-branch independent-history Gaussian mixture if evidence permits. No new algorithm, Q/R, TF or production default was changed; no BE accuracy or50ms qualification is claimed. GNSS remains solely under existing production use_gps semantics, default-off for planned experiments; no RAIM/FDE/integrity state machine. Default legacy GPS1 converter input has no active antenna-to-rear-axle correction; the separate TF-capable VectorNav path is not evidence that this EKF input is corrected. Runtime wiring remains unverified. [Recommendation](../experiments/phase_be_multimodal_localization/FINAL_RECOMMENDATION.md), [architecture](../experiments/phase_be_multimodal_localization/MULTIMODAL_LOCALIZATION_ARCHITECTURE.md), [GNSS audit](../experiments/phase_be_multimodal_localization/GNSS_INTEGRITY_AND_FUSION.md).

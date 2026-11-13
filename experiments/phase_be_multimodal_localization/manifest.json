@@ -1,0 +1,47 @@
+{
+  "phase": "BE",
+  "kind": "review_and_design_only",
+  "base_commit": "05b73c0aae6b9f5440f8497477dfe9909ebfe9e1",
+  "production_commit": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "gnss": "existing_production_switch_only; default_off; no_new_integrity_algorithm",
+  "algorithm_changes": false,
+  "new_accuracy_experiments": false,
+  "production_changes": false,
+  "main_changes": false,
+  "design_configuration_sha256": "d97ad1abfc6f33b888c1d4fda3693d67e9661c9812533375ca73eefed30c948d",
+  "research_code_commit": "none: no algorithm code; report parent is base_commit; final report commit from Git history",
+  "data_version": "AW-BD reports at base_commit; loop44/map0105 are planned future inputs, not newly replayed",
+  "input_identity_policy": "non-reconstructive report/version identities only; full private evidence is outside repository",
+  "reference_revisions": [
+    {
+      "repo": "TUMFTM/FAR-LIO",
+      "commit": "ef20510316ad1f8dbf2e428e4a193f700493eccd"
+    },
+    {
+      "repo": "koide3/small_gicp",
+      "commit": "fa0cfc983417c044b6036f71dfa448038bb9c820"
+    },
+    {
+      "repo": "ethz-asl/COIN-LIO",
+      "commit": "76729cc4feb3649cbd79d28f82d9f62a2c82889b"
+    },
+    {
+      "repo": "leggedrobotics/perfectlyconstrained",
+      "commit": "0fbe4175ea205a271f85287abfd8048e5f7dd32a"
+    },
+    {
+      "repo": "TUMFTM/3DVehicleDynamicsStateEstimation",
+      "commit": "14ba6285d1cb8d0cd847a69af4e1981015d48b8e"
+    },
+    {
+      "repo": "superxslam/SuperOdom",
+      "commit": "f10e65cd50007767b22e4c401689665e20d827d6"
+    }
+  ],
+  "limitations": [
+    "live ROS parameter/TF graph not captured",
+    "GNSS rear-axle input qualification failed",
+    "some classic original texts inaccessible",
+    "no BE accuracy or real-time qualification"
+  ]
+}
