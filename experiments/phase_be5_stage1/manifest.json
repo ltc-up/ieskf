@@ -1,0 +1,54 @@
+{
+  "phase": "BE5_STAGE1_READ_ONLY_DRAFT",
+  "source_baseline": "a03036ca3289b00ab747d13b19059421aff28790",
+  "production_source": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "new_branch_created": false,
+  "algorithm_changes": false,
+  "new_matching": false,
+  "new_replay": false,
+  "new_algorithm_tests_run": false,
+  "reviewed_small_source_files": 31,
+  "reviewed_source_bytes": 351153,
+  "existing_native_matrix_available": true,
+  "full_native_statistical_calibration": "UNKNOWN",
+  "C_independent_reference": "UNKNOWN",
+  "GNSS_online": false,
+  "scope": [
+    "A",
+    "C",
+    "R"
+  ],
+  "excluded": [
+    "B",
+    "GMF expansion",
+    "GICP replacement",
+    "global relocation",
+    "optimizer/Q/bias/production changes"
+  ],
+  "approval_required_before_implementation": true,
+  "source_evidence": "private audited source identities retained separately",
+  "reports": [
+    "SOURCE_AND_DATAFLOW_AUDIT.md",
+    "ESKF_VERTICAL_FAILURE_ANALYSIS.md",
+    "A_VERTICAL_VELOCITY_MODEL.md",
+    "C_ATTITUDE_REFERENCE_MODEL.md",
+    "NDT_COVARIANCE_REVIEW.md",
+    "EXPERIMENT_PLAN.md",
+    "MINIMAL_CHANGE_PROPOSAL.md",
+    "STORAGE_BUDGET.md",
+    "README.md"
+  ],
+  "report_sha256": {
+    "A_VERTICAL_VELOCITY_MODEL.md": "0a1d3273ae2086dcb00f473bb3deb278ca70aeee916148aec58e2f5c06d26d88",
+    "C_ATTITUDE_REFERENCE_MODEL.md": "de3520c918daee60f473f90194c00a054fe925857b5e7e76e20b4d685e2ea0e1",
+    "ESKF_VERTICAL_FAILURE_ANALYSIS.md": "b1cd2dda4184769436b6a29b7f6ffa45c0ac93b1304b29875811d9480703fad0",
+    "EXPERIMENT_PLAN.md": "9ce70c422bfedae4d55ec6b3fc526dea7938b64d2226cede062e89b1248fc8f2",
+    "MINIMAL_CHANGE_PROPOSAL.md": "5069606e8e691b092fad15e6be6880602377ecab88c154690c7af39792987c14",
+    "NDT_COVARIANCE_REVIEW.md": "675319c209e4522c4f988a2e4f3ed55638d55553227985cd7295d58ba820afbd",
+    "README.md": "4d7e9c01f99e1a7aefef389d9157f5a41d818fb536e9c09ccfa37f9590cb9d42",
+    "SOURCE_AND_DATAFLOW_AUDIT.md": "9c8004065c3a6d751d082bb25bb2b3b303af2fdfdd8ddb26285926295f48fc29",
+    "STORAGE_BUDGET.md": "3d7b9d449120ecf569edff76d12cc995a6c1f32888f2e34fb86b6cc60cbc1fb4"
+  },
+  "review_validation": "31 reviewed source identities unchanged; production HEAD/status/stash unchanged; 8 required drafts present; report links valid; no algorithm tests or replays"
+}

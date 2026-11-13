@@ -126,3 +126,8 @@ BE is documentation-only on an independent research branch, based on05b73c0. Lit
 ## Phase BE-E0–E4 — implementation and negative qualification
 
 Independent branch; real own-state15D CUDA/Deskew, directional/slip diagnostics,1468 same-input NDT/CPU-GICP pairs and historical sample, two independent replay branches, unique terminal ledger and retained-window retraction implemented.218 tests pass. Twelve declared complete profile/window comparisons; GMF three-lap4052/4134 and robust4035/4134 fail on forward-input horizon after backlog. Rank3 retained in every real directional frame; no real degeneracy-suppression gain. Optical conditional75ms gain repeats normal8 regression. No production changes, GNSS online input, high-speed reset or main merge. [Conclusion](../experiments/phase_be_e0_e4/FINAL_CONCLUSION.md), [reproduce](../experiments/phase_be_e0_e4/REPRODUCE.md), [manifest](../experiments/phase_be_e0_e4/manifest.json).
+
+
+## Phase BE5 Stage 1 — read-only A/C/R audit
+
+Eight requested drafts plus decision entry and manifest completed from a030 research source and separate aa50 production audit. No algorithms, Q/R, optimizer, production settings, new matching or replay changed. Existing Native conversion helper still calls Legacy Fitness admissibility; saved native_internal is available for future fixed-pose comparison, not a calibrated covariance. A1/A2 have different attitude Jacobians; C independent reference remains unproven. All implementation and experiments await approval. [Decision/drafts](../experiments/phase_be5_stage1/README.md).
