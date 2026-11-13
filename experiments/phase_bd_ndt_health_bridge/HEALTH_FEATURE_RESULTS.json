@@ -1,0 +1,94 @@
+{
+  "frames": 1468,
+  "raw_valid": 1204,
+  "proxy_good": 571,
+  "proxy_bad": 1,
+  "ambiguous": 632,
+  "reference_not_certified_truth": true,
+  "hessian": {
+    "5.0": {
+      "nonpositive": 0,
+      "min_quantiles": [
+        1752.8661488354594,
+        5736.043482541685,
+        10647.57564947254,
+        13188.270116177191
+      ]
+    },
+    "10.0": {
+      "nonpositive": 0,
+      "min_quantiles": [
+        1752.3937804425018,
+        5735.4355645734795,
+        10633.707233344558,
+        13181.002065342636
+      ]
+    },
+    "20.0": {
+      "nonpositive": 0,
+      "min_quantiles": [
+        1750.4022058189412,
+        5728.324861143048,
+        10542.019182299477,
+        13149.089786188575
+      ]
+    }
+  },
+  "features": {
+    "correction_m": {
+      "spearman_error": 0.10653826139631552,
+      "good_median": 0.19170723357484,
+      "bad_median": 0.0983909814969938
+    },
+    "lateral_correction_m": {
+      "spearman_error": 0.023035427793675952,
+      "good_median": 0.04861842937680194,
+      "bad_median": 0.006251383319380466
+    },
+    "yaw_correction_rad": {
+      "spearman_error": -0.048154087149477186,
+      "good_median": 0.0030970462697470337,
+      "bad_median": 8.379031902732499e-05
+    },
+    "fitness": {
+      "spearman_error": 0.19461467504093738,
+      "good_median": 0.14375650504790358,
+      "bad_median": 0.13795992763977846
+    },
+    "iterations": {
+      "spearman_error": 0.11737118803301691,
+      "good_median": 7.0,
+      "bad_median": 8.0
+    },
+    "min_eigen_L5": {
+      "spearman_error": -0.24287978032613836,
+      "good_median": 6489.155751122544,
+      "bad_median": 5103.787734424286
+    },
+    "anisotropy_L5": {
+      "spearman_error": 0.1301433352283261,
+      "good_median": 217.928732591173,
+      "bad_median": 308.43896506548174
+    },
+    "min_eigen_L10": {
+      "spearman_error": -0.242221055761363,
+      "good_median": 6485.212066621768,
+      "bad_median": 5101.707559948035
+    },
+    "anisotropy_L10": {
+      "spearman_error": 0.12968178525302793,
+      "good_median": 54.68452084923849,
+      "bad_median": 77.17292423366513
+    },
+    "min_eigen_L20": {
+      "spearman_error": -0.23925921538360573,
+      "good_median": 6471.396860241369,
+      "bad_median": 5092.979700184066
+    },
+    "anisotropy_L20": {
+      "spearman_error": 0.12710266764266184,
+      "good_median": 14.026850497602366,
+      "bad_median": 19.359749313950825
+    }
+  }
+}

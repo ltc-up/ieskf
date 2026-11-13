@@ -135,3 +135,13 @@ AU3: lawful fixed-state P/R scaling shows gain alone cannot separate P versus R 
 Additional raw optical lateral/forward motion information is implemented without changing original IMU/wheel/NDT equations or arbitrary LiDAR gain changes. Full cross-covariance/Joseph/reset and bounded delayed replay retained; optical installation, temporal correlation and engineering velocity variance are not statistically certified. The optional16D installation state is an experiment, not calibrated vehicle configuration. See [AY design](../experiments/phase_ay_localization_solution/ALGORITHM_AND_EVIDENCE.md).
 
 AY final: actual motion information produces conditional difficult-corner/global improvement without changing LiDAR gain rules, but fails no-normal-regression (segment8 lateralP95 .343576→.436548m). Static mounting-yaw augmentation does not cure it. All three candidates complete1468+4134 own-state CUDA/Deskew loops;195 numerical tests pass, no production/default changes. Full offline cycle profiling P95/P99/max23.095/26.069/76.524ms; hard50ms deadline not met, ROS2/100Hz/independent accuracy unvalidated.150ms reference reverses global ordering. Preserve original baseline; candidate is not main/default qualified. [Final AY](../experiments/phase_ay_localization_solution/FINAL_CONCLUSION.md).
+
+
+## Phase BD — P0 in progress
+
+Independent AY-based branch. Verified distinct step/objective epsilons and step-min coupling;13×1468 frozen CUDA fits, selected MT and frozen AY1468/4134 causal runs retained.75ms conditional gains,150ms ranking reversal and normal5 regression; no production qualification or accepted rejection policy. Remaining BD queue counterfactual/health/search/recovery work open. [P0 report](../experiments/phase_bd_ndt_health_bridge/P0_CLOSED_LOOP_COMPARISON.md).
+
+
+### BD result: safe rejection policy NOT ESTABLISHED
+
+P0 conditional75ms gains with150ms reversal and normal5 regression; true CUDA1468/4134 retained. Independent KD-tree2×2 and exact-radius oracle completed; NO-GO replacingDIRECT7 (normal8/history basin regressions). Original15D delayed counterfactual baseline exactly reproduces;30-frame rejection cases quantify drift/reentry, full prediction-only fails. HEALTHY necessary checks do not certify peaks; no new final gate admitted. Automatic global recovery NO-GO. [Final conclusion](../experiments/phase_bd_ndt_health_bridge/FINAL_CONCLUSION.md).

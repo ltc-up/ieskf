@@ -1,0 +1,9 @@
+# Performance comparison
+
+Selected DIRECT7 MT true serial1468-frame cycle: P50/P95/P99/max20.911/26.668/42.098/70.674ms. No frame exclusion; strict50ms per-frame qualification FAIL. Max100 repeat matches max35 candidate exactly in native seeds/final poses/Hessians; caps never activated (22/24 maximum iterations on single/triple selected runs). Partial first performance repeat stopped after52 frames because its next intermediate source file was absent during observed disk exhaustion; preserved and not counted as1468 success. Timing process suspended own compression and resumed it afterward.
+
+Full initial selected/baseline single/triple timing distributions and all overruns are retained in P0_CLOSED_LOOP_RESULTS.json; triple runs partly overlapped and are not fair performance rankings. Frozen13-grid times include per-step trace I/O. Neighborhood2×2 is untraced alignment-only: DIRECT7 OFF/MT P95≈3.34/2.74ms, KD OFF/MT≈5.68/4.21ms; it is not full-cycle KD timing. KD one-time build≈7.8ms/1.21MB for60362 nodes is additional to original map startup; no build cost is hidden as zero.
+
+Health-only CPU matrix diagnostic P50/P95/P99≈.0409/.0442/.0523ms, first-use max15.594ms retained. No additional match required for these basic metrics. Offline multi-start diagnosis requires extra real matches and is not a free gate. Search/score-gradient-Hessian are fused; independent neighbor/Hessian GPU stage times were not instrumented. Line-search evaluation counts are retained per iteration but isolated line-search wall time is unvalidated. EKF/repropagation are included in full-cycle runtime and revision logs; this phase does not fabricate independent microsecond breakdowns from total time.
+
+No global recovery task runs in the tracking cycle. Its full CPU/GPU/memory/verification cost is not measured anew; NO-GO based on missing few-ms evidence and adverse historical costs. Realtime, statistical consistency and control safety remain separate qualifications.

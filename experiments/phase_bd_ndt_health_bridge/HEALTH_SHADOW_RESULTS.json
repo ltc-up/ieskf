@@ -1,0 +1,19 @@
+{
+  "statuses": {
+    "HEALTHY": 1468
+  },
+  "shadow_only": true,
+  "new_rejection_policy": "NO_GO_INSUFFICIENT_DISCRIMINATION",
+  "necessary_checks_only_proxy_good_accepted": 571,
+  "proxy_good_rejected": 0,
+  "proxy_bad_accepted": 1,
+  "proxy_bad_rejected": 0,
+  "ambiguous_and_reference_missing": 896,
+  "timing_ms": {
+    "p50": 0.0409065,
+    "p95": 0.044185999999999996,
+    "p99": 0.05234455999999991,
+    "max": 15.593983
+  },
+  "qualification": "one bad proxy among1204 raw-reference-valid frames is not enough to estimate dangerous-match rates; historical LOW example is independent evidence, not pooled into a rate"
+}

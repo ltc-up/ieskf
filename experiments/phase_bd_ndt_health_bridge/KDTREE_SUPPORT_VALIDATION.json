@@ -1,0 +1,18 @@
+{
+  "kdtree": {
+    "optimizer_score_max_relative_difference": 0.0,
+    "score_gradient_max_relative_difference": 0.0,
+    "score_hessian_max_relative_difference": 0.0,
+    "final_max_relative_difference": 0.0,
+    "pair_count_equal": 40,
+    "frames": 40
+  },
+  "direct7": {
+    "optimizer_score_max_relative_difference": 0.04567772563356999,
+    "score_gradient_max_relative_difference": 1.0932660320052152,
+    "score_hessian_max_relative_difference": 0.21568101559469194,
+    "final_max_relative_difference": 0.0007341434277043271,
+    "pair_count_equal": 0,
+    "frames": 40
+  }
+}

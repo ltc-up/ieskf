@@ -1,0 +1,88 @@
+{
+  "checks": [
+    {
+      "binary": "match_p0",
+      "configuration": {
+        "transformation_epsilon": 0.001,
+        "relative_objective_epsilon": 0.0,
+        "line_search": false,
+        "mode": "mt"
+      },
+      "frames": 5,
+      "max_absolute_difference": {
+        "final": 0.0,
+        "score_gradient": 0.0,
+        "score_hessian": 0.0,
+        "optimizer_score": 0.0
+      }
+    },
+    {
+      "binary": "match_p0",
+      "configuration": {
+        "transformation_epsilon": 0.001,
+        "relative_objective_epsilon": 0.0,
+        "line_search": true,
+        "mode": "mt"
+      },
+      "frames": 5,
+      "max_absolute_difference": {
+        "final": 0.0,
+        "score_gradient": 0.0,
+        "score_hessian": 0.0,
+        "optimizer_score": 0.0
+      }
+    },
+    {
+      "binary": "match_p0",
+      "configuration": {
+        "transformation_epsilon": 0.01,
+        "relative_objective_epsilon": 0.001,
+        "line_search": true,
+        "mode": "gll"
+      },
+      "frames": 5,
+      "max_absolute_difference": {
+        "final": 0.0,
+        "score_gradient": 0.0,
+        "score_hessian": 0.0,
+        "optimizer_score": 0.0
+      }
+    },
+    {
+      "binary": "match_kdtree",
+      "configuration": {
+        "transformation_epsilon": 0.001,
+        "relative_objective_epsilon": 0.0,
+        "line_search": false,
+        "mode": "mt",
+        "neighbor": "kdtree"
+      },
+      "frames": 5,
+      "max_absolute_difference": {
+        "final": 0.0,
+        "score_gradient": 0.0,
+        "score_hessian": 0.0,
+        "optimizer_score": 0.0
+      }
+    },
+    {
+      "binary": "match_kdtree",
+      "configuration": {
+        "transformation_epsilon": 0.001,
+        "relative_objective_epsilon": 0.0,
+        "line_search": true,
+        "mode": "mt",
+        "neighbor": "kdtree"
+      },
+      "frames": 5,
+      "max_absolute_difference": {
+        "final": 0.0,
+        "score_gradient": 0.0,
+        "score_hessian": 0.0,
+        "optimizer_score": 0.0
+      }
+    }
+  ],
+  "all_exact": true,
+  "source_target_paths_within_storage": true
+}

@@ -1,0 +1,9 @@
+# Global recovery — NO-GO for automatic high-speed resets
+
+No global recovery was placed in the20Hz path or allowed to reset state. Existing reference documentation reports seconds for BBS2D queries and demonstrates fitness-only false confirmation of along-route aliases; second fresh-query cross-check and scan-time pose comparison were added for that failure. Those Go2/Koide demonstrations do not establish racing safety.
+
+Local historical BBS_TOPK_AND_VISIBILITY_REPORT retained five3DBBS runs: about15.5–23.1s for pit-region TopK,49.0s for full-map Top10. The wrong scan ranks an alias above TRUE; top3 is insufficient. BBS_LOCAL_RESCORE_REPORT records crop median52.5–80.1ms and target build282.8ms before trustworthy recovery. These use different historical inputs and3DBBS, so they are not new loop44 BBS2D benchmarks; they are sufficient negative evidence against assuming millisecond whole-system recovery. Do not report kernel-only timing as full recovery latency.
+
+No complete few-millisecond asynchronous recovery with preprocessing, search, multi-candidate validation, contention, GPU memory and candidate freshness was measured here. Accordingly those requested new measurements are UNVALIDATED, not zero-cost. No new background search is justified merely to fill a feature checklist. At35m/s,100ms corresponds to3.5m travelled and1s to35m; the result must be transported/validated at its scan stamp, not directly reset into current control pose.
+
+Decision: NO-GO automatic high-speed relocation and NO-GO any search in the20Hz critical path. A separately funded offline/asynchronous experiment would need end-to-end timing, memory/normal-tracking contention, fresh multi-scan branch validation and a control-safe correction contract. Existing data do not prove those prerequisites. All state/P reset paths remain absent.

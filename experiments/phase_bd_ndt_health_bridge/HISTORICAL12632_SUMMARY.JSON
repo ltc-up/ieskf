@@ -1,0 +1,210 @@
+[
+  {
+    "config": {
+      "transformation_epsilon": 0.001,
+      "relative_objective_epsilon": 0.0,
+      "line_search": false,
+      "mode": "mt"
+    },
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS",
+    "optimizer_score": 17446.284876205493,
+    "scaled_chart_eigenvalues": [
+      9311.829697634288,
+      19042.672090744418,
+      651816.3078909917
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.001,
+      "relative_objective_epsilon": 0.0,
+      "line_search": true,
+      "mode": "mt"
+    },
+    "iterations": 13,
+    "exit": "OPTIMIZER_CONVERGED",
+    "optimizer_score": 13436.754904597532,
+    "scaled_chart_eigenvalues": [
+      5348.890275385509,
+      15957.418664750616,
+      418366.9617849514
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.01,
+      "relative_objective_epsilon": 0.0,
+      "line_search": false,
+      "mode": "mt"
+    },
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS",
+    "optimizer_score": 17446.284876205493,
+    "scaled_chart_eigenvalues": [
+      9311.829697634288,
+      19042.672090744418,
+      651816.3078909917
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.01,
+      "relative_objective_epsilon": 0.0,
+      "line_search": true,
+      "mode": "mt"
+    },
+    "iterations": 12,
+    "exit": "OPTIMIZER_CONVERGED",
+    "optimizer_score": 13435.057117599994,
+    "scaled_chart_eigenvalues": [
+      5347.721320972548,
+      15952.585978773322,
+      418246.41964113165
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.001,
+      "relative_objective_epsilon": 0.0001,
+      "line_search": false,
+      "mode": "mt"
+    },
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS",
+    "optimizer_score": 17446.284876205493,
+    "scaled_chart_eigenvalues": [
+      9311.829697634288,
+      19042.672090744418,
+      651816.3078909917
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.001,
+      "relative_objective_epsilon": 0.0001,
+      "line_search": true,
+      "mode": "mt"
+    },
+    "iterations": 21,
+    "exit": "OBJECTIVE_CONVERGED",
+    "optimizer_score": 13437.922822773457,
+    "scaled_chart_eigenvalues": [
+      5349.084500983126,
+      15958.964485514285,
+      418613.28807915235
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.01,
+      "relative_objective_epsilon": 0.0001,
+      "line_search": false,
+      "mode": "mt"
+    },
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS",
+    "optimizer_score": 17446.284876205493,
+    "scaled_chart_eigenvalues": [
+      9311.829697634288,
+      19042.672090744418,
+      651816.3078909917
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.01,
+      "relative_objective_epsilon": 0.0001,
+      "line_search": true,
+      "mode": "mt"
+    },
+    "iterations": 13,
+    "exit": "OBJECTIVE_CONVERGED",
+    "optimizer_score": 13434.472177591873,
+    "scaled_chart_eigenvalues": [
+      5349.464365270703,
+      15956.063096071055,
+      418553.95299504994
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.001,
+      "relative_objective_epsilon": 0.001,
+      "line_search": false,
+      "mode": "mt"
+    },
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS",
+    "optimizer_score": 17446.284876205493,
+    "scaled_chart_eigenvalues": [
+      9311.829697634288,
+      19042.672090744418,
+      651816.3078909917
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.001,
+      "relative_objective_epsilon": 0.001,
+      "line_search": true,
+      "mode": "mt"
+    },
+    "iterations": 14,
+    "exit": "OBJECTIVE_CONVERGED",
+    "optimizer_score": 13437.156221771846,
+    "scaled_chart_eigenvalues": [
+      5349.317768294711,
+      15956.719845336853,
+      418365.900150546
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.01,
+      "relative_objective_epsilon": 0.001,
+      "line_search": false,
+      "mode": "mt"
+    },
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS",
+    "optimizer_score": 17446.284876205493,
+    "scaled_chart_eigenvalues": [
+      9311.829697634288,
+      19042.672090744418,
+      651816.3078909917
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.01,
+      "relative_objective_epsilon": 0.001,
+      "line_search": true,
+      "mode": "mt"
+    },
+    "iterations": 13,
+    "exit": "OBJECTIVE_CONVERGED",
+    "optimizer_score": 13434.472177591873,
+    "scaled_chart_eigenvalues": [
+      5349.464365270703,
+      15956.063096071055,
+      418553.95299504994
+    ]
+  },
+  {
+    "config": {
+      "transformation_epsilon": 0.01,
+      "relative_objective_epsilon": 0.001,
+      "line_search": true,
+      "mode": "gll"
+    },
+    "iterations": 35,
+    "exit": "MAX_ITERATIONS",
+    "optimizer_score": 17446.284876205493,
+    "scaled_chart_eigenvalues": [
+      9311.829697634288,
+      19042.672090744418,
+      651816.3078909917
+    ]
+  }
+]

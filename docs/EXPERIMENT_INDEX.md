@@ -106,3 +106,13 @@ Frozen AS baseline fe55fd3. Real raw GPS1/GPS2/attitude audit and1468 native AR-
 Frozen c647ac3 retained. Added opt-in full15D raw optical sensor-axis velocity update, replay-aware source substitution/fallback and optional16D static mounting-yaw experiment. Reused AW journal/evaluation support without production source copying. Source/model assumptions and actual candidate selection: [algorithm and evidence](../experiments/phase_ay_localization_solution/ALGORITHM_AND_EVIDENCE.md). No default or main promotion authorized on incomplete acceptance.
 
 AY executed three actual candidates, each1468-frame single lap plus4134-frame continuous three laps, no reset. OpticalXY lowers fixed75ms engineering XY RMSE0.577097→0.516665m and difficult3/9 lateralP95 .673964/.667541→.567103/.427361m, but normal8 worsens.195 tests pass; baseline40 and profiled1468 key matrix/seed equivalence exact. Overall repair FAILED; independent branch only. [Results](../experiments/phase_ay_localization_solution/RESULTS.md), [qualification](../experiments/phase_ay_localization_solution/FINAL_CONCLUSION.md), [reproduce](../experiments/phase_ay_localization_solution/REPRODUCE.md).
+
+
+## Phase BD — P0 in progress
+
+Independent AY-based branch. Verified distinct step/objective epsilons and step-min coupling;13×1468 frozen CUDA fits, selected MT and frozen AY1468/4134 causal runs retained.75ms conditional gains,150ms ranking reversal and normal5 regression; no production qualification or accepted rejection policy. Remaining BD queue counterfactual/health/search/recovery work open. [P0 report](../experiments/phase_bd_ndt_health_bridge/P0_CLOSED_LOOP_COMPARISON.md).
+
+
+### BD result: safe rejection policy NOT ESTABLISHED
+
+P0 conditional75ms gains with150ms reversal and normal5 regression; true CUDA1468/4134 retained. Independent KD-tree2×2 and exact-radius oracle completed; NO-GO replacingDIRECT7 (normal8/history basin regressions). Original15D delayed counterfactual baseline exactly reproduces;30-frame rejection cases quantify drift/reentry, full prediction-only fails. HEALTHY necessary checks do not certify peaks; no new final gate admitted. Automatic global recovery NO-GO. [Final conclusion](../experiments/phase_bd_ndt_health_bridge/FINAL_CONCLUSION.md).

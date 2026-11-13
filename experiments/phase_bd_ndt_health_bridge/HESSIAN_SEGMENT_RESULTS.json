@@ -1,0 +1,72 @@
+{
+  "0": {
+    "n": 949,
+    "median_min_eigen_per_pair": 0.6566797130283291,
+    "median_lateral_curvature_per_pair": 1.6088931461613112,
+    "median_scaled_yaw_curvature_per_pair": 40.09906673744857,
+    "median_weak_axis_lateral_projection": 0.05818601850082211
+  },
+  "1": {
+    "n": 48,
+    "median_min_eigen_per_pair": 0.7684587217515655,
+    "median_lateral_curvature_per_pair": 0.9946125241492408,
+    "median_scaled_yaw_curvature_per_pair": 31.834839694305927,
+    "median_weak_axis_lateral_projection": 0.5828642749415194
+  },
+  "2": {
+    "n": 43,
+    "median_min_eigen_per_pair": 1.0344993449373188,
+    "median_lateral_curvature_per_pair": 1.4685786742091629,
+    "median_scaled_yaw_curvature_per_pair": 38.486956657763635,
+    "median_weak_axis_lateral_projection": 0.194587457729066
+  },
+  "3": {
+    "n": 89,
+    "median_min_eigen_per_pair": 0.919959434780811,
+    "median_lateral_curvature_per_pair": 1.9040978438262177,
+    "median_scaled_yaw_curvature_per_pair": 46.2471687377968,
+    "median_weak_axis_lateral_projection": 0.06391962091005227
+  },
+  "4": {
+    "n": 50,
+    "median_min_eigen_per_pair": 0.7314635669708539,
+    "median_lateral_curvature_per_pair": 1.3428944441451203,
+    "median_scaled_yaw_curvature_per_pair": 47.72079079220452,
+    "median_weak_axis_lateral_projection": 0.13526061090664848
+  },
+  "5": {
+    "n": 104,
+    "median_min_eigen_per_pair": 0.5383422044015282,
+    "median_lateral_curvature_per_pair": 0.9086639943171941,
+    "median_scaled_yaw_curvature_per_pair": 32.089716276225815,
+    "median_weak_axis_lateral_projection": 0.7203450134059189
+  },
+  "6": {
+    "n": 13,
+    "median_min_eigen_per_pair": 0.5823098074583826,
+    "median_lateral_curvature_per_pair": 1.454480341983125,
+    "median_scaled_yaw_curvature_per_pair": 33.33516869923161,
+    "median_weak_axis_lateral_projection": 0.09570995697026166
+  },
+  "7": {
+    "n": 14,
+    "median_min_eigen_per_pair": 0.5931212615390326,
+    "median_lateral_curvature_per_pair": 1.4384409989411404,
+    "median_scaled_yaw_curvature_per_pair": 40.33875536401155,
+    "median_weak_axis_lateral_projection": 0.15683697540071337
+  },
+  "8": {
+    "n": 129,
+    "median_min_eigen_per_pair": 0.6293189401184387,
+    "median_lateral_curvature_per_pair": 0.9669228355674616,
+    "median_scaled_yaw_curvature_per_pair": 39.78801666994102,
+    "median_weak_axis_lateral_projection": 0.9902885493702667
+  },
+  "9": {
+    "n": 29,
+    "median_min_eigen_per_pair": 0.8356686221103188,
+    "median_lateral_curvature_per_pair": 1.3742757251218394,
+    "median_scaled_yaw_curvature_per_pair": 26.689578820365718,
+    "median_weak_axis_lateral_projection": 0.21991663360148267
+  }
+}

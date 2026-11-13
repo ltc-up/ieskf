@@ -1,0 +1,14 @@
+# NDT health — diagnostic success, rejection-policy NO-GO
+
+Per-frame private shadow records retain prediction, raw NDT, prediction-inverse*NDT, native actual posterior, full priorP, interval, seed-derived motion context, temporal map-correction change, eigenvalues/directions and explicit reasons. They do not mutate the filter and use no GNSS in decisions. Native arrival-order before/after shadow states and rejected-window trajectories are retained separately by frame index. Health diagnostics add no NDT solve.
+
+Necessary checks cover convergence, finite pose/Fitness/Hessian/native covariance and candidate validity. Raw HEALTHY means these checks passed and no measured nonpositive XY-yaw curvature; every record also says PEAK_CORRECTNESS_UNQUALIFIED. INVALID and DEGRADED represent failed necessary checks and nonpositive curvature; SUSPICIOUS would require independent branch-disagreement evidence. No arbitrary uncertainty threshold is invented to populate that class. All1468 original frames report basic HEALTHY, demonstrating that this classifier is not a wrong-peak detector.
+
+## Diagnostic discrimination
+Under raw75ms reference, proxy-good<=0.5m has571 samples; proxy-bad>=2m has1;632 valid samples are deliberately ambiguous and264 lack qualified reference. These thresholds label offline diagnostic subsets only, never online rejection. The bad proxy has correction0.0984m vs good median0.1917m, lateral correction0.00625m vs0.0486m, Fitness0.138 vs0.144. A larger-correction or single-Fitness gate would not isolate this case. Rank correlations with reference error are correction0.107, lateral correction0.023, yaw correction−0.048, Fitness0.195 and iterations0.117. They do not establish causal error detection or a calibrated likelihood.
+
+Baseline/necessary-check acceptance:571/571 proxy-good accepted,0 false rejects;1/1 proxy-bad accepted,0 correct rejects. These tiny labeled denominators are explicit, not a certified false-accept rate. Wrong-peak independent evidence is historical12632: MT converges to LOW with a positive Hessian. It is not pooled into a different dataset's rate. No reliable warning lead time or cross-validated error detector was established.
+
+Health computation alone P50/P95/P99≈0.0409/0.0442/0.0523ms, including Python matrix algebra; first-use maximum15.594ms retained. This is a diagnostic microbenchmark, not ROS executor qualification.
+
+Decision: no multidimensional rejection policy has sufficient evidence to protect difficult frames while retaining normal-turn corrections. Do not revive fixed Fitness/NIS gates, tune around the one bad proxy, or claim reject-all is safer. Multi-health-gate counterfactual and production closed-loop admission are intentionally NO-GO; only baseline/necessary-invalid, deliberately rejected windows and prediction-only failure branches are executed. No gate is deployed.
