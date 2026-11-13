@@ -1,0 +1,10 @@
+{
+  "A1_max_absolute_FD_error": 2.344868132997391e-09,
+  "A2_max_absolute_FD_error": 8.805015028201524e-08,
+  "C_max_absolute_FD_error": 1.6659782442474125e-09,
+  "Native_max_absolute_covariance_FD_error": 5.5003501753247974e-11,
+  "Native_max_absolute_chart_Jacobian_FD_error": 3.935859832493449e-10,
+  "synthetic_A_states": 32,
+  "synthetic_C_states": 16,
+  "all_15_columns": true
+}

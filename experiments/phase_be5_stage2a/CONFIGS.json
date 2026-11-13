@@ -1,0 +1,19 @@
+{
+  "max_total_frames": 60,
+  "actual_unique_frames": 55,
+  "BE_matched_pose_frames": 49,
+  "old_Z_frames": 5,
+  "historical12632_frames": 1,
+  "A1": "fixed map up hypothesis only, not road",
+  "A2": "state-dependent body up hypothesis only",
+  "A_contact_sigma_m_s": 0.5,
+  "A_contact_scale_calibrated": false,
+  "C": "math/source diagnostics only; no real qualified references",
+  "native_scale": "Raw unchanged, no Fitness multiplier or independent calibration",
+  "Q_bias_and_guards": "unchanged baseline",
+  "all_stage2a_commits": 0,
+  "new_matching": 0,
+  "new_replays": 0,
+  "new_cloud_files": 0,
+  "incremental_budget_bytes": 500000000
+}

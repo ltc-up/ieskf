@@ -131,3 +131,8 @@ Independent branch; real own-state15D CUDA/Deskew, directional/slip diagnostics,
 ## Phase BE5 Stage 1 — read-only A/C/R audit
 
 Eight requested drafts plus decision entry and manifest completed from a030 research source and separate aa50 production audit. No algorithms, Q/R, optimizer, production settings, new matching or replay changed. Existing Native conversion helper still calls Legacy Fitness admissibility; saved native_internal is available for future fixed-pose comparison, not a calibrated covariance. A1/A2 have different attitude Jacobians; C independent reference remains unproven. All implementation and experiments await approval. [Decision/drafts](../experiments/phase_be5_stage1/README.md).
+
+
+## Phase BE5 Stage 2A — shadow-only model and frozen verification
+
+Implemented A1/A2 pure models, S² source/math diagnostics, and Native-only covariance transport decoupled from Legacy Fitness.303 tests pass.55 existing cases only:49 paired BE snapshots,5 old vertical windows,1 matcher-only historical record; no matching/replay/state commit. Native full-R frozen responses differ, not accuracy certification; A2 bias-domain failure and unqualified normal/contact/IMU correlation make immediate A soft-window NO-GO. [Results](../experiments/phase_be5_stage2a/README.md).

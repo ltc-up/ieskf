@@ -163,3 +163,8 @@ BE is documentation-only on an independent research branch, based on05b73c0. Lit
 ## BE5 Stage 1: review only; implementation pending
 
 Storage prerequisite completed under the approved duplicate-cloud plan, with original inputs and full numerical/failed-run evidence retained privately. BE5 reviews actual15D input/state/delay contract, vertical proposal versus commit, A fixed-world versus body-normal models, C correlated/unknown attitude sources, and Native full covariance charts/scales. No trustworthy independent C or absolute6D Native calibration is established. Recommend small opt-in frozen diagnostics and Native-helper decoupling only after explicit approval; no B, new matchers, optimizer/Q/Bias/production changes. [Review](../experiments/phase_be5_stage1/README.md).
+
+
+## BE5 Stage 2A complete — no permission to fuse or replay
+
+303 numerical tests pass; original Legacy proposals reproduced exactly in49 stored BE priors. Native full covariance no longer requires Fitness to pass Legacy range, but no scale calibration or wrong-peak guarantee. C reference remains unavailable; oldZ/12632 missing-contract comparisons are explicitly blocked. A2 produces one beyond-domain accel-bias proposal. Recommend no immediate A soft fusion; Stage2A has0 commits to live/carried state/P,0 new matches and0 replays. Production/Q/Bias/gates and oldBE reports stay unchanged. [Evidence](../experiments/phase_be5_stage2a/README.md).

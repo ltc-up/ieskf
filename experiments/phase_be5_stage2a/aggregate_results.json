@@ -1,0 +1,313 @@
+{
+  "frames": 55,
+  "BE_frames": 49,
+  "historical_Z_frames": 5,
+  "all_actual_stage2a_commits": 0,
+  "independent_vertical_truth": false,
+  "C_fusion_blocked": 55,
+  "Native_real_frame_scope": "saved BE numerical map only; no deployed ROS/old-Z equivalence",
+  "frozen_algebra_ms": {
+    "50": 1.4906655,
+    "95": 1.5268075499999998,
+    "99": 1.9091193700000006,
+    "100": 2.227652
+  },
+  "legacy_delta_proposal_max_parity_error": 0.0,
+  "fitness_range": [
+    0.1139795573086822,
+    0.5611134782015433
+  ],
+  "pose_modes": {
+    "Legacy_candidate": {
+      "n": 49,
+      "would_admit": 49,
+      "abs_dz": {
+        "n": 49,
+        "p50": 0.005192682252595929,
+        "p95": 0.028694733812174338,
+        "max": 0.47792286120650124
+      },
+      "abs_dvz": {
+        "n": 49,
+        "p50": 0.005773939215957571,
+        "p95": 0.12775891911795476,
+        "max": 0.2698836349701538
+      },
+      "R_eigen_min": {
+        "n": 49,
+        "p50": 0.00020015489072739892,
+        "p95": 0.0006701324558213715,
+        "max": 0.0007013918477519292
+      },
+      "R_eigen_max": {
+        "n": 49,
+        "p50": 0.04003097814547978,
+        "p95": 0.1340264911642743,
+        "max": 0.14027836955038586
+      },
+      "max_abs_vz_contribution_sum_error": 5.551115123125783e-17
+    },
+    "Native_Raw_candidate": {
+      "n": 49,
+      "would_admit": 49,
+      "abs_dz": {
+        "n": 49,
+        "p50": 0.000629100084460628,
+        "p95": 0.005455566374321572,
+        "max": 0.30173149325662896
+      },
+      "abs_dvz": {
+        "n": 49,
+        "p50": 0.000535941197229688,
+        "p95": 0.023091198512365133,
+        "max": 0.16449992496760618
+      },
+      "R_eigen_min": {
+        "n": 49,
+        "p50": 0.00011949734058272661,
+        "p95": 0.0002244549007063768,
+        "max": 0.0002624247089582488
+      },
+      "R_eigen_max": {
+        "n": 49,
+        "p50": 0.5867645412865854,
+        "p95": 1.1834573235228727,
+        "max": 1.7887368751275852
+      },
+      "max_abs_vz_contribution_sum_error": 2.7755575615628914e-17
+    }
+  },
+  "A": {
+    "A1_fixed_map_up_hypothesis": {
+      "n": 54,
+      "physical_fusion_eligible": 0,
+      "original_domain_exceeded": 0,
+      "abs_h": {
+        "n": 54,
+        "p50": 0.5076360256009678,
+        "p95": 1.2092080735076784,
+        "max": 2.182820677036177
+      },
+      "abs_dz": {
+        "n": 54,
+        "p50": 0.010337455948171457,
+        "p95": 0.09229937098794799,
+        "max": 0.14488332787562
+      },
+      "abs_dvz": {
+        "n": 54,
+        "p50": 0.024097899852819717,
+        "p95": 0.6292010598611648,
+        "max": 0.9425394501610157
+      },
+      "P_change_Frobenius": {
+        "n": 54,
+        "p50": 0.0006227447315767681,
+        "p95": 3.2463224675569338,
+        "max": 3.9783761005457623
+      }
+    },
+    "A2_body_up_hypothesis": {
+      "n": 54,
+      "physical_fusion_eligible": 0,
+      "original_domain_exceeded": 1,
+      "abs_h": {
+        "n": 54,
+        "p50": 0.23964677556659236,
+        "p95": 0.5814170407409326,
+        "max": 2.646633863983013
+      },
+      "abs_dz": {
+        "n": 54,
+        "p50": 0.004352043940765792,
+        "p95": 0.0306607200870623,
+        "max": 0.05122869594067341
+      },
+      "abs_dvz": {
+        "n": 54,
+        "p50": 0.010076999593385011,
+        "p95": 0.24108348684820913,
+        "max": 0.5310904970402504
+      },
+      "P_change_Frobenius": {
+        "n": 54,
+        "p50": 0.0005413289932671418,
+        "p95": 2.397503604379212,
+        "max": 3.260923464349307
+      }
+    }
+  },
+  "groups": {
+    "fixed_segment_3": {
+      "frames": 6,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.0016835565758415076,
+          "p95": 0.012305201271898587,
+          "max": 0.015278851163777607
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.0003795737155302799,
+          "p95": 0.000603718907261016,
+          "max": 0.0006322104341668233
+        }
+      }
+    },
+    "fixed_segment_9": {
+      "frames": 6,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.008176028074511718,
+          "p95": 0.021511858127269096,
+          "max": 0.022165279162900255
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.0005900517410476532,
+          "p95": 0.002041653620714592,
+          "max": 0.0021598471496695366
+        }
+      }
+    },
+    "fixed_segment_5": {
+      "frames": 6,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.009568768238969395,
+          "p95": 0.023114067653516805,
+          "max": 0.027005426801548202
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.0017462727455952415,
+          "p95": 0.002611431477202271,
+          "max": 0.002644386452837031
+        }
+      }
+    },
+    "fixed_segment_8": {
+      "frames": 6,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.005232437443777542,
+          "p95": 0.01955129152699021,
+          "max": 0.022524459170979526
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.00043676366324673174,
+          "p95": 0.0014022675835409968,
+          "max": 0.0014463083961716607
+        }
+      }
+    },
+    "high_fitness_in_this_baseline": {
+      "frames": 8,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 8,
+        "abs_dvz": {
+          "n": 8,
+          "p50": 0.0009050633246319136,
+          "p95": 0.005679428608822923,
+          "max": 0.007001765247984925
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 8,
+        "abs_dvz": {
+          "n": 8,
+          "p50": 0.0005419196434680317,
+          "p95": 0.0015628249753566982,
+          "max": 0.002044341054543442
+        }
+      }
+    },
+    "large_saved_vz_proposal": {
+      "frames": 6,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.12605871383425998,
+          "p95": 0.24028804927846126,
+          "max": 0.2698836349701538
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 6,
+        "abs_dvz": {
+          "n": 6,
+          "p50": 0.022331963931219143,
+          "p95": 0.1353307231029051,
+          "max": 0.16449992496760618
+        }
+      }
+    },
+    "offline_proxy_bad_not_truth": {
+      "frames": 0,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 0,
+        "abs_dvz": {
+          "n": 0
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 0,
+        "abs_dvz": {
+          "n": 0
+        }
+      }
+    },
+    "supplement_offline_raw_match_proxy_bad_not_truth": {
+      "frames": 1,
+      "interpretation": "overlapping selection groups; no independent correctness labels",
+      "Legacy_candidate": {
+        "would_admit": 1,
+        "abs_dvz": {
+          "n": 1,
+          "p50": 0.0010518437814742928,
+          "p95": 0.0010518437814742928,
+          "max": 0.0010518437814742928
+        }
+      },
+      "Native_Raw_candidate": {
+        "would_admit": 1,
+        "abs_dvz": {
+          "n": 1,
+          "p50": 0.0002840267361737699,
+          "p95": 0.0002840267361737699,
+          "max": 0.0002840267361737699
+        }
+      }
+    }
+  },
+  "matrix_eigen_statistics_scope": "raw mixed-unit matrix spectra for numerical SPD checks only, not physical observability scores"
+}
