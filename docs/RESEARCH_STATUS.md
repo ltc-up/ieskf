@@ -145,3 +145,6 @@ Independent AY-based branch. Verified distinct step/objective epsilons and step-
 ### BD result: safe rejection policy NOT ESTABLISHED
 
 P0 conditional75ms gains with150ms reversal and normal5 regression; true CUDA1468/4134 retained. Independent KD-tree2×2 and exact-radius oracle completed; NO-GO replacingDIRECT7 (normal8/history basin regressions). Original15D delayed counterfactual baseline exactly reproduces;30-frame rejection cases quantify drift/reentry, full prediction-only fails. HEALTHY necessary checks do not certify peaks; no new final gate admitted. Automatic global recovery NO-GO. [Final conclusion](../experiments/phase_bd_ndt_health_bridge/FINAL_CONCLUSION.md).
+
+
+BD publication: committed locally on the new-volume independent branch; Git HTTPS authentication failed. No remote-access claim, force push or main modification. See PUBLICATION_STATUS.md in the phase directory.

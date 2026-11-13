@@ -131,5 +131,6 @@
     "real_migrated_CUDA_cases": 25,
     "production_queue_header": "PASS; original header, no ROS node rebuild"
   },
-  "original_AY_rerun_exact": false
+  "original_AY_rerun_exact": false,
+  "publication_status": "NOT_PUSHED_GIT_HTTPS_AUTHENTICATION_UNAVAILABLE"
 }
