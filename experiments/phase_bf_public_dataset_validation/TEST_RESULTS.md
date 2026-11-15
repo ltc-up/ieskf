@@ -1,0 +1,9 @@
+# BF1 tests and data validation
+
+47 targeted tests pass (0.21s):9newKITTIcontracttests plus existingNativeconversion, ExternalPose, delayedreplay andmanagedGMF/lifecycleunitregressions. The latter do not mean aGMFexperiment ran. HistoricalBE5's303tests are not claimedasnewlyrerun. Logs private: regression_tests_final.log; earlier6/7/8testiterations retained.
+
+Newtests: nanosecondprecision/monotonicity; frozenmap/testsplit; KITTIextrinsicxyz vsNDTintrinsicXYZdistinction; calibrationinverse/point roundtrip; XYZIstride/no fabricatedtime; online/reference schema separation; timestampinterpolationbracketing andfuturetestreferenceperturbation cannotchangeearliermapposes; runnerexcludesoffline reference loading; exactexistingBE6DoFLegacyRmapping.
+
+Realdata: approvedlengths/SHA256andallZIPCRCpass;77pointfilesfinite,846rawOXTSfinite/timestampsmonotonic, no25msIMUgap;57frames retainedbothgroups;57NativefullRmatricesSPDandnonzerooffdiagonals;posteriorPpositive; allcandidateupdatesandAShadowcommittedFalse;actualaccepted46/57; matched57commontimestampsassertedequal. Thesearecontract/numericalchecks, notindependentaccuracy or50msqualification.
+
+Failedpreparation timestampalignment andfailedfirstlaunch/statisticsserialization arepreserved andexcludedfromcanonicalanalysis. NoCfusion, Astate/Pupdate, newvelocitysource, productionchange orNativecalibration.

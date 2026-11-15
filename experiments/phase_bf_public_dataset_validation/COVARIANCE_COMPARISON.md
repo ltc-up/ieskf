@@ -1,15 +1,21 @@
-# BF covariance comparison protocol — NOT_RUN
+# BF1：Legacy与Native Raw协方差对照
 
-Baseline da3ea9df; no new covariance method or calibration proposed. Existing303 numerical tests are historical, not rerun as a substitute for public-data validation.
+CONFIRMED：B0严格沿用已有BE六维研究映射：调用engineering_R(fitness)，将其平移方差用于XYZ，将其旋转方差用于三个右误差创新分量。它不等同于发布器原始diag(f,f,f,0.5f,0.5f,0.5f)。原有分档和五步系数保持不变；没有调尺度。Legacy的Fitness合法范围只作用于B0，不作为Native额外门限。
 
-B0 uses unchanged researchLegacy semantics, not an invented direct Fitness diagonal. B1 uses native_pose_R with components(x,y,z,rx,ry,rz), explicit qualified frame, original internal6×6 matrix and exact native pose parameters. Preserve off-diagonal terms and SPD validation; no source_floor_R diagonalization, Fitness multiplication or empirical rescaling. Use identicalSource/Target/seed/final/prior/P/stamp/observationID in frozen comparison. Native conversion not readingFitness does not waive common finite-pose/convergence/frame prerequisites. Preserve unchanged Legacy eligibility outcome separately, so a group-specific hidden legacy threshold cannot silently become a shared Native gate.
+B1调用现有native_pose_R，使用原始完整6×6 Native矩阵、内部RxRyRz参数及显式确认的map/PCM恒等变换。这里恒等合同来自Source已转换到IMU参考点、Target直接构建于同一map，不能推广到其他记录。没有Native×Fitness、再次分档缩放、残差尺度调参或静默对角化。
 
-Record full innovation/H/R/S/K, all15candidate deltas, full15×15P including reset/Joseph effects, before/after covariance eigenvalues and dimensioned directional standard deviations. Candidate update is not carried state. Label proposal-domain failure separately from actualcommit. Full mixed meter/radian condition numbers are numerical diagnostics only, not geometry health probabilities. Retain failure reasons and timing.
+每个B0 prior均对同一匹配位姿计算B0/B1候选，记录完整R/H/S/K、15D增量及Joseph/reset前后P。共57对，其中46个匹配满足已有收敛前置条件，另外11个匹配无效但仍保留其数值诊断。所有候选标记committed=False，不能写成真实状态更新。真实提交另由观测账本和actual_update记录。
 
-Then, if map/input pass and KITTI download approved, own-state causalB0/B1 use unchangedQ/Bias/gates/matcher/delay. Report accepted/rejected/expired observations, gaps and lifecycle; noGT mode selection, NIS tuning or correlated-pose duplication. A1/A2Shadow only, Cabsent. ChangingR changes subsequentseeds in causal runs; distinguish this from the fixed-pose isolatedR test.
+全部57个Native矩阵对称正定且保留交叉项，最小特征值约0.000130752。混合米/弧度的特征值只用于数值SPD核验，不用于物理退化判断。B0 priors中的Native x/yaw相关系数约−0.213至+0.038；完整非对角项未丢弃。
 
-Metrics: XYRMSE, raw/common-initial-frameATE plus any explicitly labeled rigidSE3 alignedATE (no scale fitting), RPE with feasible temporal1s lag and paircount (do not invent100mKITTI benchmark on a tiny scene), longitudinal/lateral error using declared reference tangent, yaw, Z/Vz when supported, fullR/P/K and innovation/NIS time autocorrelation. Report0/75/150 msGNSS reference sensitivity as a predeclared analysis, not fit a delay to improve ranking. Native Raw uncalibrated; covariance size or smallerdv is not accuracy. Without independent truth/full state reference no absoluteNEES claim.
+在46个有效匹配的同prior对照中，|候选ΔVz|的P95/max：Legacy为0.006406/0.011686m/s，Native为0.007683/0.011384m/s。若统计全部57个候选，Legacy为0.011583/0.014386，Native为0.024270/0.038837m/s；后者含11个不会提交的无效匹配。因此不能认为Native总能减小垂向修正。
 
-Measure read/decode, transfer, preprocessing/Deskew, NDT, native quality/Fitness, covariance transport, EKF/replay and fullscan epoch→availability/callback cycle P50/P95/P99/max. Separate source-diskIO, CPU/GPU synchronization and warmup; neither GPUkernel timing nor10 Hzscan throughput proves50 mswholecycle. Retain every failed frame, never drop to passdeadline.
+真实接纳更新的最大|ΔVz|：B0为0.011686m/s，共同到达时刻B1为0.015149m/s；发布状态最大|Vz|约0.186665/0.182766m/s。本场景没有重现多m/s的真实速度跳变，也不证明垂向精度可靠。
 
-Success: input/frame/time correctness, honest map qualification, reproducible matched observations and metrics, no hiddenGNSS online or covariance mutation. Accuracy improvement/productionGO requires independent evidence, normal-section nonregression and deadline reliability; BF0 has none. A shortscene cannot establish cross-scene calibration.
+57个B0 priors下的中位方差开方摘要：Legacy XYZ约0.272247m、三个旋转分量约0.019251rad；Native XYZ约[0.371360,0.272893,0.199225]m，旋转约[0.023346,0.016972,0.020177]rad。这些是当前模型给出的尺度，不是独立误差界。
+
+接纳46帧的条件NIS中位数约0.0256/0.0123，创新各分量一阶时间相关系数约0.59–0.86。NIS很小且残差明显相关，不能认定6D尺度已经标定，更不能宣称完整15D NEES成立。本轮没有引入NIS拒绝门限或用参考轨迹调R。
+
+共同到达时间的因果对照中，Native使XY参考RMSE约0.220625→0.196802m，但横向P95约0.163078→0.173032m，Yaw RMSE约0.074206→0.08784°。仅此短场景不足以支持全面替换Legacy，跨场景尺度仍UNKNOWN。
+
+Native转换不需要Fitness参与，本轮独立Raw路径确实可运行。Fitness继续作为B0经验R的输入、B1的独立诊断。两组都计算Fitness，因此关闭Fitness的GPU收益未测；quality_extra_ms是额外Native查询，不能冒充PCL Fitness耗时。Native原有residual_scale及1/N归一化未改，尚未形成独立统计标定证据。

@@ -36,3 +36,12 @@ Candidate M db3=20711575552 bytes; metadata=16132bytes, uncompressedSQLite, no a
 Prior user-approved BE duplicate-cloud cleanup remains authoritative. No new historic recursive hashing, deletion, compression, moving, restoration or large du walk performed. Existing source, failed cases and alias mappings remain unchanged. Space is ample for KITTI; no cleanup candidates need approval now. Scoped name search at depth3 found no prior KITTI/RACECAR scene outside the newly created BF metadata; this is not an exhaustive hidden-file inventory.
 
 Within visible /proc there were no open write descriptors to either work disk, and no actual replay/matching/download process identified. Sandbox process visibility is limited: not proof of exclusive use. Recheck before an approved run, never stop another process without authorization.
+
+
+## BF1 actual storage and preservation
+
+Threeapprovedarchives814833599bytes retained; selectedrawfiles150605145logicalbytes, no camera/tracklet extraction. NewBFworkroot currently1264785702logicalbytes across1282files; unique-inode allocated1156210688bytes (1.077GiB), includingBF0papers/fetchfailures, raw, map, numericalrecords, evaluations andlogs. This is far below8GiB. df is affected byotherprocesses andmetadata, notassumedidentical todu. Actualnewvolume availability capturedbeforeRACECARrequest352339312640bytes.
+
+The timestampfix initially generated a duplicateconvertedSourcecache. Only thisBF1-generated set of77byte-identical files was coalesced into same-diskhardlinks aftercomparison; bothpaths/contentandfailureevidence remain. Shared112626904bytes count once physically. NohistoricalAW–BEdataorrawinputwasremoved/moved/compressed; no usercleanupauthorization inferred. Futuregroups reuse the sameSource/map; current_source.bin is overwritten only as anexplicitper-runtemporaryhandshake, sourceidentities/rawinputs remain archived. No new逐帧PCD.
+
+Exactprivatepaths, per-fileidentity/coalescingreceipt, downloadCRC/SHA, df/du/source/runtimefingerprints andpublicationreceipt reside inBFaudit. Largeprivateoutputs are not committed.

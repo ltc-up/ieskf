@@ -1,0 +1,11 @@
+# BF1 retained failures and limits
+
+1. Initialpreparedmap index-pairedsyncOXTS withLiDAR; measured12–28msoffset makes that contract invalid. NoNDTwasrunagainstthismap. Retainedfirstpreparation, then canonicalactualtime-interpolated map withsame0–19/20–76split. This is coordinate/timecorrection, notoutcome-drivenframepartition tuning.
+2. FirstB0launch failedbecauseoutputparentdidnotexist; noframeexecuted. Parentcreationfixed; initialB0.logretained.
+3. Firstofflineevaluation failedNumPyint64JSONserialization afterwritingCSVs; failedprefix/log retained. evaluation_v2 fixesserialization withoutanymatchingrerun. Primaryevaluation_common_arrival furthercontrolsarrivalepochs; originalrun1data unchanged.
+4. B0/B1MAX_ITERATIONS at66–76; no full-track mapupdatecontinuity. Failedposes andallR/K/Pcandidatesremain, nofakeframeomission. 1.134575s prediction-onlytail isshort anddoesnotcertifytolerablelongdropout.
+5. NativeXYbenefit doesnotextendtolateral/Yaw; neitherproductionimprovementnorabsoluteRscale is established. NISsmall, residualsseriallycorrelated, referenceassistedmap andsharedOXTSreceiver errorslimitindependence.
+6. Full50msbudgetfails; startupandfirstcatchupretained; additionalDeskew/ROS/controlpathunverified. MoreCPU/GPUtimeorfiltercomplexity isnotaddedtohidefailure.
+7. Noexactpointtime, independentroll/pitchreference, groundnormal orrear-axlecalibration. A1usesENUupapproximation, A2usesbodyup atknownVelodynepoint; bothresidual/Honly, notcontactprecisionevidence. Cprohibited. NoQ/Bias/NDTchange.
+8. No certifiedconvergedwrong-local-peakcasewithindependenttruth inthisshortscene. MAX_ITERATIONS alonecannotprovewrongpeak. Source/binaryhashesretained; exactprivatebinaryrebuildanddeployedproductioncomponentparitystillunknown.
+9. BF0SiPS2024fulltextaccessgap remains; noRACECARpayloadhasbeendownloaded. Noadditionaldatasetsshouldbeacquiredwithoutnewapproval.

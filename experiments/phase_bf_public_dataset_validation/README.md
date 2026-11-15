@@ -1,11 +1,7 @@
-# Phase BF / BF0 — download approval checkpoint
+# Phase BF：BF1 KITTI已完成，等待RACECAR独立审批
 
-Status: AWAITING_KITTI_APPROVAL. No BF localization experiment has run. Baseline da3ea9df0acf34eb5c0808c2e258c9bbb86bafb1, existing research branch; main is unchanged.
+基线143ce47。仅下载获批的KITTI0002三包，固定前20帧建图、后57帧测试，两组均完成。Native有局部XY收益，但横向及Yaw退化；50ms预算未通过。所有结果仅属参考辅助功能验证，不构成独立精度或生产认证。未执行A/C融合，未修改生产代码、Q/Bias或NDT配置。
 
-The one KITTI scene is 2011_09_26_drive_0002. The one future RACECAR candidate is S3/M-SOLO-FAST-100-140. This checkpoint requests KITTI only, not RACECAR or historical cleanup.
+[完整KITTI报告](BF1_KITTI_REPORT.md)、[原始聚合统计](BF1_RESULTS.json)、[协方差对照](COVARIANCE_COMPARISON.md)、[性能](PERFORMANCE_COMPARISON.md)、[测试](TEST_RESULTS.md)、[失败与限制](BF1_FAILURES_AND_LIMITATIONS.md)、[RACECAR下载申请](RACECAR_DOWNLOAD_REQUEST.md)。
 
-[Feasibility and request](DATASET_FEASIBILITY.md), [storage](STORAGE_MANAGEMENT.md), [literature](RACECAR_LITERATURE_REVIEW.md), [KITTI input/map contract](KITTI_INPUT_AND_MAP_AUDIT.md), [RACECAR metadata audit](RACECAR_INPUT_AND_MAP_AUDIT.md), [Git/audit limitations](STORAGE_AND_GIT_AUDIT.md), [reproduction](REPRODUCE.md).
-
-CONFIRMED means a source/metadata check, not successful adaptation. HYPOTHESIS means a proposed experiment. UNKNOWN means not established. Results files are deliberately NOT_RUN. Numerical BE5 tests are not dataset accuracy validation.
-
-Literature limitation: the original SiPS 2024 full PDF is inaccessible (HTTP403); its abstract/record is reviewed, and the author's earlier thesis summary was separately read. These are not interchangeable versions. The remaining SiPS session/latency/full evaluation claims stay UNKNOWN. This limitation does not require downloading either dataset.
+BF0原始记录可从143ce47查看，原manifest另存BF0_MANIFEST.json。SiPS全文访问缺口仍明确保留。RACECAR原始数据尚未下载，当前停止等待批准。

@@ -11,3 +11,8 @@ ZIPcentral-directorymetadata was queried usingHTTPRange. For the4068-bytecalibra
 Failedliteraturefetches: ZenodoSiPSPDF403; initialRACECARarXivPDF capped15MB provedtruncatedandpdftotextfailed; retainedasfailedfetch, replacedasreadingsourcebycompleteauthorPDF20896286bytes. No truncatedpaperclaimasfull text. OfficialKITTIreadmeguessedURL404 is notadataabsenceconclusion; useofficialIJRRpaperandpostapprovalarchiveformatfile. Originalhistoricaldatauntouched.
 
 Commitpublicationreceipt will recordexactnewcommit/remoteinspectionprivately afterreview. Do not treatbaselineSHAasnewBFcommit. Pendingdownloadapproval is a realexecutionstop.
+
+
+## BF1 authorized changes
+
+KITTI download explicitly approved on143ce47; onlythreeexactobjects downloaded/CRCchecked. Stage2Afilters and productionfiles untouched. Added standaloneKITTIadapter, causal runner and offlineevaluator plus9targetedtests; report/indexupdates only. No additional scene, newGMF/GICP, Q/Bias/gate/optimizerchange or mainpush. Source/runtimehash ledgerprivate. AllBF1startup/preparation/evaluationfailuresretained. Task-localbyte-identicalconvertedcaches sharehardlinks; nohistoricalcleanup. Alloutputs/temp/caches onnewvolume, T7notused.

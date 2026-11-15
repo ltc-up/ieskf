@@ -173,3 +173,8 @@ Storage prerequisite completed under the approved duplicate-cloud plan, with ori
 ## Phase BF / BF0 — public data approval checkpoint
 
 Baseline da3ea9df, metadata/disk/paper audit only. KITTI0002:77syncedscans and846extractOXTSrecords;3archives814833599bytes; proposed8GiBnew-volumepeak, nocleanupneeded. FutureRACECARS3Mscene19.3GiB, separateapprovalrequired. OfficialRAWIMUexampleaccelerationassignmentbug andSiPSPDF403 retainedaslimitations. CalibrationZIP4068byteswasreadinmemoryduringmetadataquery(preapprovalboundarydeviation), notsaved/extracted. NoBFmatching/replay/algorithmchange. AwaitKITTIapprovalandstop. [Checkpoint](../experiments/phase_bf_public_dataset_validation/README.md).
+
+
+## Phase BF1 — KITTI0002 functional validation, no production qualification
+
+Only approved3archives,77LiDAR/846OXTS; actualtimestampinterpolationfix keepsmap0–19/test20–76.57frames completeeach,46validupdates/11MAX_ITERATIONS. SamepriorfullR/K/Pcandidates andcontrolledarrivalB0/B1 retained. NativeXYreference .220625→.196802m butlateralP95/Yawregress;50msbudgetfails.47targetedtestspass, noA/Cfusion orproduction/Q/Bias/NDTchange. Sharedreference/map/receiverlimits ruleoutindependentcalibration. RACECARnotdownloaded;separate19.289GiBsource/64GiBnew-volumeplanawaitsapproval. [Results](../experiments/phase_bf_public_dataset_validation/BF1_KITTI_REPORT.md).

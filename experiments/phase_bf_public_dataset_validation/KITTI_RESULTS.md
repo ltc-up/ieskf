@@ -1,3 +1,5 @@
-# KITTI_RESULTS — NOT_RUN
+# KITTI BF1 result
 
-Awaiting explicit dataset download approval. No BF adapter, matching, frozen update or causal replay has executed. Accuracy, acceptance, vertical state, covariance consistency and50 ms performance are UNKNOWN. Historical BE numerical tests and55 frozen cases are not results on thisdataset. No payload already stored is implied by the result filename.
+Completed only2011_09_26_drive_0002. [Full report](BF1_KITTI_REPORT.md), [aggregate](BF1_RESULTS.json), [covariance](COVARIANCE_COMPARISON.md), [performance](PERFORMANCE_COMPARISON.md), [failures](BF1_FAILURES_AND_LIMITATIONS.md).
+
+CONDITIONAL functional adaptation:77scan/846OXTS checks pass;57test frames retained,46valid updates each. Native's smallXY benefit accompanies lateral/Yaw regression; not replacement qualification. Hard50ms budgetNO-GO. No independent map/6Dtruth orNativecalibration. NoA/Cfusion. Stop pending separateRACECARapproval.

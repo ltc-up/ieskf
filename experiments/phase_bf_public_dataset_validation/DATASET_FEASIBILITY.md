@@ -1,3 +1,7 @@
+# BF1状态更新
+
+用户已明确批准三包并完成下载/单场景验证。以下为保留的BF0申请历史，不再表示KITTI待批准。RACECAR仍未批准；见[RACECAR申请](RACECAR_DOWNLOAD_REQUEST.md)。
+
 # BF0 dataset feasibility and KITTI download request
 
 Audit date 2026-11-15; all sizes bytes unless specified. Approval state PENDING. Dataset payloads must not be fetched automatically by a reproduction command.
