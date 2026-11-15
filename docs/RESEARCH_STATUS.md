@@ -168,3 +168,8 @@ Storage prerequisite completed under the approved duplicate-cloud plan, with ori
 ## BE5 Stage 2A complete — no permission to fuse or replay
 
 303 numerical tests pass; original Legacy proposals reproduced exactly in49 stored BE priors. Native full covariance no longer requires Fitness to pass Legacy range, but no scale calibration or wrong-peak guarantee. C reference remains unavailable; oldZ/12632 missing-contract comparisons are explicitly blocked. A2 produces one beyond-domain accel-bias proposal. Recommend no immediate A soft fusion; Stage2A has0 commits to live/carried state/P,0 new matches and0 replays. Production/Q/Bias/gates and oldBE reports stay unchanged. [Evidence](../experiments/phase_be5_stage2a/README.md).
+
+
+## Phase BF / BF0 — public data approval checkpoint
+
+Baseline da3ea9df, metadata/disk/paper audit only. KITTI0002:77syncedscans and846extractOXTSrecords;3archives814833599bytes; proposed8GiBnew-volumepeak, nocleanupneeded. FutureRACECARS3Mscene19.3GiB, separateapprovalrequired. OfficialRAWIMUexampleaccelerationassignmentbug andSiPSPDF403 retainedaslimitations. CalibrationZIP4068byteswasreadinmemoryduringmetadataquery(preapprovalboundarydeviation), notsaved/extracted. NoBFmatching/replay/algorithmchange. AwaitKITTIapprovalandstop. [Checkpoint](../experiments/phase_bf_public_dataset_validation/README.md).

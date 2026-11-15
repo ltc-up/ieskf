@@ -1,0 +1,58 @@
+{
+  "phase": "BF0",
+  "status": "AWAITING_KITTI_APPROVAL",
+  "date": "2026-11-15",
+  "research_baseline": "da3ea9df0acf34eb5c0808c2e258c9bbb86bafb1",
+  "research_branch": "research/phase-be-e0-e4-shadow",
+  "remote_main_observed": "05b73c0aae6b9f5440f8497477dfe9909ebfe9e1",
+  "algorithm_changes": false,
+  "localization_experiments_run": 0,
+  "kitti_scene": "2011_09_26_drive_0002",
+  "racecar_future_scene": "S3/M-SOLO-FAST-100-140",
+  "download_approval": {
+    "kitti": false,
+    "racecar": false
+  },
+  "archive_boundary_incident": "4068-byte calibration ZIP read in memory during metadata query; not saved/extracted; see audit",
+  "kitti_archives": [
+    {
+      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0002/2011_09_26_drive_0002_sync.zip",
+      "archive_bytes": 319776816,
+      "uncompressed_bytes": 319651180,
+      "etag": "\"de3de1116c4691081e63d7da1ef89893-39\""
+    },
+    {
+      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0002/2011_09_26_drive_0002_extract.zip",
+      "archive_bytes": 495052715,
+      "uncompressed_bytes": 494718821,
+      "etag": "\"e26dfc818dced2b973676bbf572d4d33-60\""
+    },
+    {
+      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_calib.zip",
+      "archive_bytes": 4068,
+      "uncompressed_bytes": 3472,
+      "etag": "\"5d6cfb6bd7ec7c5f5231d16ead7ce9f1\""
+    }
+  ],
+  "zip_metadata_sha256": "c4b6ae9a2ec4bd0c41ccebaaa7b262cb81efdef7b259c9c21bf1a447c03cb4bc",
+  "racecar_metadata_sha256": "c079c69b2b915fed25f75cdcd27a781903c7cfabb240a94000c7af708f8ff968",
+  "racecar_reference_tree_sha": "2ad1d70aad72de095ec529633f64dfc7b4ffa5f7",
+  "proposed_incremental_kitti_budget_bytes": 8589934592,
+  "config_hash": null,
+  "config_status": "not implemented; no runtime configuration exists",
+  "reports_sha256": {
+    "COVARIANCE_COMPARISON.md": "0d63b07ab752f6146421775907e450e472e07ecd1579c54d6bfa7ffe8e5c30b8",
+    "DATASET_FEASIBILITY.md": "63f2e203132a2887ded2ee0dd314f92841f241b883a3df4bdd32956fdc573c73",
+    "DATASET_OBJECTS.json": "4ac1e49ac31ffc8bed7dd5daa124d01fb578b94d55ab49d560e5357b2123e20f",
+    "FINAL_CONCLUSION.md": "a54e71aa2f4a389bb678b228b3e474d9dc22a86eb606ddb4ce7bf7026961be21",
+    "KITTI_INPUT_AND_MAP_AUDIT.md": "c4f462c4263923968f26552b96612b82e54f38b57f2887e5d84c14e6bcaba2e5",
+    "KITTI_RESULTS.md": "2febdfab8dc491229d9de6a4a1ec16574ecfb7ee4fcb4f77ac5e0514c853a7ca",
+    "RACECAR_INPUT_AND_MAP_AUDIT.md": "054e7305cfa7efef2c69105dad4523b05a416379ef6618e2eaf1b3477a7bc8e0",
+    "RACECAR_LITERATURE_REVIEW.md": "5ad211af9c11cad649f1fca1469237e91052260e499acc808721b58bce9f1776",
+    "RACECAR_RESULTS.md": "c68b18113e416e6fafe41b9c405091282239c17d02a551ba5be19ba9522825d7",
+    "README.md": "e8034774fee1f7765adea431a8a80459ff4a226138c63dc6352aca1c77246cdc",
+    "REPRODUCE.md": "06c55d63d843a79d3a5d67cb82246c6ff68983ffc7ece1e4c63e8939436f4f92",
+    "STORAGE_AND_GIT_AUDIT.md": "03ac93a7360778879cac4985bb164a67532336bd9f1182a8b44ed7fd56569aaf",
+    "STORAGE_MANAGEMENT.md": "f04670caa643702d96d0db6085cae49d919f32ff3c1536187e0fddd3fa877c47"
+  }
+}

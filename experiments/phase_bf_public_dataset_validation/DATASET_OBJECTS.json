@@ -1,0 +1,64 @@
+{
+  "kitti": [
+    {
+      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0002/2011_09_26_drive_0002_sync.zip",
+      "archive_bytes": 319776816,
+      "uncompressed_bytes": 319651180,
+      "etag": "\"de3de1116c4691081e63d7da1ef89893-39\"",
+      "groups": {
+        "oxts": {
+          "files": 81,
+          "bytes": 37000
+        },
+        "camera": {
+          "files": 320,
+          "bytes": 169438866
+        },
+        "lidar": {
+          "files": 82,
+          "bytes": 150175314
+        }
+      }
+    },
+    {
+      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0002/2011_09_26_drive_0002_extract.zip",
+      "archive_bytes": 495052715,
+      "uncompressed_bytes": 494718821,
+      "etag": "\"e26dfc818dced2b973676bbf572d4d33-60\"",
+      "groups": {
+        "oxts": {
+          "files": 850,
+          "bytes": 389359
+        },
+        "camera": {
+          "files": 343,
+          "bytes": 247311073
+        },
+        "lidar": {
+          "files": 85,
+          "bytes": 247018389
+        }
+      }
+    },
+    {
+      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_calib.zip",
+      "archive_bytes": 4068,
+      "uncompressed_bytes": 3472,
+      "etag": "\"5d6cfb6bd7ec7c5f5231d16ead7ce9f1\"",
+      "groups": {
+        "other": {
+          "files": 3,
+          "bytes": 3472
+        }
+      }
+    }
+  ],
+  "racecar_candidate": {
+    "db3_url": "https://racecar-dataset.s3.us-west-2.amazonaws.com/RACECAR-ROS2/S3/M-SOLO-FAST-100-140/M-SOLO-FAST-100-140.db3",
+    "db3_bytes": 20711575552,
+    "metadata_bytes": 16132,
+    "duration_ns": 899997582975,
+    "message_count": 5533818
+  },
+  "payload_approval": false
+}

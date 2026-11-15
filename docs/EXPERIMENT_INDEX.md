@@ -136,3 +136,8 @@ Eight requested drafts plus decision entry and manifest completed from a030 rese
 ## Phase BE5 Stage 2A — shadow-only model and frozen verification
 
 Implemented A1/A2 pure models, S² source/math diagnostics, and Native-only covariance transport decoupled from Legacy Fitness.303 tests pass.55 existing cases only:49 paired BE snapshots,5 old vertical windows,1 matcher-only historical record; no matching/replay/state commit. Native full-R frozen responses differ, not accuracy certification; A2 bias-domain failure and unqualified normal/contact/IMU correlation make immediate A soft-window NO-GO. [Results](../experiments/phase_be5_stage2a/README.md).
+
+
+## Phase BF / BF0 — public data approval checkpoint
+
+Baseline da3ea9df, metadata/disk/paper audit only. KITTI0002:77syncedscans and846extractOXTSrecords;3archives814833599bytes; proposed8GiBnew-volumepeak, nocleanupneeded. FutureRACECARS3Mscene19.3GiB, separateapprovalrequired. OfficialRAWIMUexampleaccelerationassignmentbug andSiPSPDF403 retainedaslimitations. CalibrationZIP4068byteswasreadinmemoryduringmetadataquery(preapprovalboundarydeviation), notsaved/extracted. NoBFmatching/replay/algorithmchange. AwaitKITTIapprovalandstop. [Checkpoint](../experiments/phase_bf_public_dataset_validation/README.md).

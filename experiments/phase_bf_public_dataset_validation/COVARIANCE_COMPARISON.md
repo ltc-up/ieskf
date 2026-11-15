@@ -1,0 +1,15 @@
+# BF covariance comparison protocol — NOT_RUN
+
+Baseline da3ea9df; no new covariance method or calibration proposed. Existing303 numerical tests are historical, not rerun as a substitute for public-data validation.
+
+B0 uses unchanged researchLegacy semantics, not an invented direct Fitness diagonal. B1 uses native_pose_R with components(x,y,z,rx,ry,rz), explicit qualified frame, original internal6×6 matrix and exact native pose parameters. Preserve off-diagonal terms and SPD validation; no source_floor_R diagonalization, Fitness multiplication or empirical rescaling. Use identicalSource/Target/seed/final/prior/P/stamp/observationID in frozen comparison. Native conversion not readingFitness does not waive common finite-pose/convergence/frame prerequisites. Preserve unchanged Legacy eligibility outcome separately, so a group-specific hidden legacy threshold cannot silently become a shared Native gate.
+
+Record full innovation/H/R/S/K, all15candidate deltas, full15×15P including reset/Joseph effects, before/after covariance eigenvalues and dimensioned directional standard deviations. Candidate update is not carried state. Label proposal-domain failure separately from actualcommit. Full mixed meter/radian condition numbers are numerical diagnostics only, not geometry health probabilities. Retain failure reasons and timing.
+
+Then, if map/input pass and KITTI download approved, own-state causalB0/B1 use unchangedQ/Bias/gates/matcher/delay. Report accepted/rejected/expired observations, gaps and lifecycle; noGT mode selection, NIS tuning or correlated-pose duplication. A1/A2Shadow only, Cabsent. ChangingR changes subsequentseeds in causal runs; distinguish this from the fixed-pose isolatedR test.
+
+Metrics: XYRMSE, raw/common-initial-frameATE plus any explicitly labeled rigidSE3 alignedATE (no scale fitting), RPE with feasible temporal1s lag and paircount (do not invent100mKITTI benchmark on a tiny scene), longitudinal/lateral error using declared reference tangent, yaw, Z/Vz when supported, fullR/P/K and innovation/NIS time autocorrelation. Report0/75/150 msGNSS reference sensitivity as a predeclared analysis, not fit a delay to improve ranking. Native Raw uncalibrated; covariance size or smallerdv is not accuracy. Without independent truth/full state reference no absoluteNEES claim.
+
+Measure read/decode, transfer, preprocessing/Deskew, NDT, native quality/Fitness, covariance transport, EKF/replay and fullscan epoch→availability/callback cycle P50/P95/P99/max. Separate source-diskIO, CPU/GPU synchronization and warmup; neither GPUkernel timing nor10 Hzscan throughput proves50 mswholecycle. Retain every failed frame, never drop to passdeadline.
+
+Success: input/frame/time correctness, honest map qualification, reproducible matched observations and metrics, no hiddenGNSS online or covariance mutation. Accuracy improvement/productionGO requires independent evidence, normal-section nonregression and deadline reliability; BF0 has none. A shortscene cannot establish cross-scene calibration.
