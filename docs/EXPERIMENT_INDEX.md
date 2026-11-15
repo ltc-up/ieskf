@@ -146,3 +146,8 @@ Baseline da3ea9df, metadata/disk/paper audit only. KITTI0002:77syncedscans and84
 ## Phase BF1 — KITTI0002 functional validation, no production qualification
 
 Only approved3archives,77LiDAR/846OXTS; actualtimestampinterpolationfix keepsmap0–19/test20–76.57frames completeeach,46validupdates/11MAX_ITERATIONS. SamepriorfullR/K/Pcandidates andcontrolledarrivalB0/B1 retained. NativeXYreference .220625→.196802m butlateralP95/Yawregress;50msbudgetfails.47targetedtestspass, noA/Cfusion orproduction/Q/Bias/NDTchange. Sharedreference/map/receiverlimits ruleoutindependentcalibration. RACECARnotdownloaded;separate19.289GiBsource/64GiBnew-volumeplanawaitsapproval. [Results](../experiments/phase_bf_public_dataset_validation/BF1_KITTI_REPORT.md).
+
+
+## BF1只读复盘完成
+
+末11帧支持下降、纵向弱约束及优化偏移并存，种子并未先偏数米；64/65帧已有收敛但变差。缺逐迭代证据，震荡机制UNKNOWN。Native XY收益以纵向和拒绝期状态记忆为主，横向/Yaw代价保留；NDT约78%墙钟、纯IO/IMU细分未知，50ms仍NO-GO。仅分析原记录，零下载/匹配/更新/回放。RACECAR用户不批准，历史申请归档；下一步5帧trace/计时只提案，停止等待单独授权。[报告](../experiments/phase_bf_public_dataset_validation/review/README.md)。

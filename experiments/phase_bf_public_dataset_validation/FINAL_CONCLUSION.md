@@ -7,4 +7,8 @@
 - UNKNOWN：A2高速接触假设及垂向真值；本轮仅A残差/H Shadow，参考点是已知Velodyne点而非假定后轴。未见历史多m/s Vz实际跳变，但无独立垂向精度证明。C未融合。
 - NO-GO：凭此短场景推进生产配置/新算法或Native标定。保持原Q/Bias、生产6D、TF/YAML和NDT配置不变。
 
-只下载获批三包814833599字节，无历史清理、无其他KITTI/RACECARpayload。工作根现有全部分配约1.077GiB，包含BF0论文及失败准备，低于8GiB增量预算。下一步仅提交[RACECAR独立下载申请](RACECAR_DOWNLOAD_REQUEST.md)，停等批准。
+只下载获批三包814833599字节，无历史清理、无其他KITTI/RACECARpayload。工作根现有全部分配约1.077GiB，包含BF0论文及失败准备，低于8GiB增量预算。BF1交付时曾提交[RACECAR历史申请](RACECAR_DOWNLOAD_REQUEST.md)；用户后续明确不批准，现已归档且不再推进。
+
+## BF1只读复盘后的状态
+
+[复盘](review/README.md)维持50ms NO-GO。Native主要改善纵向，约88%的XY误差平方收益累积在拒绝区间，不能作为错误匹配识别证据。用户明确不批准RACECAR下载，旧申请归档，后续高速仅考虑已有A2RL数据。当前停止，不自行执行后续小实验。

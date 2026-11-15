@@ -1,0 +1,26 @@
+{
+  "phase": "BF1_READ_ONLY_RETROSPECTIVE",
+  "baseline": "49c3aad8d666deea3a9165117d09dd526df5360b",
+  "input_version": "Existing BF1 common-arrival B0/B1 and BE5 Stage2A paired49; original identities retained privately",
+  "configuration": "Unchanged; BF1_MANIFEST.json and prior Stage2A manifests",
+  "production_change": false,
+  "downloads": 0,
+  "new_matches": 0,
+  "replays": 0,
+  "new_filter_updates": 0,
+  "racecar": "NOT_APPROVED_ARCHIVED_ONLY",
+  "next": "STOP_WAIT_FOR_EXPLICIT_AUTHORIZATION",
+  "reproduction": "Existing authorized private inputs required; REPRODUCE.md",
+  "files": {
+    "A2RL_MECHANISM_COMPARISON.md": "9839b5a4c7cf44b515486bf735e40483d126397be8f42f3f517ca4811070c08d",
+    "AGGREGATES.json": "e1b086a92cc500e70f3246c15d82eb3633dd20ad7e7a971aafc24f17bd6974aa",
+    "AUDIT_AND_CHECKS.md": "8eebd12a229e0a915b5f91b5931897c22313cce4aa006cad45d0d32e70ce49c6",
+    "MAX_ITERATIONS_ANALYSIS.md": "d5c69eff1c7c53b8f764e19618093393205aad93366cf60d402e2dbbdcd8cc0e",
+    "MINIMAL_NEXT_EXPERIMENTS.md": "1dfda382ade72c6f8b15384f3093d5d089d6a663f4f0c88e10f4884c8cc1cab9",
+    "NATIVE_GAIN_AND_ERROR_ANALYSIS.md": "73770c27d6815790dcaeab211d4e4a5482819ce532aa69716785b2d52699853c",
+    "README.md": "03a35d8880c90b7ab497a8fb018ddc2b09deb01829038c29d8984402d72383e3",
+    "REPRODUCE.md": "a37cf941ed1319c1c756a840d35fdef57559a5ae1394ca04b119b662080d75fa",
+    "TIMING_ATTRIBUTION.md": "0490af3257bcefac564aefaa674fcbff9b70d342db715c6c06e5a79f14dc1766",
+    "analyze_existing.py": "6dde756fe64d70e3e79babef6effa8e6e0dda324a19f7d61843bf018d6d6ed18"
+  }
+}
