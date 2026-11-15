@@ -1,0 +1,62 @@
+{
+  "phase": "BF1-P3",
+  "baseline": "0ed77cb8f80a5a170eb5dac644ed6df5abbf6712",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "configuration": {
+    "frames": [
+      60,
+      65,
+      76
+    ],
+    "repeats_per_mode": 3,
+    "align_calls": 18,
+    "fitness_modes": [
+      "ON",
+      "OFF"
+    ],
+    "default": "ON",
+    "fitness_off": null,
+    "legacy_R_generation": false,
+    "q": 50,
+    "max_iterations": 35,
+    "step_size": 0.2,
+    "resolution": 1.5,
+    "neighbor": "DIRECT7",
+    "line_search": "GLL3",
+    "transformation_epsilon": 0.01,
+    "relative_objective_epsilon": 0.001,
+    "native_scale_changed": false,
+    "trace": false,
+    "barriers": "same pre/post align and post quality cudaDeviceSynchronize in both modes"
+  },
+  "configuration_sha256": "6f1e09e6c7044ffdecff25714de611e82b31821d09244847ac29f7187fbb2322",
+  "library_sha256": "0c229305a733c467a5a63019489768f4ea0b626f449cff23c56b707ccb0ed54c",
+  "diagnostic_wrapper_sha256": "7baf2be005c00db07d1963a21fc16c4b9d14c2a89ef18a1ff34dce8ea38adcff",
+  "source_target_input_identities": {
+    "060.bin": "873fe71b5180968bf03a61f928ae1ca4526247fc940bac35cfb302f93bd1c1d0",
+    "map.bin": "293300a932d4ad7cb9cb6d7225d48dcd6a78b68f78c3a45b504f4146f28e3f2d",
+    "065.bin": "d71922ffca10e890bfd94c570fe26f2a3bfea38ca54ff54e5c5b5545b3e0b375",
+    "076.bin": "7cfa16a325b58abe012ccc48b688d886e99b8916435463f2747a14e7aa7ce6d0"
+  },
+  "production_change": false,
+  "state_P_commits": 0,
+  "replays": 0,
+  "downloads": 0,
+  "next": "STOP_NO_NEW_OPTIMIZATION_AUTHORIZED",
+  "qualification": "FINITE_EQUIVALENCE_AND_TIMING_ONLY_NOT_20HZ",
+  "reproduction": "Original private P2 inputs and qualified shared library required; no raw payloads published",
+  "files": {
+    "CONCLUSION.md": "95c4a2f2fdb955af639dc5cea439c2d22f8823e3b56b346d9988e3a74b8a8d4f",
+    "CONTRACT_AND_EQUIVALENCE.md": "2dbe595b0ff609298a7bce90264285d91d1ab573987f7f267cd9bfe740e70dde",
+    "PERFORMANCE.md": "34f4ef7783321c2232201091b47a4e4c0ea358cfc0aed979e9aa9c9435ec970e",
+    "README.md": "721a6d8fdb92adbbaa9c1f381197e2bb78f1e0a72cba705964fc29bcda0e93d1",
+    "REPRODUCE.md": "37bb510db4104e20fdc63e79c7b11380aaefcedfa4a5e1db27bd2b17788c176b",
+    "RESULTS.json": "3605abedbcb74a4b32920ce9095dd3fd891e0587212a17aeca0ba651f0a50b6f",
+    "TEST_OUTPUT.txt": "065c7d15facfd20f14fb9182747be315f3349fa1d5e1a0e966047509f4bfa9b1",
+    "TIMINGS.csv": "66e7eaae64e6d73477a8e10291aea7278631ee9660b49c7b570cbb1255935db6",
+    "analyze_pairs.py": "cfa0b02b3eb2a22b6ca572fd94e36dcd0c77456ea6f164f5b96711a79ce7c716",
+    "run_pairs.py": "2a0d281effd5c2526716b677a29456a1ff9515b3599e88df4cc5957a50edca53",
+    "test_contracts.py": "6ca01ea4187c01a51476a96a76b7e6d186b9ef7cb80e7a22550f0237c7cbd915"
+  },
+  "fault_isolation": "NOT_ESTABLISHED_SHARED_ALIGN_EXCEPTION_HANDLER"
+}

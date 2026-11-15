@@ -16,3 +16,7 @@
 ## BF1-P2完成后的补充
 
 [五帧证据](p2/README.md)：64/65满足终止但持续向更偏参考位置提高score；66/76没有GLL回退或可证实震荡，直接增加迭代缺乏依据。PCL Fitness墙钟35.47–36.53ms，为本轮align主要成本。仍不构成20Hz或生产资格，未运行Fitness关闭对照，未修改算法/参数，完成5次即停止。
+
+## BF1-P3补充
+
+[三帧ON/OFF](p3/README.md)18次输出与P2保持等价；OFF显式缺失Fitness，不构造Legacy R。稳态align节省约35–37ms，未观测到向尾部同步转移同量级耗时，但纯GPU/等待占比UNKNOWN。不构成完整20Hz通过，也不允许Native替换生产R。完成即停止。

@@ -1,6 +1,6 @@
 {
   "phase": "BF",
-  "current_stage": "BF1_P2_COMPLETE",
+  "current_stage": "BF1_P3_COMPLETE",
   "next": "STOP_NO_NEW_EXPERIMENT_AUTHORIZED",
   "BF0": "BF0_MANIFEST.json",
   "BF1": "BF1_MANIFEST.json",
@@ -16,7 +16,7 @@
     "DATASET_FEASIBILITY.md": "74376c5466e71e31874b91f28337d507a10fce9f8bf66d4017ffa97265a5b98a",
     "DATASET_OBJECTS.json": "4ac1e49ac31ffc8bed7dd5daa124d01fb578b94d55ab49d560e5357b2123e20f",
     "evaluate_kitti.py": "87648a8f20963d7333aeaa5019bde8c5b0379c12a98c8e3b60be16914d760742",
-    "FINAL_CONCLUSION.md": "18efe7ab341369b97527672c6198c1e17294e0440384df8814e0914b2bc9ec7a",
+    "FINAL_CONCLUSION.md": "f46908d8c4296ec9596e8cf58277b5cbf43dc05c01d43ca753a7724adbe46f49",
     "kitti_adapter.py": "6a3f7551fb786746101f96585a32da8a87a3e3391c0d3ffe8f89a2bf2be916a0",
     "KITTI_INPUT_AND_MAP_AUDIT.md": "74c4d4350665ed664a80649d5a4529ca276a9129411c64285a7bf60e68a60244",
     "KITTI_RESULTS.md": "b3969b3643f9c0e19dc2cb6776a614d27f6d0f9e610ddb5ffd6d4154f308b92d",
@@ -25,16 +25,18 @@
     "RACECAR_INPUT_AND_MAP_AUDIT.md": "054e7305cfa7efef2c69105dad4523b05a416379ef6618e2eaf1b3477a7bc8e0",
     "RACECAR_LITERATURE_REVIEW.md": "5ad211af9c11cad649f1fca1469237e91052260e499acc808721b58bce9f1776",
     "RACECAR_RESULTS.md": "c68b18113e416e6fafe41b9c405091282239c17d02a551ba5be19ba9522825d7",
-    "README.md": "f610af47788b81521b856e12076096f65912e56ffe2fbbd25e5c04d086cab7dc",
+    "README.md": "b27ad4a643b56947c989d95dc4afdf4eb64f232b359cad6579d6e3a8e57bc917",
     "REPRODUCE.md": "525bd4e2fba4ba418383eee6777f0e948d8affb66e1cd392061fa209530a48b4",
     "run_kitti.py": "e0f1c57175af7974a462aea1185208355310ea4fd08c09111b21f35545b7a75a",
     "STORAGE_AND_GIT_AUDIT.md": "a8e203f4ef492b134c2aed55e55d476c26dafc9f3efd0f1386bbcdd06b4eef4a",
     "STORAGE_MANAGEMENT.md": "576dbed7d0a105962c7db74de7c1026a012f16119c48d19f9044813c3f4c3489",
     "TEST_RESULTS.md": "d26d83f9c006b6ff6697e44402b921b133b2227146812aaba4f2a0237f0dfbb6",
     "review/manifest.json": "f489522f585aa6245f722e83c56c93d4720f09f36aacaf93d68dd81446a27773",
-    "p2/manifest.json": "b463d0426e5ba05659dd60e2a1ade509ff9bb9501764badc6e4a37a36d2b4d59"
+    "p2/manifest.json": "b463d0426e5ba05659dd60e2a1ade509ff9bb9501764badc6e4a37a36d2b4d59",
+    "p3/manifest.json": "94eff23d04e1406aaa39c99f368b8140bb83c933f6c6148f6902e3e699abcf5e"
   },
   "racecar": "NOT_APPROVED_ARCHIVED_ALTERNATIVE",
   "retrospective": "review/manifest.json",
-  "P2": "p2/manifest.json"
+  "P2": "p2/manifest.json",
+  "P3": "p3/manifest.json"
 }

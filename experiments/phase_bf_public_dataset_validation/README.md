@@ -9,3 +9,5 @@ BF0原始记录可从143ce47查看，原manifest另存BF0_MANIFEST.json。SiPS�
 最新：[KITTI只读复盘](review/README.md)。未开展新匹配、回放或算法修改。后续最小实验仅提案，当前停止。
 
 最新：[BF1-P2五帧诊断完成](p2/README.md)。恰好5次匹配，0次回放/状态提交。0次GLL回退；PCL Fitness墙钟为主要耗时线索。当前停止，未批准下一轮对照。
+
+最新：[BF1-P3 Fitness ON/OFF有限验证](p3/README.md)已完成，18次匹配结果等价，节省约35–37ms；无R构造/回放。当前停止，不修改生产Fitness。

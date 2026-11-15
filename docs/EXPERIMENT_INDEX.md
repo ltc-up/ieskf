@@ -156,3 +156,8 @@ Only approved3archives,77LiDAR/846OXTS; actualtimestampinterpolationfix keepsmap
 ## BF1-P2 five-frame diagnostic complete
 
 Exactly5fixedregistrations60/64/65/66/76,119iterations;historicallibrary/outputparityverified. Allscoresincrease,0GLLbacktracks,noobserveddirectionreversal.64/65convergetoworse-referencepositions;66stepfails;76last10stepscappedwhilemovingfarther. Fitnesswall+sync35.47–36.53msdominatesalign,notGLLretries. AssociationidentityandfineGPUtimingUNKNOWN.5nonCUDAcontracttestspass;onefloat-analysisfailurepreserved/correctedwithoutnewmatches. No15Dreplay/update,parameterorproductionchange. Stop;nextFitness/optimizercontrastsneedseparateapproval.[Report](../experiments/phase_bf_public_dataset_validation/p2/README.md).
+
+
+## BF1-P3 bounded Fitness ON/OFF complete
+
+Frames60/65/76 only,3repeats/mode=18serialmatches,qualifiedoriginalsharedlibrary. OFFFitnessexplicitnull, noLegacyR. Match/score/Nativefullcovariance/exitandqualityequalhistoricalP2(numericdifference0).Steadypairedalignsavings36.197/36.547/35.691ms;postreturnOFFsync<=0.001593ms,no35mswaitingtransferseen. PCLwallincludessync;pureGPUeventsplitUNKNOWN.6no-CUDAtestspass.No15Dreplay/production/R/Q/Bias/optimizerchange. Not20Hzqualification. Stop;newFitnessoptimizationnotauthorized.[Report](../experiments/phase_bf_public_dataset_validation/p3/README.md).
