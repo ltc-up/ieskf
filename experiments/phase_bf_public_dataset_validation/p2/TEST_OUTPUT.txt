@@ -1,0 +1,7 @@
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 0.008s
+
+OK
+
+Actual-record assertions PASS: 5 calls; 119 rows; all score increments positive; no backtracking evaluations; original 17 inputs unchanged; final equivalence and trajectory/termination reconstruction pass. No CUDA calls in contract tests.

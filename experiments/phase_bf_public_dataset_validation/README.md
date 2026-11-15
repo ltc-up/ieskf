@@ -7,3 +7,5 @@
 BF0原始记录可从143ce47查看，原manifest另存BF0_MANIFEST.json。SiPS全文访问缺口仍明确保留。RACECAR原始数据尚未下载，用户不批准下载，旧申请仅作备选归档。
 
 最新：[KITTI只读复盘](review/README.md)。未开展新匹配、回放或算法修改。后续最小实验仅提案，当前停止。
+
+最新：[BF1-P2五帧诊断完成](p2/README.md)。恰好5次匹配，0次回放/状态提交。0次GLL回退；PCL Fitness墙钟为主要耗时线索。当前停止，未批准下一轮对照。
