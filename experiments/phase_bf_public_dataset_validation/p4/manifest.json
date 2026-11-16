@@ -1,0 +1,80 @@
+{
+  "phase": "BF1-P4",
+  "baseline": "3c1c45e7f3accb7a29008642c192b84d88e2675d",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "configuration": {
+    "frames": [
+      60,
+      64,
+      65,
+      66,
+      76
+    ],
+    "counts": [
+      3000,
+      5000,
+      10000,
+      20000,
+      "FULL"
+    ],
+    "space_seeds": [
+      2026111501,
+      2026111502,
+      2026111503
+    ],
+    "random_seed": 2026111599,
+    "actual_seed": "base + frame",
+    "fitness": "OFF",
+    "trace": false,
+    "q": 50,
+    "resolution": 1.5,
+    "step_size": 0.2,
+    "max_iterations": 35,
+    "transformation_epsilon": 0.01,
+    "relative_objective_epsilon": 0.001,
+    "neighbor": "DIRECT7",
+    "line_search": "GLL3",
+    "crop_target_seed": "unchanged P2 requests"
+  },
+  "configuration_sha256": "29f0359cbac9662311e56277cb7c5c1f2423778dcfd7222519ac7802ad6964e9",
+  "matcher_sha256": "7baf2be005c00db07d1963a21fc16c4b9d14c2a89ef18a1ff34dce8ea38adcff",
+  "library_sha256": "0c229305a733c467a5a63019489768f4ea0b626f449cff23c56b707ccb0ed54c",
+  "new_matches": 72,
+  "stages": {
+    "A": 20,
+    "FULL_OFF": 2,
+    "B": 40,
+    "C": 10
+  },
+  "historical_full_rows": 3,
+  "filter_updates": 0,
+  "replays": 0,
+  "downloads": 0,
+  "production_change": false,
+  "deviation": "First trigger excluded FULL; retained then corrected with original pre-fixed seeds, B performed after C; no reference read until all matching completed",
+  "next": "STOP_NO_A2RL_IMPLEMENTATION_OR_NEW_MATCH_AUTHORIZED",
+  "qualification": "FIVE_FRAME_DIAGNOSTIC_ONLY_PYTHON_SAMPLER_ONLINE_NO_GO",
+  "reproduction": "Original private P2/P3 inputs and qualified matcher required; REPRODUCE.md",
+  "files": {
+    "A2RL_TRANSFER_ASSESSMENT.md": "a48b7ec81c9bb994dbb070b7c9cf1da17591ead64a0d4eb2589dcf1f9948112e",
+    "COVERAGE.json": "afeaf67579fb2a78c4e038933b094831b8907de797adc228b3dabec320b98b98",
+    "FINAL_CONCLUSION.md": "f9841bff95f370c51573802ca06fc0c670787700b93901138a8671c7a0f9177d",
+    "GEOMETRY_AND_FAILURE_ANALYSIS.md": "e616eb8d142c152bbde417e225c3561387fda0b854e0bf25d407c18932a62a11",
+    "PERFORMANCE.md": "2673bf8116eb4188a678cf6a0fb4e47d79daf7021c655b53598090e5cea0b08c",
+    "POINT_COUNT_RESULTS.md": "d56376ccb76a692e4c549a114df3d6627ca1460b0ac4f8ea3771199a7850eed1",
+    "README.md": "bb39b01a3cc3f7a963232f131d0c6f95818dbdf0d9922844699a854dab10960c",
+    "REPRODUCE.md": "eda1d33d116a75590438b9bcf8611d8e7f4956d73e1cd7e8d57a87a0f7297983",
+    "RESULTS.csv": "3a1b8fba9a8dd370e0917683a5015ee7610c48469b6769372c1327d0301db48e",
+    "RESULTS.json": "5f7f9165e440a5840a4605c95be1d2b50fec7f9b85e63c74d581598b04da31f1",
+    "SAMPLING_DESIGN.md": "5b64cb47b5fa32ae2168dd7e4acd429c7f2fe5250a35786c177f6b2df58b6f82",
+    "SAMPLING_METHOD_COMPARISON.md": "72b2072b6edca9a6452e67a0ef30d363ec7c9363e672bbde3725adb2e809dfcd",
+    "TEST_OUTPUT.txt": "70d00d4af0c64be7f903f45a71446ee57d0a90f5c92c416002998efbe84913ad",
+    "analyze.py": "6874a503f15f8074836bc9f772fe7fd238395557fdf12366f189279023c13659",
+    "plot_results.py": "db9b427569ace40603133ce6acf6d507a35fca037746910266f0ca058b7daf91",
+    "point_counts.png": "9e1217c839c21f330ce96cea40221ff8c9c56b897198ff479f05e68f6adea333",
+    "run_ablation.py": "4428e51d5513d8b95f5d30fedba9454a3175297c1c4ae12bcc2f34cc4350917e",
+    "sampling.py": "2c3d8f3954e673fea34da96c7429a693365fea76000787da8ae5abe854bf7bf3",
+    "test_sampling.py": "15519a73ba7f5e26196c5f47650505da9be99b64fb7a1ac4b61abd4a4e5bde73",
+    "verify_saved.py": "7ee2f65e8501d1e53b9ef3f8c403e697629c0556fc15d42b25576efc5954383f"
+  }
+}

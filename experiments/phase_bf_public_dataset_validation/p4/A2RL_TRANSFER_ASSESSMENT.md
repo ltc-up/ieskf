@@ -1,0 +1,9 @@
+# 对A2RL的参考价值
+
+CONFIRMED（历史记录）：困难12632冻结Source为5000点；已有BE多LiDAR151帧血缘检查通过，但信息trace不是最终匹配点数比例。当前可读取源码副本显示裁剪→分段VoxelGrid→RandomSample keep上限，leaf_size=0.8、keep_num=5000；矩形ROI具有高度约束，融合与单雷达分支的轴约定/裁剪不同。它已经不是KITTI原始全量均匀随机抽点的分布。
+
+**版本边界：** 此源码副本没有可核验.git，不能声称其HEAD仍aa50或就是部署版本。历史审查aa50与实际部署组件身份缺口继续保留。精确私有路径/文件SHA与ROI参数仅存本地A2RL_source_audit_private.json，不修改源文件。部署时实际ROI/keep数、直道/弯道点数、最终前/左/右保留比例、远近分布与护栏/路沿语义覆盖仍UNKNOWN，不能从配置5000推断每帧实数或传感器权重。
+
+HYPOTHESIS：A2RL已有VoxelGrid和高度/范围裁剪可能已降低KITTI中近处密集层的重复权重，所以P4的巨大FULL差异未必会重现。KITTI空间排序的固定高度层与强制极值不能照搬到banking、车辆姿态或多雷达融合场景。不能把KITTI结果用来改生产ROI、leaf或keep_num。
+
+CONDITIONAL：值得下一阶段先在已有A2RL困难3/9和正常5/8的少量冻结样本做只读分布审查，记录最终Source及传感器血缘、远近/高度/护栏路沿覆盖，再申请同源同Seed采样对照。当前不执行新A2RL匹配，更不自动启用本Python采样器。须保持生产当前默认及正常段保护指标，且把采样时间计入50ms完整预算。

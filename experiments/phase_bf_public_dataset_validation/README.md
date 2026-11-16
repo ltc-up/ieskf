@@ -11,3 +11,5 @@ BF0原始记录可从143ce47查看，原manifest另存BF0_MANIFEST.json。SiPS�
 最新：[BF1-P2五帧诊断完成](p2/README.md)。恰好5次匹配，0次回放/状态提交。0次GLL回退；PCL Fitness墙钟为主要耗时线索。当前停止，未批准下一轮对照。
 
 最新：[BF1-P3 Fitness ON/OFF有限验证](p3/README.md)已完成，18次匹配结果等价，节省约35–37ms；无R构造/回放。当前停止，不修改生产Fitness。
+
+最新：[P4 Source点数与覆盖消融](p4/README.md)，72次新增匹配完成；分布效应明显但正常帧退化，Python采样成本超预算。当前停止，无A2RL迁移实施。

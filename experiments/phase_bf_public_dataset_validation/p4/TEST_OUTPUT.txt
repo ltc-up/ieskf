@@ -1,0 +1,7 @@
+......
+----------------------------------------------------------------------
+Ran 6 tests in 0.175s
+
+OK
+
+PASS: 72 calls; 70 subset byte identities; 15 source-only spatial orders and strict nesting; actual point counts/OFF semantics; immutable originals
