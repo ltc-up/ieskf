@@ -1,0 +1,33 @@
+{
+  "phase": "BG-C5",
+  "baseline": "3ab45456c32dd776baeac5750b3bedd8d1bd1b14",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "status": "PARTIAL_CONTINUOUS_BASELINE_COMPLETED_FAR_ABLATION_NOT_RUN",
+  "new_real_continuous_runs": 1,
+  "matched_frames": 7798,
+  "new_frozen_FAR_ablations": 0,
+  "online_gnss": false,
+  "production_changes": false,
+  "map_cache_sha256": "2f7c78d7aa61d219033a3cb9bc1822204db450e9d3ce0405cd1bca9fdcd197ac",
+  "map_raw_identity_from_existing_manifest": "5d165afc16f22aaad785711a37575673b09587f1d934edb5cb6dc85b2f52de8f",
+  "matcher_sha256": "8ae76d7ece996cf89f498fba2519ba4c73d76b8f64beb69ffd5884a243ea1c08",
+  "frozen_config_sha256": "bb9dce7544b84104eee1957e2e7abf9e9adbcd8e66ed58522ca3e7edeb8cbba0",
+  "input_order_identity_sha256": "b52a32bc8e91d11d1b4200e95cb3ed083f017e86b42c755e40e236515db1d940",
+  "code_sha256": {
+    "analyze_completed.py": "2ed52baf292854de0432eb49bcaec72af86bf26f776fe81c891269786418f009",
+    "high_rate_real.py": "b3b1382a289b7974b6d85423117a271b09c056dafac830814f5eecf5b202dd2e",
+    "input_contract.py": "e8d6f8859d4fe0a7cadde56a5fc8533a86e82d8ca74f8e87663cfe349bc832ea",
+    "resource_monitor.py": "32289dec17e3fad9510b9c0b05e2a23ec37bbd118a451d78dd7455d8a7ccb8dd",
+    "run_continuous.py": "11d80378ba36e63d513e89135fcb0424c9e715d308ab9d99778145af1f395be5",
+    "test_trace_equivalence.py": "c18535b97f323a1eeebf3a196f2c1be416baa986b78e4ab7080842ac8c408a66",
+    "trace_backend.py": "42af2db304a3f31f4676ac2ca5494cb88179e827f1b5a3b5e42311eac5800944"
+  },
+  "tests": {
+    "pre_run": 33,
+    "final_subset": 19,
+    "frozen_real_event_bitwise_parity": 3714,
+    "full_output_P_numeric_checks": 39000
+  },
+  "reproduction": "authorized private bag/map/initialization/TF and full retained checkpoint required; per-frame source is reconstructible, not duplicated; FAR exact full history is missing",
+  "publication": "independent research code and deidentified aggregate summaries only"
+}

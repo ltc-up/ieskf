@@ -1,0 +1,27 @@
+{
+  "checked_files": [
+    "experiments/phase_bg_far_lio/c5/C5_INITIALIZATION_AND_MAP_CONTRACT.md",
+    "experiments/phase_bg_far_lio/c5/FAR_UNIQUE_ID_CAUSAL_ABLATION.md",
+    "experiments/phase_bg_far_lio/c5/FINAL_CONCLUSION.md",
+    "experiments/phase_bg_far_lio/c5/FIRST_WRONG_BASIN_CAUSAL_TIMELINE.md",
+    "experiments/phase_bg_far_lio/c5/HIGH_FITNESS_CORRECT_OBSERVATION_ANALYSIS.md",
+    "experiments/phase_bg_far_lio/c5/LOOP44_1013_15D_CONTINUOUS_BASELINE.md",
+    "experiments/phase_bg_far_lio/c5/README.md",
+    "experiments/phase_bg_far_lio/c5/REAL_100HZ_OUTPUT_VALIDATION.md",
+    "experiments/phase_bg_far_lio/c5/REPRODUCE.md",
+    "experiments/phase_bg_far_lio/c5/RESOURCE_AND_FAILURE_AUDIT.md",
+    "experiments/phase_bg_far_lio/c5/ROBUST_FUSION_NEXT_CANDIDATES.md",
+    "experiments/phase_bg_far_lio/c5/aggregate_results.json",
+    "experiments/phase_bg_far_lio/c5/analyze_completed.py",
+    "experiments/phase_bg_far_lio/c5/high_rate_real.py",
+    "experiments/phase_bg_far_lio/c5/input_contract.py",
+    "experiments/phase_bg_far_lio/c5/manifest.json",
+    "experiments/phase_bg_far_lio/c5/resource_monitor.py",
+    "experiments/phase_bg_far_lio/c5/run_continuous.py",
+    "experiments/phase_bg_far_lio/c5/test_trace_equivalence.py",
+    "experiments/phase_bg_far_lio/c5/trace_backend.py"
+  ],
+  "review": "All listed files read; independent research modules, summaries and scalar aggregates only. No raw bag/map/point cloud, full real trajectory, event epoch/ID, extrinsics, credentials or original production source. Production core unchanged. Explicit research-branch push only.",
+  "parent_commit": "3ab45456c32dd776baeac5750b3bedd8d1bd1b14",
+  "main_expected": "05b73c0aae6b9f5440f8497477dfe9909ebfe9e1"
+}
