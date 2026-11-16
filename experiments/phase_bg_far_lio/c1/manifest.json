@@ -1,0 +1,20 @@
+{
+  "phase": "BG-C1",
+  "baseline": "a3712acfa3ee34218d0eb8604a7255902718d73f",
+  "qualification": "BLOCKED_COMMON_INITIALIZATION",
+  "localization_runs": 0,
+  "new_alignments": 0,
+  "downloads": 0,
+  "input_identities": [
+    "existing loop44 metadata/events",
+    "existing lap bindings",
+    "BE run_loop.py at baseline"
+  ],
+  "public_files": {
+    "continuous_config.draft.json": "17dbea7280b8dae97c63783fb16f60cfd74347178e574309a570dcb1705d8d01",
+    "CONTINUOUS_TEST_CONFIGURATION.md": "928092faabcc4f7a440d27c9948096899ea311ad5e5a3c4a57fa177c2315ca91",
+    "FINAL_CONCLUSION.md": "4c54cebac08fcc1b69926581f99e42c2544f1318167116466eaa76aa93b20620",
+    "LOOP44_STARTUP_TIMELINE.md": "6966981e84acff3878bcb857ef855e0dfa34ca4dff1df8d06ab982dc311313e3",
+    "REPRODUCE.md": "3fa796e5ae1ad6f77f528b3752e684364a492f651129000cf2349ab9ee21d07f"
+  }
+}

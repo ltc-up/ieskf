@@ -206,3 +206,8 @@ No new localization result. Official nine-state backend/internal tilt and prior-
 ## Phase BG — Native finite tests, system NO-GO
 
 Original-map FAR-LIO and research-only timestamp/lever adapters exercised on preregistered normal8/right3. Local raw-registration benefit does not establish improved delivered localization. IO/clock stalls, dropped scored outputs and ~10m converged right-turn candidates prevent qualification; native callback speed does not certify full50ms. Preserve failures and clarify data-path timing before any separately approved follow-up. Production6D equivalence, vertical accuracy and independent wrong-basin identification remain UNKNOWN. [Evidence](../experiments/phase_bg_far_lio/native/README.md).
+
+
+## BG-C1 pit连续启动预检
+
+恢复轮速/评分消息时间线；共同地图初始化成功证据不足，按停止门未运行FAR/15D。没有新精度或实时性结论。见[时间线](../experiments/phase_bg_far_lio/c1/LOOP44_STARTUP_TIMELINE.md)及[结论](../experiments/phase_bg_far_lio/c1/FINAL_CONCLUSION.md)。

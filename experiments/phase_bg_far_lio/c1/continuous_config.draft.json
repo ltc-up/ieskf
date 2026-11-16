@@ -1,0 +1,23 @@
+{
+  "status": "DRAFT_NOT_EXECUTABLE_INITIALIZATION_UNRESOLVED",
+  "start_relative_s": 130,
+  "end_relative_s": 345.80606308,
+  "score_indices": {
+    "normal8": [
+      675,
+      803
+    ],
+    "right3": [
+      1317,
+      1405
+    ]
+  },
+  "map_update": false,
+  "gnss_online": false,
+  "bag_dynamic_tf": false,
+  "max_runs_each": 1,
+  "planned_prefetch_bytes": 134217728,
+  "planned_writer_bytes": 67108864,
+  "planned_disk_cap_bytes": 536870912,
+  "initialization": null
+}

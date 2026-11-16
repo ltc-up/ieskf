@@ -174,3 +174,8 @@ Cached official commit/source/paper, one-second raw three-LiDAR/IMU bag metadata
 ## Phase BG — Native bounded comparison completed
 
 Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-map normal8/right3 ran; initial normal8 recording failure retained, same-input retry completed. Raw normal matching shows local benefit, delivered-state comparison does not improve15D; right3 has two ~10m proxy-error candidates following IO/clock stalls. Full-cycle50ms FAIL, incomplete coverage; causal attribution/production6D/Z accuracy UNKNOWN. No datasets/images/full laps or production changes. [Final report](../experiments/phase_bg_far_lio/native/FINAL_CONCLUSION.md).
+
+
+## BG-C1 pit连续启动预检
+
+恢复轮速/评分消息时间线；共同地图初始化成功证据不足，按停止门未运行FAR/15D。没有新精度或实时性结论。见[时间线](../experiments/phase_bg_far_lio/c1/LOOP44_STARTUP_TIMELINE.md)及[结论](../experiments/phase_bg_far_lio/c1/FINAL_CONCLUSION.md)。
