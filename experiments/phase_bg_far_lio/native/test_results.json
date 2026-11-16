@@ -1,0 +1,8 @@
+{
+  "tests": 14,
+  "passed": 14,
+  "scope": "Synthetic math and input contracts; not accuracy certification",
+  "frozen_groups_checked": 298,
+  "point_time_roundtrip_max_ns": 2,
+  "tf_matches": true
+}

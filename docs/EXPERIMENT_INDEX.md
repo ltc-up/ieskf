@@ -170,3 +170,7 @@ Fiveframes,72newmatches(20A+2FULL+40B+10C),P3FitnessOFF,unchangedTarget/Seed/opt
 ## Phase BG — FAR-LIO read-only review
 
 Cached official commit/source/paper, one-second raw three-LiDAR/IMU bag metadata, original map identity, host and image-manifest size audited. No build, download layers or localization run. Existing fusion-only XYZI drops point time; IMU reference point and global initialization remain incomplete. Two historical segments frozen before results. Input integration CONDITIONAL; accuracy/realtime UNKNOWN. [Review and approval plan](../experiments/phase_bg_far_lio/README.md).
+
+## Phase BG — Native bounded comparison completed
+
+Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-map normal8/right3 ran; initial normal8 recording failure retained, same-input retry completed. Raw normal matching shows local benefit, delivered-state comparison does not improve15D; right3 has two ~10m proxy-error candidates following IO/clock stalls. Full-cycle50ms FAIL, incomplete coverage; causal attribution/production6D/Z accuracy UNKNOWN. No datasets/images/full laps or production changes. [Final report](../experiments/phase_bg_far_lio/native/FINAL_CONCLUSION.md).

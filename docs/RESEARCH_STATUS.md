@@ -202,3 +202,7 @@ Fiveframes,72newmatches(20A+2FULL+40B+10C),P3FitnessOFF,unchangedTarget/Seed/opt
 ## Phase BG — prior-map FAR-LIO review only
 
 No new localization result. Official nine-state backend/internal tilt and prior-PCD path distinguished from the research15D. Existing upstream no-deskew fusion loses point timestamps; direct remapping is blocked. Native workspace dependency/storage approval and verified fusion/IMU/map/init contracts precede any finite run. No container pulled, no algorithm changed, no full replay. [Report](../experiments/phase_bg_far_lio/FINAL_RECOMMENDATION.md).
+
+## Phase BG — Native finite tests, system NO-GO
+
+Original-map FAR-LIO and research-only timestamp/lever adapters exercised on preregistered normal8/right3. Local raw-registration benefit does not establish improved delivered localization. IO/clock stalls, dropped scored outputs and ~10m converged right-turn candidates prevent qualification; native callback speed does not certify full50ms. Preserve failures and clarify data-path timing before any separately approved follow-up. Production6D equivalence, vertical accuracy and independent wrong-basin identification remain UNKNOWN. [Evidence](../experiments/phase_bg_far_lio/native/README.md).

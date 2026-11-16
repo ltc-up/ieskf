@@ -1,0 +1,76 @@
+{
+  "normal8": {
+    "pipeline/num_points_frame": {
+      "min": 100543.0,
+      "max": 127701.0,
+      "median": 113938.5
+    },
+    "registration/num_points_frame": {
+      "min": 9379.0,
+      "max": 17913.0,
+      "median": 12927.5
+    },
+    "map/num_points": {
+      "min": 585085.0,
+      "max": 585085.0,
+      "median": 585085.0
+    },
+    "map/num_voxel": {
+      "min": 41982.0,
+      "max": 41982.0,
+      "median": 41982.0
+    },
+    "map/points_added": {
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "map/points_removed": {
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "node/map_update": {
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    }
+  },
+  "right3": {
+    "pipeline/num_points_frame": {
+      "min": 87013.0,
+      "max": 102580.0,
+      "median": 97227.0
+    },
+    "registration/num_points_frame": {
+      "min": 6919.0,
+      "max": 9621.0,
+      "median": 8384.0
+    },
+    "map/num_points": {
+      "min": 584980.0,
+      "max": 584980.0,
+      "median": 584980.0
+    },
+    "map/num_voxel": {
+      "min": 41982.0,
+      "max": 41982.0,
+      "median": 41982.0
+    },
+    "map/points_added": {
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "map/points_removed": {
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    },
+    "node/map_update": {
+      "min": 0.0,
+      "max": 0.0,
+      "median": 0.0
+    }
+  }
+}

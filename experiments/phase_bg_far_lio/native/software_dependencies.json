@@ -1,0 +1,100 @@
+[
+  {
+    "name": "tam_common",
+    "url": "https://codeload.github.com/TUMFTM/TAM__common/tar.gz/4b19b608bdd8b6d6c60747e3fcfa1288399c3186",
+    "bytes": 652429,
+    "status": "EXTRACTED",
+    "sha256": "1ca15c624ea08dea12ea7abf619f16ee9a7142ed2d3c56b80f3311dc36e2ae7b"
+  },
+  {
+    "name": "parameter_management",
+    "url": "https://codeload.github.com/TUMFTM/TAM__param_management/tar.gz/66c1481b16d9a86497751f91b0d048ad8d129921",
+    "bytes": 23024,
+    "status": "EXTRACTED",
+    "sha256": "86534f5b0a33d9a54329e7a4fc4d646639aa60908a31abbdb747fe1dd97b240a"
+  },
+  {
+    "name": "time_series_logging",
+    "url": "https://codeload.github.com/TUMFTM/tsl/tar.gz/d91a26211bdba041e3e1d329755f2e5697b1db0a",
+    "bytes": 489025,
+    "status": "EXTRACTED",
+    "sha256": "89b4fe562703b41efb548f3f47ba0203e26f71c421f0c93ddbe644df9ea84108"
+  },
+  {
+    "name": "tam_msgs",
+    "url": "https://codeload.github.com/TUMFTM/TAM__msgs/tar.gz/4b920bbbe7af39753579b9afd16a178c5febb91c",
+    "bytes": 9311,
+    "status": "EXTRACTED",
+    "sha256": "69a050cceadcf0a2d535a60f139900a4f495ff1a6e2660063fc4315f9b72caec"
+  },
+  {
+    "name": "tier4_msgs",
+    "url": "https://codeload.github.com/tier4/tier4_autoware_msgs/tar.gz/e6d504b0bf4fc80d994a92fc7a783bdca11ac8d0",
+    "bytes": 42994,
+    "status": "EXTRACTED",
+    "sha256": "88b4769dd40869036d26a2adee136e5d1e0ef1e43684b530633297ebf47d8b50"
+  },
+  {
+    "name": "autoware_msgs",
+    "url": "https://codeload.github.com/autowarefoundation/autoware_msgs/tar.gz/0631905d402bd94ca5092c03dc2188a8c20f7bfb",
+    "bytes": 159149,
+    "status": "EXTRACTED",
+    "sha256": "29a6b76b8946d693bd48c37bc776684f2353db2eef6236b20b67330d612b9bdc"
+  },
+  {
+    "name": "autoware_auto_msgs",
+    "url": "https://codeload.github.com/tier4/autoware_auto_msgs/tar.gz/624aae9feb142eb2a4e16069ed06bf4050ccc3ea",
+    "bytes": 33826,
+    "status": "EXTRACTED",
+    "sha256": "71ca57772a00c1018a5fca7c521cc658215b68fd5305c0c1c9355f2c00a3510c"
+  },
+  {
+    "name": "robin_map",
+    "url": "https://codeload.github.com/Tessil/robin-map/tar.gz/refs/tags/v1.4.0",
+    "bytes": 70352,
+    "status": "EXTRACTED",
+    "sha256": "7930dbf9634acfc02686d87f615c0f4f33135948130b8922331c16d90a03250c"
+  },
+  {
+    "name": "googletest",
+    "url": "https://codeload.github.com/google/googletest/tar.gz/03597a01ee50ed33e9dfd640b249b4be3799d395",
+    "bytes": 859872,
+    "status": "EXTRACTED",
+    "sha256": "3dd5da4302b4069f90b2d58f48e6f3bc4c9938e024e7599241cafaebda476013"
+  },
+  {
+    "name": "sophus",
+    "url": "https://codeload.github.com/strasdat/Sophus/tar.gz/refs/tags/1.24.6",
+    "bytes": 112937,
+    "status": "EXTRACTED",
+    "sha256": "3f3098bdac2c74d42a921dbfb0e5e4b23601739e35a1c1236c2807c399da960c"
+  },
+  {
+    "name": "tbb",
+    "url": "https://codeload.github.com/uxlfoundation/oneTBB/tar.gz/refs/tags/v2022.0.0",
+    "bytes": 2654343,
+    "status": "EXTRACTED",
+    "sha256": "e8e89c9c345415b17b30a2db3095ba9d47647611662073f7fbf54ad48b7f3c2a"
+  },
+  {
+    "name": "cuco",
+    "url": "https://codeload.github.com/NVIDIA/cuCollections/tar.gz/67110a53135ffdd43814794c6c39751f8d74e080",
+    "bytes": 1043003,
+    "status": "EXTRACTED",
+    "sha256": "746979c0e35b9fb8618db6b4a3124bafbe90d7be7e1f897ba1b84181f1512ff6"
+  },
+  {
+    "name": "rapids",
+    "url": "https://codeload.github.com/rapidsai/rapids-cmake/tar.gz/10c761af0da5d110a1182d212b08271291abf100",
+    "bytes": 198655,
+    "status": "EXTRACTED",
+    "sha256": "0fd69884d66003ea42ad837b27d1df28448e6e3dbf79a7449186a16185f16682"
+  },
+  {
+    "name": "cpm",
+    "url": "https://codeload.github.com/cpm-cmake/CPM.cmake/tar.gz/refs/tags/v0.40.0",
+    "bytes": 102978,
+    "status": "EXTRACTED",
+    "sha256": "32e6dff3bb4305581b03cb84203b495ce98152ce458974827a185743b0181c76"
+  }
+]
