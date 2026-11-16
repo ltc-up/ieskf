@@ -166,3 +166,7 @@ Frames60/65/76 only,3repeats/mode=18serialmatches,qualifiedoriginalsharedlibrary
 ## BF1-P4 bounded source ablation complete
 
 Fiveframes,72newmatches(20A+2FULL+40B+10C),P3FitnessOFF,unchangedTarget/Seed/optimizer.60spatialcasesconverge,maxsameNseedspread0.0823m;FULLandrandom10kframe76stillfail.Normal60regresses;pointcountnotuniversalquality.20kspatialcoversall1mSourcecells,radial/heightweightsdiffergreatlyfromFULL.Pythonsampling73–76msmakesonline50msNO-GO.FirsttriggeromittedFULL,preserved/correctedbeforeOXTSread;BcompletedafterCwithoriginalseeds.NoA2RLmatch/filter/productionchange.Stop.[Reports](../experiments/phase_bf_public_dataset_validation/p4/README.md).
+
+## Phase BG — FAR-LIO read-only review
+
+Cached official commit/source/paper, one-second raw three-LiDAR/IMU bag metadata, original map identity, host and image-manifest size audited. No build, download layers or localization run. Existing fusion-only XYZI drops point time; IMU reference point and global initialization remain incomplete. Two historical segments frozen before results. Input integration CONDITIONAL; accuracy/realtime UNKNOWN. [Review and approval plan](../experiments/phase_bg_far_lio/README.md).

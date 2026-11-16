@@ -1,0 +1,27 @@
+{
+  "phase": "BG read-only review",
+  "research_base": "0d5ffecbc6cce0b2862d40fb38a6efe29650fed6",
+  "official_commit": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+  "tam_common_gitlink": "4b19b608bdd8b6d6c60747e3fcfa1288399c3186",
+  "algorithm_runs": 0,
+  "builds": 0,
+  "image_layers_downloaded": 0,
+  "new_datasets": 0,
+  "production_modified": false,
+  "window_selection_sha256": "cae9b6d625b6e93c25e471193c9214352e17fc5fc8654ee6de11f09ac8e66413",
+  "qualification": "READ_ONLY_REVIEW_COMPLETE; INPUT_CONTRACT_PARTIAL; LOCALIZATION_AND_REALTIME_UNKNOWN",
+  "configuration": "Official pinned defaults reviewed; no runtime config generated",
+  "files": {
+    "A2RL_INPUT_AND_MAP_AUDIT.md": "ff274b2b0efc96b7ff746105fde3cfbe28cf1c89d0888fd089132ac41b0d27b7",
+    "ENVIRONMENT_AND_STORAGE.md": "6f3a2fbebc3ac181f1c94d4ae61812adbf3fba635a57fd2ca5c49e162c7051d7",
+    "FAIR_COMPARISON.md": "c8eac50886dd944323cc27ddbecf8ec5b2f8f34c099cb30ada41957daaccc761",
+    "FINAL_RECOMMENDATION.md": "9deb07fe8683fe431e6728f75fa2dc2fa28e6bd0a13ad68d15a3820734e3a828",
+    "inspect_inputs.py": "0e98fde7e60a75d8bc0845d12bcf83458e25f6ed49b30474778009b1cba5b652",
+    "MINIMAL_RUN_PLAN.md": "9c8478fa65306ed1bf892da2d2b7680f6646a33d784397a487bf5d7f9fed7751",
+    "README.md": "a087aac01c7aa7d6d0028327b11277a3251c4867df22a3baaabe745c2e67101e",
+    "REPRODUCE.md": "65c6ec8480235bff91e5791a02ddbb3890f7b81d95afbc9f2f8a860c9b9fc5bf",
+    "RESULTS_AND_FAILURES.md": "d92637ee61b69b3a188c781d6a660fcfb90d2134f2e160f88263111ce99cffb8",
+    "SOURCE_AND_PAPER_REVIEW.md": "7fc4a38a961184a83de57f4204365b8ec8c905256cde40e71d58e67b8bf3ade7"
+  },
+  "official_config_sha256": "ca4f5bf4177b18bc0ecfc80c1e85a1046c8ed17ea4970d7fd86c252ac22f4317"
+}

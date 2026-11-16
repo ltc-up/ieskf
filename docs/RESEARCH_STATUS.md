@@ -198,3 +198,7 @@ Frames60/65/76 only,3repeats/mode=18serialmatches,qualifiedoriginalsharedlibrary
 ## BF1-P4 bounded source ablation complete
 
 Fiveframes,72newmatches(20A+2FULL+40B+10C),P3FitnessOFF,unchangedTarget/Seed/optimizer.60spatialcasesconverge,maxsameNseedspread0.0823m;FULLandrandom10kframe76stillfail.Normal60regresses;pointcountnotuniversalquality.20kspatialcoversall1mSourcecells,radial/heightweightsdiffergreatlyfromFULL.Pythonsampling73–76msmakesonline50msNO-GO.FirsttriggeromittedFULL,preserved/correctedbeforeOXTSread;BcompletedafterCwithoriginalseeds.NoA2RLmatch/filter/productionchange.Stop.[Reports](../experiments/phase_bf_public_dataset_validation/p4/README.md).
+
+## Phase BG — prior-map FAR-LIO review only
+
+No new localization result. Official nine-state backend/internal tilt and prior-PCD path distinguished from the research15D. Existing upstream no-deskew fusion loses point timestamps; direct remapping is blocked. Native workspace dependency/storage approval and verified fusion/IMU/map/init contracts precede any finite run. No container pulled, no algorithm changed, no full replay. [Report](../experiments/phase_bg_far_lio/FINAL_RECOMMENDATION.md).
