@@ -184,3 +184,8 @@ Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-
 ## BG-C1追加授权：录制均值初始化连续对照完成
 
 最新授权解除历史init_flag阻塞。两套各一次pit到345.806s，完整输入一致；新FAR右弯状态XY约0.716m、新15D约0.890m，旧10m候选未复现。初始化与调度共同改变，不能归因单一匹配器。FAR全段148ms尾延迟及7个缺失输出，严格50ms仍NO-GO。见[完整交付](../experiments/phase_bg_far_lio/c1/recorded_init/README.md)。旧停止报告只是前置历史，不代表本轮未运行。
+
+
+## BG-C2：9D/15D、三种延迟及R的只读因果审查
+
+零新匹配/滤波回放/参数或生产修改；核验C1保存K·创新=δ、218评分帧与4214完成输出配对，14项保存合同检查通过。FAR缓存received持续复用同一LiDAR、15D单信息接入保留Legacy ×5；FAR评分段横向R恒.05、位置裁剪未触发。右弯NDT原始横向P95 .286m优于GICP .343m，但最终状态排序相反；不能归因状态维数。纠正C1全程固定Bias和一次发布等于一次融合的描述，原评分不变。保留15D/回滚研究，生产替换与直接移植FAR R/9D均NO-GO；新实验只提案并等待另批。[五份专题及证据](../experiments/phase_bg_far_lio/c2/README.md)。

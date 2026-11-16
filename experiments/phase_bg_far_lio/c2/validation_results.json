@@ -1,0 +1,20 @@
+{
+  "scope": "saved algebra/contracts only; not localization validation",
+  "checks_passed": 14,
+  "checks": [
+    "saved_K_residual_delta_identity",
+    "saved_translation_innovation_identity",
+    "4214_completion_pairs",
+    "completion_pair_timing_under_5ms",
+    "normal8_all_scored_position_residuals_inside_clip_bound",
+    "normal8_Rxy_constant",
+    "normal8_yaw_R_floor_delay_formula",
+    "normal8_saved_scoring_sample_count",
+    "right3_all_scored_position_residuals_inside_clip_bound",
+    "right3_Rxy_constant",
+    "right3_yaw_R_floor_delay_formula",
+    "right3_saved_scoring_sample_count",
+    "analyze_existing.py_no_filter_matcher_ROS_import",
+    "temporal_existing.py_no_filter_matcher_ROS_import"
+  ]
+}

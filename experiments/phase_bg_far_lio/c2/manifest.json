@@ -1,0 +1,96 @@
+{
+  "phase": "BG-C2 read-only supplement",
+  "baseline": "62eb9472887483d94c22a67c81b90cb2934a90d3",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "FAR_commit": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+  "TAM_common_commit": "4b19b608bdd8b6d6c60747e3fcfa1288399c3186",
+  "production_source_head": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "remote_main_precheck": "05b73c0aae6b9f5440f8497477dfe9909ebfe9e1",
+  "source_sha256": {
+    "research": {
+      "src/geometry_ieskf/inertial.py": "279b7933319d391d2535d8736f0e55ab52eeefbe79c10128fbcfa23f811d3e61",
+      "src/geometry_ieskf/state.py": "21e8652a5cc32538f8ee19f293ef4c94cc176dffa4d29cc630b0fe5708cbecce",
+      "src/geometry_ieskf/wheel.py": "827fcb042b03dd7d20e3bab81f076d15d11fe6ada3affab33dcc86f8431dffa7",
+      "src/geometry_ieskf/external_pose.py": "29948e7077a7de54d4222823329d14b58e6edb3f2573b514aa0e2b3b565239bc",
+      "src/geometry_ieskf/ndt_pose_observation.py": "683a31d795cecda3008cb3d01a1421366ea4d8c5213d7918ebbd04873415816d",
+      "src/geometry_ieskf/pose_uncertainty.py": "ee7d25ec2330cee660f16841d1f93e9d84edb3774b8588e10def125d4c25f407",
+      "src/geometry_ieskf/research_defaults.json": "cb25184d76b20bec92303351772e95ee25b8495f77c01315a9aa3a1287bfd109",
+      "src/ndt_global/delayed_local.py": "1986e284750590ba6d0ed5b1db974177d95c7b44f5940f79532006702c5f8320",
+      "src/ndt_global/pose_delay.py": "143d8f6d6baea9977db1ef81fcfa299e981dee4a687d3d6dcb55be996787be30",
+      "src/ndt_global/managed_replay.py": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+      "experiments/phase_bg_far_lio/c1/run_continuous_15d.py": "fcd182d015f7e69cb2522a3b08b81ddac1a8f04a75cf604edbb5b82406292c99",
+      "experiments/phase_bg_far_lio/c1/run_continuous_far.py": "9439246e9d97bfaec3214f4e1099987f34c154bff6f3548af6013b37b0aabda8"
+    },
+    "FAR": {
+      "ros_packages/tam_state_estimation_node/include/tam_state_estimation_node/node.hpp": "6e3602370a7f9210662ab4d4d366cb9ad2b2c2ceebb9fb71b058acd762e51211",
+      "ros_packages/tam_state_estimation_node/include/tam_state_estimation_node/types.hpp": "41fd45b6d37e3a85a2de42378335126e2aaa39f62be579fc79f6063a38c8f5a8",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/state_estimation.hpp": "97a587a93bac7824d29d15a729a629f1c4dac41367f97ca16ffe74f6211ec0ba",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/ekf_3d.hpp": "93a5ff3283bbfac715a8fe335d14bd109bb80e827a8e102b3d0e7d9b902038a5",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/ekf.hpp": "fe13bae2b319a3d9d64bc772d499aecc3f0efac09e22695fa0fc8da1df0649c3",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/kalman_filter/base.hpp": "beabee6c03032fbb74ca4dffca291ee4910aaf277cd5cb237954c138bb2c768f",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/submodules/imu_handler.hpp": "39b6089d33cbe80d986300d095fcd76ccfcdda213950d9be14dbe988a7ca89d3",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/submodules/vehicle_model_handler.hpp": "9615e152617c90dc290781e0c792bb37f5096efd3d88d8f067a5a08231377df1",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/submodules/ref_orientation_handler.hpp": "aa5d9ebdf9d98fc401f17d224d0500ad20eefa1e6f33ed4d42792b96f43d6aa3",
+      "lib_cpp/state_estimation_cpp/tam_state_estimation/include/tam_state_estimation/helper/outlier_rejection.hpp": "837fceadb0a8ad799f7a6d076d0fe9db5d2e20dd6b1398f6139de156ceb900ff"
+    },
+    "production": {
+      "ekf_localizer/src/ekf_module.cpp": "9ebe4d5c1389982af95787305cb6c8b47d477d89a373cb9f4930e4c16bfb76fd",
+      "ekf_localizer/src/ekf_localizer.cpp": "50d04f0a026e9020ad8c0c4ce9cd18df0c193260410bea6d8e6d05aef1293e7d",
+      "ekf_localizer/src/measurement.cpp": "1b7749922907c4d6e0d166cd1b019919799c0583eb9c78cc869b51d519b12222",
+      "ekf_localizer/include/ekf_localizer/aged_object_queue.hpp": "a590ff6ba9e73b74174145b6f55d4a1e017f62e7e78b482167491a3b0271147e",
+      "kalman_filter/src/time_delay_kalman_filter.cpp": "b8ba458211c5b76ab0073520361dce5b9688c5ddb756f7cd72666018f1488b32"
+    },
+    "TAM_common": {
+      "tum_helpers_cpp/src/delay_compensation.cpp": "20eb7d711708167f9578e48150411eeb18eea15098a2abde72fa176f0165db73"
+    }
+  },
+  "existing_FAR_run_configuration_sha256": "a4f9a58c5f61e078c8a0c7b5c948f88b826b04ef9dbb0db81b4f70bb39e5d7a1",
+  "saved_input_identity_records": {
+    "far_recorded_init/records.jsonl": {
+      "size_bytes": 124818208,
+      "mtime_ns": 1794798980506906600,
+      "identity_policy": "reuse C1 manifest; no new full-data hash"
+    },
+    "eskf15_recorded_init/states.jsonl": {
+      "size_bytes": 149235953,
+      "mtime_ns": 1794799290757676900,
+      "identity_policy": "reuse C1 manifest; no new full-data hash"
+    },
+    "eskf15_recorded_init/matches.jsonl": {
+      "size_bytes": 61464722,
+      "mtime_ns": 1794799290757676900,
+      "identity_policy": "reuse C1 manifest; no new full-data hash"
+    },
+    "continuous_analysis/comparison.json": {
+      "size_bytes": 53675,
+      "mtime_ns": 1794799383856623200,
+      "identity_policy": "reuse C1 manifest; no new full-data hash"
+    },
+    "recorded_common_init/initialization.json": {
+      "size_bytes": 2505,
+      "mtime_ns": 1794798462701618400,
+      "identity_policy": "reuse C1 manifest; no new full-data hash"
+    }
+  },
+  "data_version": "unchanged BG-C1 recorded-init continuous runs; original ordered input CDR digest in C1 manifest",
+  "new_matches": 0,
+  "new_filter_runs": 0,
+  "new_filter_updates": 0,
+  "new_downloads": 0,
+  "algorithm_or_parameter_changes": false,
+  "private_data_not_published": [
+    "original trajectory/P/TF/map/bag/source payloads",
+    "per-observation scalar decomposition"
+  ],
+  "qualification": "source-and-saved-log evidence; no independent causal ablation or production qualification",
+  "FAR_cache_clean": true,
+  "production_preexisting_untracked": "unchanged fusion_vendor directory",
+  "scope_increment_budget_bytes": 20971520,
+  "analysis_code_sha256": {
+    "analyze_existing.py": "a832f0ae556cd229f105fee05f87a5385ffc1723791c84a31c81b9c753ae4744",
+    "temporal_existing.py": "8b97de27dc656e1ee5768e2d3f691120ad37ec4d59b4edfdd37f33567df83d2c",
+    "validate_saved_analysis.py": "aff712771c883992da525bd667f39a06bd4c5937026ca06dafb5e1ecbfa13d60"
+  },
+  "checks_passed": 14,
+  "raw_full_covariance_identity_checked": 4209
+}
