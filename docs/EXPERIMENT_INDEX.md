@@ -179,3 +179,8 @@ Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-
 ## BG-C1 pit连续启动预检
 
 恢复轮速/评分消息时间线；共同地图初始化成功证据不足，按停止门未运行FAR/15D。没有新精度或实时性结论。见[时间线](../experiments/phase_bg_far_lio/c1/LOOP44_STARTUP_TIMELINE.md)及[结论](../experiments/phase_bg_far_lio/c1/FINAL_CONCLUSION.md)。
+
+
+## BG-C1追加授权：录制均值初始化连续对照完成
+
+最新授权解除历史init_flag阻塞。两套各一次pit到345.806s，完整输入一致；新FAR右弯状态XY约0.716m、新15D约0.890m，旧10m候选未复现。初始化与调度共同改变，不能归因单一匹配器。FAR全段148ms尾延迟及7个缺失输出，严格50ms仍NO-GO。见[完整交付](../experiments/phase_bg_far_lio/c1/recorded_init/README.md)。旧停止报告只是前置历史，不代表本轮未运行。

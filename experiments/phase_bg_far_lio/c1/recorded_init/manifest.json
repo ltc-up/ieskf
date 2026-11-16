@@ -1,0 +1,53 @@
+{
+  "phase": "BG-C1 recorded-EKF-mean continuous comparison",
+  "baseline": "799064772cf1af282e36ee789e45932d0e2ecdb3",
+  "far_official_commit": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "runs": {
+    "FAR_continuous": 1,
+    "research15D_continuous": 1,
+    "failed_pre_filter_environment_launch": 1,
+    "previous_GlobalInit_failed_attempt": 1
+  },
+  "scoring_indices": {
+    "normal8": [
+      675,
+      803
+    ],
+    "right3": [
+      1317,
+      1405
+    ]
+  },
+  "recorded_mean_used_once": true,
+  "recorded_covariance_copied": false,
+  "new_data_downloads": 0,
+  "algorithm_modifications": false,
+  "production_modifications": false,
+  "input_ordered_cdr_identity_sha256": "0c74f3e6caa4967db29e3e44e03cfb339b8c0cdb616f7d33f3d31c777be9f03c",
+  "tests": "18 synthetic contract checks passed; full input + ROS schedule checks passed; no accuracy certification",
+  "qualification": "CONDITIONAL localization comparison; FAR strict50ms and production replacement NO-GO",
+  "research_code_files": {
+    "experiments/phase_bg_far_lio/c1/analyze_continuous.py": "c5415d845d2dd01bff9e1aafd3b16614eb758f9c5b862ef81b647c65ab5aaa53",
+    "experiments/phase_bg_far_lio/c1/clock_pump.py": "0cdb93cf4f0ec840f827a2ef02377cd8bd8d15becb27a345b5f32f73a3ab578a",
+    "experiments/phase_bg_far_lio/c1/continuous_inputs.py": "47fd8a182fa470aed179c593fd3eef6ee2e5dc5f4ca22eb2ab4b76e31a547a2e",
+    "experiments/phase_bg_far_lio/c1/global_init_probe.py": "809b9c914bce00179f5df70c0e9bb63c736ebd001661068c93098496fbc004a8",
+    "experiments/phase_bg_far_lio/c1/prepare_common_init.py": "ac68c091ebaf199eb07f571264520a447c01db018a980edd59d237d0ad2fc5b8",
+    "experiments/phase_bg_far_lio/c1/realtime_contract.py": "e7f6692c24766bbeba63bcc7344f935550eaa97f2f17e87a08262622be87b8db",
+    "experiments/phase_bg_far_lio/c1/run_continuous_15d.py": "fcd182d015f7e69cb2522a3b08b81ddac1a8f04a75cf604edbb5b82406292c99",
+    "experiments/phase_bg_far_lio/c1/run_continuous_far.py": "9439246e9d97bfaec3214f4e1099987f34c154bff6f3548af6013b37b0aabda8",
+    "experiments/phase_bg_far_lio/c1/supplemental_audit.py": "e11da29f7d37aa1b35e3b3103acc2e05ef15d50a5aed0d2158d6b8b88a8b0315",
+    "experiments/phase_bg_far_lio/c1/test_continuous_contract.py": "cf7b83066390c5a112b0c99acc03469f8aaf10e3e6da5593f51da9227aed606a"
+  },
+  "report_files": {
+    "CONTINUOUS_COMPARISON.md": "5b5ddead6fc487d437b154f0340b2317b5a364f645141e518d427a354aa72270",
+    "FINAL_CONCLUSION.md": "ff245dd2817d82903fefce4332859148b9df27161cfbaa53633bf574bd839dc5",
+    "INITIALIZATION_AUDIT.md": "6ffaa129b66149b9dd1967d088ca0671be7369f07bb83afac70eb88cc1705dd4",
+    "metrics.json": "01b8c88242a010115d8574d9ee31e1335c3b92acfe96b64e05f8729574f4f0e0",
+    "PERFORMANCE_AND_FAILURES.md": "0a862d923e1e8221bc92080c28fb247d6a47d3484570c3ba09aaef235e3d650d",
+    "README.md": "51afd4990c42a1aca1e8e2b08d43b9262f7906681d130ab17003f127d28529b7",
+    "REPRODUCE.md": "c243f0a5ec0d2ff87bad4e96171691895ec842f6a8db1c8447bc91c6f1d1701f",
+    "timing_and_paired_comparison.json": "2b3904929cdd89cce6187205dcec7b90190ad6f0336cecd4305eaba8a135e694",
+    "TIMING_CONTRACT_AND_BUDGET.md": "14d7c0a9298e5dff72e08f27c2b199f12805474e2aa50d8f4b87672853318089"
+  }
+}
