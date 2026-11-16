@@ -1,0 +1,42 @@
+[
+  {
+    "repository": "glim",
+    "commit": "1a197c999e4865f5cab7c9cd25474128413ebbca",
+    "path": "src/glim/odometry/odometry_estimation_gpu.cpp",
+    "url": "https://raw.githubusercontent.com/koide3/glim/1a197c999e4865f5cab7c9cd25474128413ebbca/src/glim/odometry/odometry_estimation_gpu.cpp",
+    "sha256": "deef55ecdb1484b9560ab25c963ee111ae9830e49638c0d93041d48c25d0ce77",
+    "bytes": 16772
+  },
+  {
+    "repository": "glim",
+    "commit": "1a197c999e4865f5cab7c9cd25474128413ebbca",
+    "path": "src/glim/odometry/odometry_estimation_imu.cpp",
+    "url": "https://raw.githubusercontent.com/koide3/glim/1a197c999e4865f5cab7c9cd25474128413ebbca/src/glim/odometry/odometry_estimation_imu.cpp",
+    "sha256": "d025eac2dddb5d67a00272435ee4504dd7dfe02b9704aa65173ed457ff4100c5",
+    "bytes": 19968
+  },
+  {
+    "repository": "glim",
+    "commit": "1a197c999e4865f5cab7c9cd25474128413ebbca",
+    "path": "config/config_odometry_gpu.json",
+    "url": "https://raw.githubusercontent.com/koide3/glim/1a197c999e4865f5cab7c9cd25474128413ebbca/config/config_odometry_gpu.json",
+    "sha256": "db14a8d5e3e6ddd1e03071c97f5b8e82017ef7d124b60040eb3fae03820eb291",
+    "bytes": 3827
+  },
+  {
+    "repository": "gtsam_points",
+    "commit": "8e94654558dfbe7ddb0341de300daaf17e25ee02",
+    "path": "include/gtsam_points/factors/impl/integrated_vgicp_factor_impl.hpp",
+    "url": "https://raw.githubusercontent.com/koide3/gtsam_points/8e94654558dfbe7ddb0341de300daaf17e25ee02/include/gtsam_points/factors/impl/integrated_vgicp_factor_impl.hpp",
+    "sha256": "d2331b27948c55d51791fa6952c17c3f02f0af6f081a373b7a4e0ddb1071c9a1",
+    "bytes": 9272
+  },
+  {
+    "repository": "gtsam_points",
+    "commit": "8e94654558dfbe7ddb0341de300daaf17e25ee02",
+    "path": "src/gtsam_points/types/gaussian_voxelmap_cpu.cpp",
+    "url": "https://raw.githubusercontent.com/koide3/gtsam_points/8e94654558dfbe7ddb0341de300daaf17e25ee02/src/gtsam_points/types/gaussian_voxelmap_cpu.cpp",
+    "sha256": "9bb2c2c9aea95a6e20553fcf4be816c28784940ae11154ffc6087fd78de2ad54",
+    "bytes": 3926
+  }
+]

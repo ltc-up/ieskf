@@ -1,0 +1,29 @@
+{
+  "baseline": "2772172000625397b726efa51939bf561524ff88",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "files_reviewed": [
+    "FAILURE_AND_BB_REVIEW.md",
+    "FINAL_CONCLUSION.md",
+    "INPUT_CONTRACT_AND_SCOPE.md",
+    "KEYFRAME_COMPARISON.md",
+    "LOCAL_NDT_AND_PREDICTION.md",
+    "METHOD_REVIEW.md",
+    "PAIRWISE_RESULTS.md",
+    "PERFORMANCE_AND_STORAGE.md",
+    "README.md",
+    "REPRODUCE.md",
+    "aggregate_results.json",
+    "compare.py",
+    "existing_15d_prediction.py",
+    "factor_diagnostics.py",
+    "manifest.json",
+    "prepare.py",
+    "source_review_identity.json",
+    "summarize.py",
+    "test_factors.py"
+  ],
+  "allowed": "Independent diagnostic code, deidentified scalar results, links and reference source identities only. No third-party source vendoring.",
+  "excluded": "Raw source clouds, pose/P/H trajectories, epoch/message IDs, TF/extrinsics, private filesystem paths, credentials and input bags/maps remain private.",
+  "production_core_changed": false,
+  "scope": "No joint estimation, no production promotion, no current/future map result used to build B/C/D target or motion seed."
+}

@@ -1,0 +1,24 @@
+{
+  "baseline": "2772172000625397b726efa51939bf561524ff88",
+  "phase": "Koide GLIM stage1",
+  "result": "PARTIAL_NO_GO_FOR_JOINT_STAGE2",
+  "new_local_NDT": 11,
+  "VGICP_equation_factors": 59,
+  "original_gpu_joint_runs": 0,
+  "valid_saved15D_short_predictions": 21,
+  "invalid_stale_anchor_predictions_excluded": 6,
+  "production_changes": false,
+  "state_updates_from_registration": 0,
+  "tests_passed": 6,
+  "plan_sha256": "1ec9ab17f13dfff6f8672b1b735ce84a327023e96208064a71b59da4fb8328f6",
+  "qualified_plan_sha256": "c3d375144f0dc2930252bdc31f2265e830a11662d863737f4a5a18b77f5c7680",
+  "code_sha256": {
+    "compare.py": "e96c698ed909caeeb3d27de06be9eb249bf56a027afac160c38afc56c7a69fbf",
+    "existing_15d_prediction.py": "c4ce413305b19727ddb8c7144b7908a6570422ad9fcd695b90bcecc11e24ee53",
+    "factor_diagnostics.py": "9e11facbb4ac70ff6650320d9e46f82853f3895bb8a93098bd81c1426babe4f2",
+    "prepare.py": "fe83595970c18a87f1044f02628c67b8ce243590bf086500a378fcaa4199b0d3",
+    "summarize.py": "08258ff1870a7d1cc415fdfb099c28a839699471742936d608fe178257de2cbd",
+    "test_factors.py": "20529dd6a66779ebcd632ed539a6ed6ac6ee60f72a5f3ff90924d260ab3087c0"
+  },
+  "reproduction": "Authorized existing raw identities and causal histories required; nine short-history pairs absent, original GPU implementation not run. Public scalars are not independent truth or covariance calibration."
+}

@@ -204,3 +204,8 @@ Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-
 ## BG-C5：1013真实连续闭环与100Hz验收，PARTIAL
 
 一次Pit至525s、7798匹配完成，故障窗口未复现旧4–5m错峰；25条高Fitness候选仍被Legacy入口拒绝。39501/39501真实100Hz输出，年龄P95 6.312ms，7798可用时刻后完整周期最大42.885ms、超50ms=0，仅限本机预取研究回放。末段3714事件mean/P位级等价；无生产资格。FAR缺真实完整9×9 P/FIR历史，唯一ID真实消融NOT RUN；不伪造合成替代。见[BG-C5](../experiments/phase_bg_far_lio/c5/README.md)。
+
+
+## Koide/GLIM多帧约束第一阶段：PARTIAL / NO-GO进入联合估计
+
+12个冻结案例、59个CPU公式级VGICP因子、11次局部Target CUDA NDT；50/100/150ms体素支持中位34.1/31.1/24.8%，1m近邻88.4/84.7/77.9%。首次错峰低残差伴支持降至3.24%，持续共同错峰仍可高支持；正确高Fitness大修正历史不完整。关键帧未证明一致优势，D在75ms有效参考下5/10改善，时移可反转。原生GPU/联合优化NOT RUN，21项合法15D短预测，6项过旧锚点长传播补充记录判无效并保留。没有状态融合/Seed反馈/生产修改。见[阶段报告](../experiments/koide_glim_stage1/README.md)。
