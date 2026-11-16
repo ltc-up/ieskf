@@ -1,0 +1,147 @@
+{
+  "normal8": {
+    "5": {
+      "all_valid_xy_improved_count": 62,
+      "all_valid_count": 129,
+      "proxy_good_count": 98,
+      "proxy_good_would_admit": 98,
+      "proxy_good_xy_improved_count": 62,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 89,
+      "median_signed_lateral_fraction": 0.07780390008114293
+    },
+    "2": {
+      "all_valid_xy_improved_count": 58,
+      "all_valid_count": 129,
+      "proxy_good_count": 98,
+      "proxy_good_would_admit": 98,
+      "proxy_good_xy_improved_count": 58,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 89,
+      "median_signed_lateral_fraction": 0.1727009613465968
+    },
+    "1": {
+      "all_valid_xy_improved_count": 52,
+      "all_valid_count": 129,
+      "proxy_good_count": 98,
+      "proxy_good_would_admit": 98,
+      "proxy_good_xy_improved_count": 52,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 89,
+      "median_signed_lateral_fraction": 0.2918654931755792
+    }
+  },
+  "right3": {
+    "5": {
+      "all_valid_xy_improved_count": 89,
+      "all_valid_count": 89,
+      "proxy_good_count": 9,
+      "proxy_good_would_admit": 9,
+      "proxy_good_xy_improved_count": 9,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 58,
+      "median_signed_lateral_fraction": 0.10241899373190672
+    },
+    "2": {
+      "all_valid_xy_improved_count": 89,
+      "all_valid_count": 89,
+      "proxy_good_count": 9,
+      "proxy_good_would_admit": 9,
+      "proxy_good_xy_improved_count": 9,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 58,
+      "median_signed_lateral_fraction": 0.22115450663796501
+    },
+    "1": {
+      "all_valid_xy_improved_count": 89,
+      "all_valid_count": 89,
+      "proxy_good_count": 9,
+      "proxy_good_would_admit": 9,
+      "proxy_good_xy_improved_count": 9,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 58,
+      "median_signed_lateral_fraction": 0.360563037366509
+    }
+  },
+  "straight_control_first20_corner0_from100": {
+    "5": {
+      "all_valid_xy_improved_count": 14,
+      "all_valid_count": 20,
+      "proxy_good_count": 15,
+      "proxy_good_would_admit": 15,
+      "proxy_good_xy_improved_count": 11,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 9,
+      "median_signed_lateral_fraction": 0.07363445727535556
+    },
+    "2": {
+      "all_valid_xy_improved_count": 14,
+      "all_valid_count": 20,
+      "proxy_good_count": 15,
+      "proxy_good_would_admit": 15,
+      "proxy_good_xy_improved_count": 11,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 9,
+      "median_signed_lateral_fraction": 0.16546395789159746
+    },
+    "1": {
+      "all_valid_xy_improved_count": 14,
+      "all_valid_count": 20,
+      "proxy_good_count": 15,
+      "proxy_good_would_admit": 15,
+      "proxy_good_xy_improved_count": 11,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 9,
+      "median_signed_lateral_fraction": 0.2834431446632535
+    }
+  },
+  "largest10_translation_innovation_no_reference_selection": {
+    "5": {
+      "all_valid_xy_improved_count": 9,
+      "all_valid_count": 10,
+      "proxy_good_count": 3,
+      "proxy_good_would_admit": 3,
+      "proxy_good_xy_improved_count": 3,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 9,
+      "median_signed_lateral_fraction": 0.06902528680120487
+    },
+    "2": {
+      "all_valid_xy_improved_count": 9,
+      "all_valid_count": 10,
+      "proxy_good_count": 3,
+      "proxy_good_would_admit": 3,
+      "proxy_good_xy_improved_count": 3,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 9,
+      "median_signed_lateral_fraction": 0.15522148924772525
+    },
+    "1": {
+      "all_valid_xy_improved_count": 9,
+      "all_valid_count": 10,
+      "proxy_good_count": 3,
+      "proxy_good_would_admit": 3,
+      "proxy_good_xy_improved_count": 3,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 9,
+      "median_signed_lateral_fraction": 0.2664008570324263
+    }
+  },
+  "BE_saved": {
+    "5": {
+      "all_valid_xy_improved_count": 25,
+      "all_valid_count": 36,
+      "proxy_good_count": 15,
+      "proxy_good_would_admit": 15,
+      "proxy_good_xy_improved_count": 10,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 24,
+      "median_signed_lateral_fraction": 0.08505470566231729
+    },
+    "2": {
+      "all_valid_xy_improved_count": 24,
+      "all_valid_count": 36,
+      "proxy_good_count": 15,
+      "proxy_good_would_admit": 15,
+      "proxy_good_xy_improved_count": 10,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 24,
+      "median_signed_lateral_fraction": 0.18692893538361116
+    },
+    "1": {
+      "all_valid_xy_improved_count": 24,
+      "all_valid_count": 36,
+      "proxy_good_count": 15,
+      "proxy_good_would_admit": 15,
+      "proxy_good_xy_improved_count": 10,
+      "lateral_fraction_for_abs_innovation_ge_0_05m_count": 24,
+      "median_signed_lateral_fraction": 0.3118185023421516
+    }
+  }
+}

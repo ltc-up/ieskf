@@ -189,3 +189,8 @@ Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-
 ## BG-C2：9D/15D、三种延迟及R的只读因果审查
 
 零新匹配/滤波回放/参数或生产修改；核验C1保存K·创新=δ、218评分帧与4214完成输出配对，14项保存合同检查通过。FAR缓存received持续复用同一LiDAR、15D单信息接入保留Legacy ×5；FAR评分段横向R恒.05、位置裁剪未触发。右弯NDT原始横向P95 .286m优于GICP .343m，但最终状态排序相反；不能归因状态维数。纠正C1全程固定Bias和一次发布等于一次融合的描述，原评分不变。保留15D/回滚研究，生产替换与直接移植FAR R/9D均NO-GO；新实验只提案并等待另批。[五份专题及证据](../experiments/phase_bg_far_lio/c2/README.md)。
+
+
+## BG-C3：观测利用与错峰鲁棒性无反馈诊断
+
+297个固定prior、891个R×5/×2/×1候选，零匹配/传播/状态提交；历史K/δ/P等价、Joseph/reset及SPD检查通过。×1使right3局部横向P95 .673→.558m，但normal8 .343→.358m，代理错误XY候选更差。复核历史4–5m收敛错峰与大修正原记录；缺同刻15D P，保护未验证。C1不是独立100Hz发布，已给出10ms输出合同。没有合理受保护候选，按停止门未执行闭环A/B。[报告](../experiments/phase_bg_far_lio/c3/README.md)。

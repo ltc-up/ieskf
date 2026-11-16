@@ -1,0 +1,82 @@
+{
+  "phase": "BG-C3 observation efficiency and robustness: fixed-prior diagnostic",
+  "baseline": "38c42314c9284deb5b1676e66fd84847a4cc1a92",
+  "branch": "research/phase-be-e0-e4-shadow",
+  "new_matches": 0,
+  "new_sensor_propagations": 0,
+  "new_replays": 0,
+  "new_committed_updates": 0,
+  "new_R_algebra_candidates": 891,
+  "unique_prior_cases": 297,
+  "R_multipliers": [
+    5,
+    2,
+    1
+  ],
+  "new_closed_loop_runs": 0,
+  "output_publisher_implemented": false,
+  "downloads_datasets_or_software": 0,
+  "production_or_main_modified": false,
+  "statistical_calibration": false,
+  "private_full_matrix_bytes": 24097981,
+  "preregistration_sha256": "d696e35e9d8232bb3862c03889ce4cf003f88676604889ee0ef3806c2c8cb70b",
+  "source_sha256": {
+    "X_related": "d4869f371d6bed211e161ac376d37702d94317a4407ab780e78a0d8ca230f1e3",
+    "SuperLoc_related": "b89f70a8632b5194489186488de9d65580da521531cc1c9e776f68b088a74a36",
+    "inertial": "279b7933319d391d2535d8736f0e55ab52eeefbe79c10128fbcfa23f811d3e61",
+    "wheel": "827fcb042b03dd7d20e3bab81f076d15d11fe6ada3affab33dcc86f8431dffa7",
+    "pose": "29948e7077a7de54d4222823329d14b58e6edb3f2573b514aa0e2b3b565239bc",
+    "legacy": "683a31d795cecda3008cb3d01a1421366ea4d8c5213d7918ebbd04873415816d",
+    "state": "21e8652a5cc32538f8ee19f293ef4c94cc176dffa4d29cc630b0fe5708cbecce",
+    "delayed": "1986e284750590ba6d0ed5b1db974177d95c7b44f5940f79532006702c5f8320",
+    "lifecycle": "62871186a7d97050ea14b11ae5bd058e3f65273f1ed2f50d85c17d83a9f843e2",
+    "C1_runner": "fcd182d015f7e69cb2522a3b08b81ddac1a8f04a75cf604edbb5b82406292c99"
+  },
+  "code_sha256": {
+    "archive_casebook.py": "802eb8e385723f200a730aba4d9daaeca30f77a3da861878e4de7975dd2d3a52",
+    "audit_output_schedule.py": "97b0ce2db173931274c4df0bffa28ae4c3abfc5694bd61563c646cc8fb799ae8",
+    "r_scale_counterfactual.py": "f8ec6aaffdfeee1d4c5397942fad85ba7ffae9f588aef1464aa7122b6b875544",
+    "summarize_saved_candidates.py": "3c9a12190c69de75d048fd5f5d7ead0058c1965ed545e5dea0424768754b5973",
+    "summarize_utilization.py": "c4cbee9830ab630070652896c511b566d69e21b12e555bc45fe05041c9a06337",
+    "validate_candidates.py": "fcf4cb91d56172bcd08e516208f3d5618eeeb02476b92d6b5578bf1f2dd21bae"
+  },
+  "related_source_versions": {
+    "FAR": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+    "SuperOdom": "f10e65cd50007767b22e4c401689665e20d827d6",
+    "perfectlyconstrained": "0fbe4175ea205a271f85287abfd8048e5f7dd32a",
+    "Vertigo": "web master viewed; exact commit NOT qualified, no build"
+  },
+  "data_identity_policy": "reuse existing C1/C2/BE5 manifests; archived small CSV SHA in historical aggregate; no full-data rehash",
+  "storage_budget_bytes": 52428800,
+  "private_storage": {
+    "files": 12,
+    "logical_bytes": 30783652,
+    "allocated_bytes": 30818304
+  },
+  "public_storage_before_manifest": {
+    "files": 21,
+    "logical_bytes": 233037,
+    "allocated_bytes": 282624
+  },
+  "stopping_reason": "normal8 degradation and amplified proxy-error candidate; protection mechanism B not validated; no candidate admitted to closed-loop AB",
+  "public_deliverable_sha256": {
+    "100HZ_ESTIMATION_OUTPUT_CONTRACT.md": "4dfb07fa2780b857c6a465d2cd3fd7e3a971e4383cca5c350e0307e0e1df8b45",
+    "analysis_attempts.json": "e5f9df48cae5f9c82150d1a11b053abc5aabd9afb2d8b1b93ce77c49a88b6033",
+    "CLOSED_LOOP_DECISION.md": "acacf2652a429c8a8a8a2e4e045c1e6701782bc80ec44cb49aea16d062a0a0c4",
+    "CORRECT_VS_WRONG_NDT_CASEBOOK.md": "b30daf5d5dbd74c39f058865b9e4b3ad023b5aecab2efe0bbca0f3219724d619",
+    "FINAL_CONCLUSION.md": "77f8daf59c54934ad1bf76aadbaef0f45536ebe4c163abde742b9c70d9c714a5",
+    "historical_casebook_aggregate.json": "f57f77993ac9dcae0eb2d4833e0d2288be614ae6ee49f3ea06c26c05d50eb662",
+    "LATERAL_CORRECTION_MECHANISM_DESIGN.md": "805ae20c90376de39199ce55d914505ed61fbb3cd1c224409dd1c56d6e05e1b8",
+    "LEGACY_R_INFORMATION_AUDIT.md": "be96adb1808cd34ffdb183f36d7afccee8b20ee033e3964ae3eff4537638f521",
+    "output_schedule_audit.json": "d481125df4beeb1c73ebbfc8f8146e37f591fa7513247ca6338c95fc6521b72c",
+    "preregistration.json": "d696e35e9d8232bb3862c03889ce4cf003f88676604889ee0ef3806c2c8cb70b",
+    "README.md": "c089a222089e32a4475e43c66f824d8156eee48c9e201c1d07baecc592104916",
+    "REPRODUCE.md": "d7f70e2dccf9eb922fdb28ded5336371d45945b0f976df988a79b8be55f2d798",
+    "ROBUST_OBSERVATION_LITERATURE.md": "c9ce7870b852615c27723b834ff0f8ddbe1025a91001a86eecb8582d8934c5fa",
+    "r_scale_aggregate.json": "6f14cb994fa8afcae2dfc5720228243cd2ac0fd93a8d604a23b6cc2f3acd395e",
+    "R_SCALE_COUNTERFACTUAL_RESULTS.md": "9d38de6ed3542e24df038cbb8c2cb9964def5582c0e1a7223992e4e794ac55d8",
+    "STORAGE_AND_GIT_AUDIT.md": "1e8b115ace20c87e05ac51a3caee001879deabda4687c961f32f77447a18f106",
+    "utilization_aggregate.json": "f4d7de900fe9a4ad48a9768c694ad714090828d0ef6c1896f44535b09d758b7f",
+    "validation_results.json": "656bb34ea3ac45e5551c0b5d832f37f684a3cfec1519bb412da9c5a4bb83134b"
+  }
+}

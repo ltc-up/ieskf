@@ -1,0 +1,57 @@
+{
+  "scope": "saved-record causal lookup on proposed 10ms grid, NOT timer execution or core-current-state reconstruction",
+  "saved_state_records": 25295,
+  "saved_causes": {
+    "wheel": 21080,
+    "initial_state": 1,
+    "ndt_completion": 4214
+  },
+  "saved_record_interarrival_ms": {
+    "n": 25294,
+    "mean": 8.333881385901796,
+    "p50_abs": 9.868551,
+    "p95_abs": 11.35361885,
+    "max_abs": 16.914254,
+    "rmse": 8.930592602044733
+  },
+  "saved_state_header_intervals_ms": {
+    "n": 25294,
+    "mean": 8.333942779275718,
+    "p50_abs": 9.9960165,
+    "p95_abs": 10.0234159,
+    "max_abs": 12.083675,
+    "rmse": 8.815120626446499
+  },
+  "proposed_grid_slots": 21081,
+  "slots_with_prior_saved_state": 21080,
+  "slots_without_saved_state": 1,
+  "saved_state_age_on_grid_ms": {
+    "n": 21080,
+    "mean": 4.097066175426945,
+    "p50_abs": 4.0235845,
+    "p95_abs": 6.4623813,
+    "max_abs": 15.933855,
+    "rmse": 4.498473870092169
+  },
+  "latest_delivered_imu_minus_saved_state_stamp_ms": {
+    "n": 21080,
+    "mean": 0.13059514127134716,
+    "p50_abs": 1.7143484999999998,
+    "p95_abs": 4.80849335,
+    "max_abs": 12.135449,
+    "rmse": 2.547139716445924
+  },
+  "reused_saved_snapshot_adjacent_slots": 258,
+  "bins_with_exactly_one_saved_record": 16446,
+  "bins_with_multiple_saved_records": 4376,
+  "bins_with_no_saved_record": 259,
+  "max_actual_sim_record_gap_ms": 16.914254,
+  "causal_grid_lookup": true,
+  "new_predictions": 0,
+  "new_observation_updates": 0,
+  "unknown": [
+    "actual 100Hz publisher scheduling/jitter/deadlines; no timer publisher existed in C1",
+    "unlogged IMU-only intermediate core states and P",
+    "online revision atomicity under concurrent publishing"
+  ]
+}

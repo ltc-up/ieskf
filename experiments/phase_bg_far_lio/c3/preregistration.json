@@ -1,0 +1,571 @@
+{
+  "phase": "BG-C3 no-feedback preregistration",
+  "baseline": "38c42314c9284deb5b1676e66fd84847a4cc1a92",
+  "R_multipliers": [
+    5,
+    2,
+    1
+  ],
+  "R_definition": "original_saved_R*(multiplier/5); no shape/scale calibration",
+  "C1_cohorts": {
+    "normal8": [
+      675,
+      676,
+      677,
+      678,
+      679,
+      680,
+      681,
+      682,
+      683,
+      684,
+      685,
+      686,
+      687,
+      688,
+      689,
+      690,
+      691,
+      692,
+      693,
+      694,
+      695,
+      696,
+      697,
+      698,
+      699,
+      700,
+      701,
+      702,
+      703,
+      704,
+      705,
+      706,
+      707,
+      708,
+      709,
+      710,
+      711,
+      712,
+      713,
+      714,
+      715,
+      716,
+      717,
+      718,
+      719,
+      720,
+      721,
+      722,
+      723,
+      724,
+      725,
+      726,
+      727,
+      728,
+      729,
+      730,
+      731,
+      732,
+      733,
+      734,
+      735,
+      736,
+      737,
+      738,
+      739,
+      740,
+      741,
+      742,
+      743,
+      744,
+      745,
+      746,
+      747,
+      748,
+      749,
+      750,
+      751,
+      752,
+      753,
+      754,
+      755,
+      756,
+      757,
+      758,
+      759,
+      760,
+      761,
+      762,
+      763,
+      764,
+      765,
+      766,
+      767,
+      768,
+      769,
+      770,
+      771,
+      772,
+      773,
+      774,
+      775,
+      776,
+      777,
+      778,
+      779,
+      780,
+      781,
+      782,
+      783,
+      784,
+      785,
+      786,
+      787,
+      788,
+      789,
+      790,
+      791,
+      792,
+      793,
+      794,
+      795,
+      796,
+      797,
+      798,
+      799,
+      800,
+      801,
+      802,
+      803
+    ],
+    "right3": [
+      1317,
+      1318,
+      1319,
+      1320,
+      1321,
+      1322,
+      1323,
+      1324,
+      1325,
+      1326,
+      1327,
+      1328,
+      1329,
+      1330,
+      1331,
+      1332,
+      1333,
+      1334,
+      1335,
+      1336,
+      1337,
+      1338,
+      1339,
+      1340,
+      1341,
+      1342,
+      1343,
+      1344,
+      1345,
+      1346,
+      1347,
+      1348,
+      1349,
+      1350,
+      1351,
+      1352,
+      1353,
+      1354,
+      1355,
+      1356,
+      1357,
+      1358,
+      1359,
+      1360,
+      1361,
+      1362,
+      1363,
+      1364,
+      1365,
+      1366,
+      1367,
+      1368,
+      1369,
+      1370,
+      1371,
+      1372,
+      1373,
+      1374,
+      1375,
+      1376,
+      1377,
+      1378,
+      1379,
+      1380,
+      1381,
+      1382,
+      1383,
+      1384,
+      1385,
+      1386,
+      1387,
+      1388,
+      1389,
+      1390,
+      1391,
+      1392,
+      1393,
+      1394,
+      1395,
+      1396,
+      1397,
+      1398,
+      1399,
+      1400,
+      1401,
+      1402,
+      1403,
+      1404,
+      1405
+    ],
+    "straight_control_first20_corner0_from100": [
+      100,
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108,
+      109,
+      110,
+      111,
+      112,
+      113,
+      114,
+      219,
+      220,
+      221,
+      222,
+      223
+    ],
+    "largest10_translation_innovation_no_reference_selection": [
+      1120,
+      1117,
+      1119,
+      1121,
+      1118,
+      1126,
+      1123,
+      1122,
+      1127,
+      130
+    ]
+  },
+  "BE_saved_case_records": [
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_0",
+      "index": 0,
+      "row_sha256": "d3b2224f93c6bc339fc0fcb10108e688342acfe249ace499128bf6692443276c"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_2",
+      "index": 2,
+      "row_sha256": "270aae0b42af21e170d87b26dce86e1f125c3b66d27b8a9bcbd3b5b776fcf8c0"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_4",
+      "index": 4,
+      "row_sha256": "3f55979a755c352f6a9b7b61f36f49eec6246750615a3204650398d18e7b9a52"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_5",
+      "index": 5,
+      "row_sha256": "95e89f7fd463fba8875ec58305fb18b0ce77c793004e5ea603d21176fae4978a"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_6",
+      "index": 6,
+      "row_sha256": "665497ba57534e537ce81cb28231652c71f22023e85f96416ac94b48a907d85d"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_7",
+      "index": 7,
+      "row_sha256": "e5bc8b8173006c3c23971a1899bf9397a3797494fa5ef0f52a9520d0b0396940"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_31",
+      "index": 31,
+      "row_sha256": "52c6d3829a7f4833a4bcdbb18b020c58989f299924423e80fa3f55a7de9d3fc8"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_62",
+      "index": 62,
+      "row_sha256": "f67748c11b0025453fdcf53c33a839ddd2aab4626c2db910013db20278d7bd89"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_93",
+      "index": 93,
+      "row_sha256": "21c9cf8d1c567b3d14827705d15afe04ac7da081ba22c1f9fd343fb1411015b8"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_115",
+      "index": 115,
+      "row_sha256": "2ae35c77a868b648b817f91a2f6f38ac23096de2cd7a95d90b33a0eefdce2e80"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_124",
+      "index": 124,
+      "row_sha256": "28ed56f6c5ebf14ff97ee2185e30a769ff0e2dec5b8b6144835eb9fa7a892dd9"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_132",
+      "index": 132,
+      "row_sha256": "9b4176c41a5460e9e2813d58602e95f414e3194267bd17922ce5b86aabdf1c9c"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_149",
+      "index": 149,
+      "row_sha256": "0bd5fa352e390453871eb0ac230ab265280a95e283f966df7d66db6911d4db56"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_156",
+      "index": 156,
+      "row_sha256": "e5bd9a22fffe6f06e68886ac169d7f3b90844455e223d5038950e8c515a05510"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_166",
+      "index": 166,
+      "row_sha256": "69afc35b8ddfc11b95a9ead3bb7c509557da90e80652981e89e3316d69c30779"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_183",
+      "index": 183,
+      "row_sha256": "c3840a56ca90248a9a1be439a078c3f24ba7dacbe9de8aeedac92de73869cca9"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_187",
+      "index": 187,
+      "row_sha256": "3adc7003abeb6d4b28b4d2118fe554f308c71fda0088169fa15d3329d2c121ba"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_200",
+      "index": 200,
+      "row_sha256": "479f8bbc9f1e5ab14105795a6b150b6c2d31759899e8431ca5ac92d4dabee868"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_218",
+      "index": 218,
+      "row_sha256": "ea8300d2a45c166c9849d4b605b40425643470e3b901208644651376c720b173"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_249",
+      "index": 249,
+      "row_sha256": "7773f28f87eed886f78c8c15d2317c1557b86f6a2e29f73d5007815f2d6d4531"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_280",
+      "index": 280,
+      "row_sha256": "a601255b193da7bfb5aea56309c97f7e2337b9683f645cb95814546c18be46d1"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_312",
+      "index": 312,
+      "row_sha256": "d81261db60511b59d0c30b342f84038c03bd3205d48cf8efe9114b8f726611ba"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_560",
+      "index": 560,
+      "row_sha256": "ba6b1b942fea2294c2f44a9b2900560201a3cc6d534cdd1fb05808b8b5d01ccc"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_563",
+      "index": 563,
+      "row_sha256": "f6da79caf8ec249348377e7c769d9f76b42ae5f2b4731b3f83e98fe26d2247b2"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_564",
+      "index": 564,
+      "row_sha256": "311a459983ac9fdfc70fbc064fa8fa0292f283e108e952cef0f94eb555758b49"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_565",
+      "index": 565,
+      "row_sha256": "83a6307302b20d1014b2114ca7337f60770a010d5c0bf722837dfeaee2dd8d5f"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_566",
+      "index": 566,
+      "row_sha256": "1577f27793252f538ce5c9cccc0725ead66ae828fba62ef37492d43809056412"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_570",
+      "index": 570,
+      "row_sha256": "476a3d0bb5ebd410ed9d793801b3a18ba20b4804d4a222607a234fbe4b8d2f11"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_574",
+      "index": 574,
+      "row_sha256": "0fd8fe1a2a55e5906a4a6ab09ea7d0d34f8dfbb348170232170c46edc62c12ac"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_675",
+      "index": 675,
+      "row_sha256": "1034d11c7735f3795421ce968b2320920436ad83e94ea8328219250d20871498"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_696",
+      "index": 696,
+      "row_sha256": "13844d21f6a3d995a12961b596e3acb519fff70f1de003d15c7d2f74a0e48f04"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_717",
+      "index": 717,
+      "row_sha256": "950bb4fa570fee10dae254d0ac78b0bea40eed45f738434d5a8ff40d329a3dbe"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_738",
+      "index": 738,
+      "row_sha256": "c18d403c98bcb764bd670f99586a8ef5e2ba3fc2acfbbe3da63f43dbe219175c"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_759",
+      "index": 759,
+      "row_sha256": "8d3a4ef1d9da3d64bda0399a7ac141a01b5865cf4e30057e4a92b0ecf43b722e"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_780",
+      "index": 780,
+      "row_sha256": "5bd2e5cc206cee0df56a242bcce06e8a687acda1e0e8669772431f3c3ed02ff1"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_869",
+      "index": 869,
+      "row_sha256": "244905568d19c00dfc7e693043edfb21592d50303f181a6dc6c1473e5166f5aa"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_873",
+      "index": 873,
+      "row_sha256": "3a35121079f21f8266035757a5beb2f282d5b4573313b5fd8c7ef1c86ac48352"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_877",
+      "index": 877,
+      "row_sha256": "490709d641864624c41234b25bf246d015db3026d9515b83b55461ed19e31269"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_881",
+      "index": 881,
+      "row_sha256": "d014dc53c66b99511b4434ee032c43b305a4f8f67ccdd1f38846a36110f1e1d5"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_885",
+      "index": 885,
+      "row_sha256": "ca08c47c2ef6ad8ea234347c3ead8ec93da0f754f085311bc376159d192376c4"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_889",
+      "index": 889,
+      "row_sha256": "bda1c5c2d9e2441977f427251f34dee94e2e9a06024cb1dc84756960aede3dc7"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_1274",
+      "index": 1274,
+      "row_sha256": "4e7af9945ebf8bbdbf457b3153bd15076e6a6ae4615f2d707689ee1df4993741"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_1317",
+      "index": 1317,
+      "row_sha256": "12beb24976f9c0e020421365a9e68364ba2ec3f9b621b7626e0f96a3641083fd"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_1331",
+      "index": 1331,
+      "row_sha256": "cdba0cd90241a2a8b33fa4ec426225af5b2443d0f1e20d612fa11f5599ab563e"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_1345",
+      "index": 1345,
+      "row_sha256": "c70e9da4d7fb4bad470996c0be2cf6ecce81e28e19c65bc719fcfdb6effe2a40"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_1359",
+      "index": 1359,
+      "row_sha256": "7c5eb0de0b24144dc59cdb9588341aaf7eebb3b09a60d81ab104020d93b337be"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_1373",
+      "index": 1373,
+      "row_sha256": "bd510a3bf6894489a7a3c1d440418ee9497a2c3953bab6e84e3cbe74bfebbac4"
+    },
+    {
+      "folder": "frozen_54",
+      "case_id": "BE_1387",
+      "index": 1387,
+      "row_sha256": "36361ffd88172c7ceb7912274851b183d8d95c40a6438a7f6ec1be3366e6ae16"
+    },
+    {
+      "folder": "supplement_1070",
+      "case_id": "BE_1070",
+      "index": 1070,
+      "row_sha256": "4247a6b9db425c25c342cac94906e253c9f5d8785a1d8d90222f19a10b888f2f"
+    }
+  ],
+  "max_unique_cases": 297,
+  "reference_use": "offline evaluation AFTER selection; 0/.075/.15 all retained; never R selection",
+  "labels": "original BD engineering proxy <=.5m / >=2m; never independent truth",
+  "scope": "candidate algebra only; zero sensor propagation/replay, zero matching, zero committed state/P; no auto AB",
+  "budget_bytes": 52428800,
+  "storage": "existing new-volume; no data/cloud duplication",
+  "mechanism_B_prerequisite": "must demonstrate protection on real wrong branches AND preserve correct large corrections; missing P cannot be replaced with other-case P"
+}

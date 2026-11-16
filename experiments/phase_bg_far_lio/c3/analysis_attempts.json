@@ -1,0 +1,19 @@
+[
+  {
+    "attempt": 1,
+    "stage": "pre-execution parser",
+    "error": "unmatched parenthesis on old_P_candidate comparison",
+    "candidate_updates_executed": 0,
+    "resolution": "remove extra parenthesis; same preregistration"
+  },
+  {
+    "attempt": 2,
+    "stage": "summary JSON serialization",
+    "error": "numpy bool_ not JSON serializable",
+    "cases_computed": 297,
+    "candidates_computed": 891,
+    "full_matrices_preserved": true,
+    "identity_assertions_passed": true,
+    "resolution": "summarize preserved candidates; no repeated candidate calculation"
+  }
+]

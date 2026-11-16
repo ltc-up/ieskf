@@ -1,0 +1,210 @@
+{
+  "scope": "independent archived matcher cases, not pooled into C1 R statistics",
+  "history_12632": {
+    "frame_id": "12632",
+    "cpu_gnss_xy_error": "0.17221336330639683",
+    "cuda_gnss_xy_error": "2.826939475015525",
+    "cpu_gnss_longitudinal_error": "0.16804137206740558",
+    "cuda_gnss_longitudinal_error": "-2.826848664048584",
+    "cpu_gnss_lateral_error": "0.03767678031632747",
+    "cuda_gnss_lateral_error": "-0.022658904823194548"
+  },
+  "history_12632_optimizer": {
+    "final_basin": "LOW",
+    "iterations": "13",
+    "final_score": "13434.472207660554",
+    "mean_mt_eval_count": "1.9230769230769231",
+    "step_min_clamp_total": "10"
+  },
+  "history_4_to_5m_cases": [
+    {
+      "case": "cpu",
+      "kind": "sweep",
+      "lateral_delta": "-0.2999999999999999",
+      "longitudinal_delta": "0",
+      "yaw_delta_deg": "0.0",
+      "iterations": "37",
+      "converged": "1",
+      "termination": "MAX_ITERATIONS_REPORTED_CONVERGED",
+      "objective_score": "1658.1018133778125",
+      "pcl_fitness": "5.75437999978562",
+      "xy_error": "4.475502099527755",
+      "longitudinal_error": "0.6608225013253399",
+      "lateral_error": "-4.42644695716773",
+      "yaw_error_deg": "0.5776632027178221",
+      "basin": "WRONG_BASIN",
+      "source_row_sha256": "691afa510fcf241b2cf50e78a9ad36973a4c8eb32b1b70b0f3b5e3dd858e3d59",
+      "prior_P_K_R": "MISSING; no substitute prior and no R-update computation",
+      "label_evidence": "original archived WRONG_BASIN plus original engineering reference; not independent truth",
+      "input_identity": {
+        "case": "cpu",
+        "source_sha256": "b790cbdd66b9f58d3d8e685ce1db42f049355cedbd9c2a7452c49f439d25bd8e",
+        "target_sha256": "37a7e386dc3ebc89f8efef416d26b53a58a2da02115ab2dece3ec1d3453ad994",
+        "seed_sha256": "021dd1525c74c73e1c3f3d8821120bb708a0d4123dd280273b987eeef32dabab",
+        "source_points": "2161",
+        "target_points": "71041",
+        "cuda_global_target_sha256": "48acb5246b73e27939ae58dc94a356440cbbaa402bfcbeb50a2368e95c66eee9",
+        "active_region_sha256": "a39d9a45aa07acf61371be2c78eb166d36e04a882771de4f0eab8e1617a914ba",
+        "same_gaussian_object": "False"
+      }
+    },
+    {
+      "case": "cuda_ls_off",
+      "kind": "sweep",
+      "lateral_delta": "-0.2999999999999999",
+      "longitudinal_delta": "0",
+      "yaw_delta_deg": "0.0",
+      "iterations": "35",
+      "converged": "0",
+      "termination": "MAX_ITERATIONS",
+      "objective_score": "1657.48145251628",
+      "pcl_fitness": "5.754292824078107",
+      "xy_error": "4.461524835058349",
+      "longitudinal_error": "0.6071733310491558",
+      "lateral_error": "-4.42001633480071",
+      "yaw_error_deg": "0.6116570542169756",
+      "basin": "WRONG_BASIN",
+      "source_row_sha256": "953fe4b66f46add35b1ce1290dd7db1101cdfb56a81d266fc36ca692bc196497",
+      "prior_P_K_R": "MISSING; no substitute prior and no R-update computation",
+      "label_evidence": "original archived WRONG_BASIN plus original engineering reference; not independent truth",
+      "input_identity": {
+        "case": "cuda_ls_off",
+        "source_sha256": "b790cbdd66b9f58d3d8e685ce1db42f049355cedbd9c2a7452c49f439d25bd8e",
+        "target_sha256": "37a7e386dc3ebc89f8efef416d26b53a58a2da02115ab2dece3ec1d3453ad994",
+        "seed_sha256": "021dd1525c74c73e1c3f3d8821120bb708a0d4123dd280273b987eeef32dabab",
+        "source_points": "2161",
+        "target_points": "71041",
+        "cuda_global_target_sha256": "48acb5246b73e27939ae58dc94a356440cbbaa402bfcbeb50a2368e95c66eee9",
+        "active_region_sha256": "a39d9a45aa07acf61371be2c78eb166d36e04a882771de4f0eab8e1617a914ba",
+        "same_gaussian_object": "True"
+      }
+    },
+    {
+      "case": "cuda_mt",
+      "kind": "sweep",
+      "lateral_delta": "-0.2999999999999999",
+      "longitudinal_delta": "0",
+      "yaw_delta_deg": "0.0",
+      "iterations": "15",
+      "converged": "1",
+      "termination": "OBJECTIVE_CONVERGED",
+      "objective_score": "809.8475204765565",
+      "pcl_fitness": "8.690422828282141",
+      "xy_error": "4.202775274954263",
+      "longitudinal_error": "1.2633976812412506",
+      "lateral_error": "-4.0083845013672414",
+      "yaw_error_deg": "2.7291215648530573",
+      "basin": "WRONG_BASIN",
+      "source_row_sha256": "bcee17421a766c828ebefe8a135c64241ad416b437bec66f60c722508c300a86",
+      "prior_P_K_R": "MISSING; no substitute prior and no R-update computation",
+      "label_evidence": "original archived WRONG_BASIN plus original engineering reference; not independent truth",
+      "input_identity": {
+        "case": "cuda_mt",
+        "source_sha256": "b790cbdd66b9f58d3d8e685ce1db42f049355cedbd9c2a7452c49f439d25bd8e",
+        "target_sha256": "37a7e386dc3ebc89f8efef416d26b53a58a2da02115ab2dece3ec1d3453ad994",
+        "seed_sha256": "021dd1525c74c73e1c3f3d8821120bb708a0d4123dd280273b987eeef32dabab",
+        "source_points": "2161",
+        "target_points": "71041",
+        "cuda_global_target_sha256": "48acb5246b73e27939ae58dc94a356440cbbaa402bfcbeb50a2368e95c66eee9",
+        "active_region_sha256": "a39d9a45aa07acf61371be2c78eb166d36e04a882771de4f0eab8e1617a914ba",
+        "same_gaussian_object": "True"
+      }
+    },
+    {
+      "case": "cuda_gll",
+      "kind": "sweep",
+      "lateral_delta": "-0.2999999999999999",
+      "longitudinal_delta": "0",
+      "yaw_delta_deg": "-0.5",
+      "iterations": "34",
+      "converged": "1",
+      "termination": "OBJECTIVE_CONVERGED",
+      "objective_score": "1693.8725787121805",
+      "pcl_fitness": "5.76089300712641",
+      "xy_error": "4.716019158145411",
+      "longitudinal_error": "1.3450414009069076",
+      "lateral_error": "-4.520143839507869",
+      "yaw_error_deg": "0.17365409821698288",
+      "basin": "WRONG_BASIN",
+      "source_row_sha256": "29bf27256abb929ee6b7806d58090474d739d65dacc09b741c5241fe28dc477d",
+      "prior_P_K_R": "MISSING; no substitute prior and no R-update computation",
+      "label_evidence": "original archived WRONG_BASIN plus original engineering reference; not independent truth",
+      "input_identity": {
+        "case": "cuda_gll",
+        "source_sha256": "b790cbdd66b9f58d3d8e685ce1db42f049355cedbd9c2a7452c49f439d25bd8e",
+        "target_sha256": "37a7e386dc3ebc89f8efef416d26b53a58a2da02115ab2dece3ec1d3453ad994",
+        "seed_sha256": "021dd1525c74c73e1c3f3d8821120bb708a0d4123dd280273b987eeef32dabab",
+        "source_points": "2161",
+        "target_points": "71041",
+        "cuda_global_target_sha256": "48acb5246b73e27939ae58dc94a356440cbbaa402bfcbeb50a2368e95c66eee9",
+        "active_region_sha256": "a39d9a45aa07acf61371be2c78eb166d36e04a882771de4f0eab8e1617a914ba",
+        "same_gaussian_object": "True"
+      }
+    },
+    {
+      "case": "cuda_gll",
+      "kind": "sweep",
+      "lateral_delta": "-0.2999999999999999",
+      "longitudinal_delta": "0",
+      "yaw_delta_deg": "0.0",
+      "iterations": "32",
+      "converged": "1",
+      "termination": "OBJECTIVE_CONVERGED",
+      "objective_score": "1649.8443244658413",
+      "pcl_fitness": "5.738131273718666",
+      "xy_error": "4.3973207004605115",
+      "longitudinal_error": "0.4486806684556306",
+      "lateral_error": "-4.374370240440644",
+      "yaw_error_deg": "0.6715373226704774",
+      "basin": "WRONG_BASIN",
+      "source_row_sha256": "0191cc42a5c88e7e1c1b28f11303464e02055342fb3456dcbdea339faaa6eca5",
+      "prior_P_K_R": "MISSING; no substitute prior and no R-update computation",
+      "label_evidence": "original archived WRONG_BASIN plus original engineering reference; not independent truth",
+      "input_identity": {
+        "case": "cuda_gll",
+        "source_sha256": "b790cbdd66b9f58d3d8e685ce1db42f049355cedbd9c2a7452c49f439d25bd8e",
+        "target_sha256": "37a7e386dc3ebc89f8efef416d26b53a58a2da02115ab2dece3ec1d3453ad994",
+        "seed_sha256": "021dd1525c74c73e1c3f3d8821120bb708a0d4123dd280273b987eeef32dabab",
+        "source_points": "2161",
+        "target_points": "71041",
+        "cuda_global_target_sha256": "48acb5246b73e27939ae58dc94a356440cbbaa402bfcbeb50a2368e95c66eee9",
+        "active_region_sha256": "a39d9a45aa07acf61371be2c78eb166d36e04a882771de4f0eab8e1617a914ba",
+        "same_gaussian_object": "True"
+      }
+    }
+  ],
+  "original21grid_counts": {
+    "cpu": {
+      "AMBIGUOUS": 1,
+      "CORRECT_BASIN": 15,
+      "WRONG_BASIN": 5
+    },
+    "cuda_gll": {
+      "AMBIGUOUS": 0,
+      "CORRECT_BASIN": 16,
+      "WRONG_BASIN": 5
+    },
+    "cuda_ls_off": {
+      "AMBIGUOUS": 1,
+      "CORRECT_BASIN": 15,
+      "WRONG_BASIN": 5
+    },
+    "cuda_mt": {
+      "AMBIGUOUS": 6,
+      "CORRECT_BASIN": 11,
+      "WRONG_BASIN": 4
+    }
+  },
+  "correct_large_original_proxy_count": 57,
+  "missing": [
+    "same-time 15D prior/P/K/R for archived4\u20135m/12632",
+    "independent truth certifying basin labels",
+    "fully qualified old GNSS0/75/150 contract matching current C1"
+  ],
+  "identities": {
+    "seed_robustness.csv": "0ec9245a174427cbb135e901af557401194f75af2df5d64e664e7d9ad99ea445",
+    "same_input_sha256.csv": "5aeefb2cf825e409aa9930f296299a27e94bb815e232799d63eb0785f20f3051",
+    "gnss_truth_comparison.csv": "4d6850fee0fc88a916a83e119d00b0c98a452463cc05da4bace50c3379c152b3",
+    "baseline_mt_feature_audit.csv": "50c3d9fb4161d2ab0b65448406c426aeefead096ef06ed0d050b665f12027f8e"
+  }
+}

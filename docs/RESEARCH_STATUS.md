@@ -223,3 +223,8 @@ Original-map FAR-LIO and research-only timestamp/lever adapters exercised on pre
 FAR九状态名义body惯性与15D map惯性形式可等价，当前输入、Bias、倾角、Wheel和P策略不同。源码确认FAR低速学习gyroBias、驾驶中冻结，未输入Wheel的非完整零vy分支不执行；ROS received缓存会每tick重新提交，核心清fusion_vec不足以防重复。C1机制勘误已附，原结果保留。
 
 评分段FAR Rx/Ry恒.05，无位置/姿态裁剪证据；15D保存增益横向投影中位约.103，单次信息接入仍沿用×5 Legacy。不能直接除5或宣称R就是根因。15D回滚P95 3.224ms/max5.204ms，无500ms固定输出延迟；C1 Legacy不支持retract，不能冒称完整终态恢复。Bias数值稳定不等于物理可观测，FAR Jacobian还存在源码线性化缺项。优先观测ID/信息预算/增益证据，再独立标定方向性R，模型减维只作待批方案；生产替换仍NO-GO。[审查](../experiments/phase_bg_far_lio/c2/README.md)。
+
+
+## BG-C3：统一降R暂不进入闭环
+
+Legacy×5的即时影响已量化，但不能由固定prior推断闭环轨迹贡献；normal8与Yaw/错误候选代价保留，单一增强信息NO-GO。保留15D/Wheel/回滚，优先独立100Hz只读快照合同及历史错峰证据补齐；几何/时序信任设计尚无验证，不部署在线自适应R或9D。[报告](../experiments/phase_bg_far_lio/c3/README.md)。

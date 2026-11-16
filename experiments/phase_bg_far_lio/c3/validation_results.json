@@ -1,0 +1,19 @@
+{
+  "scope": "fixed-prior numerical validity only; not accuracy/100Hz/realtime validation",
+  "checks": {
+    "case_count_297": true,
+    "candidate_count_891": true,
+    "all_candidates_P_SPD": true,
+    "no_candidate_committed": true,
+    "Joseph_reset_max_abs_error": 2.7755575615628914e-17,
+    "S_max_abs_error": 0.0,
+    "delta_K_nu_max_abs_error": 0.0,
+    "R5_BE_saved_P_max_abs_error": 8.881784197001252e-16,
+    "R5_saved_K_max_abs_error": 2.531308496145357e-14,
+    "R5_saved_delta_max_abs_error": 2.220446049250313e-16,
+    "same_original_R_shape": true,
+    "causal_schedule_lookup": true,
+    "zero_schedule_predictions_updates": true
+  },
+  "passed": true
+}
