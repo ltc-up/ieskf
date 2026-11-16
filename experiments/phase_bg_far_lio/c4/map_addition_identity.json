@@ -1,0 +1,29 @@
+[
+  {
+    "base_points": 94971,
+    "augmented_points": 99592,
+    "base_unique": 94971,
+    "augmented_unique": 99592,
+    "base_missing_from_augmented": 0,
+    "added_unique": 4621,
+    "control_id": "MAP_CONTROL_0"
+  },
+  {
+    "base_points": 92887,
+    "augmented_points": 97508,
+    "base_unique": 92887,
+    "augmented_unique": 97508,
+    "base_missing_from_augmented": 0,
+    "added_unique": 4621,
+    "control_id": "MAP_CONTROL_1"
+  },
+  {
+    "base_points": 84199,
+    "augmented_points": 88820,
+    "base_unique": 84199,
+    "augmented_unique": 88820,
+    "base_missing_from_augmented": 0,
+    "added_unique": 4621,
+    "control_id": "MAP_CONTROL_2"
+  }
+]

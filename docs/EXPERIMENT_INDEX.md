@@ -194,3 +194,8 @@ Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-
 ## BG-C3：观测利用与错峰鲁棒性无反馈诊断
 
 297个固定prior、891个R×5/×2/×1候选，零匹配/传播/状态提交；历史K/δ/P等价、Joseph/reset及SPD检查通过。×1使right3局部横向P95 .673→.558m，但normal8 .343→.358m，代理错误XY候选更差。复核历史4–5m收敛错峰与大修正原记录；缺同刻15D P，保护未验证。C1不是独立100Hz发布，已给出10ms输出合同。没有合理受保护候选，按停止门未执行闭环A/B。[报告](../experiments/phase_bg_far_lio/c3/README.md)。
+
+
+## BG-C4：高频架构、FAR部分归因与1013错峰，PARTIAL
+
+35次固定输入CUDA诊断复现收敛错峰最大约4.506m；纠正旧397s与bag713s属于不同经过，713组18例11收敛/7迭代失败，未复现多米错峰。三地图控制含补结构后仍4.306m的反例；错峰局部投影仍正定。FAR已有日志恢复356个受限prior（right3 104tick），其prior/post横向P95约.531/.523m；原生同50ms一次/五次信息消融证实重复缓存压P，但真实全部贡献分解仍UNKNOWN。原生预测有限差分支持速度-倾角A缺项，未修改。事件内核+只读100Hz实际ROS合成401/401slot、mean/P逐事件等价；16接口测试及18合同检查通过，停输STALE保留。没有新真实1013长时15D闭环或生产50ms/100Hz资格；保留惯性/Wheel/完整P/回滚，不复制FAR重复信息，也不部署新单指标门控。下一步仅不改轨迹的真实发布资格与观测事务/独立分支证据。见[BG-C4完整报告](../experiments/phase_bg_far_lio/c4/README.md)。

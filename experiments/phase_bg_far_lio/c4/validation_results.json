@@ -1,0 +1,25 @@
+{
+  "scope": "saved result contract checks, not localization accuracy/statistical calibration qualification",
+  "checks": {
+    "registered_35_unique_within40": true,
+    "input_point_count_preserved": true,
+    "config_q50_max35": true,
+    "all_native_R_finite_symmetric_SPD": true,
+    "all_full_gradient_H_finite": true,
+    "failure_count_7_preserved": true,
+    "native_trace_mean_P_exact": true,
+    "same_50ms_comparison": true,
+    "native_repeated_same_id_stronger_information": true,
+    "native_trace_P_finite_symmetric_PSD": true,
+    "ROS_401_unique_received": true,
+    "ROS_no_state_time_reversal_or_errors": true,
+    "ROS_numerical_hash_parity": true,
+    "planned_stale_outputs_retained": true,
+    "compiled_native_headers_equal_official": true,
+    "three_map_additions_exact_superset": true,
+    "native_zero_tilt_derivative_mismatch_detected": true,
+    "qualified_recovery_356_not_floor_imputation": true
+  },
+  "passed": 18,
+  "total": 18
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "common synthetic IMU at co-located reference; native9D Euler vs15D midpoint/SO3, no real prediction accuracy claim; covariance charts/Q differ, P not ranked",
+  "results": [
+    {
+      "dt_ms": 10,
+      "position_difference_m": 0.00033544912607921096,
+      "velocity_map_difference_m_s": 3.253284526905101e-05,
+      "attitude_difference_rad": 7.210398962657564e-08,
+      "P15_min_eig": 0.08859030550632838
+    },
+    {
+      "dt_ms": 50,
+      "position_difference_m": 0.0016777285383108003,
+      "velocity_map_difference_m_s": 0.00016258155360690093,
+      "attitude_difference_rad": 3.6052410835805446e-07,
+      "P15_min_eig": 0.05505386703430118
+    },
+    {
+      "dt_ms": 100,
+      "position_difference_m": 0.0033566796647314513,
+      "velocity_map_difference_m_s": 0.0003249580170453713,
+      "attitude_difference_rad": 7.210585783814171e-07,
+      "P15_min_eig": 0.031740111214776046
+    }
+  ]
+}

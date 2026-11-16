@@ -1,0 +1,21 @@
+{
+  "baseline": "5d784066c7dca12407e78d567531618c008e06b6",
+  "increment_budget_bytes": 1073741824,
+  "software_source_download_limit_bytes": 4194304,
+  "first_batch_max_registrations": 40,
+  "initial_intent": "20 original1013 capture frames + up to 12 fixed map controls, no seed grid; select by immutable header before results",
+  "large_map_copy": false,
+  "raw_bag_copy": false,
+  "continuous_real_run": {
+    "max": 1,
+    "status": "not scheduled; requires map/time/init and resource contract first"
+  },
+  "prototype": "synthetic event driven15D + delayed observation, read-only100Hz snapshot ROS2; baseline numeric parity first",
+  "FAR": "saved-log and qualified native function tests first; no full replay by default",
+  "stopping_rules": [
+    "unqualified frame/coordinate/PCD contract: stop matching that group",
+    "identity mismatch not silently called historical reproduction",
+    "native failure retained, no parameter relaxation/retry",
+    "new allocation above1GiB stops writes"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "comparison_horizon_ms": 50,
+  "first_update_y": 0.20000666622225186,
+  "repeat5_Pyy": 0.009142416825310489,
+  "repeat5_position_y": 0.27291270057110767,
+  "scope": "synthetic native9D controlled functions; no real C1 prior substitution",
+  "single_Pyy": 0.033521098593427105,
+  "single_update_position_y": 0.2000866608892741,
+  "trace_equivalence_max_abs": 0.0
+}

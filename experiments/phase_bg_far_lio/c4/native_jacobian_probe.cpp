@@ -1,0 +1,5 @@
+// Passive finite differences of native FAR predict. No corrected Jacobian used.
+#define main original_probe_main
+#include "native_ekf_probe.cpp"
+#undef main
+int main(){auto f=setup();f.x_(3)=.13;f.x_(4)=-.08;f.x_(5)=.7;f.x_(6)=35.;f.x_(7)=1.2;f.x_(8)=.2;Eigen::Vector<double,C::INPUT_VECTOR_SIZE> u;u<<.03,-.04,.2,.5,7.,9.81;auto nominal=f;nominal.predict(u);Eigen::Matrix<double,9,9> fd;Eigen::Matrix<double,9,6> fi;const double e=1e-6;for(int j=0;j<9;j++){auto p=f,m=f;p.x_(j)+=e;m.x_(j)-=e;p.predict(u);m.predict(u);fd.col(j)=(p.x_pred_-m.x_pred_)/(2*e);}for(int j=0;j<6;j++){auto p=f,m=f;auto up=u,um=u;up(j)+=e;um(j)-=e;p.predict(up);m.predict(um);fi.col(j)=(p.x_pred_-m.x_pred_)/(2*e);}std::cout<<J{{"scope","native synthetic finite differences; no real trajectory or code repair"},{"epsilon",e},{"source_audit_velocity_angle_block_zero",true},{"A_FD",mat(fd)},{"velocity_angle_FD",mat(fd.block<3,3>(6,3))},{"source_zero_block_max_difference",fd.block<3,3>(6,3).cwiseAbs().maxCoeff()},{"B_FD",mat(fi)}}.dump()<<std::endl;}
