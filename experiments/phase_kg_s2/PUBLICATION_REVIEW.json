@@ -1,0 +1,184 @@
+{
+  "phase": "KG-S2",
+  "allowed": "independently authored research code, synthetic tests, redacted aggregate results and failure reports",
+  "excluded": [
+    "all bag/map/source payloads",
+    "real trajectories and event-level figures",
+    "full P/J/H and raw sensor statistics",
+    "extrinsics/device configuration",
+    "third-party source snapshots",
+    "credentials"
+  ],
+  "production_files_staged": false,
+  "history_cleanup": false,
+  "each_file_reviewed": [
+    {
+      "path": "FINAL_CONCLUSION.md",
+      "bytes": 3312,
+      "sha256": "374f3de3bbc6c11e6d1c65ccd257419d4fb087c2b46fd8afc9fe64185f4adb08"
+    },
+    {
+      "path": "FIXED_LAG_GRAPH_ARCHITECTURE.md",
+      "bytes": 4608,
+      "sha256": "be0b24741b6ccfcfd5fe726aa315d77578ddef817a20b51096962cce28db6a3e"
+    },
+    {
+      "path": "GEOMETRIC_FACTOR_NUMERICAL_VALIDATION.md",
+      "bytes": 2240,
+      "sha256": "63e079843b35637b40baabf0af4d198c9877b1a5ab955d6ea251fc68ef6f6d0a"
+    },
+    {
+      "path": "HIGH_FITNESS_AND_WRONG_BASIN_ANALYSIS.md",
+      "bytes": 3550,
+      "sha256": "d74f4adf942cf01bdfa858c5e9e365392813bec209e658a844fcfae96e03c311"
+    },
+    {
+      "path": "JOINT_OPTIMIZATION_ABLATION.md",
+      "bytes": 4238,
+      "sha256": "a580a25c34d04f010e9a3ee2b90d8ead32e4cd7ce369ab537e694e445e7e1510"
+    },
+    {
+      "path": "KOIDE_NATIVE_FACTOR_IMPLEMENTATION_REVIEW.md",
+      "bytes": 3974,
+      "sha256": "1f4ceab06140b1c8d9aba35ef8f64217a2b2093cdb3a72ca4efbe681d61482a6"
+    },
+    {
+      "path": "LEGACY_NATIVE_GEOMETRIC_R_COMPARISON.md",
+      "bytes": 2316,
+      "sha256": "d12e4bc134601449184127a8a51592056d856d4187361db9072699464ed899eb"
+    },
+    {
+      "path": "LOOP44_1013_GEOMETRY_EVIDENCE.md",
+      "bytes": 2878,
+      "sha256": "3884e436968f2d7dc483c432ac89e1fa8a37d9bb7e51ed2e1bbaa2bbcae57098"
+    },
+    {
+      "path": "NEXT_GENERATION_LOCALIZATION_DECISION.md",
+      "bytes": 2020,
+      "sha256": "0bd2d9fb3c2003c06da7bdf25767d7494ab816e8a06f34a05e9bcc3bdc5221f6"
+    },
+    {
+      "path": "OLD_BRANCH_CONDITIONAL_JOINT.md",
+      "bytes": 1520,
+      "sha256": "d69de86e720acd2fa4f872c831574bb411577d9ff647522e34b4d00847a3e2a0"
+    },
+    {
+      "path": "README.md",
+      "bytes": 1304,
+      "sha256": "8f9ccf1b3fa36475a2dcbdacec8cff15ba357f9632607b1b0576deb0bae9ade9"
+    },
+    {
+      "path": "REALTIME_FEASIBILITY.md",
+      "bytes": 3073,
+      "sha256": "3ae0b50045be4ec7a905b821465f3ad44c7e51d77d971e6a86206386e3cc7101"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "bytes": 2812,
+      "sha256": "13c158103cfd53efbe7913a15b48cdf495996b21a2e53f4cb8c444bd8fabb52b"
+    },
+    {
+      "path": "RESOURCE_AND_FAILURE_AUDIT.md",
+      "bytes": 1609,
+      "sha256": "0872bd283c11bb89c65282080732b269e3d584374dc2a50c8fc43bbf99b54185"
+    },
+    {
+      "path": "aggregate.py",
+      "bytes": 5782,
+      "sha256": "62e7f22e4b907a6d432b4b200c0f86eec94122a56cc105721436f0651f4edd65"
+    },
+    {
+      "path": "aggregate_results.json",
+      "bytes": 180896,
+      "sha256": "87b5ba8d6f2d4cb81799e24ff7df0b18fc6a831636c26f359542ae2e88cb0705"
+    },
+    {
+      "path": "conditional_R.py",
+      "bytes": 1929,
+      "sha256": "c19bb527d0db019ef64702cec8de652f5e1ab29fe2e2e2d8b5d71387b840d379"
+    },
+    {
+      "path": "evaluate.py",
+      "bytes": 5584,
+      "sha256": "83c11beb46f991189be38c4e361265c938b34af3189e83cb35285f98c58d799f"
+    },
+    {
+      "path": "manifest.json",
+      "bytes": 3968,
+      "sha256": "c634280389401e9b798b83cb33be85d7173234006d41a5a36c4d2f3590620324"
+    },
+    {
+      "path": "native/CMakeLists.txt",
+      "bytes": 1293,
+      "sha256": "6a598c7a078ffe07f3cd1e74ca77f85b1f0fa4985ec0da559c133b46e07ed817"
+    },
+    {
+      "path": "native/diagnostics.cpp",
+      "bytes": 5165,
+      "sha256": "308a75eeb88eafb5e90e74ef2ac5792e4bdaa04568190acc4dfad293f912d160"
+    },
+    {
+      "path": "native/joint.cpp",
+      "bytes": 25204,
+      "sha256": "43c37a9bd6b56b728871462f1ff13f50bfb84f9dc47e9a9f3edd21708996efa0"
+    },
+    {
+      "path": "native/tests.cpp",
+      "bytes": 3742,
+      "sha256": "9fafad731a528a8fe67769357b88dcbc9147b9ff494f5d3eeb005ca3267caa5d"
+    },
+    {
+      "path": "old_branch_conditional_results.json",
+      "bytes": 16304,
+      "sha256": "5c448ecf1cd50eaec967893478770f9600b3220bb52b0082e9a3f5dde4cba813"
+    },
+    {
+      "path": "old_conditional_window.py",
+      "bytes": 2188,
+      "sha256": "df77fe64dab39e52a37739c5d8cc1fc659a17b2d889d069a9e0239e1dd26be17"
+    },
+    {
+      "path": "predict_15d.py",
+      "bytes": 2295,
+      "sha256": "2d1a92e6e90065d86de170fb38043479ded2738b6834c173750e880f6a9c3b1f"
+    },
+    {
+      "path": "prepare_diagnostics.py",
+      "bytes": 1658,
+      "sha256": "03cbd37c037201b1db97051c2dce98434120c0f4379674821609888a10fd1b65"
+    },
+    {
+      "path": "recover_inputs.py",
+      "bytes": 9101,
+      "sha256": "dd9654194b4f50f1b5275f17f8e387eaadc87f4414aeb4c5c6051be12b93842b"
+    },
+    {
+      "path": "relative_factor_audit.py",
+      "bytes": 1655,
+      "sha256": "edcc85268a75670738f471ba23425d5f60657f1d0742997a6e70403e2154f4ea"
+    },
+    {
+      "path": "run_matrix.py",
+      "bytes": 1538,
+      "sha256": "9aba645028a03ce9571330649701174bf7b3ce63827e317f21d2de4f9730edd9"
+    },
+    {
+      "path": "spatial_coverage.py",
+      "bytes": 1300,
+      "sha256": "9f64f5b9a34bc1c696647f60bc13241c0e9bfc0c1b047376051f9fdd43778e13"
+    },
+    {
+      "path": "test_contracts.py",
+      "bytes": 1530,
+      "sha256": "3faae7eb52bd0cb32d9e585d21d7f15a2aa2a4bb69e241a2bf722e8a1d73fc8e"
+    },
+    {
+      "path": "write_reports.py",
+      "bytes": 31346,
+      "sha256": "c69c97fd47b3ec4b4c83be92761c549cff2afe228c2d3a6803eedce111de51f6"
+    }
+  ],
+  "schema_tests": 8,
+  "native_math_tests_pass": true,
+  "publish_scope": "research branch only; main unchanged"
+}

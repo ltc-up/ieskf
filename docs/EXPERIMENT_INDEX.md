@@ -209,3 +209,7 @@ Fixed FAR-LIO built; 14 tests and 298 frozen input groups checked. Native prior-
 ## Koide/GLIM多帧约束第一阶段：PARTIAL / NO-GO进入联合估计
 
 12个冻结案例、59个CPU公式级VGICP因子、11次局部Target CUDA NDT；50/100/150ms体素支持中位34.1/31.1/24.8%，1m近邻88.4/84.7/77.9%。首次错峰低残差伴支持降至3.24%，持续共同错峰仍可高支持；正确高Fitness大修正历史不完整。关键帧未证明一致优势，D在75ms有效参考下5/10改善，时移可反转。原生GPU/联合优化NOT RUN，21项合法15D短预测，6项过旧锚点长传播补充记录判无效并保留。没有状态融合/Seed反馈/生产修改。见[阶段报告](../experiments/koide_glim_stage1/README.md)。
+
+## KG-S2 — native raw geometry joint fixed-lag Shadow
+
+Baseline `d418fa2`. Built native CPU gtsam_points, normalized its cost convention, and used correspondence-aware LMExt with GTSAM Schur marginalization. Recovered 100 byte-identical C5 sources; ran 30 finite E0–E4 configurations and 59 native geometry diagnostics. Fault E1 lateral P95 improved 1.282→1.032m while XY RMSE worsened 1.046→1.133m; S2S had no stable marginal benefit, and the conditional other-pass case deteriorated strongly. A historical raw map factor retained about1.984m lateral correction, without independent accuracy certification. CPU fault E1 exceeded50ms for100/100 steps. **NO-GO for continuous feedback/production; native finite joint implementation confirmed.** [Reports](../experiments/phase_kg_s2/README.md).
