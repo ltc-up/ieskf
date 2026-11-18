@@ -20,6 +20,10 @@ class GicpFrontend
 public:
   explicit GicpFrontend(const FrontendConfig & config);
 
+  /// Streaming services call align() once per frame against one immutable
+  /// target; disable the per-request content hash in that mode only.
+  void setTargetRehashPerRequest(bool on) {target_rehash_ = on;}
+
   RegistrationOutput align(const RegistrationRequest & request);
 
   const FrontendConfig & config() const {return config_;}
@@ -55,6 +59,7 @@ private:
 
   FrontendConfig config_;
   GlobalMapManager maps_;
+  bool target_rehash_ = true;
 
   std::shared_ptr<const TargetSet> coarse_target_;
   std::string coarse_target_key_;

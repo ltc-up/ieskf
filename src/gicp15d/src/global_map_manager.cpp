@@ -22,9 +22,9 @@ double msSince(Clock::time_point t)
 
 GlobalMapManager::GlobalMapManager(
   CovarianceMode mode, int covariance_knn, double floor_ratio, int num_threads,
-  std::size_t max_points)
+  std::size_t max_points, bool rehash_on_lookup)
 : mode_(mode), covariance_knn_(covariance_knn), floor_ratio_(floor_ratio),
-  num_threads_(num_threads), max_points_(max_points)
+  num_threads_(num_threads), max_points_(max_points), rehash_on_lookup_(rehash_on_lookup)
 {
 }
 
@@ -34,6 +34,10 @@ std::shared_ptr<const TargetSet> GlobalMapManager::load(
   if (cache_hit) {*cache_hit = false;}
   for (auto & e : targets_) {
     if (e.full && e.full->path == path) {
+      if (!rehash_on_lookup_) {
+        if (cache_hit) {*cache_hit = true;}
+        return e.full;
+      }
       // Identity is the file content, not the path: a replaced file must not be
       // silently served from the cache.
       const std::string sha = fileSha256(path);

@@ -336,6 +336,7 @@ RegistrationOutput GicpFrontend::align(const RegistrationRequest & request)
   // ---- target ----
   const auto t_target = Clock::now();
   bool target_cache_hit = false;
+  maps_.setRehashOnLookup(target_rehash_);
   auto full = maps_.load(request.target_path, &error, &target_cache_hit);
   if (!full) {
     out.exit_reason = "TARGET_LOAD_FAILED:" + error;

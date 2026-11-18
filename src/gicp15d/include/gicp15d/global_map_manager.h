@@ -45,7 +45,7 @@ class GlobalMapManager
 public:
   GlobalMapManager(
     CovarianceMode mode, int covariance_knn, double floor_ratio, int num_threads,
-    std::size_t max_points);
+    std::size_t max_points, bool rehash_on_lookup = true);
 
   /// Load and preprocess the target. Repeated calls with the same path and
   /// sha256 are served from the cache. Returns nullptr and fills `error`.
@@ -57,6 +57,7 @@ public:
     const std::shared_ptr<const TargetSet> & full, const ActiveRegion & region,
     std::string * error);
 
+  void setRehashOnLookup(bool on) {rehash_on_lookup_ = on;}
   std::size_t cachedTargets() const {return targets_.size();}
   void clear();
 
@@ -71,6 +72,9 @@ private:
   double floor_ratio_;
   int num_threads_;
   std::size_t max_points_;
+  /// Streaming services load one target once; re-hashing a 10 MB file per
+  /// request would dominate the matcher budget. Off only for that use case.
+  bool rehash_on_lookup_;
   std::vector<Entry> targets_;                         ///< path -> full set
   std::vector<std::shared_ptr<TargetSet>> crops_;      ///< (path, generation) -> crop
 };

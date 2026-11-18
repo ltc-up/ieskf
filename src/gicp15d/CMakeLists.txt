@@ -45,6 +45,9 @@ target_compile_options(gicp15d_core PRIVATE -Wall -Wextra -Wno-unused-parameter)
 add_executable(gicp15d_frontend src/frontend_main.cpp)
 target_link_libraries(gicp15d_frontend PRIVATE gicp15d_core)
 
+add_executable(gicp15d_g0_service src/g0_service_main.cpp)
+target_link_libraries(gicp15d_g0_service PRIVATE gicp15d_core)
+
 add_executable(gicp15d_tests tests/run_tests.cpp)
 target_link_libraries(gicp15d_tests PRIVATE gicp15d_core)
 
