@@ -1,0 +1,24 @@
+{
+  "cases": 1468,
+  "cases_file": "/media/ltc/新加卷/autoeagle/phase_gicp15d_pipeline/artifacts/cases_aw_equiv.jsonl",
+  "per_preset": {
+    "G0_AW_EQUIV": {
+      "align_ms_max": 16.337294,
+      "align_ms_p50": 1.568794,
+      "align_ms_p95": 5.102474,
+      "candidate_valid": 1468,
+      "converged": 1404,
+      "frames": 1468,
+      "success": 1404,
+      "total_ms_max": 244.120249,
+      "total_ms_p50": 32.212863,
+      "total_ms_p95": 36.96041
+    }
+  },
+  "presets": [
+    "G0_AW_EQUIV"
+  ],
+  "results_written": 1468,
+  "threads": 8,
+  "wall_seconds": 48.298102392
+}
