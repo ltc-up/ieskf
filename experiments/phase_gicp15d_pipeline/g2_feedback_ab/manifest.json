@@ -1,0 +1,31 @@
+{
+  "phase": "G2_FEEDBACK_AB",
+  "date": "2026-11-18",
+  "branch": "dsh/gicp15d-pipeline",
+  "base_research_commit": "f2cb84b9ce3dabd5d40603f566070abb090f1fca",
+  "research_code_commit": "3a6e711",
+  "data_version": "loop44_1468_frames_archived_AW_0.075_reference",
+  "non_reconstructive_input_sha256": {
+    "loop44_motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "loop44_bindings": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+    "map_target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "temporary_reference": "34ae17211da728991ac39037e83c3197473a1de346f035de037a7a99f7329fe4"
+  },
+  "configuration": {
+    "backend": "production_gicp",
+    "window": "lap",
+    "frames": 1468,
+    "full_6d_observation": true,
+    "g0_baseline_translation_r_variance_m2": 0.25,
+    "ab_translation_r_variance_m2": 0.0378257,
+    "orientation_r_variance_rad2": 0.00030461741978670857,
+    "roi_reuse_m": 10,
+    "host_cuda_deskew": true,
+    "gicp_threads": 4
+  },
+  "configuration_sha256": "e2f422dd83c759afb58e77cfde2344a805eabde2da98de137130697cefc9251f",
+  "reference_qualification": "TEMPORARY_RELATIVE_ONLY",
+  "absolute_accuracy_qualified": false,
+  "production_repository_modified": false,
+  "private_outputs_retained_outside_git": true
+}
