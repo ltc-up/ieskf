@@ -1,0 +1,37 @@
+{
+  "phase": "GICP15D_G0_G1",
+  "date": "2026-11-18",
+  "branch": "dsh/gicp15d-pipeline",
+  "base_commit": "de651abe789369c2f497324b700faa997be19bf8",
+  "base_ref": "origin/codex/kg-s3-publication",
+  "production_repository_modified": false,
+  "production_readonly_head": "aa50e35467f89b4963f882d1f5abaace46d0ce70",
+  "small_gicp": {
+    "revision": "fa0cfc983417c044b6036f71dfa448038bb9c820",
+    "license": "MIT",
+    "downloaded_this_round": false
+  },
+  "targets": {
+    "0105": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "1013": "2f7c78d7aa61d219033a3cb9bc1822204db450e9d3ce0405cd1bca9fdcd197ac"
+  },
+  "runs": {
+    "R1_aw_equivalence_frames": 1468,
+    "R2_frames_selected": 103,
+    "R2_cases": 206,
+    "R2_presets": 8,
+    "R2_results": 1648
+  },
+  "gates": {
+    "g1_code_compiled": "PASS",
+    "g1_unit_tests": "PASS 41/41",
+    "g1_baseline_equivalence": "PASS p50 6e-6 m p95 8.6e-3 m",
+    "g1_real_frozen_registration": "PASS",
+    "g1_geometric_gain": "PARTIAL",
+    "g2_cpp_15d": "NOT_IMPLEMENTED",
+    "g3_health_fusion": "NOT_IMPLEMENTED",
+    "production_qualification": "NO"
+  },
+  "private_data_committed": false,
+  "large_binaries_committed": false
+}
