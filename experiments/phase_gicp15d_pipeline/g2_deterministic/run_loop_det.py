@@ -7,7 +7,9 @@ import numpy as np
 from runtime_journal import Journal,journal_json
 p=argparse.ArgumentParser()
 for k in ['input','bindings','target','deskew','deskew-service','matcher','private','output']:p.add_argument('--'+k,type=Path,required=True)
-p.add_argument('--backend',choices=['ndt_legacy','ndt_fixed','gicp'],required=True);p.add_argument('--profile',action='store_true');p.add_argument('--window',default='lap');p.add_argument('--limit',type=int);p.add_argument('--position-only',action='store_true');a=p.parse_args();assert not a.private.exists();a.private.mkdir(parents=True)
+p.add_argument('--backend',choices=['ndt_legacy','ndt_fixed','gicp'],required=True);p.add_argument('--profile',action='store_true');p.add_argument('--window',default='lap');p.add_argument('--limit',type=int);p.add_argument('--position-only',action='store_true');p.add_argument('--gicp-translation-r-variance',type=float,default=.25,help='Diagnostic A/B: fixed 6D GICP translation observation variance in m^2; default preserves G0 baseline.');a=p.parse_args();assert not a.private.exists();a.private.mkdir(parents=True)
+if not np.isfinite(a.gicp_translation_r_variance) or a.gicp_translation_r_variance<=0:raise ValueError('INVALID_GICP_TRANSLATION_R_VARIANCE')
+if a.backend!='gicp' and a.gicp_translation_r_variance!=.25:raise ValueError('GICP_TRANSLATION_R_VARIANCE_REQUIRES_GICP')
 source=Path(__file__).with_name('run_closed_loop_det.py');text=source.read_text();old='ledger=[];outputs=[];wall=[]';new="ledger=Journal(a.private/'transactions.jsonl');outputs=Journal(a.private/'states.jsonl');wall=[]";assert text.count(old)==1;text=text.replace(old,new);text=text.replace('wheel_records=[];health_records=[]',"wheel_records=Journal(a.private/'wheel_internal.jsonl',True);health_records=[]")
 for key in ['ledger','outputs','wheel_records']:text=text.replace('json.dumps('+key+')','journal_json('+key+')')
 needle=' for i,job in enumerate(jobs):';assert text.count(needle)==1;text=text.replace(needle,' gc.collect();gc.freeze()\n'+needle);ns=dict(__name__='aw_frozen_runner',Journal=Journal,journal_json=journal_json,gc=gc);exec(compile(text,str(source),'exec'),ns)
@@ -15,13 +17,13 @@ if a.position_only and a.backend!='gicp':raise ValueError('POSITION_ONLY_REQUIRE
 if a.backend in ('gicp','ndt_fixed'):
  def covariance(ndt,components,prior):
   if a.backend=='gicp' and ndt.get('backend')!='small_gicp':raise ValueError('MATCHER_BACKEND_IDENTITY_MISMATCH')
-  return np.diag([.5**2 if k in ('x','y','z') else np.deg2rad(1.)**2 for k in components])
+  return np.diag([a.gicp_translation_r_variance if a.backend=='gicp' and k in ('x','y','z') else .5**2 if k in ('x','y','z') else np.deg2rad(1.)**2 for k in components])
  ns['pose_covariance']=covariance
 profiler=None
 if a.profile:
  from profile_runtime import Timings
  profiler=Timings();profiler.install(ns)
-a.mode='F';a.stop_loss=2.;ns['main'](a);r=json.loads(a.output.read_text());r.update(actual_CUDA=(a.backend!='gicp'),actual_CUDA_Deskew=True,actual_small_gicp=(a.backend=='gicp'),backend=a.backend,position_only=a.position_only,runtime='streamed journal and frozen immutable heap; GC still enabled',history_horizon_ms=500,own_state_actual_rematching=True,engineered_R_uncalibrated=True);r['pose_statistical_covariance']='UNQUALIFIED_FIXED_0.5M_1DEG' if a.backend in ('gicp','ndt_fixed') else r['pose_statistical_covariance'];a.output.write_text(json.dumps(r,indent=2)+'\n')
+a.mode='F';a.stop_loss=2.;ns['main'](a);r=json.loads(a.output.read_text());r.update(actual_CUDA=(a.backend!='gicp'),actual_CUDA_Deskew=True,actual_small_gicp=(a.backend=='gicp'),backend=a.backend,position_only=a.position_only,gicp_translation_r_variance_m2=a.gicp_translation_r_variance if a.backend=='gicp' else None,runtime='streamed journal and frozen immutable heap; GC still enabled',history_horizon_ms=500,own_state_actual_rematching=True,engineered_R_uncalibrated=True);r['pose_statistical_covariance']=('UNQUALIFIED_FIXED_TRANSLATION_VARIANCE_'+str(a.gicp_translation_r_variance)+'M2_1DEG' if a.backend=='gicp' else 'UNQUALIFIED_FIXED_0.5M_1DEG') if a.backend in ('gicp','ndt_fixed') else r['pose_statistical_covariance'];a.output.write_text(json.dumps(r,indent=2)+'\n')
 if profiler:
  from evaluate import stats
  (a.private/'profile_aggregate.json').write_text(json.dumps({k:stats(v) for k,v in profiler.values.items()},indent=2)+'\n')
