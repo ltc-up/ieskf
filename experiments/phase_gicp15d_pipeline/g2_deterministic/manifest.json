@@ -1,0 +1,18 @@
+{"phase":"GICP15D_G2R","date":"2026-11-18","branch":"dsh/gicp15d-pipeline",
+ "base_commit":"aa90e198454bf4eb32f79bdd55d8441fe528a464",
+ "production_repository_modified":false,
+ "fixes":[
+  {"id":"clock","file":"run_closed_loop_det.py","change":"advance() uses declared LOGICAL_LATENCY_NS=0 instead of measured wall time"},
+  {"id":"reduction","note":"OMP guided scheduling makes the 4-thread matcher non-bit-reproducible; closed loop runs the matcher with --threads 1"}],
+ "determinism":{"runs":3,"frames":200,"states_bitwise_identical":true,"non_timing_diff_fields":"NONE"},
+ "full_lap":{"frames":1468,
+  "G0_15D":{"accepted":1401,"dropped":67,"rmse":2.4664,"p50":2.4247,"p95":3.6897,"p99":4.27,"max":4.9155},
+  "NDT_legacy_15D":{"accepted":1467,"dropped":1,"rmse":2.6215,"p50":2.5357,"p95":3.9063,"p99":4.4756,"max":5.1344},
+  "NDT_fixedR_15D":{"accepted":1467,"dropped":1,"rmse":2.5056,"p50":2.4689,"p95":3.7545,"p99":4.3056,"max":4.9081}},
+ "realtime":{"G0_1thread":{"align_p50":16.29,"align_p95":38.75,"align_p99":64.05,"frame_p50":28.07,"frame_p95":51.67,"frame_p99":79.56,"frame_max":116.25,"meets_20hz_p95":false},
+  "G0_4thread":{"align_p50":5.72,"align_p95":12.53,"frame_p95":30.36,"meets_20hz_p95":true,"deterministic":false}},
+ "official_evaluation":{"used":"evaluate_reference.py","status":"NOT_RUNNABLE","missing":["gnss_baselink_truth_delay75_full_validated.csv","center.csv","left.csv","right.csv","raceline.csv"]},
+ "accuracy":{"absolute":"NOT_QUOTABLE","relative":"G0 better than NDT legacy by 0.156 m RMSE"},
+ "verdict":"CONDITIONAL_GO",
+ "blocker":"reduction scheduling: deterministic and parallel are mutually exclusive today",
+ "next":"static-schedule deterministic reduction, then FAR-LIO mechanism port and fault injection"}
