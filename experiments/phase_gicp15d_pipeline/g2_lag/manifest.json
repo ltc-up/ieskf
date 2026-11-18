@@ -1,0 +1,22 @@
+{
+  "phase": "G2-L",
+  "base_research_commit": "16d044651eeff4f330e4b740dd28232d738e277f",
+  "research_code_commit": "this phase commit; see Git history",
+  "code_sha256": {
+    "run_g2v.py": "14bfd8444121728952e6181134f2ee41ad4189f8dc13f6c830a8fc4256f911d0",
+    "analyze_g2v.py": "6d54800d88e6e6c4c8b2253bac146fc06a51e943c8c8795d920e5125aa681c96",
+    "analyze_g2l.py": "740b609b6607dd92b0d003571c19903a7afaa6304901d98b3ad0a936cad299b6",
+    "aggregate_g2l.py": "3a22b4b0675e21dfddf600119227c5852869d0b58e249453f04e818ee6492d67"
+  },
+  "configuration": "G2-V C filtered Kistler/Wheel mutual exclusion, G0 15D Q/R, 6D GICP pose, four matcher threads, ROI reuse 10 m, raw_valid_0.075 engineering reference",
+  "configuration_sha256": "34fc4a7b9619f68694374d619d5200c56aa31523936e67a64d68c697cca144ec",
+  "data_version": "loop44 continuous three-lap AY binding, 4134 native LiDAR headers",
+  "input_identities": {
+    "motion_manifest_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "map_binary_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "filtered_optical_sha256": "a8ae6025abd3be15f9a9daf97b0749b735df2f4e30486f9761a2a9fab5ee91f2"
+  },
+  "private_run_transactions_sha256": "c73b9a16a54cd58e804617dd420456d55e2ead4ef95411516f3329d44a095a32",
+  "reproduction": "Authorized private inputs and host CUDA required; read RESULTS.md. Original payloads and per-frame transactions are not public.",
+  "qualification": "Exploratory causal replay only; no independent truth or production realtime qualification"
+}

@@ -19,6 +19,8 @@ parser.add_argument('--optical', type=Path, required=True)
 parser.add_argument('--policy', choices=('A', 'B', 'C'), required=True)
 parser.add_argument('--window', default='lap')
 parser.add_argument('--limit', type=int)
+parser.add_argument('--prune-geometry', action='store_true',
+                    help='Remove per-frame Deskew geometry after its hash and GICP result are recorded')
 args = parser.parse_args()
 assert not args.private.exists()
 args.private.mkdir(parents=True)
@@ -56,6 +58,9 @@ program = program.replace(' for i,job in enumerate(jobs):',
                           ' gc.collect();gc.freeze()\n for i,job in enumerate(jobs):')
 program = program.replace('prior=dict(p=prior.p.tolist(),',
                           'prior=dict(v=prior.v.tolist(),bg=prior.bg.tolist(),ba=prior.ba.tolist(),p=prior.p.tolist(),')
+needle = "print(a.mode,i+1,update['reason'],flush=True)"
+assert program.count(needle) == 1
+program = program.replace(needle, needle + "\n  if a.prune_geometry:\n   poses.unlink(missing_ok=True);path.unlink(missing_ok=True)\n   for key in ('native_xyzi','common_xyzi'):\n    if key in ds:Path(ds[key]).unlink(missing_ok=True)")
 program = program.replace('replay.ingest(e);after=replay.current()[0]',
                           "replay.ingest(e);after=replay.current()[0]\n   if e['kind'] in ('wheel','optical'):velocity_log.append(dict(kind=e['kind'],header_ns=e['header_ns'],source=e.get('selected_vx_source'),update=e.get('last_update',{}),observed_velocity=e.get('velocity'),wheel_speed=e.get('speed')))")
 namespace = dict(__name__='g2v_runner', gc=gc, Journal=Journal,

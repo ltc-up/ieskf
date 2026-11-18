@@ -116,6 +116,8 @@ def main():
     p = argparse.ArgumentParser()
     p.add_argument('--input', type=Path, required=True)
     p.add_argument('--reference', type=Path, required=True)
+    p.add_argument('--valid-key', default='historical_valid_0.075',
+                   help='Explicit reference mask; raw_valid_0.075 covers all three AY laps')
     p.add_argument('--run', action='append', nargs=2, metavar=('NAME', 'PATH'), required=True)
     p.add_argument('--output', type=Path, required=True)
     a = p.parse_args()
@@ -130,7 +132,7 @@ def main():
     position = reference['G_0.075']
     tangent = reference['tangent']
     normal = np.c_[-tangent[:, 1], tangent[:, 0]]
-    valid = reference['historical_valid_0.075'].astype(bool)
+    valid = reference[a.valid_key].astype(bool)
     heading = np.unwrap(np.arctan2(tangent[:, 1], tangent[:, 0]))
     arc = np.r_[0, np.cumsum(np.linalg.norm(np.diff(position[:, :2], axis=0), axis=1))]
     curvature = gaussian_filter1d(np.gradient(heading, arc), 5)
@@ -141,7 +143,7 @@ def main():
     stage = np.where(~turn, 'straight', np.where(apex, 'apex', np.where(growth >= 0, 'entry', 'exit')))
     runs = {name: load(Path(path), position, normal, tangent, lever,
                        omega_times, omega_values) for name, path in a.run}
-    result = dict(reference='temporary_G_0.075_historical_valid_only',
+    result = dict(reference='temporary_G_0.075_' + a.valid_key,
                   stage_rule='Gaussian sigma 5 frames; straight below valid median absolute curvature; apex above valid p85; entry/exit by smoothed curvature slope',
                   curvature_quantiles=np.percentile(magnitude[valid], [50, 85]).tolist(), runs={})
     ranges = {'full': (0, len(position)), 'peak_800_900': (800, 900),
