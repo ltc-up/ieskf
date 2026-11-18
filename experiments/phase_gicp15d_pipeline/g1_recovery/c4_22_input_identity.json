@@ -1,0 +1,104 @@
+[
+ {
+  "generation": 1042,
+  "historical_ndt_exit": "OBJECTIVE_CONVERGED",
+  "historical_ndt_final": [
+   -293.79443359375,
+   -170.29898071289062,
+   -30.401357650756836
+  ],
+  "historical_ndt_fitness": 22.470232096803493,
+  "historical_target_n": 98213,
+  "offset_s": 396.999993344,
+  "region_center": [
+   -295.4878234863281,
+   -174.61813354492188,
+   -30.724557876586914
+  ],
+  "seed": [
+   [
+    0.73128,
+    -0.682075,
+    0.001658,
+    -293.2270202636719
+   ],
+   [
+    0.681802,
+    0.730914,
+    -0.030188,
+    -172.12197875976562
+   ],
+   [
+    0.019379,
+    0.023206,
+    0.999543,
+    -30.72939109802246
+   ],
+   [
+    0,
+    0,
+    0,
+    1
+   ]
+  ],
+  "source_n": 2499,
+  "source_path": "/home/ltc/flyagle/auto-eagle-main/fitness_test/src/a2rl_localization/lidar_ndt/audit/ndt_uncertainty_research/phase_e4_local_convergence/runs/A1_source_restore/captures/1763205937849981440.bin",
+  "source_sha256": "50ae6316f9d571e032939976d7fdacadd1c469814577b19dcfc942bc9644bc9b",
+  "stamp_ns": 1763205937849981440,
+  "tag": "C4_22_narrow",
+  "target_n": 98216,
+  "target_path": "/media/ltc/\u65b0\u52a0\u5377/autoeagle/phase_gicp15d_pipeline/g1_recovery/target_C4_22_narrow_1013_roi.bin",
+  "target_sha256": "00df79f95d5f3be9498fc37bf9408cf41579bc3ad28b99f5c12d743b2358ea2a"
+ },
+ {
+  "generation": 1041,
+  "historical_ndt_exit": "OBJECTIVE_CONVERGED",
+  "historical_ndt_final": [
+   -293.57672119140625,
+   -173.1700897216797,
+   -31.09105110168457
+  ],
+  "historical_ndt_fitness": 16.081053867370525,
+  "historical_target_n": 98213,
+  "offset_s": 396.999993344,
+  "region_center": [
+   -295.4815673828125,
+   -174.57850646972656,
+   -30.63671112060547
+  ],
+  "seed": [
+   [
+    0.7307988405227661,
+    -0.6825549006462097,
+    0.0072047715075314045,
+    -292.97625732421875
+   ],
+   [
+    0.6823648810386658,
+    0.7302412390708923,
+    -0.03355475142598152,
+    -172.15423583984375
+   ],
+   [
+    0.017641738057136536,
+    0.02943805791437626,
+    0.9994109272956848,
+    -30.63671112060547
+   ],
+   [
+    0,
+    0,
+    0,
+    1
+   ]
+  ],
+  "source_n": 3832,
+  "source_path": "/home/ltc/flyagle/auto-eagle-main/fitness_test/src/a2rl_localization/lidar_ndt/audit/ndt_uncertainty_research/phase_e4_local_convergence/runs/A1_wide35/captures/1763205937849981440.bin",
+  "source_sha256": "58382bf0c83562696d2d7aa0cc2384813584d797136636109afd9fb1b44129e4",
+  "stamp_ns": 1763205937849981440,
+  "tag": "C4_22_wide",
+  "target_n": 98214,
+  "target_path": "/media/ltc/\u65b0\u52a0\u5377/autoeagle/phase_gicp15d_pipeline/g1_recovery/target_C4_22_wide_1013_roi.bin",
+  "target_sha256": "27a7ca02e55bafb3ee960b311e797bd95fe89df0fab747ffffab342f18a1e301"
+ }
+]

@@ -1,0 +1,51 @@
+{
+  "phase": "GICP15D_G1_RECOVERY",
+  "date": "2026-11-18",
+  "branch": "dsh/gicp15d-pipeline",
+  "base_commit": "79890342458fa4fffdcdc4b9ef9435995e9c42b7",
+  "production_repository_modified": false,
+  "inherited_evidence": [
+    "G1_VALIDATION_RESULTS.md", "G1_FAILURE_ANALYSIS.md",
+    "AUDIT_ARCHITECTURE_COMPARISON.md", "ARCHITECTURE_DECISION.md",
+    "results/loop44_aggregate.json", "results/aw_equiv_g0_summary.json"
+  ],
+  "new_execution": {
+    "c4_22_main_seed_registrations": 4,
+    "c4_22_probe_registrations": 4,
+    "c4_22_probes_per_case": 9,
+    "r1_outlier_frames": 19,
+    "r1_control_frames": 6,
+    "r1_runs": ["threads=1", "threads=8"],
+    "unit_checks": 48
+  },
+  "c4_22": {
+    "stamp_ns": 1763205937849981440,
+    "offset_s": 396.999993344,
+    "source_sha_narrow": "50ae6316f9d571e032939976d7fdacadd1c469814577b19dcfc942bc9644bc9b",
+    "source_sha_wide": "58382bf0c83562696d2d7aa0cc2384813584d797136636109afd9fb1b44129e4",
+    "kg_s3_recorded_source_sha": "964d20dae94d6e6cdffbf37b72a3612db204c99970f9f697d39d8361ce1fbdc3",
+    "source_sha_discrepancy": "recorded sha not present locally; local file is the one the historical NDT CSV itself cites",
+    "target": "TARGET_RECONSTRUCTED from map1013_leaf8.bin, 98216/98214 pts vs historical 98213",
+    "target_sha_hist": "cfff1a6ccb080d57cf30ae58999d052b2f6cdc79d661232487deb675cddebda4",
+    "target_hist_bytes_available": false,
+    "reference": "PROXY_REFERENCE_NOT_GT"
+  },
+  "results": {
+    "G0_wide_dproxy_m": 0.331,
+    "G0_narrow_dproxy_m": 0.440,
+    "G1_SPECTRUM_wide_dproxy_m": 0.969,
+    "G1_SPECTRUM_narrow_dproxy_m": 1.314,
+    "historical_ndt_wide_proxy_error_m": 2.9079,
+    "historical_ndt_narrow_proxy_error_m": 0.1305
+  },
+  "verdicts": {
+    "real_wrong_basin": "PASS",
+    "new_geometric_mechanism": "NO_GO_NEGATIVE_INCREMENT",
+    "historical_5925_5931": "NOT_COVERED",
+    "old21": "NOT_COVERED",
+    "numerical_equivalence": "PARTIAL_THREAD_HYPOTHESIS_FALSIFIED",
+    "probe_cost_defect": "FIXED",
+    "g2_readiness": "NOT_YET"
+  },
+  "private_or_large_committed": false
+}

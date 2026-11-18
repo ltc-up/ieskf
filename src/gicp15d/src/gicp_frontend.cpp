@@ -278,6 +278,33 @@ RegistrationOutput GicpFrontend::probe(
   out.seed_rotation_angle =
     rotationAngle(pass.final.linear() * request.seed.block<3, 3>(0, 0).transpose());
   out.exit_reason = pass.converged ? "CONVERGED" : "NOT_CONVERGED";
+
+  // The optimizer's stored cost belongs to its last linearisation pose, and the
+  // factor's Mahalanobis term is frozen there. Candidate costs are only
+  // comparable if every probe is re-costed at its own returned pose with the
+  // same rejector, factor settings, objective and residual definition as the
+  // main result. Without this the probe cost was left as NaN.
+  if (out.candidate_valid) {
+    GicpRejector rejector;
+    rejector.max_dist_sq = config_.max_correspondence_distance *
+      config_.max_correspondence_distance;
+    rejector.region = request.region;
+    rejector.reciprocal_check = config_.reciprocal_check;
+    rejector.source_tree = &source_tree;
+
+    RobustGICPFactor::Setting setting;
+    setting.kernel = config_.robust_kernel;
+    setting.scale_m = config_.robust_scale_m;
+    setting.min_normal_dot = (config_.normal_compatibility_deg >= 180.0) ? -1.0 :
+      std::cos(config_.normal_compatibility_deg * M_PI / 180.0);
+
+    computeDiagnostics(
+      target, source, target_tree, rejector, setting, config_.num_threads,
+      pass.final, &out.residuals, &out.information);
+    if (!std::isfinite(out.information.cost)) {
+      out.exit_reason = "PROBE_COST_UNAVAILABLE";
+    }
+  }
   return out;
 }
 

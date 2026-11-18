@@ -1,5 +1,6 @@
 // SPDX-License-Identifier: MIT
 // CPU-only contract tests for the Phase G1 frontend. No GPU, no ROS, no network.
+#include <algorithm>
 #include <cmath>
 #include <cstdio>
 #include <cstdlib>
@@ -345,6 +346,70 @@ void testFailureModes()
   std::printf("[ok] failure modes\n");
 }
 
+void testProbeCostContract()
+{
+  auto target = makeCorridor();
+  Eigen::Isometry3d truth = Eigen::Isometry3d::Identity();
+  truth.translation() << 12.0, 3.0, 0.0;
+  truth.linear() = Eigen::AngleAxisd(0.10, Eigen::Vector3d::UnitZ()).toRotationMatrix();
+  auto source = std::make_shared<gicp15d::Cloud>();
+  source->resize(target->size());
+  for (std::size_t i = 0; i < target->size(); i++) {
+    source->point(i) = truth.inverse() * target->point(i);
+  }
+  const std::string tp = "/tmp/gicp15d_probe_target.bin";
+  const std::string sp = "/tmp/gicp15d_probe_source.bin";
+  writeBin(tp, *target);
+  writeBin(sp, *source);
+
+  gicp15d::FrontendConfig cfg = gicp15d::GicpFrontend::preset("G1_SPECTRUM");
+  cfg.num_threads = 1;
+  cfg.probe_enabled = true;
+  cfg.probe_offsets_m = {0.0, 1.0};
+  gicp15d::GicpFrontend frontend(cfg);
+
+  gicp15d::RegistrationRequest req;
+  req.case_id = "probe_contract";
+  req.source_path = sp;
+  req.target_path = tp;
+  req.seed = truth.matrix();
+  req.seed.block<3, 1>(0, 3) += Eigen::Vector3d(0.20, -0.15, 0.03);
+  req.region.enabled = false;
+
+  const auto out = frontend.align(req);
+  check(out.candidate_valid, "probe contract: main result valid");
+  check(std::isfinite(out.information.cost), "probe contract: main cost is finite");
+  check(!out.probes.empty(), "probe contract: probes were produced");
+
+  bool all_finite = true;
+  bool reason_when_missing = true;
+  for (const auto & p : out.probes) {
+    if (!std::isfinite(p.cost)) {
+      all_finite = false;
+      reason_when_missing = reason_when_missing && p.correspondences == 0;
+    }
+  }
+  check(all_finite, "probe contract: every probe cost is finite");
+  check(reason_when_missing, "probe contract: a missing cost comes with zero correspondences");
+
+  // Offset 0 must reproduce the main solution, so it must carry the same cost
+  // under the same objective. This is the check that costs from different
+  // candidates are actually comparable.
+  bool matched = false;
+  for (const auto & p : out.probes) {
+    if (p.offset_m == 0.0 && p.axis.x() == 1.0) {
+      const double d = std::abs(p.cost - out.information.cost);
+      check(d <= 1e-9 * std::max(1.0, std::abs(out.information.cost)),
+        "probe contract: zero-offset probe cost equals main cost (delta " +
+        std::to_string(d) + ")");
+      matched = true;
+    }
+  }
+  check(matched, "probe contract: zero-offset probe present");
+  std::printf("[ok] probe cost contract (main %.6f, probes %zu)\n",
+    out.information.cost, out.probes.size());
+}
+
 }  // namespace
 
 int main()
@@ -356,6 +421,7 @@ int main()
   testInformationAnalysis();
   testEndToEndRecovery();
   testFailureModes();
+  testProbeCostContract();
 
   std::printf("%d checks, %d failures\n", g_checks, g_failures);
   return g_failures == 0 ? 0 : 1;
