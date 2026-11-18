@@ -77,3 +77,49 @@ Joseph 形式：`A=I−KH`、`Pc = A P Aᵀ + K R Kᵀ`、`Pc = B Pc Bᵀ`、再
 
 **结论**：15D 数学本身未发现缺陷；发现的问题是**死门（wheel STALE 不可达）**
 与**驱动器时间依赖**，两者性质不同，都不构成本轮精度结论的依据。
+
+## 9. 追加：可执行的数值核对结果
+
+以下由独立代码复核给出，均为实际执行值（非估计）：
+
+| 核对 | 方法 | 实测结果 | 判定 |
+|---|---|---|---|
+| `F` vs 有限差分 | `difference(inject(x,εe_i) 传播) / ε` vs `F` 列，`dt=0.01, ε=1e-6` | 最大绝对误差 **4.39e-8** | 通过 |
+| 零噪声 PSD | 噪声密度置零，`predict` 1000 步，`P0=1e-3 I` | `min(eigvalsh(P)) = 1.13e-9`，`max|P−Pᵀ| = 0` | 通过 |
+| Reset Jacobian | `chart_map(d)[6:9,6:9]` vs `Log(Exp(−d)Exp(d+εe_i))/ε`，`d=[0.05,−0.03,0.08]` | 最大误差 **6.70e-10** | 通过，且确认是 `Jr(+d)` 而非 `Jr(−d)` 或逆 |
+| Wheel Joseph | 手算 `S/K/d/Pc/chart_map` | `max|P−P_ref| = 8.67e-19`，`max|d−d_ref| = 0` | 通过 |
+| Wheel `STALE` 分支 | `correct(..., age=0.2)` | 返回 `STALE` —— 但所有在库调用方都不传 `age`，故实际**不可达** | 死门（已记录） |
+
+## 10. 追加：Seed 与 Deskew 的精确语义（已逐行核实）
+
+- **Seed** = `checkpoint(ref)` 的 **prior**，即 `ref` 时刻、已含**此前**所有后验、但**不含当前**
+  LiDAR 更新的预测。`checkpoint` 断言 `s[0].t == ref`，该快照由 `ref` 处的 clock 事件产生。
+- **Deskew 位姿历史** = 所有 `snapshots`（每个事件后的状态）中 `spanlo−20 ms ≤ t ≤ ref` 的部分，
+  即**逐事件过滤后的轨迹**，其最后一行的 `t=ref` 与上面的 prior 是同一状态。
+  当前 LiDAR 的后验**从不**出现在 deskew 行中。
+
+两者是不同对象。任何把 seed 在应用观测**之后**重算、或用单一后验轨迹构造 deskew 的实现，
+即使滤波方程完全一致，也不再等价。
+
+## 11. 追加：观测 H 的真实形式
+
+`ExternalPose.residual` 调用 `model(x, x.R)`，故 `rv = Log(x.Rᵀx.R) = 0`，
+`H[3:,6:9] = inv(Jr(0)) = I`。实际使用的 6×15 矩阵是
+
+```
+H = [ I3   0   R·skew(lever)   0   0 ]
+    [ 0    0        I3          0   0 ]
+```
+
+`h = [(p − R·lever); 0]`，`z = [T_translation; Log(x.Rᵀ T.R)]`。
+C++ 移植**不得**把它换成 `inv(Jr(实测旋转残差))` —— 那是另一个滤波器。
+
+## 12. 追加：固定 R 的精确数值
+
+`run_loop.py:14-18` 覆写后，mode F 的 R 为
+
+```
+diag(0.25, 0.25, 0.25, 3.0461741978670857e-4, 3.0461741978670857e-4, 3.0461741978670857e-4)
+```
+
+即平移 σ=0.5 m、旋转 σ=1°。**与 GICP fitness、Hessian、Native 协方差均无关。**
