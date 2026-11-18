@@ -1,0 +1,79 @@
+{
+  "phase": "G2_V_VELOCITY_FUSION",
+  "date": "2026-11-18",
+  "branch": "dsh/gicp15d-pipeline",
+  "base_commit": "b2ed91af4ad213db86372f9d1b9b5b842be4c511",
+  "research_code_commit": "938f3ab",
+  "data_version": "loop44_1468_frames_phase_AY_optical_extraction",
+  "non_reconstructive_input_sha256": {
+    "loop44_motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "loop44_bindings": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+    "map_target": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "temporary_reference": "34ae17211da728991ac39037e83c3197473a1de346f035de037a7a99f7329fe4",
+    "extracted_optical": "441a961e0a6b2e60082a09450b53d57b9d87b07c5c17d23c61aa06a2d1e76a7b",
+    "production_filtered_optical": "a8ae6025abd3be15f9a9daf97b0749b735df2f4e30486f9761a2a9fab5ee91f2"
+  },
+  "configuration": {
+    "frames": 1468,
+    "window": "lap",
+    "policies": [
+      "A_wheel_x",
+      "B_wheel_x_kistler_y",
+      "C_exclusive_wheel_or_kistler_x_kistler_y"
+    ],
+    "kistler_status_requires_good": true,
+    "kistler_vx_threshold_m_s": 1.0,
+    "wheel_recent_ns": 100000000,
+    "kistler_variance_m2_s2": 0.26,
+    "lidar_translation_variance_m2": 0.25,
+    "lidar_orientation_std_deg": 1.0,
+    "gicp_threads": 4,
+    "roi_reuse_m": 10,
+    "host_cuda_deskew": true,
+    "reference_mask_valid_frames": 1197,
+    "reference_comparison_time": "native_lidar_reference_ns"
+  },
+  "configuration_sha256": "6c452d8d1b7a0d7ec606010e3387194682ca576dfc80cefcb88b1791cb96f27e",
+  "completed_runs": {
+    "A": {
+      "frames": 1468,
+      "accepted": 1406,
+      "lateral_rmse_m": 0.326,
+      "along_rmse_m": 0.5,
+      "xy_rmse_m": 0.597
+    },
+    "B_filtered": {
+      "frames": 1468,
+      "accepted": 1413,
+      "lateral_rmse_m": 0.322,
+      "along_rmse_m": 0.498,
+      "xy_rmse_m": 0.593
+    },
+    "C_filtered": {
+      "frames": 1468,
+      "accepted": 1421,
+      "lateral_rmse_m": 0.212,
+      "along_rmse_m": 0.305,
+      "xy_rmse_m": 0.372
+    },
+    "B_raw_diagnostic_superseded": {
+      "frames": 1468,
+      "accepted": 1415,
+      "lateral_rmse_m": 0.325,
+      "along_rmse_m": 0.493,
+      "xy_rmse_m": 0.591
+    },
+    "C_raw_diagnostic_superseded": {
+      "frames": 1468,
+      "accepted": 1424,
+      "lateral_rmse_m": 0.214,
+      "along_rmse_m": 0.31,
+      "xy_rmse_m": 0.377
+    }
+  },
+  "qualification": "TEMPORARY_REFERENCE_RELATIVE_ONLY",
+  "absolute_accuracy_qualified": false,
+  "low_speed_real_data_qualified": false,
+  "production_repository_modified": false,
+  "private_outputs_retained_outside_git": true
+}
