@@ -1,0 +1,24 @@
+{
+  "phase": "GICP15D_G2_CLOSED_LOOP",
+  "date": "2026-11-18",
+  "branch": "dsh/gicp15d-pipeline",
+  "base_commit": "1ce16eac62a9248766c8ddaf28b5b464b246d17a",
+  "production_repository_modified": false,
+  "far_lio_revision": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+  "small_gicp_revision": "fa0cfc983417c044b6036f71dfa448038bb9c820",
+  "new_code": ["src/gicp15d/src/g0_service_main.cpp", "GlobalMapManager::setRehashOnLookup", "GicpFrontend::setTargetRehashPerRequest"],
+  "unit_checks": {"count": 63, "failures": 0},
+  "closed_loop": {
+    "driver": "ieskf-aw run_loop.py (frozen) exec AR run_closed_loop.py (unmodified)",
+    "frames": 1468, "duration_s": 73.350073732, "accepted": 1401, "rejected": 67,
+    "own_causal_seed": true, "max_accepted_gap_s": 0.250030859
+  },
+  "reproduction_vs_phase_aw": {"matcher_pose_diff_max_m": 0.0, "rot_p95_deg": 2e-06, "converged_agree": "1468/1468", "accept_disagreements": 0, "posterior_p50_m": 0.153, "posterior_max_m": 5.847},
+  "determinism": {"same_binary_two_runs_matcher_max_m": 1.1e-13, "posterior_p50_m": 0.0807, "posterior_max_m": 0.5265, "verdict": "HARNESS_WALLCLOCK_DEPENDENT"},
+  "realtime_ms": {"align_p50": 5.72, "align_p95": 12.53, "align_p99": 20.32, "align_max": 32.78, "frame_p50": 19.89, "frame_p95": 31.24, "frame_max": 206.72, "strict_50ms": false},
+  "accuracy": {"status": "INCONCLUSIVE", "reason": "harness non-determinism + ad-hoc scoring not the audited pipeline", "relative_only": true},
+  "verdict": "CONDITIONAL_GO",
+  "blocking_issue": "replay harness advances the clock by measured wall time, making the EKF trajectory non-deterministic",
+  "not_done": ["harness determinism fix", "fault injection", "C4 window closed loop", "C++ 15D ESKF"],
+  "private_or_large_committed": false
+}
