@@ -1,0 +1,220 @@
+{
+ "proxy_frames": [
+  {
+   "case": "C4_18",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 1.0834016096780936,
+   "dndt": 0.9992608761252254,
+   "dseed": 0.6438944312524759,
+   "converged": false,
+   "inliers": 1252
+  },
+  {
+   "case": "C4_18",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 0.7023858505337999,
+   "dndt": 0.6236031107647886,
+   "dseed": 0.3672550865197445,
+   "converged": true,
+   "inliers": 1260
+  },
+  {
+   "case": "C4_18",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 0.8504318982699164,
+   "dndt": 0.7677898412472711,
+   "dseed": 0.44880842592575065,
+   "converged": true,
+   "inliers": 1252
+  },
+  {
+   "case": "C4_19",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 0.12004274830468675,
+   "dndt": 0.09515311685226661,
+   "dseed": 0.5361615746344931,
+   "converged": false,
+   "inliers": 1286
+  },
+  {
+   "case": "C4_19",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 4.060587366626742,
+   "dndt": 3.9701193542246487,
+   "dseed": 3.6512947091725394,
+   "converged": false,
+   "inliers": 2043
+  },
+  {
+   "case": "C4_19",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 0.5646286516279753,
+   "dndt": 0.4606926598856292,
+   "dseed": 0.10719975380182864,
+   "converged": false,
+   "inliers": 1325
+  },
+  {
+   "case": "C4_20",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 0.37298858595567813,
+   "dndt": 0.3025758434722355,
+   "dseed": 1.2316895004948738,
+   "converged": true,
+   "inliers": 2029
+  },
+  {
+   "case": "C4_20",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 1.2020317008623582,
+   "dndt": 1.1349775618904192,
+   "dseed": 0.5369006944122168,
+   "converged": true,
+   "inliers": 2164
+  },
+  {
+   "case": "C4_20",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 1.444304779277464,
+   "dndt": 1.373691189220642,
+   "dseed": 0.814662556427363,
+   "converged": true,
+   "inliers": 2097
+  },
+  {
+   "case": "C4_21",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 0.2751892608074132,
+   "dndt": 0.322716620948232,
+   "dseed": 1.8824437275208212,
+   "converged": false,
+   "inliers": 1654
+  },
+  {
+   "case": "C4_21",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 1.1323055174560868,
+   "dndt": 1.1639221942014308,
+   "dseed": 1.2324472332864775,
+   "converged": true,
+   "inliers": 1752
+  },
+  {
+   "case": "C4_21",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 0.8948424075358675,
+   "dndt": 0.9474056799340828,
+   "dseed": 1.5329947500572885,
+   "converged": true,
+   "inliers": 1686
+  },
+  {
+   "case": "C4_22",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 0.3896868996555467,
+   "dndt": 4.226910124397182,
+   "dseed": 1.8803502446127167,
+   "converged": true,
+   "inliers": 1534
+  },
+  {
+   "case": "C4_22",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 1.690749917655756,
+   "dndt": 3.547106297466155,
+   "dseed": 1.6632854814547244,
+   "converged": true,
+   "inliers": 1709
+  },
+  {
+   "case": "C4_22",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 1.275270655275472,
+   "dndt": 3.693137047293875,
+   "dseed": 1.5849654534294073,
+   "converged": true,
+   "inliers": 1593
+  },
+  {
+   "case": "C4_23",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 0.2346637639695421,
+   "dndt": 4.5261452112757485,
+   "dseed": 2.326121925925772,
+   "converged": true,
+   "inliers": 1594
+  },
+  {
+   "case": "C4_23",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 0.7407825818393837,
+   "dndt": 3.9059700070799597,
+   "dseed": 1.8245636566898515,
+   "converged": true,
+   "inliers": 1661
+  },
+  {
+   "case": "C4_23",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 0.7719542748878249,
+   "dndt": 3.754473813540597,
+   "dseed": 1.6564789915908833,
+   "converged": true,
+   "inliers": 1577
+  },
+  {
+   "case": "C4_24",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 0.17576618514661663,
+   "dndt": 4.481135670962549,
+   "dseed": 2.4233464309688353,
+   "converged": false,
+   "inliers": 1627
+  },
+  {
+   "case": "C4_24",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 5.2329455198075925,
+   "dndt": 0.9647926700494054,
+   "dseed": 3.0128529426641046,
+   "converged": true,
+   "inliers": 2219
+  },
+  {
+   "case": "C4_24",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 4.545354053141895,
+   "dndt": 0.23903569573539876,
+   "dseed": 2.3073513260823617,
+   "converged": false,
+   "inliers": 2147
+  },
+  {
+   "case": "C4_25",
+   "preset": "G0_AW_EQUIV",
+   "dproxy": 4.388481933135743,
+   "dndt": 4.454676043826876,
+   "dseed": 2.3301399121582063,
+   "converged": true,
+   "inliers": 2162
+  },
+  {
+   "case": "C4_25",
+   "preset": "G1_FAR_FROBENIUS",
+   "dproxy": 5.728100840530612,
+   "dndt": 5.706756401025457,
+   "dseed": 3.1385001590874015,
+   "converged": true,
+   "inliers": 2315
+  },
+  {
+   "case": "C4_25",
+   "preset": "G1_SPECTRUM",
+   "dproxy": 5.209374283168791,
+   "dndt": 5.179146027802964,
+   "dseed": 2.6125035021419727,
+   "converged": false,
+   "inliers": 2282
+  }
+ ]
+}

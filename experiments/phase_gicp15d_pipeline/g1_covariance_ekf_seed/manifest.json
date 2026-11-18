@@ -1,0 +1,42 @@
+{
+  "phase": "GICP15D_G1_C",
+  "date": "2026-11-18",
+  "branch": "dsh/gicp15d-pipeline",
+  "base_commit": "554312cc00490496f32b8714d362f0349f660534",
+  "production_repository_modified": false,
+  "far_lio": {
+    "revision": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+    "cpu_file": "lib_cpp/odometry_cpp/modules/map_handler/include/map_handler/map_handler_base.hpp:393-401",
+    "gpu_file": "lib_cpp/odometry_cpp/modules/map_handler/include/map_handler/map_utils.cuh:87-95",
+    "lambda": 0.001,
+    "config": "cov_regularization: FROBENIUS (config/far-lio.yml:160)"
+  },
+  "new_code": ["CovarianceMode::FAR_FROBENIUS", "farFrobeniusRegularize", "G1_FAR_FROBENIUS preset"],
+  "unit_checks": {"before": 48, "after": 63, "failures": 0},
+  "inputs": {
+    "cases": 26,
+    "distinct_headers": 26,
+    "with_proxy_reference": 8,
+    "c4_22_source_sha": "964d20dae94d6e6cdffbf37b72a3612db204c99970f9f697d39d8361ce1fbdc3",
+    "c4_22_target_sha": "cfff1a6ccb080d57cf30ae58999d052b2f6cdc79d661232487deb675cddebda4",
+    "proxy": "WALL_frames.csv ndt_x_good/ndt_y_good (PROXY_REFERENCE_NOT_GT)",
+    "seed": "requests.json seed_common (EKF pre-match request seed)",
+    "seed_provenance": "SEED_PROVENANCE_PARTIAL"
+  },
+  "results_by_proxy": {
+    "G0_AW_EQUIV": {"p50": 0.373, "mean": 0.880, "max": 4.388, "better_than_ndt": 5, "n": 8},
+    "G1_FAR_FROBENIUS": {"p50": 1.691, "mean": 2.561, "max": 5.728, "better_than_ndt": 3, "n": 8},
+    "G1_SPECTRUM": {"p50": 1.275, "mean": 1.945, "max": 5.209, "better_than_ndt": 3, "n": 8}
+  },
+  "consecutive_capture": {"frames": ["C4_22", "C4_23", "C4_24"], "g0_m": [0.390, 0.235, 0.176], "ndt_m": [4.503, 4.342, 4.308], "next_frame_failed": "C4_25 g0 4.388 vs ndt 0.226"},
+  "verdicts": {
+    "frobenius_implemented": "PASS",
+    "frobenius_benefit": "NO_GO_NEGATIVE",
+    "continuous_history_recovered": "PARTIAL",
+    "g0_capture": "PARTIAL",
+    "persistent_recovery": "NOT_DEMONSTRATED",
+    "g2_readiness": "NOT_YET",
+    "g1r_caliber": "CORRECTED"
+  },
+  "private_or_large_committed": false
+}
