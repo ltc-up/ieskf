@@ -1,0 +1,24 @@
+{
+  "phase": "G2 production GICP bridge",
+  "research_code_commit": "b162ea1d70bdabe16e68fba327cd8ed3aca872b9",
+  "parent_research_commit": "159868e",
+  "configuration_sha256": "32a865de959052fa1307ca76d3f3dd73e2f12219a837329b6ad461788a035211",
+  "configuration": {
+    "threads": 4,
+    "roi_reuse_m": 10,
+    "source_crop_m": [100, 35, 1, 15],
+    "target_radius_m": 120,
+    "correspondence_gate_m": 4,
+    "ekf_measurement": "6D fixed 0.5m 1deg",
+    "logical_latency_ns": 0
+  },
+  "input_sha256": {
+    "loop44_motion": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "loop44_bindings": "c83017c500212e17d00b3d5d397460a23bc52d91d9563ca9d91cfadcad35993a",
+    "target_map": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "temporary_reference_cache": "34ae17211da728991ac39037e83c3197473a1de346f035de037a7a99f7329fe4"
+  },
+  "data_version": "loop44 1468-frame frozen lap; AW temporary engineering-reference cache",
+  "reproducibility_conditions": "Host CUDA Deskew, four-thread production GICP adapter, PCL 1.14, Eigen 3.4, Python 3.12 with numpy/scipy; private data and existing NDT runs supplied separately",
+  "qualification": "research closed loop only; no certified absolute accuracy or strict 50 ms tail"
+}
