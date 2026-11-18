@@ -1,0 +1,25 @@
+# A realtime status — not qualified
+
+Matcher and independent Score service build successfully. GPU synthetic Score and original Align isolation tests passed. These tests do not establish a complete 50 ms cycle or actual 100 Hz state freshness.
+
+The measured production cycle must include unchanged original Align (max 35), both MAP starts, every total-MAP line-search evaluation, Source upload/Target/ROI handling, optional original/corrected Hessian diagnostics, P construction, rollback, logging and output commit. A1's current spatial-block service invokes many separate kernels/uploads and is an intentionally honest initial implementation, not a claimed realtime optimization. The callback service currently repeats Source upload and original/corrected evaluations per q; all overhead is included rather than hidden.
+
+The separate publisher can continue reading committed snapshots while callbacks execute, but CPU/GPU work may age those snapshots or delay causal input ingestion. An accelerated causal replay is not 100 Hz wallclock certification. P50/P95/P99/max complete-cycle latency, timeout/failure counts, state age, RSS and VRAM remain to be measured by the common runner. GPU experiments use one archive GPU lock and never run concurrently with B performance experiments.
+
+## Actual measured and pending qualifications
+
+Complete serial A1 cycles were measured over 7798 legal matches per map: 0105 P95 37.082 ms, maximum 60.355 ms, 8 cycles over 50 ms; 1013 P95 34.310 ms, maximum 59.513 ms, 2 over 50 ms. All rejected matches remain in these denominators. Neither map satisfies an unconditional 50 ms maximum, and serial scheduling cannot establish wallclock 100 Hz freshness. RSS maxima were approximately 612.5 MB / 624.9 MB and sampled GPU memory 1013 / 1136 MiB respectively.
+
+A separate `realtime_runner.py` uses actual availability-time delivery, one asynchronous GPU worker, bounded queues, immutable historical Sources and actual 100 Hz snapshot publication. It records all retry costs, end-to-end availability delay, explicit expired-history failures and runtime/binary hashes. Twenty-two unique CPU tests pass and the coordinator independently reviewed the harness. No actual realtime run has executed yet. A late input invalidating a previously committed geometric prior currently raises an explicit asynchronous-history-rebuild failure rather than silently reusing stale geometry. This is a qualification limitation and may produce a legitimate NO-GO.
+
+A2 serial full cycles also exceed the unconditional 50 ms maximum: 0105 P95/max 45.142/128.617 ms (86 over budget); 1013 44.296/124.076 ms (62 over budget). These failures remain included. Four independent actual-realtime configurations (A1/A2 × 0105/1013) have been prepared; the post-commit asynchronous historical rebuild limitation remains an explicit possible NO-GO, not hidden synchronous GPU work. No actual realtime completion is asserted.
+
+Actual ROS runs use isolated research DDS domain ROS_DOMAIN_ID=173 and ROS_LOCALHOST_ONLY=1; effective ROS environment is recorded in runtime_identity.json. This isolates the experimental /clock and publications from default-domain nodes without changing the measurement timestamps or algorithm. The first queued attempt was canceled before GPU lock acquisition and created no experiment prefix.
+
+## First executed actual ROS experiment: A1 0105
+
+The separate wallclock runner completed all 130–525 s inputs and 7798 legal matches, with 7229 accepted updates and no prior-version retries or changed runtime files. Real ROS published and loopback received 39501/39501 distinct scheduled packets in isolated DDS domain 173. The 501 UNINITIALIZED packets are exactly seq 0–500 before/at legal 135 s initialization; 600 STALE packets are a disjoint initialized health category, and 38400 packets are CURRENT. STALE spans start at seq3166 and extend intermittently through final seq39500; the full interval list is retained in the independent audit. All 17 slots late by more than 10 ms remain counted. State age P95/max was 10.3567/43.8341 ms, maximum scheduling lateness 15.0874 ms.
+
+Full cycles P95/max were 38.4125/95.0788 ms, with 15 of 7798 exceeding 50 ms. Complete publication therefore does not establish an unconditional 50 ms cycle or zero-stale 100 Hz guarantee. The experiment does not trigger the known post-commit rebuild limitation; that unsupported case remains unsupported.
+
+Independent pairwise audit found exact equality to the serial run for all 7798 Source hashes, Seeds and complete historical priors. The recorded current states differ because the actual realtime commit occurs after additional causal IMU/Wheel input has advanced the current checkpoint; direct current-to-current comparison is not a same-reference posterior comparison. There were 7229 one-covariance-update records and 569 zero-update records, with no prior hash binding mismatch. Actual initialized output age and deadlines are retained independently of serial positioning evidence. All six closed root JSONL files were SHA-roundtrip-verified and compressed without losing bytes.

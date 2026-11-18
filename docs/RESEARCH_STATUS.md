@@ -148,3 +148,8 @@ P0 conditional75ms gains with150ms reversal and normal5 regression; true CUDA146
 
 
 BD publication: committed locally on the new-volume independent branch; Git HTTPS authentication failed. No remote-access claim, force push or main modification. See PUBLICATION_STATUS.md in the phase directory.
+
+
+## KG-S3: partial research, no production adoption
+
+Completed two-map serial Score-MAP and independent local-motion studies; retained failures, severe local-chain drift and incomplete realtime/713 qualification. [KG-S3 final conclusion](../experiments/phase_kg_s3/FINAL_CONCLUSION.md).

@@ -1,0 +1,22 @@
+{
+  "status": "USER_APPROVED_RESEARCH_FREEZE",
+  "contract": {
+    "beta": 1.0,
+    "iterations": 3,
+    "step_cap": 0.2,
+    "step_min": 0.005,
+    "gll_window": 3,
+    "armijo": 0.0001,
+    "max_evaluations": 10,
+    "position_condition_scale_m": 0.5,
+    "rotation_condition_scale_rad": 0.05235987755982988,
+    "curvature_difference_step": 0.0001,
+    "calibrated": false,
+    "snap_guard_version": "continuous-euler-rate-bound-v1",
+    "snap_threshold_rad": 0.0001,
+    "path_subdivision_budget": 128
+  },
+  "sha256": "c679b6bfdcdd9d345d5110121439fbd5a79843c21a717da226120f3bedae84e1",
+  "reference_or_fitness_tuning": false,
+  "production_calibrated": false
+}

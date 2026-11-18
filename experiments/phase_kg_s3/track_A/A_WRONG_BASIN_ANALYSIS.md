@@ -1,0 +1,23 @@
+# Wrong-basin qualification — unresolved
+
+The current implementation preserves four candidates, including the original prior and unmodified Align, and scores them under one complete MAP objective. No reference chooses a candidate. This prevents silently discarding the prior start but does not prove that the true basin has the best MAP value. Positive H/greater support/optimizer convergence remain insufficient evidence of correctness.
+
+The scalar beta illustration shows that prior weight can suppress a useful 2 m correction. It also shows why increasing geometric weight can strengthen a wrong basin. Neither raw Score nor a fixed conditional information cap resolves ambiguous or biased correspondences. The complete own-feedback 0105 and 1013 runs are recorded in A_CONTINUOUS_RESULTS.md; independent reference-based first-error/continued-feedback/recovery and normal-turn classification remains required. No added small-displacement gate excludes a large correction.
+
+The conditional P cap is explicitly a research engineering model. Repeated biased observations can still accumulate overconfidence across time; temporal correlation and incorrect branch persistence remain material risks. Full 15×15 P, cross terms and all failures must be audited against the actual replay. There is no production GO claim.
+
+## Historical conditional probe protocol
+
+`conditional_old21.py` executed and produced a preserved result.json. It binds the exact historical 2601-point Source at 517.936350068 s, captured Target and request-21 record using SHA identities. It solves from only the approved Prior and fresh original Align. The old saved near-correct candidate is subsequently evaluated under the same frozen F, strictly as a posthoc probe; it never initializes or selects an online branch. A same-frame archived 4–5 m wrong candidate has not been identified and remains UNKNOWN rather than synthesized from a reference.
+
+The KG-S2 old-branch prior uses model velocity, zero biases and default P. It is not the mature historical ESKF prior/P. Any retained roughly 2 m correction in this experiment will therefore remain conditional evidence, not proof of actual continuous recovery. The two full A2 runs must first establish their genuine own-feedback behavior.
+
+## Executed historical conditional probe
+
+The actual unchanged Align reported Fitness 20.86761. A2 accepted Align-refined under beta=1 and retained 1.9762459 m lateral correction in original Seed body coordinates, ending 0.004986 m from the saved near-correct candidate. The four total objectives were Prior −1735.04677, Align −5463.27391, Prior-refined −2128.09070 and Align-refined −5464.67214. The selected Score was 5466.95429 over 3917 pairs; prior quadratic 4.56430 contributes +2.28215, geometric contribution −5466.95429. The saved near candidate was evaluated only afterward (F=−5463.27396), not supplied to optimization or selection.
+
+All four same-input original/repaired comparisons retain identical Score and gradient; both Hessians and Newton directions are archived. Full P is explicitly conditional and uncalibrated. Total diagnostic wall cost 274.872 ms includes additional posthoc probes, so it is not a regular complete-cycle benchmark. This shows the original-Score A2 can preserve a useful large correction under this model prior; it does not prove mature-P recovery or avoidance of a same-frame 4–5 m wrong basin, for which an authenticated saved candidate remains unavailable. No reference-selected initialization, synthetic wrong candidate or continuous-accuracy claim was introduced.
+
+## Adjacent true wrong-candidate material
+
+C4_22 is authenticated separately at bag 517.986342260 s / old profiling 396.999993344 s, not the 713 s passage and not old21 at 517.936 s. Its captured 2499-point Source, 98213-point Target, Seed, actual original CUDA wrong candidate and request settings are available; historical engineering comparison is approximately 4.506 m and is not independent truth. The KG-S2 second record has the same Source hash and Seed, but no saved full 15D prior/P. Only its preceding first record contains the conditional model prior. The evolved KG-S2 graph states/covariances belong to a different conditional model and cannot be substituted as original captured priors. No authenticated mature same-frame 15D prior/P or equivalent full causal reconstruction was found in the examined archives. Consequently a same-input full-P A2 wrong-basin result remains NOT EXECUTED; no adjacent prior transplant or new model prior has been fabricated. A new conditional prior definition would require separate explicit agreement.

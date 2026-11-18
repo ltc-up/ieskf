@@ -116,3 +116,8 @@ Independent AY-based branch. Verified distinct step/objective epsilons and step-
 ### BD result: safe rejection policy NOT ESTABLISHED
 
 P0 conditional75ms gains with150ms reversal and normal5 regression; true CUDA1468/4134 retained. Independent KD-tree2×2 and exact-radius oracle completed; NO-GO replacingDIRECT7 (normal8/history basin regressions). Original15D delayed counterfactual baseline exactly reproduces;30-frame rejection cases quantify drift/reentry, full prediction-only fails. HEALTHY necessary checks do not certify peaks; no new final gate admitted. Automatic global recovery NO-GO. [Final conclusion](../experiments/phase_bd_ndt_health_bridge/FINAL_CONCLUSION.md).
+
+
+## KG-S3: partial research, no production adoption
+
+Completed two-map serial Score-MAP and independent local-motion studies; retained failures, severe local-chain drift and incomplete realtime/713 qualification. [KG-S3 final conclusion](../experiments/phase_kg_s3/FINAL_CONCLUSION.md).

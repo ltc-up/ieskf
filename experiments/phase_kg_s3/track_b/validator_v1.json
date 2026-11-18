@@ -1,0 +1,14 @@
+{
+  "name": "B-engineering-validator-v1",
+  "statistically_calibrated": false,
+  "minimum_target_valid_voxels": 20,
+  "minimum_distinct_neighbor_source_points": 100,
+  "minimum_distinct_neighbor_source_fraction": 0.1,
+  "translation_innovation_at_50ms_m": 1.0,
+  "rotation_innovation_at_50ms_deg": 5.0,
+  "maximum_dt_scale": 2.0,
+  "require_candidate_valid": true,
+  "require_converged": true,
+  "source_support_field": "neighbor_points",
+  "rejected_proposals": "preserve; use independent prediction; store true immediately preceding scan"
+}

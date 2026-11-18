@@ -1,0 +1,24 @@
+{
+  "predictor": "KINEMATIC_BK",
+  "legacy_predictor": "LEGACY_15D_DIFF",
+  "target_axis": [
+    "PREVIOUS",
+    "ROLLING",
+    "KEYFRAME"
+  ],
+  "bias_base_rad_s": [
+    0,
+    0,
+    0
+  ],
+  "imu_max_hold_ns": 25000000,
+  "wheel_max_hold_ns": 100000000,
+  "body_velocity": "[recorded wheel base linear.x,0,0]",
+  "integration": "interval from I, exact constant-body-twist SE3, union admitted measurement headers, ZOH",
+  "initialization": "fixed H_init=legacy first legal O0 inverse(Ukin(firstRef)); no later Legacy/global reads",
+  "delay": "retry only on actual next input available; retain original source; preserve both availability times; no new timeout",
+  "gap": "only complete original header audit can prove irrecoverable input gap",
+  "resource": "maximum_motion_samples=1024; maximum_pending_frames=10; pending bytes=128MiB; total B branch disk cap=2GiB; RESOURCE_FAILURE distinct from GAP",
+  "new_slip_detector": false,
+  "statistical_covariance": false
+}
