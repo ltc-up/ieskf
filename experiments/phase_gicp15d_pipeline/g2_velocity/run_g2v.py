@@ -9,6 +9,7 @@ import numpy as np
 from geometry_ieskf.optical_velocity import OpticalVelocity
 from velocity_replay import VelocityReplay
 from runtime_journal import Journal, journal_json
+from g2e_health import PoseHealth
 
 
 parser = argparse.ArgumentParser()
@@ -21,7 +22,15 @@ parser.add_argument('--window', default='lap')
 parser.add_argument('--limit', type=int)
 parser.add_argument('--prune-geometry', action='store_true',
                     help='Remove per-frame Deskew geometry after its hash and GICP result are recorded')
+parser.add_argument('--g2e-gate', action='store_true')
+parser.add_argument('--g2e-yaw-variance-scale', type=float, default=1.)
+parser.add_argument('--g2e-recovery', action='store_true')
+parser.add_argument('--g2e-continue-loss', action='store_true')
+parser.add_argument('--g2e-inject-frame', type=int)
+parser.add_argument('--g2e-drop-start', type=int)
+parser.add_argument('--g2e-drop-count', type=int, default=0)
 args = parser.parse_args()
+assert args.g2e_yaw_variance_scale > 0
 assert not args.private.exists()
 args.private.mkdir(parents=True)
 
@@ -58,6 +67,27 @@ program = program.replace(' for i,job in enumerate(jobs):',
                           ' gc.collect();gc.freeze()\n for i,job in enumerate(jobs):')
 program = program.replace('prior=dict(p=prior.p.tolist(),',
                           'prior=dict(v=prior.v.tolist(),bg=prior.bg.tolist(),ba=prior.ba.tolist(),p=prior.p.tolist(),')
+program = program.replace('components=(',
+                          "health=PoseHealth(lever,a.g2e_gate,a.g2e_recovery,a.g2e_yaw_variance_scale);health_log=Journal(a.private/'g2e_health.jsonl',True);components=(", 1)
+needle = "ndt=json.loads(line);T=np.array(ndt['final']);latency="
+assert program.count(needle) == 1
+program = program.replace(needle, """ndt=json.loads(line);T=np.array(ndt['final'])
+   if a.g2e_inject_frame==i:
+    T=T.copy();T[0,3]+=3.;T[:3,:3]=T[:3,:3]@Rotation.from_euler('z',4,degrees=True).as_matrix();ndt['final']=T.tolist()
+   if a.g2e_drop_start is not None and a.g2e_drop_start<=i<a.g2e_drop_start+a.g2e_drop_count:ndt['converged']=False
+   if ndt['converged'] and ndt['candidate_valid']:
+    proposed_R=pose_covariance(ndt,components,prior);g2e_ok,g2e_R,g2e_diag=health.check(prior,Q,T,proposed_R,ref)
+    health_log.append(dict(index=i,header_ns=ref,**g2e_diag,gate_accepted=g2e_ok))
+   else:health_log.append(dict(index=i,header_ns=ref,reason='MATCH_INVALID',state=health.state(ref),gate_accepted=False))
+   latency=""")
+program = program.replace("if a.mode!='E' and ndt['converged'] and ndt['candidate_valid']:",
+                          "if a.mode!='E' and ndt['converged'] and ndt['candidate_valid'] and g2e_ok:")
+program = program.replace("else:update=dict(accepted=False,reason='NDT_NOT_CONVERGED_OR_INVALID')",
+                          "else:update=dict(accepted=False,reason='POSE_HEALTH_REJECTED' if ndt['converged'] and ndt['candidate_valid'] else 'NDT_NOT_CONVERGED_OR_INVALID')")
+program = program.replace('Rv=pose_covariance(ndt,components,prior);projection=None',
+                          'Rv=g2e_R;projection=None')
+program = program.replace("  if update['accepted']:\n", "  health.record(ref,update['accepted'])\n  if update['accepted']:\n", 1)
+program = program.replace("if a.stop_loss is not None and a.mode", "if a.stop_loss is not None and not a.g2e_continue_loss and a.mode")
 needle = "print(a.mode,i+1,update['reason'],flush=True)"
 assert program.count(needle) == 1
 program = program.replace(needle, needle + "\n  if a.prune_geometry:\n   poses.unlink(missing_ok=True);path.unlink(missing_ok=True)\n   for key in ('native_xyzi','common_xyzi'):\n    if key in ds:Path(ds[key]).unlink(missing_ok=True)")
@@ -65,7 +95,7 @@ program = program.replace('replay.ingest(e);after=replay.current()[0]',
                           "replay.ingest(e);after=replay.current()[0]\n   if e['kind'] in ('wheel','optical'):velocity_log.append(dict(kind=e['kind'],header_ns=e['header_ns'],source=e.get('selected_vx_source'),update=e.get('last_update',{}),observed_velocity=e.get('velocity'),wheel_speed=e.get('speed')))")
 namespace = dict(__name__='g2v_runner', gc=gc, Journal=Journal,
                  journal_json=journal_json, VelocityReplay=VelocityReplay,
-                 OpticalVelocity=OpticalVelocity, np=np)
+                 OpticalVelocity=OpticalVelocity, PoseHealth=PoseHealth, np=np)
 exec(compile(program, str(source), 'exec'), namespace)
 namespace['pose_covariance'] = lambda ndt, components, prior: np.diag([
     .25 if component in ('x', 'y', 'z') else np.deg2rad(1.)**2
@@ -77,5 +107,8 @@ args.position_only = False
 namespace['main'](args)
 summary = json.loads(args.output.read_text())
 summary.update(velocity_policy=args.policy, actual_raw_optical=args.policy != 'A',
-               lidar_R_unchanged=True, full_6d_pose=True)
+               lidar_R_unchanged=not args.g2e_recovery and args.g2e_yaw_variance_scale==1.,
+               full_6d_pose=True, g2e_gate=args.g2e_gate,
+               g2e_yaw_variance_scale=args.g2e_yaw_variance_scale,
+               g2e_recovery=args.g2e_recovery)
 args.output.write_text(json.dumps(summary, indent=2) + '\n')

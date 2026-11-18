@@ -1,0 +1,30 @@
+{
+  "phase": "G2-E",
+  "base_research_commit": "16fbf7a",
+  "research_code_commit": "this phase commit; see Git history",
+  "code_sha256": {
+    "experiments/phase_gicp15d_pipeline/g2_velocity/run_g2v.py": "df91e630e1e174855d287bdd5ae0786fc0fc5bebb2dd82e0a7854c4568e1450e",
+    "experiments/phase_gicp15d_pipeline/g2_velocity/g2e_health.py": "bcd5170658d27a778455ef05b93dec1202ce31639e685454abe36f86235f148d",
+    "experiments/phase_gicp15d_pipeline/g2_velocity/analyze_g2e.py": "334aa7e6dbcb5b2dd9716ad8f7406a559f9924a2839d2889ee0627d269588144",
+    "experiments/phase_gicp15d_pipeline/g2_velocity/analyze_g2e_fault.py": "66bf7158be00d3cef98f601a0e4c6b177e262c978db9b94f533a066e33339db1",
+    "tests/test_g2e_health.py": "46a7faa9a2d79818e7fe2f4dabeefe22b21ed9394ace518fa55a8c99170bd94b"
+  },
+  "configuration": "C, full 6D GICP R translation .25m2 attitude (1deg)^2, four matcher threads, ROI10m; NIS6 22.457744, marginal NIS3 diagnostics, physical 5m/5deg, recovery gap .5s R 4,2,2; yaw scale .5 A/B; raw_valid_0.075 engineering reference",
+  "configuration_sha256": "df90681338ec26af3b4f7bea51322af5577354a80fc2d88cc4ea118dba14e930",
+  "data_version": "loop44 continuous three-lap binding, 4134 native LiDAR headers; full filtered Kistler events 20865",
+  "input_identities": {
+    "motion_manifest_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "map_binary_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "filtered_optical_sha256": "a8ae6025abd3be15f9a9daf97b0749b735df2f4e30486f9761a2a9fab5ee91f2",
+    "reference_75ms_raw_converted_sha256": "cf88cf3ac71d75ee406a2320afad1641828a446d776fb3395ca4b2af4ae9afc6"
+  },
+  "private_run_transactions_sha256": {
+    "base": "5a68949834090f5ea0daed26836dbdef72f5faada39359dbf30fccdf3f5a605e",
+    "gate": "39cfdcebfe8de3f4c98185498a2f1e582e9639bac107d7b45e51269d35293a40",
+    "yaw": "92c17d5f665bc1dd3a44f73d091927ca8f57f2453f27a4d9dc79455cba9dc2a4",
+    "eager_recovery_failed": "319338603346a05b63a49c438421ccc909b35f44903f03abbe6c4ca1aa2b0870",
+    "strict_recovery": "05a40e8e72ef269e6dd955ef509bc48f19e5f8d491bd2be0b73982fd7c63849f"
+  },
+  "reproduction": "Authorized private inputs and host CUDA required; see RESULTS.md. Original payloads and per-frame transactions excluded.",
+  "qualification": "Exploratory engineering-reference comparison only; independent accuracy and ROS hard realtime unqualified"
+}

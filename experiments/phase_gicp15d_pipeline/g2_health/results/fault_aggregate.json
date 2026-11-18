@@ -1,0 +1,60 @@
+{
+  "fault": "one frame +3m x and +4deg yaw at 800; 45 forced missing poses at 820..864",
+  "runs": {
+    "unguarded": {
+      "frames": 900,
+      "stop_reason": null,
+      "injected_frame_accepted": true,
+      "injected_frame_reason": "EXTERNAL_POSE_UPDATE",
+      "accepted_after_loss": 34,
+      "first_reaccepted_frame": 865,
+      "max_accepted_gap_s": 2.299716256,
+      "xy_rmse_before": 0.28275664751428814,
+      "xy_at_fault": 0.253610059332338,
+      "xy_rmse_gap": 1.0479842191872766,
+      "xy_rmse_after": 0.43805172652548313,
+      "health_states": {
+        "TRACKING": 825,
+        "DEGRADED": 69,
+        "LOST": 6
+      },
+      "gate_reasons": {
+        "PASS": 824,
+        "MATCH_INVALID": 75,
+        "NIS_GATE": 1
+      },
+      "R_factors": {
+        "1.0": 900
+      }
+    },
+    "guarded": {
+      "frames": 900,
+      "stop_reason": null,
+      "injected_frame_accepted": false,
+      "injected_frame_reason": "POSE_HEALTH_REJECTED",
+      "accepted_after_loss": 34,
+      "first_reaccepted_frame": 865,
+      "max_accepted_gap_s": 2.299716256,
+      "xy_rmse_before": 0.28275664751428814,
+      "xy_at_fault": 0.2682781059211937,
+      "xy_rmse_gap": 1.0276463752232332,
+      "xy_rmse_after": 0.5010364415289194,
+      "health_states": {
+        "TRACKING": 823,
+        "DEGRADED": 69,
+        "LOST": 6,
+        "RECOVERING": 2
+      },
+      "gate_reasons": {
+        "PASS": 825,
+        "MATCH_INVALID": 74,
+        "NIS_GATE": 1
+      },
+      "R_factors": {
+        "1.0": 897,
+        "4.0": 1,
+        "2.0": 2
+      }
+    }
+  }
+}
