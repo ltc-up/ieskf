@@ -7,6 +7,7 @@
 #include <cstring>
 #include <fstream>
 #include <iostream>
+#include <limits>
 #include <string>
 #include <random>
 #include <vector>
@@ -410,6 +411,101 @@ void testProbeCostContract()
     out.information.cost, out.probes.size());
 }
 
+void testFarFrobeniusRegularization()
+{
+  using Eigen::Matrix3d;
+  const double lambda = 1.0e-3;
+
+  // 1. Closed form on a diagonal covariance: C_far = ||(C+lambda I)^-1||_F * (C+lambda I)
+  Matrix3d C = Matrix3d::Zero();
+  C.diagonal() << 4.0, 0.25, 0.01;
+  const Matrix3d C0 = C + lambda * Matrix3d::Identity();
+  const double kExpected = C0.inverse().norm();
+  const Matrix3d expected = kExpected * C0;
+  const Matrix3d got = gicp15d::farFrobeniusRegularize(C, lambda);
+  check((got - expected).cwiseAbs().maxCoeff() < 1e-12,
+    "FROBENIUS matches the closed form on a diagonal covariance");
+  // and it matches the literal FAR-LIO expression evaluated independently
+  const Matrix3d inv = C0.inverse();
+  const Matrix3d lit = (inv / inv.norm()).inverse();
+  check((got - lit).cwiseAbs().maxCoeff() < 1e-12,
+    "FROBENIUS matches the literal inverse/normalise/inverse expression");
+
+  // 2. Rotation equivariance: C_far(R C R^T) == R C_far(C) R^T
+  const Matrix3d R = Eigen::AngleAxisd(0.7, Eigen::Vector3d(1.0, 2.0, 3.0).normalized())
+    .toRotationMatrix();
+  const Matrix3d rot_got = gicp15d::farFrobeniusRegularize(R * C * R.transpose(), lambda);
+  // The operation is provably isotropic (adding lambda*I and normalising by the
+  // Frobenius norm both commute with rotations), so the only residual is double
+  // round-off. Compare relatively: |C_far| here is O(1e2), so an absolute 1e-12
+  // bound would be below one ulp.
+  const double scale = std::max(1.0, got.cwiseAbs().maxCoeff());
+  check((rot_got - R * got * R.transpose()).cwiseAbs().maxCoeff() <= 1e-13 * scale,
+    "FROBENIUS is equivariant under an orthogonal rotation");
+
+  // 3. Positive definiteness, symmetry, finiteness on a degenerate planar patch
+  Matrix3d planar = Matrix3d::Zero();
+  const Eigen::Vector3d n = Eigen::Vector3d(0.3, -0.4, 0.866).normalized();
+  planar = Eigen::Matrix3d::Identity() - n * n.transpose();  // rank 2, zero along n
+  const Matrix3d pf = gicp15d::farFrobeniusRegularize(planar, lambda);
+  check(pf.allFinite(), "FROBENIUS output is finite for a rank-2 patch");
+  check((pf - pf.transpose()).cwiseAbs().maxCoeff() < 1e-15, "FROBENIUS output is symmetric");
+  Eigen::SelfAdjointEigenSolver<Matrix3d> es(pf);
+  check(es.eigenvalues()(0) > 0.0, "FROBENIUS output is positive definite for a rank-2 patch");
+  // The normal direction must stay the least-weighted axis.
+  check(std::abs(es.eigenvectors().col(0).dot(n)) > 0.999,
+    "FROBENIUS preserves the plane normal as the smallest axis");
+
+  // 4. Near-zero covariance and a single noisy axis still give a PD result.
+  Matrix3d tiny = 1e-14 * Matrix3d::Identity();
+  const Matrix3d tf = gicp15d::farFrobeniusRegularize(tiny, lambda);
+  check(tf.allFinite() && tf(0, 0) > 0.0, "FROBENIUS survives a near-zero covariance");
+  Matrix3d line = Matrix3d::Zero();
+  line(0, 0) = 9.0;
+  const Matrix3d lf = gicp15d::farFrobeniusRegularize(line, lambda);
+  check(lf.allFinite(), "FROBENIUS survives a rank-1 covariance");
+  Eigen::SelfAdjointEigenSolver<Matrix3d> es2(lf);
+  check(es2.eigenvalues()(0) > 0.0, "FROBENIUS output is PD for a rank-1 covariance");
+
+  // 5. Invalid input is refused rather than silently propagated.
+  check(gicp15d::farFrobeniusRegularize(Matrix3d::Constant(
+      std::numeric_limits<double>::quiet_NaN()), lambda) == Matrix3d::Identity(),
+    "FROBENIUS rejects a non-finite covariance");
+
+  std::printf("[ok] FAR-LIO FROBENIUS regularisation (k=%.6f)\n", kExpected);
+}
+
+void testFrobeniusCloudMode()
+{
+  // The cloud-level mode must differ from G0 on the same cloud, and G0 must not move.
+  auto c = makeCorridor();
+  auto tree = std::make_shared<gicp15d::KdTree>(c, small_gicp::KdTreeBuilderOMP(1));
+
+  auto unit = std::make_shared<gicp15d::Cloud>(*c);
+  gicp15d::estimateCovariances(
+    *unit, *tree, 20, gicp15d::CovarianceMode::SMALL_GICP_UNIT, 1e-3, 1);
+  auto fro = std::make_shared<gicp15d::Cloud>(*c);
+  auto fro_stats = gicp15d::estimateCovariances(
+    *fro, *tree, 20, gicp15d::CovarianceMode::FAR_FROBENIUS, 1e-3, 1);
+
+  bool unit_unchanged = true;
+  bool fro_all_pd = true;
+  bool differs = false;
+  for (std::size_t i = 0; i < c->size(); i += 13) {
+    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> eu(unit->cov(i).block<3, 3>(0, 0));
+    if (std::abs(eu.eigenvalues()(0) - 1e-3) > 1e-9) {unit_unchanged = false;}
+    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> ef(fro->cov(i).block<3, 3>(0, 0));
+    if (!(ef.eigenvalues()(0) > 0.0)) {fro_all_pd = false;}
+    if ((fro->cov(i) - unit->cov(i)).cwiseAbs().maxCoeff() > 1e-9) {differs = true;}
+  }
+  check(unit_unchanged, "G0 SMALL_GICP_UNIT spectrum is unchanged by the new mode");
+  check(fro_all_pd, "every FROBENIUS cloud covariance is positive definite");
+  check(differs, "FROBENIUS differs from G0 on the same cloud");
+  check(std::isfinite(fro_stats.condition_median), "FROBENIUS cloud stats are finite");
+  std::printf("[ok] FROBENIUS cloud mode (cond %.1f vs unit %.1f)\n",
+    fro_stats.condition_median, 1000.0);
+}
+
 }  // namespace
 
 int main()
@@ -422,6 +518,8 @@ int main()
   testEndToEndRecovery();
   testFailureModes();
   testProbeCostContract();
+  testFarFrobeniusRegularization();
+  testFrobeniusCloudMode();
 
   std::printf("%d checks, %d failures\n", g_checks, g_failures);
   return g_failures == 0 ? 0 : 1;

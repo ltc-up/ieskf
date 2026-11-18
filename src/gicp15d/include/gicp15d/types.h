@@ -37,6 +37,11 @@ enum class CovarianceMode {
   /// floor_ratio * lambda_max. Avoids collapsing a genuinely 3-D
   /// neighbourhood into a unit-scale planar disc.
   SPECTRUM_FLOOR = 1,
+  /// FAR-LIO "FROBENIUS" regularisation (config/far-lio.yml:160, default SVD):
+  ///   C = cov + lambda*I,  C_far = (C^-1 / ||C^-1||_F)^-1,  lambda = 1e-3
+  /// See lib_cpp/odometry_cpp/modules/map_handler/include/map_handler/
+  /// map_handler_base.hpp:393-401 (CPU) and map_utils.cuh:87-95 (GPU, same math).
+  FAR_FROBENIUS = 2,
 };
 
 /// Which cloud the covariances are estimated on.

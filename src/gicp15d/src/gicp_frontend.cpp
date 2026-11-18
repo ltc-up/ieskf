@@ -69,7 +69,12 @@ std::string jsonEscape(const std::string & s)
 
 const char * covarianceModeName(CovarianceMode mode)
 {
-  return mode == CovarianceMode::SMALL_GICP_UNIT ? "small_gicp_unit" : "spectrum_floor";
+  switch (mode) {
+    case CovarianceMode::SMALL_GICP_UNIT: return "small_gicp_unit";
+    case CovarianceMode::SPECTRUM_FLOOR: return "spectrum_floor";
+    case CovarianceMode::FAR_FROBENIUS: return "far_frobenius";
+  }
+  return "unknown";
 }
 
 const char * robustKernelName(RobustKernel kernel)
@@ -162,6 +167,10 @@ FrontendConfig GicpFrontend::preset(const std::string & name)
     base.robust_kernel = RobustKernel::GEMAN_MCCLURE;
     base.robust_scale_m = 1.0;
     base.robust_scale_adaptive = false;
+    return base;
+  }
+  if (name == "G1_FAR_FROBENIUS") {
+    base.covariance_mode = CovarianceMode::FAR_FROBENIUS;
     return base;
   }
   if (name == "G1_SPECTRUM") {

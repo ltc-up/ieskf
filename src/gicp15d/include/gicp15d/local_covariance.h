@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: MIT
 #pragma once
 
+#include <Eigen/Core>
+
 #include <small_gicp/ann/kdtree.hpp>
 #include <small_gicp/points/point_cloud.hpp>
 
@@ -22,6 +24,12 @@ struct CovarianceStats
   double effective_floor_median = 0.0;
   double condition_median = 0.0;
 };
+
+/// FAR-LIO FROBENIUS regularisation of one 3x3 local covariance:
+///   C = cov + lambda*I,  C_far = (C^-1 / ||C^-1||_F)^-1
+/// With lambda > 0 this equals || (cov+lambda I)^-1 ||_F * (cov + lambda I).
+/// Returns Identity if the result is not finite.
+Eigen::Matrix3d farFrobeniusRegularize(const Eigen::Matrix3d & cov, double lambda);
 
 /// Estimate per-point normals and 3x3 covariances in place.
 ///

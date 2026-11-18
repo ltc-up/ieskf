@@ -61,6 +61,14 @@ Feature computeFeature(
   }
 
   Eigen::Vector3d values;
+  if (mode == CovarianceMode::FAR_FROBENIUS) {
+    f.cov = farFrobeniusRegularize(cov, 1.0e-3);
+    Eigen::SelfAdjointEigenSolver<Eigen::Matrix3d> es2(f.cov);
+    f.lmax = es2.eigenvalues()(2);
+    f.lmin = es2.eigenvalues()(0);
+    f.ok = true;
+    return f;
+  }
   if (mode == CovarianceMode::SMALL_GICP_UNIT) {
     values << 1.0e-3, 1.0, 1.0;
   } else {
@@ -84,6 +92,18 @@ double medianOf(std::vector<double> v)
 }
 
 }  // namespace
+
+Eigen::Matrix3d farFrobeniusRegularize(const Eigen::Matrix3d & cov, double lambda)
+{
+  if (!cov.allFinite() || !(lambda > 0.0)) {return Eigen::Matrix3d::Identity();}
+  const Eigen::Matrix3d c = cov + lambda * Eigen::Matrix3d::Identity();
+  const Eigen::Matrix3d inv = c.inverse();
+  const double fro = inv.norm();  // Eigen .norm() on a matrix is Frobenius
+  if (!(fro > 0.0) || !std::isfinite(fro)) {return Eigen::Matrix3d::Identity();}
+  Eigen::Matrix3d out = (inv / fro).inverse();
+  if (!out.allFinite()) {return Eigen::Matrix3d::Identity();}
+  return 0.5 * (out + out.transpose());
+}
 
 CovarianceStats estimateCovariances(
   small_gicp::PointCloud & cloud, KdTree & tree, int num_neighbors,
