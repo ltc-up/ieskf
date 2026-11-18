@@ -121,3 +121,7 @@ P0 conditional75ms gains with150ms reversal and normal5 regression; true CUDA146
 ## KG-S3: partial research, no production adoption
 
 Completed two-map serial Score-MAP and independent local-motion studies; retained failures, severe local-chain drift and incomplete realtime/713 qualification. [KG-S3 final conclusion](../experiments/phase_kg_s3/FINAL_CONCLUSION.md).
+
+## G2 production GICP bridge — loop44 own-state replay
+
+Reused the production `lidar_ndt::GicpRegistration` through an offline JSONL bridge. Host-GPU CUDA Deskew and 15D self-feedback completed 1468/1468 frames. GICP accepted 1406 observations; temporary-reference XY RMSE 2.469 m and lateral RMSE 0.361 m versus archived NDT Legacy 2.622/0.295 m. A position-only observation A/B lost matching by frame 394; retained 6D feedback. Ten-metre ROI target reuse cut matcher p50 30.90→4.60 ms and frame p95 62.86→48.96 ms without a material trajectory change. Strict 50 ms tail and lateral precision remain unqualified. [Results](../experiments/phase_gicp15d_pipeline/g2_production_bridge/RESULTS.md).

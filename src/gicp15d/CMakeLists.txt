@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16)
-project(gicp15d LANGUAGES CXX)
+project(gicp15d LANGUAGES C CXX)
 
 # Independent GICP-15D research module (Phase G1).
 # Not part of the production a2rl_localization colcon build.
@@ -47,6 +47,25 @@ target_link_libraries(gicp15d_frontend PRIVATE gicp15d_core)
 
 add_executable(gicp15d_g0_service src/g0_service_main.cpp)
 target_link_libraries(gicp15d_g0_service PRIVATE gicp15d_core)
+
+# Offline JSONL bridge around the unmodified production lidar_ndt matcher.
+option(BUILD_PRODUCTION_GICP_SERVICE "Build production GICP replay bridge" OFF)
+set(LIDAR_NDT_SOURCE_DIR "" CACHE PATH "Path to the production lidar_ndt source directory")
+if(BUILD_PRODUCTION_GICP_SERVICE)
+  if(NOT EXISTS "${LIDAR_NDT_SOURCE_DIR}/src/gicp_registration.cpp")
+    message(FATAL_ERROR "Set -DLIDAR_NDT_SOURCE_DIR to the existing lidar_ndt source directory")
+  endif()
+  find_package(PCL REQUIRED COMPONENTS common io filters registration search)
+  add_executable(gicp15d_production_service
+    src/production_service_main.cpp
+    ${LIDAR_NDT_SOURCE_DIR}/src/gicp_registration.cpp)
+  target_include_directories(gicp15d_production_service PRIVATE
+    ${LIDAR_NDT_SOURCE_DIR}/include ${SMALL_GICP_INCLUDE} ${PCL_INCLUDE_DIRS})
+  target_link_libraries(gicp15d_production_service PRIVATE
+    gicp15d_core ${PCL_LIBRARIES} OpenMP::OpenMP_CXX)
+  target_compile_definitions(gicp15d_production_service PRIVATE LIDAR_NDT_SMALL_GICP)
+  target_compile_options(gicp15d_production_service PRIVATE ${PCL_DEFINITIONS})
+endif()
 
 add_executable(gicp15d_tests tests/run_tests.cpp)
 target_link_libraries(gicp15d_tests PRIVATE gicp15d_core)

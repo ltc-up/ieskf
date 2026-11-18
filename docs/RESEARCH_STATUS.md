@@ -153,3 +153,7 @@ BD publication: committed locally on the new-volume independent branch; Git HTTP
 ## KG-S3: partial research, no production adoption
 
 Completed two-map serial Score-MAP and independent local-motion studies; retained failures, severe local-chain drift and incomplete realtime/713 qualification. [KG-S3 final conclusion](../experiments/phase_kg_s3/FINAL_CONCLUSION.md).
+
+## G2 production matcher closed loop
+
+Production `GicpRegistration` now runs behind a research-only replay bridge with unchanged small_gicp, 15D propagation, and G0 engineering Q/R. The 1468-frame loop44 host-GPU replay completed with 1406 accepted observations and a 0.150 s maximum acceptance gap. Temporary-reference XY RMSE 2.469 m beats archived NDT Legacy 2.622 m, but lateral RMSE 0.361 m is worse than Legacy 0.295 m. Position-only observation feedback failed at frame 394, supporting retention of full 6D updates. ROI reuse yields a large runtime benefit (frame p95 48.96 ms versus 62.86 ms) with the same 1406 acceptances, but p99 61.19 ms exceeds 50 ms. Functional research GO; production accuracy and hard real-time NO-GO. Investigate persistent lateral differences in frames 1254–1405 using independent reference and matched timing; do not tune Q/R from this proxy. [Report](../experiments/phase_gicp15d_pipeline/g2_production_bridge/RESULTS.md).
