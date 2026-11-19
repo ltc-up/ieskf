@@ -1,0 +1,34 @@
+{
+  "phase": "G2-E2",
+  "base_research_commit": "397b052",
+  "research_code_commit": "this phase commit; see Git history",
+  "code_sha256": {
+    "experiments/phase_gicp15d_pipeline/g2_velocity/run_g2v.py": "5d064c9d9ce1ec2047020ca8a9466f61a11f9652153ad46c4df945d5c02b5e03",
+    "experiments/phase_gicp15d_pipeline/g2_velocity/g2e_health.py": "ef865196517b41db15cadac40365978ea00a833f942811e91c400b1aab090e14",
+    "experiments/phase_gicp15d_pipeline/g2_velocity/g2e2_health.py": "d50153d26fe1950b98b074eb2845fa04d89f158879f051255fd7fa1863d96271",
+    "experiments/phase_gicp15d_pipeline/g2_velocity/analyze_g2e2.py": "9b8a6b584347bdef84a150a99c0362d7f955fe5526b4900503832c638e37be34",
+    "tests/test_g2e2_health.py": "0085f76f5797eae93ff3979ea14ecb71f8af1f1e724522d88aad5ecea9526071"
+  },
+  "configuration": "C; 4134 frames; full 6D GICP; R position .25m2 orientation (1deg)^2; NIS6 22.457744; pose physical 5m/5deg; old R 4,2,2 vs E2 base R 1; sensor health IMU 25ms vx/vy 100ms; fault frame800 +3m x +4deg yaw, pose drop820-864, speed drop820-864; engineering raw_valid_0.075",
+  "configuration_sha256": "7419000b50179659bc0e977a67d952f428c0cdd58c6b8c9048222987a6802b99",
+  "data_version": "loop44 continuous three-lap binding, 4134 native LiDAR headers; full filtered Kistler events 20865",
+  "input_identities": {
+    "motion_manifest_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "map_binary_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "filtered_optical_sha256": "a8ae6025abd3be15f9a9daf97b0749b735df2f4e30486f9761a2a9fab5ee91f2",
+    "reference_75ms_raw_converted_sha256": "cf88cf3ac71d75ee406a2320afad1641828a446d776fb3395ca4b2af4ae9afc6"
+  },
+  "external_source_commits": {
+    "TUMFTM/FAR-LIO": "ef20510316ad1f8dbf2e428e4a193f700493eccd",
+    "autowarefoundation/autoware_core": "e05daabe1524b57b24d330f39470c77b4d6b6995"
+  },
+  "private_run_transactions_sha256": {
+    "gate": "e14bae7f3d29b333c124ac849098a0740d3ed877d63c7ba65bb87002d2c19321",
+    "e2": "662dc5125f84473393a4787abae0b17fcf14d3bf6e70b63f661e13e76fcfec73",
+    "fault_legacy": "0652cfade0094b0c4aa5af429106537b5acfb4eeb8ed35242054330bd6e72c3f",
+    "fault_e2": "7f5587eb1b7e95b598115aa2136ca429d522ce05395b8acd4409e1af866e03e7",
+    "fault_speed": "f74395ee2a68279d7654c0029e3dfed99ac246d738773196d55f46f8731bd381"
+  },
+  "reproduction": "Authorized private inputs and host CUDA required; see RESULTS.md. Original payloads and per-frame transactions excluded.",
+  "qualification": "Engineering-reference comparison and controlled injections only; independent accuracy, covariance calibration and ROS online timing unqualified"
+}

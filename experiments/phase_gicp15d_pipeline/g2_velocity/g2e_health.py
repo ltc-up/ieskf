@@ -10,11 +10,12 @@ class PoseHealth:
     NIS6 = 22.457744
     NIS3 = 16.266236
 
-    def __init__(self, lever, gate=False, recovery=False, yaw_variance_scale=1.):
+    def __init__(self, lever, gate=False, recovery=False, yaw_variance_scale=1., recovery_baseline=False):
         self.observer = ExternalPose(lever, ('x', 'y', 'z', 'rx', 'ry', 'rz'))
         self.gate = gate
         self.recovery = recovery
         self.yaw_variance_scale = yaw_variance_scale
+        self.recovery_baseline = recovery_baseline
         self.last_accepted_ns = None
         self.first_seen_ns = None
         self.recovery_steps = 0
@@ -26,7 +27,7 @@ class PoseHealth:
         anchor = self.last_accepted_ns if self.last_accepted_ns is not None else self.first_seen_ns
         age = 0. if anchor is None else max(0., (stamp_ns-anchor)*1e-9)
         factor = 1.
-        if self.recovery and (age >= .5 or self.recovery_steps):
+        if self.recovery and not self.recovery_baseline and (age >= .5 or self.recovery_steps):
             factor = 4. if age >= .5 else 2.
         R *= factor
         try:
