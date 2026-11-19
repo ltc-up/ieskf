@@ -1,0 +1,84 @@
+{
+  "phase": "G2-N",
+  "data_version": "loop44-three-lap-4134-frame-causal-replay-v1",
+  "research_branch": "dsh/gicp15d-pipeline",
+  "base_commit": "eb0de085b7431071d66943909d2e948cf8d9665a",
+  "research_code_commit": "eb0de085b7431071d66943909d2e948cf8d9665a (base revision); phase source revisions identified by SHA-256",
+  "configuration_sha256": "6bd4cb96f766cdcf26e37db9ff416a99d5c64de5a93392250758eb4e21f67781",
+  "configuration": {
+    "frames": 4134,
+    "lap_count": 3,
+    "window": "multilap",
+    "velocity_policy": "C",
+    "prediction": "15D ESKF delayed replay",
+    "observation": "full 6D SO(3) external pose",
+    "matcher_arms": [
+      {
+        "name": "gicp_fixed",
+        "backend": "production small_gicp",
+        "R_translation_variance_m2": 0.25,
+        "R_rotation_variance_deg2": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "ndt_fixed",
+        "backend": "CUDA NDT",
+        "R_translation_variance_m2": 0.25,
+        "R_rotation_variance_deg2": [
+          1,
+          1,
+          1
+        ]
+      },
+      {
+        "name": "ndt_legacy",
+        "backend": "CUDA NDT",
+        "R": "engineering_R(fitness)"
+      }
+    ],
+    "common": "same initialization, target map, Deskew, bindings, raw IMU/Wheel/Kistler stream, Q, common candidate validity; own-state seed and fresh match each frame; no optional NIS gate"
+  },
+  "inputs": {
+    "motion_record_sha256": "7445c7172792d93352d876c3030acdef498ae9d68e21fa6c69a94bf68852719c",
+    "multilap_bindings_sha256": "c2ccf4bd3a98ef071c6e9e0e298b493be67d1300124d100a16bbd59220b337e8",
+    "target_map_sha256": "0895ad26af296aeba68b55350f7b9b70cd6b397be551fc78af75794410192968",
+    "filtered_optical_C_sha256": "a8ae6025abd3be15f9a9daf97b0749b735df2f4e30486f9761a2a9fab5ee91f2",
+    "temporary_reference_archive_sha256": "cf88cf3ac71d75ee406a2320afad1641828a446d776fb3395ca4b2af4ae9afc",
+    "normalized_velocity_event_sequence_sha256": "88c147f5c74753dadc8d56ef7b5d84da378fda5bca5884d51c1a34c1c3af0e19",
+    "E2_GICP_transactions_sha256": "1d65e0e123453eeef66aa79621cbafbeadfbf48239a098d6eec525a2f60a5007"
+  },
+  "run_records": [
+    {
+      "id": "g2e2-e2",
+      "backend": "small_gicp",
+      "policy": "fixed_025_1deg",
+      "frames": 4134,
+      "accepted": 3996
+    },
+    {
+      "id": "g2n-ndt-fixed",
+      "backend": "ndt_cuda",
+      "policy": "fixed_025_1deg",
+      "frames": 4134,
+      "accepted": 4133,
+      "invalid_frame": 2924,
+      "invalid_reason": "MAX_ITERATIONS"
+    },
+    {
+      "id": "g2n-ndt-legacy",
+      "backend": "ndt_cuda",
+      "policy": "legacy_fitness",
+      "frames": 4134,
+      "accepted": 4134
+    }
+  ],
+  "qualification": "Exploratory closed-loop comparison against a temporary engineering reference; not independent absolute truth, covariance calibration, ROS2-online, or hard-real-time qualification.",
+  "private_payloads_excluded": true,
+  "phase_source_sha256": {
+    "run_g2v.py": "e60c91eea03420df783d5e599720079f22b14854ae6e65e618623c0a3d1087a6",
+    "analyze_g2v.py": "42645df0b9911337b92d36d6cbda80688ae62a52fce6e38987b7a30f2f263c33"
+  }
+}

@@ -19,6 +19,9 @@ for name in ('input', 'bindings', 'target', 'deskew', 'deskew-service',
     parser.add_argument('--' + name, type=Path, required=True)
 parser.add_argument('--optical', type=Path, required=True)
 parser.add_argument('--policy', choices=('A', 'B', 'C'), required=True)
+parser.add_argument('--matcher-backend', choices=('gicp', 'ndt_cuda'), default='gicp')
+parser.add_argument('--pose-covariance', choices=('fixed_025_1deg', 'legacy_fitness'),
+                    default='fixed_025_1deg')
 parser.add_argument('--window', default='lap')
 parser.add_argument('--limit', type=int)
 parser.add_argument('--prune-geometry', action='store_true',
@@ -36,6 +39,10 @@ parser.add_argument('--g2e2-speed-drop-start', type=int)
 parser.add_argument('--g2e2-speed-drop-count', type=int, default=0)
 args = parser.parse_args()
 assert args.g2e_yaw_variance_scale > 0
+if args.matcher_backend == 'gicp' and args.pose_covariance != 'fixed_025_1deg':
+    parser.error('GICP comparison is defined only with fixed 0.25 m^2 / (1 degree)^2 pose R')
+if args.matcher_backend == 'gicp' and args.g2e_gate:
+    parser.error('G2-N uses the common baseline validity path; optional G2-E gate is disabled')
 if args.g2e2_recovery_baseline:
     args.g2e_recovery = True
 assert not args.private.exists()
@@ -82,11 +89,14 @@ program = program.replace(' for i,job in enumerate(jobs):',
                           ' gc.collect();gc.freeze()\n for i,job in enumerate(jobs):')
 program = program.replace('prior=dict(p=prior.p.tolist(),',
                           'prior=dict(v=prior.v.tolist(),bg=prior.bg.tolist(),ba=prior.ba.tolist(),p=prior.p.tolist(),')
+needle = "proc.stdin.write(json.dumps(request)+'\\n');proc.stdin.flush();line=proc.stdout.readline()"
+assert program.count(needle) == 1
+program = program.replace(needle, "matcher_start=time.perf_counter_ns();" + needle + ";matcher_roundtrip_ms=(time.perf_counter_ns()-matcher_start)/1e6")
 program = program.replace('components=(',
                           "health=PoseHealth(lever,a.g2e_gate,a.g2e_recovery,a.g2e_yaw_variance_scale,a.g2e2_recovery_baseline);health_log=Journal(a.private/'g2e_health.jsonl',True);sensor_health=SensorHealth();sensor_health_log=Journal(a.private/'g2e2_sensor_health.jsonl',True);components=(", 1)
 needle = "ndt=json.loads(line);T=np.array(ndt['final']);latency="
 assert program.count(needle) == 1
-program = program.replace(needle, """ndt=json.loads(line);T=np.array(ndt['final'])
+program = program.replace(needle, """ndt=json.loads(line);T=np.array(ndt['final']);ndt['matcher_roundtrip_wall_ms']=matcher_roundtrip_ms
    if a.g2e_inject_frame==i:
     T=T.copy();T[0,3]+=3.;T[:3,:3]=T[:3,:3]@Rotation.from_euler('z',4,degrees=True).as_matrix();ndt['final']=T.tolist()
    if a.g2e_drop_start is not None and a.g2e_drop_start<=i<a.g2e_drop_start+a.g2e_drop_count:ndt['converged']=False
@@ -102,6 +112,9 @@ program = program.replace("else:update=dict(accepted=False,reason='NDT_NOT_CONVE
 program = program.replace('Rv=pose_covariance(ndt,components,prior);projection=None',
                           'Rv=g2e_R;projection=None')
 program = program.replace("  if update['accepted']:\n", "  health.record(ref,update['accepted'])\n  if update['accepted']:\n", 1)
+needle = "ledger.append(dict(index=i,ref=ref,available=available,complete=now,source_group=group,seed=seed.tolist(),"
+assert program.count(needle) == 1
+program = program.replace(needle, needle + "matcher_roi=request['roi'] if ndt is not None else None,deskew_points={k:ds.get(k) for k in ('raw_points','source_points','cropped_points','voxel_points')} if ndt is not None else None,")
 program = program.replace("if a.stop_loss is not None and a.mode", "if a.stop_loss is not None and not a.g2e_continue_loss and a.mode")
 needle = "print(a.mode,i+1,update['reason'],flush=True)"
 assert program.count(needle) == 1
@@ -116,10 +129,24 @@ namespace = dict(__name__='g2v_runner', gc=gc, Journal=Journal,
                  OpticalVelocity=OpticalVelocity, PoseHealth=PoseHealth,
                  SensorHealth=SensorHealth, np=np)
 exec(compile(program, str(source), 'exec'), namespace)
-namespace['pose_covariance'] = lambda ndt, components, prior: np.diag([
-    .25 if component in ('x', 'y', 'z') else np.deg2rad(1.)**2
-    for component in components
-])
+from geometry_ieskf.ndt_pose_observation import engineering_R
+
+def phase_g2n_pose_covariance(ndt, components, prior):
+    expected_backend = 'small_gicp' if args.matcher_backend == 'gicp' else None
+    if expected_backend and ndt.get('backend') != expected_backend:
+        raise ValueError('MATCHER_BACKEND_IDENTITY_MISMATCH')
+    if args.pose_covariance == 'legacy_fitness':
+        if args.matcher_backend != 'ndt_cuda':
+            raise ValueError('LEGACY_FITNESS_R_IS_NDT_ONLY')
+        if ndt.get('fitness') is None or not np.isfinite(ndt['fitness']):
+            raise ValueError('NDT_FITNESS_UNAVAILABLE_FOR_LEGACY_R')
+        small = engineering_R(float(ndt['fitness']))
+        return np.diag([small[0, 0] if c in ('x', 'y', 'z') else small[2, 2]
+                        for c in components])
+    return np.diag([.25 if component in ('x', 'y', 'z')
+                    else np.deg2rad(1.)**2 for component in components])
+
+namespace['pose_covariance'] = phase_g2n_pose_covariance
 args.mode = 'F'
 args.stop_loss = 2.
 args.position_only = False
@@ -135,4 +162,39 @@ summary.update(g2e2_health=args.g2e2_health,
                g2e2_recovery_baseline=args.g2e2_recovery_baseline,
                g2e2_speed_drop_start=args.g2e2_speed_drop_start,
                g2e2_speed_drop_count=args.g2e2_speed_drop_count)
+summary.update(matcher_backend=args.matcher_backend,
+               pose_covariance_policy=args.pose_covariance,
+               actual_CUDA=args.matcher_backend == 'ndt_cuda',
+               actual_CUDA_Deskew=True,
+               actual_small_gicp=args.matcher_backend == 'gicp',
+               fixed_pose_R={'translation_variance_m2': 0.25,
+                             'rotation_variance_rad2': float(np.deg2rad(1.)**2)}
+                             if args.pose_covariance == 'fixed_025_1deg' else None)
+
+def percentile_summary(values):
+    values = np.asarray(values, dtype=float)
+    if not len(values):
+        return None
+    result = {key: float(np.percentile(values, q))
+              for key, q in (('p50', 50), ('p95', 95), ('p99', 99))}
+    result['max'] = float(values.max())
+    return result
+
+timing = {'frame_wall_ms': summary.get('wall_ms')}
+matcher_ms = [float(row['ndt']['align_wall_ms']) for row in json.loads(
+    (args.private / 'transactions.json').read_text()) if row.get('ndt') and
+    row['ndt'].get('align_wall_ms') is not None]
+timing['matcher_align_wall_ms'] = percentile_summary(matcher_ms)
+transaction_rows = json.loads((args.private / 'transactions.json').read_text())
+timing['matcher_roundtrip_wall_ms'] = percentile_summary([row['ndt']['matcher_roundtrip_wall_ms']
+    for row in transaction_rows if row.get('ndt') and row['ndt'].get('matcher_roundtrip_wall_ms') is not None])
+timing['matcher_target_build_ms'] = percentile_summary([row['ndt']['target_build_ms']
+    for row in transaction_rows if row.get('ndt') and row['ndt'].get('target_build_ms') is not None])
+deskew_meta = args.private / 'deskew_meta_stream.jsonl'
+if deskew_meta.exists():
+    rows = [json.loads(line) for line in deskew_meta.read_text().splitlines() if line]
+    for field in ('gpu_deskew_ms', 'crop_voxel_sample_ms',
+                  'rebase_with_file_write_ms', 'initial_context_ms'):
+        timing[field] = percentile_summary([row[field] for row in rows if field in row])
+summary['stage_latency_ms'] = timing
 args.output.write_text(json.dumps(summary, indent=2) + '\n')

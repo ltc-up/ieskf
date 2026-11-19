@@ -2,6 +2,7 @@
 import argparse
 import csv
 import json
+from collections import Counter
 from pathlib import Path
 
 import matplotlib
@@ -22,10 +23,21 @@ def metrics(values):
                 abs_max=float(np.max(abs(values))))
 
 
-def longest_run(values, threshold=.3):
+def percentile_summary(values):
+    values = np.asarray(values, dtype=float)
+    if not len(values):
+        return None
+    return dict(p50=float(np.percentile(values, 50)),
+                p95=float(np.percentile(values, 95)),
+                p99=float(np.percentile(values, 99)), max=float(np.max(values)))
+
+
+def longest_run(values, threshold=.3, valid=None):
     longest = current = 0
-    for value in values:
-        current = current + 1 if abs(value) > threshold else 0
+    if valid is None:
+        valid = np.ones(len(values), dtype=bool)
+    for value, is_valid in zip(values, valid):
+        current = current + 1 if is_valid and abs(value) > threshold else 0
         longest = max(longest, current)
     return longest
 
@@ -129,6 +141,7 @@ def main():
     omega_times = np.asarray([e['header_ns'] for e in imu_events])
     omega_values = np.asarray([imu_rotation @ e['omega'] for e in imu_events])
     reference = np.load(a.reference)
+    reference_data = reference
     position = reference['G_0.075']
     tangent = reference['tangent']
     normal = np.c_[-tangent[:, 1], tangent[:, 0]]
@@ -141,10 +154,18 @@ def main():
     apex = magnitude >= np.percentile(magnitude[valid], 85)
     growth = np.gradient(gaussian_filter1d(magnitude, 5))
     stage = np.where(~turn, 'straight', np.where(apex, 'apex', np.where(growth >= 0, 'entry', 'exit')))
+    start_distance = np.linalg.norm(position[:, :2] - position[0, :2], axis=1)
+    near_start = np.flatnonzero((start_distance < 3.0) & (np.arange(len(position)) > 500))
+    near_groups = np.split(near_start, np.flatnonzero(np.diff(near_start) > 1) + 1) if len(near_start) else []
+    lap_returns = [int(group[np.argmin(start_distance[group])]) for group in near_groups
+                   if len(group) and group[-1] - group[0] < 20]
+    lap_boundaries = [0] + lap_returns + [len(position)]
+    assert len(lap_boundaries) == 4, f'EXPECTED_THREE_LAP_SPAN:{lap_boundaries}'
     runs = {name: load(Path(path), position, normal, tangent, lever,
                        omega_times, omega_values) for name, path in a.run}
     result = dict(reference='temporary_G_0.075_' + a.valid_key,
                   stage_rule='Gaussian sigma 5 frames; straight below valid median absolute curvature; apex above valid p85; entry/exit by smoothed curvature slope',
+                  lap_boundary_rule='course path returns within 3 m of frame-0 position at frame indices ' + ','.join(map(str, lap_returns)) + '; invalid references may define boundaries but are excluded from error metrics',
                   curvature_quantiles=np.percentile(magnitude[valid], [50, 85]).tolist(), runs={})
     ranges = {'full': (0, len(position)), 'peak_800_900': (800, 900),
               'corner_1254_1297': (1254, 1297), 'offset_1317_1406': (1317, 1406),
@@ -156,19 +177,28 @@ def main():
                     ranges={}, stages={})
         for label, (lo, hi) in ranges.items():
             m = valid[lo:hi]
+            pair_valid = valid[lo+1:hi] & valid[lo:hi-1]
+            prediction_step = run['prior'][lo+1:hi, 0] - run['posterior'][lo:hi-1, 0]
+            update_valid = valid[lo:hi] & run['accepted'][lo:hi]
+            update_step = run['posterior'][lo:hi, 0][update_valid] - run['prior'][lo:hi, 0][update_valid]
             seed = run['prior'][lo:hi][m]
             match = run['match'][lo:hi][m]
             post = run['posterior'][lo:hi][m]
             item['ranges'][label] = dict(n=int(m.sum()), seed_lateral=metrics(seed[:, 0]),
                 match_lateral=metrics(match[:, 0]), posterior_lateral=metrics(post[:, 0]),
+                seed_xy_rmse=float(np.sqrt(np.mean(np.sum(run['prior'][lo:hi][m]**2, axis=1)))),
+                match_xy_rmse=float(np.sqrt(np.mean(np.sum(run['match'][lo:hi][m]**2, axis=1)))),
                 posterior_along=metrics(post[:, 1]),
                 posterior_xy_rmse=float(np.sqrt(np.mean(np.sum(post**2, axis=1)))),
-                longest_abs_lateral_gt_0p3=longest_run(post[:, 0]),
-                mean_prediction_lateral_step=float(np.mean(run['prior'][lo+1:hi, 0] - run['posterior'][lo:hi-1, 0])),
-                prediction_lateral_step_rmse=float(np.sqrt(np.mean((run['prior'][lo+1:hi, 0] - run['posterior'][lo:hi-1, 0])**2))),
-                mean_update_lateral_step=float(np.mean(run['posterior'][lo:hi, 0] - run['prior'][lo:hi, 0])),
-                update_lateral_step_rmse=float(np.sqrt(np.mean((run['posterior'][lo:hi, 0] - run['prior'][lo:hi, 0])**2))),
-                median_lateral_gain=float(np.median(run['gain'][lo:hi][run['accepted'][lo:hi]])),
+                longest_abs_lateral_gt_0p3=longest_run(run['posterior'][lo:hi, 0], valid=m),
+                mean_prediction_lateral_step=float(np.mean(prediction_step[pair_valid])),
+                prediction_lateral_step_rmse=float(np.sqrt(np.mean(prediction_step[pair_valid]**2))),
+                mean_update_lateral_step=float(np.mean(update_step)),
+                update_lateral_step_rmse=float(np.sqrt(np.mean(update_step**2))),
+                median_lateral_gain=float(np.median(run['gain'][lo:hi][run['accepted'][lo:hi] & valid[lo:hi]])),
+                yaw_innovation_deg=metrics(np.rad2deg(run['yaw_match'][lo:hi][m])),
+                yaw_posterior_correction_deg=metrics(np.rad2deg(run['yaw_post'][lo:hi][m])),
+                mean_yaw_lateral_cross_gain=float(np.mean(run['yaw_gain'][lo:hi][m])),
                 mean_match_yaw_correction_deg=float(np.rad2deg(np.mean(run['yaw_match'][lo:hi]))),
                 mean_post_yaw_correction_deg=float(np.rad2deg(np.mean(run['yaw_post'][lo:hi]))),
                 mean_body_vx_m_s=float(np.mean(run['body_velocity'][lo:hi, 0])),
@@ -184,6 +214,48 @@ def main():
             item['stages'][label] = dict(n=int(m.sum()), lateral=metrics(post[:, 0]),
                                           along=metrics(post[:, 1]),
                                           xy_rmse=float(np.sqrt(np.mean(np.sum(post**2, axis=1)))))
+        item['laps'] = {}
+        for lap, (lo, hi) in enumerate(zip(lap_boundaries[:-1], lap_boundaries[1:]), 1):
+            m = valid[lo:hi]
+            post = run['posterior'][lo:hi][m]
+            item['laps'][str(lap)] = dict(frame_start=lo, frame_end_exclusive=hi,
+                valid_frames=int(m.sum()), lateral=metrics(post[:, 0]),
+                along=metrics(post[:, 1]), xy_rmse=float(np.sqrt(np.mean(np.sum(post**2, axis=1)))) if len(post) else None)
+        normal8 = valid & (reference_data['corner'] == 8)
+        normal8_post = run['posterior'][normal8]
+        item['normal_segment_8'] = dict(n=int(normal8.sum()), lateral=metrics(normal8_post[:, 0]),
+            along=metrics(normal8_post[:, 1]),
+            xy_rmse=float(np.sqrt(np.mean(np.sum(normal8_post**2, axis=1)))) if len(normal8_post) else None)
+        normal8_ix = np.flatnonzero(reference_data['corner'] == 8)
+        normal8_groups = np.split(normal8_ix, np.flatnonzero(np.diff(normal8_ix) > 1) + 1)
+        item['normal_segment_8_laps'] = {}
+        for lap, group in enumerate(normal8_groups, 1):
+            m = valid[group]
+            seed = run['prior'][group][m]
+            match = run['match'][group][m]
+            post = run['posterior'][group][m]
+            item['normal_segment_8_laps'][str(lap)] = dict(frame_start=int(group[0]),
+                frame_end_exclusive=int(group[-1] + 1), n=int(m.sum()),
+                seed_lateral=metrics(seed[:, 0]), match_lateral=metrics(match[:, 0]),
+                posterior_lateral=metrics(post[:, 0]), posterior_along=metrics(post[:, 1]),
+                posterior_xy_rmse=float(np.sqrt(np.mean(np.sum(post**2, axis=1)))) if len(post) else None)
+        valid_ix = np.flatnonzero(valid)
+        item['extrema'] = dict(
+            max_abs_posterior_lateral_frame=int(valid_ix[np.argmax(abs(run['posterior'][valid, 0]))]),
+            max_posterior_xy_frame=int(valid_ix[np.argmax(np.linalg.norm(run['posterior'][valid], axis=1))]),
+            max_abs_raw_match_lateral_frame=int(valid_ix[np.argmax(abs(run['match'][valid, 0]))]),
+            max_raw_match_xy_frame=int(valid_ix[np.argmax(np.linalg.norm(run['match'][valid], axis=1))]))
+        item['failure_reasons'] = dict(Counter(row['update']['reason'] for row in run['rows']
+                                               if not row['update']['accepted']))
+        item['measurement_R'] = dict(
+            translation_variance_m2=percentile_summary([row['update']['R'][0][0] for row in run['rows']
+                if row['update'].get('accepted') and row['update'].get('R')]),
+            rotation_variance_rad2=percentile_summary([row['update']['R'][-1][-1] for row in run['rows']
+                if row['update'].get('accepted') and row['update'].get('R')]))
+        item['NDT_match_exit'] = dict(Counter(row['ndt'].get('exit', 'UNKNOWN') for row in run['rows']
+                                              if row.get('ndt')))
+        item['match_timing_ms'] = percentile_summary([r['ndt']['align_wall_ms'] for r in run['rows']
+            if r.get('ndt') and r['ndt'].get('align_wall_ms') is not None])
         result['runs'][name] = item
         for i in range(len(position)):
             table.append(dict(run=name, frame=i, valid=int(valid[i]), stage=stage[i],
@@ -191,6 +263,13 @@ def main():
                               match_lateral=float(run['match'][i, 0]),
                               post_lateral=float(run['posterior'][i, 0]),
                               post_along=float(run['posterior'][i, 1]),
+                              seed_xy=float(np.linalg.norm(run['prior'][i])),
+                              match_xy=float(np.linalg.norm(run['match'][i])),
+                              post_xy=float(np.linalg.norm(run['posterior'][i])),
+                              yaw_innovation_deg=float(np.rad2deg(run['yaw_match'][i])),
+                              yaw_correction_deg=float(np.rad2deg(run['yaw_post'][i])),
+                              lateral_gain=float(run['gain'][i]),
+                              yaw_lateral_gain=float(run['yaw_gain'][i]),
                               body_vx=float(run['body_velocity'][i, 0]),
                               body_vy=float(run['body_velocity'][i, 1]),
                               yaw_rate=float(run['yaw_rate'][i]),
@@ -224,6 +303,15 @@ def main():
     figure.savefig(a.output / 'error_curves.png', dpi=160)
     figure.savefig(a.output / 'stage_error_curves.png', dpi=160)
     plt.close(figure)
+    figure, axis = plt.subplots(figsize=(8, 8))
+    axis.plot(position[valid, 0], position[valid, 1], '.', ms=1, label='temporary GNSS reference')
+    for name, run in runs.items():
+        # plot the reference-relative reconstructed base position from each
+        # immediate posterior, using the same saved normal/tangent projection.
+        pxy = position[:, :2] + tangent * run['posterior'][:, 1, None] + normal * run['posterior'][:, 0, None]
+        axis.plot(pxy[valid, 0], pxy[valid, 1], lw=.6, label=name)
+    axis.set_aspect('equal'); axis.legend(); axis.grid(alpha=.2)
+    figure.tight_layout(); figure.savefig(a.output / 'trajectory.png', dpi=160); plt.close(figure)
 
 
 if __name__ == '__main__':
